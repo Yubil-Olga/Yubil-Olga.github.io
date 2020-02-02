@@ -1,0 +1,54 @@
+@font-face{
+    font-family: Quicksand;
+    src: url(../fonts/quicksand-bold.ttf) format('truetype'),
+         url(../fonts/quicksand-bold.woff) format('woff'),
+         url(../fonts/quicksand-bold.svg) format('svg');
+    font-weight: bold;
+}
+@font-face{
+    font-family: Montserrat;
+    src: url(../fonts/montserrat-bold.ttf) format('truetype'),
+         url(../fonts/montserrat-bold.woff) format('woff'),
+         url(../fonts/montserrat-bold.svg) format('svg');
+    font-weight: bold;
+}
+@font-face{
+    font-family: Montserrat;
+    src: url(../fonts/montserrat-regular.ttf) format('truetype'),
+         url(../fonts/montserrat-regular.woff) format('woff'),
+         url(../fonts/montserrat-regular.svg) format('svg');
+    font-weight: normal;
+}
+
+@mixin H1 {
+    font: {
+        family: Quicksand;
+        weight: bold;
+        size: 24px;
+    }
+    line-height: 30px;
+}
+@mixin H2 {
+    font: {
+        family: Quicksand;
+        weight: bold;
+        size: 19px;
+    }
+    line-height: 24px;
+}
+@mixin H3 {
+    font: {
+        family: Montserrat;
+        weight: bold;
+        size: 12px;
+    }
+    line-height: 15px;
+}
+@mixin Body {
+    font: {
+        family: Montserrat;
+        weight: normal;
+        size: 14px;
+    }
+    line-height: 24px;
+}

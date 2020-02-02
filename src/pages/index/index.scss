@@ -1,3 +1,6 @@
+@import '../fonts.scss', '../base.scss';
+
 h1 {
-    color: green;
+    @include H1;
+    color: $purple;  
 }

@@ -1,5 +1,6 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -26,7 +27,11 @@ module.exports = {
             chunks: ['index', 'common'],
             template: './pages/index/index.pug'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css',
+          })
     ],
     module: {
         rules: [
@@ -36,7 +41,17 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [
+                    MiniCssExtractPlugin.loader, 
+                    'css-loader', 
+                    'resolve-url-loader', 
+                    {
+                      loader: 'sass-loader',
+                      options: {
+                        sourceMap: true
+                      }
+                    }
+                ]
             },
             {
                 test: /\.(png|jpeg|jpg|svg|gif)$/i,
@@ -48,6 +63,17 @@ module.exports = {
                         }
                   },
                 ],
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: 'fonts/[name].[ext]'
+                    }
+                  }
+                ]
             },
             {
                 test: /\.pug$/,
