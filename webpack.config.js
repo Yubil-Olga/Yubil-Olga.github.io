@@ -1,6 +1,6 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -54,7 +54,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpeg|jpg|svg|gif)$/i,
+                test: /\.(png|jpeg|jpg|gif)$/i,
                 use: [
                   {
                     loader: 'file-loader',

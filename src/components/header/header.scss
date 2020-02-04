@@ -1,0 +1,62 @@
+.header {
+    box-shadow:  0px 10px 20px $dark-shade-5;
+    padding: 15px;
+    .layout {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+.logo__icon {
+    width: 40px;
+    height: 40px;
+    background: url(./Logo.png) center/contain no-repeat;
+    margin-right: 12px;
+}
+.logo__text {
+    width: 54px;
+    height: 13px;
+    background: url(./TOXIN.png) center/contain no-repeat;
+}
+.header__navigation {
+    display: flex;
+    align-items: center;
+    ul {
+        display: flex;
+        li {
+            margin-right: 30px;
+        }
+    }
+    .navigation__list {
+        font: {
+            family: Montserrat;
+            weight: normal;
+            size: 14px;
+        }
+        line-height: 17px;
+    }
+}
+.navigation__toolbar {
+    text-transform: uppercase;
+    font: {
+        family: Montserrat;
+        weight: bold;
+        size: 12px;
+    }
+    line-height: 15px;
+    li:last-child {
+        margin-right: 0;
+    }
+    .user {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-shade-50;
+        text-transform: none;
+        padding-left: 30px;
+        border-left: 1px solid rgba($dark-shade, 0.1);;
+    }
+}

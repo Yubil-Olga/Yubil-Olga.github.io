@@ -1,7 +1,31 @@
-$purple: #BC9CFF;
-$green: #6FCF97;
-$dark-shade: #1F2041;
-$dark-shade-5: rgba($dark-shade, 0.05);
-$dark-shade-25: rgba($dark-shade, 0.25);
-$dark-shade-50: rgba($dark-shade, 0.5);
-$dark-shade-75: rgba($dark-shade, 0.75);
+@import '../fonts.scss', '../colors', '../components/header/header.scss';
+
+body {
+    max-width: 1920px;
+    min-width: 320px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+.layout {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+.button {
+    border-radius: 22px;
+    padding: 8px 21px;
+    &-light {
+        border: 2px solid $purple;
+        color: $purple;
+    }
+    &-dark {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: #fff;
+    }
+}

@@ -27,6 +27,7 @@
         size: 24px;
     }
     line-height: 30px;
+    color: $dark-shade;
 }
 @mixin H2 {
     font: {
@@ -35,6 +36,7 @@
         size: 19px;
     }
     line-height: 24px;
+    color: $dark-shade;
 }
 @mixin H3 {
     font: {
@@ -43,6 +45,7 @@
         size: 12px;
     }
     line-height: 15px;
+    color: $dark-shade;
 }
 @mixin Body {
     font: {
@@ -51,4 +54,5 @@
         size: 14px;
     }
     line-height: 24px;
+    color: $dark-shade-75;
 }
