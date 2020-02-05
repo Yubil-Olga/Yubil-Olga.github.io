@@ -8,7 +8,8 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        index: './pages/index/index.js'
+        index: './pages/index/index.js',
+        headersfooters: './pages/headers-footers/headers-footers.js'
     },
     output: {
         filename: './js/[name].js',
@@ -27,6 +28,11 @@ module.exports = {
             chunks: ['index', 'common'],
             template: './pages/index/index.pug'
         }),
+        new HTMLWebpackPlugin({
+          filename: 'headers-footers.html',
+          chunks: ['headersfooters', 'common'],
+          template: './pages/headers-footers/headers-footers.pug'
+      }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css',

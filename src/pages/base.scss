@@ -1,8 +1,9 @@
-@import '../fonts.scss', '../colors', '../components/header/header.scss';
+@import '../fonts.scss', '../colors', '../components/header/header.scss', '../components/footer/footer.scss';
 
 body {
     max-width: 1920px;
     min-width: 320px;
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -12,10 +13,6 @@ ul {
 }
 li {
     list-style: none;
-}
-.layout {
-    max-width: 1160px;
-    margin: 0 auto;
 }
 .button {
     border-radius: 22px;

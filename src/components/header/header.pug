@@ -1,31 +1,33 @@
 - var auth = false
 - var user = "Cosmin Negoita"
 header.header
-    .layout
-        .header__logo
-            .logo__icon
-            .logo__text
-        .header__navigation
-            ul.navigation__list
-                li 
-                    a(href="") Home
+    .logo
+        .logo__icon
+        .logo__text
+    .header__navigation
+        ul.navigation__list
+            li 
+                a(href="") Home
+            li
+                a(href="") About us
+            li
+                a(href="") Services
+            li
+                a(href="") Careers
+            li
+                a(href="") News
+            li
+                a(href="") Documentation
+        ul.navigation__toolbar
+            if auth
+                li.user=user
+            else
                 li
-                    a(href="") About us
+                    a(href="").button.button-light Login
                 li
-                    a(href="") Services
-                li
-                    a(href="") Careers
-                li
-                    a(href="") News
-                li
-                    a(href="") Documentation
-            ul.navigation__toolbar
-                if auth
-                    li.user=user
-                else
-                    li
-                        a(href="").button.button-light Login
-                    li
-                        a(href="").button.button-dark Register
+                    a(href="").button.button-dark Register
+    
+        
                 
                 
+        

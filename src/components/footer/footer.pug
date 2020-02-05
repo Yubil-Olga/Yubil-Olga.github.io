@@ -1,0 +1,63 @@
+- var creative = true
+footer.footer(class=creative ? "footer-creative" : "footer")
+    .grid__columns_5
+            .footer__block
+                .logo
+                    .logo__icon
+                    .logo__text
+                p.logo__description 
+                    |Lorem ipsum dolor sit amet consectetur adipiscing
+                    | elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+            unless creative
+                .footer__block
+                    h3 Navigation
+                    ul
+                        li
+                            a(href="") About Us
+                        li
+                            a(href="") News
+                        li
+                            a(href="") Support
+                        li
+                            a(href="") Product
+                .footer__block
+                    h3 About us
+                    ul
+                        li
+                            a(href="") Who we are
+                        li
+                            a(href="") Our team
+                        li
+                            a(href="") Careers
+                        li
+                            a(href="") Investors
+                .footer__block
+                    h3 Support
+                    ul
+                        li
+                            a(href="") Documentation
+                        li
+                            a(href="") Community
+                        li
+                            a(href="") Get in Touch
+                form.footer__block
+                    h3 Subscribe to our newsletter
+                    p Receive our latest news and promotions in your inbox!
+                    .subscribe
+                        input(
+                            type="text"
+                            name="Subscribe"
+                            placeholder="Your email address"
+                        )
+                        button
+                            .arrow
+    .copyright-bar(class=creative ? "center" : "space-between")
+        unless creative
+            p Copyright © 2018 Toxin UI Kit. All rights reserved.
+        .social
+            .social__icon.twitter
+            .social__icon.fb
+            .social__icon.instagram   
+
+            
+        
