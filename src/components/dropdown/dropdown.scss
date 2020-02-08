@@ -9,6 +9,12 @@
         padding-left: 15px;
         @include Body;
         line-height: 18px;
+        .dropdown__title {
+            width: 160px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
         .arrow_direction_bottom {
             width: 44px;
             height: 44px;
@@ -37,7 +43,7 @@
     .dropdown__menu {
         @include H3;
         display: block;
-        padding: 13px 7px 13px 15px;
+        padding: 7px 7px 7px 15px;
         border-radius: 0 0 2px 2px;
         border: $border;
         border-top: none;
@@ -45,6 +51,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            .option__title {
+                @include H3;
+            }
             .option__counter {
                 display: flex;
             }
@@ -92,6 +101,7 @@
             .clean {
                 color: $dark-shade-50;
                 cursor: pointer;
+                visibility: hidden;
             }
             .accept {
                 color: $purple;

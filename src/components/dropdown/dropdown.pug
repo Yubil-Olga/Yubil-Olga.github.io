@@ -1,7 +1,10 @@
 mixin dropdown(title, ...items)
     .dropdown
         .dropdown__selection
-            p=title
+            if title == "room"
+                p.dropdown__title.room Сколько комнат
+            else
+                p.dropdown__title Сколько гостей
             .arrow_direction_bottom
         .dropdown__menu
             each item in items
@@ -11,6 +14,7 @@ mixin dropdown(title, ...items)
                         .counter__decrement
                         input.counter-item(value="0" readonly)
                         .counter__increment
-            .menu__control
-                .clean очистить
-                .accept применить
+            unless title == "room"
+                .menu__control
+                    .clean очистить
+                    .accept применить
