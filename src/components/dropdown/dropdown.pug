@@ -1,0 +1,16 @@
+mixin dropdown(title, ...items)
+    .dropdown
+        .dropdown__selection
+            p=title
+            .arrow_direction_bottom
+        .dropdown__menu
+            each item in items
+                .menu__option
+                    h3.option__title=item
+                    .option__counter
+                        .counter__decrement
+                        input.counter-item(value="0" readonly)
+                        .counter__increment
+            .menu__control
+                .clean очистить
+                .accept применить

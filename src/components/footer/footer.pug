@@ -1,6 +1,6 @@
-- var creative = true
-footer.footer(class=creative ? "footer-creative" : "footer")
-    .grid__columns_5
+mixin footer(creative)
+    footer.footer(class=creative ? "footer-creative" : "footer")
+        .grid__columns_5
             .footer__block
                 .logo
                     .logo__icon
@@ -51,13 +51,13 @@ footer.footer(class=creative ? "footer-creative" : "footer")
                         )
                         button
                             .arrow
-    .copyright-bar(class=creative ? "center" : "space-between")
-        unless creative
-            p Copyright © 2018 Toxin UI Kit. All rights reserved.
-        .social
-            .social__icon.twitter
-            .social__icon.fb
-            .social__icon.instagram   
+        .copyright-bar(class=creative ? "center" : "space-between")
+            unless creative
+                p Copyright © 2018 Toxin UI Kit. All rights reserved.
+            .social
+                .social__icon.twitter
+                .social__icon.fb
+                .social__icon.instagram   
 
             
         

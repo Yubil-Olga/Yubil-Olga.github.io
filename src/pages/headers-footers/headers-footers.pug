@@ -1,6 +1,13 @@
 extends ../base
+include ../../components/header/header
+include ../../components/footer/footer
+
 block variables
     - var pageTitle = 'Headers & Footers'
+    - var user = "Cosmin Negoita"
 block main
-    include ../../components/header/header
-    include ../../components/footer/footer
+    +header(false)
+    +header(true)
+    +footer(false)
+    +footer(true)
+    

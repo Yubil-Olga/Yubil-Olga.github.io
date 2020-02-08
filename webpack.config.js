@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
@@ -9,7 +10,8 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './pages/index/index.js',
-        headersfooters: './pages/headers-footers/headers-footers.js'
+        headersfooters: './pages/headers-footers/headers-footers.js',
+        cards: './pages/cards/cards.js'
     },
     output: {
         filename: './js/[name].js',
@@ -32,11 +34,21 @@ module.exports = {
           filename: 'headers-footers.html',
           chunks: ['headersfooters', 'common'],
           template: './pages/headers-footers/headers-footers.pug'
-      }),
+        }),
+        new HTMLWebpackPlugin({
+          filename: 'cards.html',
+          chunks: ['cards', 'common'],
+          template: './pages/cards/cards.pug'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css',
+          }),
+          new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            "window.jQuery": 'jquery'
           })
     ],
     module: {

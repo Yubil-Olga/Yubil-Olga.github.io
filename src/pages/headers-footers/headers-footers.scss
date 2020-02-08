@@ -1,1 +1,9 @@
 @import '../base.scss';
+body {
+    display: grid;
+    grid-row-gap: 40px;
+    background-color:  #E5E5E5;
+    padding-top: 150px;
+    padding-bottom: 130px;
+    background: url(../../components/logo/Logo.png) 30px 30px no-repeat;
+}

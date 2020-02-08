@@ -1,0 +1,102 @@
+.dropdown {
+    width: 266px;
+    .dropdown__selection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $dark-shade-25;;
+        border-radius: 2px 2px 0 0;
+        padding-left: 15px;
+        @include Body;
+        line-height: 18px;
+        .arrow_direction_bottom {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border: solid $dark-shade-75;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .dropdown__menu {
+        display: none;
+    }
+}
+.show {
+    $border: 1px solid $dark-shade-50;
+    .dropdown__selection {
+        border: $border;
+    }
+    .dropdown__menu {
+        @include H3;
+        display: block;
+        padding: 13px 7px 13px 15px;
+        border-radius: 0 0 2px 2px;
+        border: $border;
+        border-top: none;
+        .menu__option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .option__counter {
+                display: flex;
+            }
+            input {
+                width: 30px;
+                border: none;
+                @include H3;
+                text-align: center;
+            }
+            @each $counter in increment, decrement {
+                .counter__#{$counter} {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid $dark-shade-50;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            @each $counter in increment, decrement {
+                .counter__#{$counter}:before {
+                    font: {
+                        family: Montserrat;
+                        weight: normal;
+                        size: 18px;
+                    }
+                    line-height: 22px;
+                    color: $dark-shade-50;
+                }
+            }
+            .counter__increment:before {
+                content: "+";
+            }
+            .counter__decrement:before {
+                content: "-";
+            }
+            
+        }
+        .menu__control {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            .clean {
+                color: $dark-shade-50;
+                cursor: pointer;
+            }
+            .accept {
+                color: $purple;
+                cursor: pointer;
+            }
+        }
+    }
+}
