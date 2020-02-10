@@ -1,0 +1,9 @@
+mixin rate-btn(total, rating)
+    form.rate-btn
+        - for (let i=0; i<total; i++)
+            label.rate-btn__item(class = rating> i ? "rate-btn__item_active" : "")
+                input(type="radio" name="star" value=i+1)
+
+        
+
+        

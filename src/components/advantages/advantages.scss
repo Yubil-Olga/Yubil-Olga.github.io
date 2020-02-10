@@ -1,0 +1,19 @@
+.advantages {
+    @include Body;
+    padding-left: 58px;
+    position: relative;
+    &:before {
+        width: 48px;
+        height: 48px;
+        background: url("./insert_emoticon.png") center no-repeat;
+        position: absolute;
+        left: 0;
+    }
+    .description__title {
+        font-weight: bold;
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+}
