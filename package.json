@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "ion-rangeslider": "^2.3.1",
     "item-quantity-dropdown": "^2.0.2"
   }
 }

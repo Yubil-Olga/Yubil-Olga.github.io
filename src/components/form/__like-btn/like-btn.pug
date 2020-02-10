@@ -1,0 +1,3 @@
+mixin like-btn(count, checked)
+    label.like-btn(data-count=checked ? count+1 : checked class= checked ? "like-btn_active" : "")
+        input(type="checkbox" name="like" value="like" checked)

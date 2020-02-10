@@ -1,0 +1,22 @@
+.like-btn {
+    width: 40px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('./favorite_border.png') 6px no-repeat;
+    color: $dark-shade-25;
+    &:after {
+        content: attr(data-count);
+    }
+    input {
+        opacity: 0;
+    }
+}
+.like-btn_active {
+    border-color: $purple;
+    background: url('./favorite.png') 6px no-repeat;
+    color: $purple;
+}

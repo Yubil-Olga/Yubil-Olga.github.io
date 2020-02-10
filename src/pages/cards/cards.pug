@@ -1,12 +1,15 @@
 extends ../base
-include ../../components/dropdown/dropdown
+include ../../components/form/__toggle/toggle
 
 block variables
     - var pageTitle = 'Cards'
 
 block main
-    +dropdown("room", "спальни", "кровати","ванные комнаты")
-    +dropdown("guests", "Olga", "Roma")
+    input(type="text" class="js-range-slider" name="my_range" value="")
+    +toggle("Получать спецпредложения")
+    +toggle("Акция")
+    
+    
     
 
     
