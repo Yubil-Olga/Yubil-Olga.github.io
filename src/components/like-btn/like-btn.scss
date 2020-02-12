@@ -1,15 +1,31 @@
 .like-btn {
+    display: inline-block;
     width: 40px;
     height: 20px;
     border: 1px solid $dark-shade-25;
     border-radius: 10px;
+    color: $dark-shade-25;
+    box-sizing: border-box;
+    padding-left: 6px;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: url('./favorite_border.png') 6px no-repeat;
-    color: $dark-shade-25;
+    i.material-icons {
+        font-family: Material Icons;
+        font-style: normal;
+        font-size: 10px;
+    }
     &:after {
         content: attr(data-count);
+        position: absolute;
+        right: 8px;
+        top: 3px;
+        font: {
+            family: Montserrat;
+            weight: normal;
+            size: 10px;
+        }
+        line-height: 12px;
     }
     input {
         opacity: 0;
@@ -17,6 +33,5 @@
 }
 .like-btn_active {
     border-color: $purple;
-    background: url('./favorite.png') 6px no-repeat;
     color: $purple;
 }

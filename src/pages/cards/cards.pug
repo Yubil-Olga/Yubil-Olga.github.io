@@ -1,10 +1,28 @@
 extends ../base
+include ../../components/like-btn/like-btn
+include ../../components/advantages/advantages
+include ../../components/input/input
+include ../../components/dropdown/dropdown
 
 block variables
     - var pageTitle = 'Cards'
 
 block main
-    
+    +dropdown("person", "man", "child", "baby")
+    +input("Text field", "Email", "text")
+    +input("Text field", "Email", "text", "This is pretty awesome")
+    +like-btn(5, true)
+    .button_active click me
+    .button_ghost click me
+    .button_border_active click me
+    .button_border_ghost click me
+    .button_simple_active click me
+    .button_simple_ghost click me
+    .button_arrow click me
+        i.material-icons arrow_forward
+    +advantages("Комфорт", "Шумопоглощающие стены", "insert_emoticon")
+    +advantages("Удобство", "Окно в каждой из спален", "location_city")
+        
     
 
     

@@ -1,13 +1,23 @@
 .advantages {
-    @include Body;
-    padding-left: 58px;
-    position: relative;
-    &:before {
-        width: 48px;
-        height: 48px;
-        background: url("./insert_emoticon.png") center no-repeat;
-        position: absolute;
-        left: 0;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba($dark-shade, 0.1);
+    i.material-icons{
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none;
+        font-size: 48px;
+        line-height: 41px;
+        background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    .advantages__description {
+        @include Body;
+        padding-left: 10px;
     }
     .description__title {
         font-weight: bold;

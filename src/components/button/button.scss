@@ -1,0 +1,73 @@
+%button {
+    @include H3;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 22px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.button {
+    $color: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+    $color-ghost: linear-gradient(180deg, transparentize($purple,0.5) 0%, transparentize(#8BA4F9,0.5) 100%);
+    &_active {
+        @extend %button;
+        color: #fff;
+        background: $color;
+    }
+    &_ghost {
+        @extend %button;
+        color: #fff;
+        background: $color-ghost 
+    }
+    &_border_active, &_border_ghost {
+        @extend %button;
+        color: $purple;
+        background-color: #fff;
+        background-clip: padding-box;
+        padding: 13px 18px;
+        border: 2px solid transparent;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+        }
+    }
+    &_border_active:before {
+        background: $color;
+    }
+    &_border_ghost:before {
+        background: $color-ghost;
+    }
+    &_simple_active {
+        @extend %button;
+        color: $purple;
+    }
+    &_simple_ghost {
+        @extend %button;
+        color: $dark-shade-50;
+    }
+    &_arrow {
+        @extend %button;
+        background: $color;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        i.material-icons {
+            font-family: Material Icons;
+            font-style: normal;
+            font-weight: normal;
+            text-transform: none;
+            font-size: 24px;
+        }
+    }
+}
+

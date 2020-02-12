@@ -1,3 +1,12 @@
 mixin like-btn(count, checked)
     label.like-btn(data-count=checked ? count+1 : checked class= checked ? "like-btn_active" : "")
+        if checked
+            i.material-icons favorite
+        else
+            i.material-icons favorite_border
         input(type="checkbox" name="like" value="like" checked)
+        
+
+
+
+        

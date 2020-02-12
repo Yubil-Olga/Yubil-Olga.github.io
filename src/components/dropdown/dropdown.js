@@ -29,7 +29,9 @@ function dropdown(path, totalCounter){
             if (totalCounter == 0 && path.querySelectorAll('.clean').length>0) {
                 path.querySelector('.clean').style.visibility="hidden";
             }
-            path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);
+            //path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);
+            path.querySelector('.input_default').textContent = titleCounter(totalCounter, path);
+            
         })
     })
     if (path.querySelectorAll('.clean').length>0) {

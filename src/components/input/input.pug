@@ -1,7 +1,8 @@
-mixin input(title, placeholder, type)
+mixin input(title, placeholder, type, text)
     .input_default
         label= title
-        input(
+        input.mask(
             type= type
             placeholder= placeholder
+            value=text
         )

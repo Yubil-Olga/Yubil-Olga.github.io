@@ -1,5 +1,6 @@
-mixin advantages(title, description, url)
-    .advantages(data-url=url)
+mixin advantages(title, description, icon)
+    .advantages
+        i.material-icons= icon
         .advantages__description
             h4.description__title= title
-            p= description
+            p= description 

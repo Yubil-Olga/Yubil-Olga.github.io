@@ -1,13 +1,16 @@
-document.querySelectorAll('.like-btn input').forEach(el => {
+document.querySelectorAll('.like-btn').forEach(el => {
     el.addEventListener('click', () => {
-        let likes=el.parentNode.getAttribute('data-count');
-        if (el.parentNode.classList.contains('like-btn_active')) {
+        let likes = el.getAttribute('data-count');
+        if (el.querySelector('input').checked) {
+            likes++; 
+            el.querySelector('.material-icons').textContent = 'favorite';
+            el.classList.add('like-btn_active');
+        }
+        else {
             likes--;
+            el.querySelector('.material-icons').textContent = 'favorite_border';
+            el.classList.remove('like-btn_active');
         }
-        if (!el.parentNode.classList.contains('like-btn_active')) {
-            likes++;
-        }
-        el.parentNode.classList.toggle('like-btn_active');
-        el.parentNode.setAttribute('data-count', likes);
+        el.setAttribute('data-count', likes);
     })
 })
