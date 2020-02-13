@@ -1,6 +1,10 @@
 extends ../base
+include ../../components/form-selection/form-selection
+include ../../components/form-registration/form-registration
+
 block variables
     - var pageTitle = 'Index page'
 
 block main
-    h1.title Index page
+    +form-selection
+    +form-registration

@@ -1,10 +1,10 @@
 import 'air-datepicker/dist/js/datepicker';
+import '../input/input';
 
 $('.datepicker-here').datepicker(
     {
-        range: true,
         clearButton: true,
-        multipleDatesSeparator: "-",
+        //startDate: "01.01.2020"
     }
 );
 

@@ -9,17 +9,13 @@
 .button {
     $color: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
     $color-ghost: linear-gradient(180deg, transparentize($purple,0.5) 0%, transparentize(#8BA4F9,0.5) 100%);
-    &_active {
-        @extend %button;
-        color: #fff;
-        background: $color;
-    }
-    &_ghost {
-        @extend %button;
-        color: #fff;
+    @extend %button;
+    color: #fff;
+    background: $color;
+    &:hover {
         background: $color-ghost 
     }
-    &_border_active, &_border_ghost {
+    &_border {
         @extend %button;
         color: $purple;
         background-color: #fff;
@@ -37,36 +33,34 @@
             z-index: -1;
             margin: -2px;
             border-radius: inherit;
+            background: $color;
         }
     }
-    &_border_active:before {
-        background: $color;
-    }
-    &_border_ghost:before {
+    &_border:hover::before {
         background: $color-ghost;
     }
-    &_simple_active {
+    &_simple {
         @extend %button;
         color: $purple;
     }
-    &_simple_ghost {
-        @extend %button;
+    &_simple:hover {
         color: $dark-shade-50;
     }
     &_arrow {
         @extend %button;
         background: $color;
-        width: 100%;
+        width: 320px;
         color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        text-align: center;
+        position: relative;
         i.material-icons {
             font-family: Material Icons;
             font-style: normal;
             font-weight: normal;
             text-transform: none;
             font-size: 24px;
+            position: absolute;
+            right: 12px;
         }
     }
 }

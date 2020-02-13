@@ -1,12 +1,10 @@
-document.addEventListener("click", (e) => {
-    if (e.target.closest('.dropdown') !== null) {
-        const path = e.target.closest('.dropdown');
-        if (e.target.className == "arrow_direction_bottom") {
-            path.classList.toggle("show");
-            let totalCounter = 0;
-            dropdown(path, totalCounter);  
-        } 
-    }
+document.querySelectorAll('.dropdown .arrow_direction_bottom').forEach(e => {
+    e.addEventListener('click', () => {
+        const path = e.closest('.dropdown');
+        path.classList.toggle("show");
+        let totalCounter = 0;
+        dropdown(path, totalCounter);  
+    })
 })
 
 function dropdown(path, totalCounter){
@@ -29,9 +27,7 @@ function dropdown(path, totalCounter){
             if (totalCounter == 0 && path.querySelectorAll('.clean').length>0) {
                 path.querySelector('.clean').style.visibility="hidden";
             }
-            //path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);
-            path.querySelector('.input_default').textContent = titleCounter(totalCounter, path);
-            
+            path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);
         })
     })
     if (path.querySelectorAll('.clean').length>0) {

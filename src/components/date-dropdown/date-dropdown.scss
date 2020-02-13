@@ -1,0 +1,26 @@
+@import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+
+.date-dropdown {
+    width: 150px;
+    height: 44px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid $dark-shade-25;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 11px;
+    .datepicker-here {
+        @include Body;
+        border: none;
+        width: 90px;
+    }
+    i.material-icons {
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

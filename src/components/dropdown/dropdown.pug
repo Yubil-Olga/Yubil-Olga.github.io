@@ -1,20 +1,19 @@
 include ../input/input
-mixin dropdown(title, ...items)
-    .dropdown
+mixin dropdown(show, title, ...items)
+    .dropdown(class=show ? "show": "")
         .dropdown__selection
             if title == "room"
                 p.dropdown__title.room Сколько комнат
             else
-                +input("Сколько гостей")
-                i.material-icons favorite_border
-            //- .arrow_direction_bottom
+                p.dropdown__title Сколько гостей
+            i.material-icons.arrow_direction_bottom expand_more
         .dropdown__menu
             each item in items
                 .menu__option
                     h3.option__title=item
                     .option__counter
                         .counter__decrement
-                        input.counter-item(value="0" readonly)
+                        input.counter-item(value="0" readonly name=item)
                         .counter__increment
             unless title == "room"
                 .menu__control

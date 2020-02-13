@@ -1,0 +1,18 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+
+mixin form-selection
+    form.form-selection.form
+        h1.form__title Найдём номера под ваши пожелания
+        .form-selection__date-picker-wrapper
+            .arrival
+                h3.form__sub-title прибытие
+                +date-dropdown
+            .departure
+                h3.form__sub-title выезд
+                +date-dropdown
+        .form-selection__dropdown-wrapper
+            h3.form__sub-title гости
+            +dropdown(false, "", "взрослые", "дети", "младенцы")
+        .button_arrow.form__footer подобрать номер
+            i.material-icons arrow_forward

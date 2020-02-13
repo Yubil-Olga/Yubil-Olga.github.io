@@ -1,0 +1,24 @@
+include ../input/input
+include ../radiobutton/radiobutton
+include ../toggle/toggle
+
+mixin form-registration
+    form.form-registration.form
+        h1.form__title Регистрация аккаунта
+        .form__section
+            +input(false, "Имя")
+            +input(false, "Фамилия")
+            +radiobutton
+        .form__section
+            h3.form__sub-title дата рождения
+            +input(true, "ДД.ММ.ГГГГ")
+        .form__section
+            h3.form__sub-title данные для входа в сервис
+            +input(false, "Email")
+            +input(false, "Пароль")
+            +toggle("Получать спецпредложения", false)
+        .button_arrow перейти к оплате
+            i.material-icons arrow_forward
+        .form-registration__login.form__footer
+            p Уже есть аккаунт на Toxin
+            .button_border войти
