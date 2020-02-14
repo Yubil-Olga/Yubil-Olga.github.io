@@ -1,4 +1,4 @@
 import './cards.scss';
-import '../../components/dropdown/dropdown';
-import '../../components/input/input';
-import '../../components/date-dropdown/date-dropdown';
+import '../../components/form-selection/form-selection';
+import '../../components/form-registration/form-registration';
+import '../../components/form-login/form-login';

@@ -1,4 +1,4 @@
-@import '../colors', '../fonts', '../../components/button/button.scss', '../../components/like-btn/like-btn.scss', '../../components/advantages/advantages.scss';
-@import '../../components/input/input.scss';
-@import '../../components/dropdown/dropdown.scss';
-@import '../../components/date-dropdown/date-dropdown.scss';
+@import '../colors', '../fonts', '../base.scss';
+@import '../../components/form-selection/form-selection.scss';
+@import '../../components/form-registration/form-registration.scss';
+@import '../../components/form-login/form-login.scss';

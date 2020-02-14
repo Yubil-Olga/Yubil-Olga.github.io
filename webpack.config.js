@@ -11,6 +11,7 @@ module.exports = {
     entry: {
         index: './pages/index/index.js',
         headersfooters: './pages/headers-footers/headers-footers.js',
+        formelements: './pages/form-elements/form-elements.js',
         cards: './pages/cards/cards.js'
     },
     output: {
@@ -34,6 +35,11 @@ module.exports = {
           filename: 'headers-footers.html',
           chunks: ['headersfooters', 'common'],
           template: './pages/headers-footers/headers-footers.pug'
+        }),
+        new HTMLWebpackPlugin({
+          filename: 'form-elements.html',
+          chunks: ['formelements', 'common'],
+          template: './pages/form-elements/form-elements.pug'
         }),
         new HTMLWebpackPlugin({
           filename: 'cards.html',

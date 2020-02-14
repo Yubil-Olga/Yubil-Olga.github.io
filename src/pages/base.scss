@@ -17,15 +17,3 @@ ul {
 li {
     list-style: none;
 }
-.button {
-    border-radius: 22px;
-    padding: 8px 21px;
-    &-light {
-        border: 2px solid $purple;
-        color: $purple;
-    }
-    &-dark {
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        color: #fff;
-    }
-}

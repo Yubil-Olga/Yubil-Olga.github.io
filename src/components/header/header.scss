@@ -1,5 +1,10 @@
 @import '../logo/logo.scss';
+@import '../button/button.scss';
+
 .header {
+    width: 1440px;
+    box-sizing: border-box;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
@@ -18,9 +23,10 @@
         display: flex;
         li {
             margin-right: $space-x;
+            display: flex;
         }
     }
-    .navigation__list {
+    .navigation__list, .navigation__toolbar {
         font: {
             family: Montserrat;
             weight: normal;
@@ -28,25 +34,23 @@
         }
         line-height: 17px;
     }
+    i.material-icons {
+        font-family: Material Icons;
+        font-style: normal;
+        font-size: 24px;
+    }
+}
+.navigation__toolbar a:not(:last-child) {
+    margin-right: 20px;
 }
 .navigation__toolbar {
-    text-transform: uppercase;
-    font: {
-        family: Montserrat;
-        weight: bold;
-        size: 12px;
-    }
-    line-height: 15px;
-    li:last-child {
-        margin-right: 0;
-    }
-    .user {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
-        color: $dark-shade-50;
-        text-transform: none;
-        padding-left: $space-x;
-        border-left: 1px solid rgba($dark-shade, 0.1);;
+    z-index: 0;
+    .button_border {
+        padding: 6px 18px;
     }
 }
+.navigation__toolbar .user {
+    border-left: 1px solid rgba($dark-shade, 0.1);
+    padding-left: 30px;
+}
+

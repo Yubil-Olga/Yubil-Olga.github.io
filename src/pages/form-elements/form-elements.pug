@@ -1,0 +1,30 @@
+extends ../base
+include ../../components/like-btn/like-btn
+include ../../components/advantages/advantages
+include ../../components/input/input
+include ../../components/dropdown/dropdown
+include ../../components/date-dropdown/date-dropdown
+
+block variables
+    - var pageTitle = 'Form elements'
+
+block main
+     h1 Form elements
+     +date-dropdown("19.08.2019")
+     +date-dropdown
+     +dropdown(false, "", "man", "child", "baby")
+     +input(false, "Email")
+     +input(false, "", "This is pretty awesome")
+     +input(true, "ДД.ММ.ГГГГ")
+     +like-btn(5, true)
+     .button click me
+     .button click me
+     .button_border click me
+     .button_border click me
+     .button_simple click me
+     .button_simple click me
+     .button_arrow click me
+          i.material-icons arrow_forward
+     +advantages("Комфорт", "Шумопоглощающие стены", "insert_emoticon")
+     +advantages("Удобство", "Окно в каждой из спален", "location_city")
+        

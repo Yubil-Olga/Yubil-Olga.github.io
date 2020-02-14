@@ -1,0 +1,14 @@
+include ../input/input
+mixin form-login
+    .form.form-login
+        h1.form__title Войти
+        .form__section
+            +input(false, "Email")
+            +input(false, "Пароль")
+        .form__section
+            .button_arrow войти
+                i.material-icons arrow_forward
+        .form__footer
+            p Уже есть аккаунт на Toxin
+            .button_border.form__button создать
+

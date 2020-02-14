@@ -1,10 +1,14 @@
 %button {
     @include H3;
-    padding: 15px 20px;
     display: inline-block;
     border-radius: 22px;
     cursor: pointer;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99px;
+    height: 44px;
 }
 .button {
     $color: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
@@ -20,7 +24,6 @@
         color: $purple;
         background-color: #fff;
         background-clip: padding-box;
-        padding: 13px 18px;
         border: 2px solid transparent;
         position: relative;
         &:before {

@@ -11,20 +11,20 @@ mixin header(auth)
                     a(href="") About us
                 li
                     a(href="") Services
+                    i.material-icons expand_more
                 li
                     a(href="") Careers
                 li
                     a(href="") News
                 li
                     a(href="") Documentation
-            ul.navigation__toolbar
+            .navigation__toolbar
                 if auth
-                    li.user=user
+                    .user=user
                 else
-                    li
-                        a(href="").button.button-light Login
-                    li
-                        a(href="").button.button-dark Register
+                    a(href="#").button_border Login
+                    a(href="#").button Register
+    
     
         
                 

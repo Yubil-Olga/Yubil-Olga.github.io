@@ -11,6 +11,12 @@
     .input_default:not(:last-child) {
         margin-bottom: 10px;
     }
+    p {
+        @include Body;
+        line-height: 18px;
+        color: #000;
+        margin: 0;
+    }
 }
 .form__title {
     @include H1;
@@ -21,4 +27,12 @@
 }
 .form__footer {
     margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 0;
+}
+.form__button {
+    width: 99px;
+    height: 44px;
 }

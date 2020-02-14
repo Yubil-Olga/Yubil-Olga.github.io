@@ -3,14 +3,3 @@
 @import '../radiobutton/radiobutton.scss';
 @import '../toggle/toggle.scss';
 
-.form-registration__login {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    p {
-        @include Body;
-        line-height: 18px;
-        color: #000;
-        margin: 0;
-    }
-}
