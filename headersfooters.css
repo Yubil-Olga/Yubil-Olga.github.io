@@ -33,7 +33,70 @@
   height: 13px;
   background: url(images/TOXIN.png) center/contain no-repeat; }
 
+.button, .button_border, .button_simple, .button_arrow {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 22px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 99px;
+  height: 44px; }
+
+.button {
+  color: #fff;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .button:hover {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+  .button_border {
+    color: #BC9CFF;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    position: relative; }
+    .button_border:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .button_border:hover::before {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+  .button_simple {
+    color: #BC9CFF; }
+  .button_simple:hover {
+    color: rgba(31, 32, 65, 0.5); }
+  .button_arrow {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    width: 320px;
+    color: #fff;
+    text-align: center;
+    position: relative; }
+    .button_arrow i.material-icons {
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none;
+      font-size: 24px;
+      position: absolute;
+      right: 12px; }
+
 .header {
+  width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   background-color: #fff;
@@ -49,29 +112,29 @@
   .header__navigation ul {
     display: flex; }
     .header__navigation ul li {
-      margin-right: 30px; }
-  .header__navigation .navigation__list {
+      margin-right: 30px;
+      display: flex; }
+  .header__navigation .navigation__list, .header__navigation .navigation__toolbar {
     font-family: Montserrat;
     font-weight: normal;
     font-size: 14px;
     line-height: 17px; }
+  .header__navigation i.material-icons {
+    font-family: Material Icons;
+    font-style: normal;
+    font-size: 24px; }
+
+.navigation__toolbar a:not(:last-child) {
+  margin-right: 20px; }
 
 .navigation__toolbar {
-  text-transform: uppercase;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px; }
-  .navigation__toolbar li:last-child {
-    margin-right: 0; }
-  .navigation__toolbar .user {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    color: rgba(31, 32, 65, 0.5);
-    text-transform: none;
-    padding-left: 30px;
-    border-left: 1px solid rgba(31, 32, 65, 0.1); }
+  z-index: 0; }
+  .navigation__toolbar .button_border {
+    padding: 6px 18px; }
+
+.navigation__toolbar .user {
+  border-left: 1px solid rgba(31, 32, 65, 0.1);
+  padding-left: 30px; }
 
 .logo {
   display: flex;
@@ -203,16 +266,6 @@ ul {
 
 li {
   list-style: none; }
-
-.button {
-  border-radius: 22px;
-  padding: 8px 21px; }
-  .button-light {
-    border: 2px solid #BC9CFF;
-    color: #BC9CFF; }
-  .button-dark {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: #fff; }
 
 body {
   display: grid;

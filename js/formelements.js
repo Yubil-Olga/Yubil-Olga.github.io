@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./pages/cards/cards.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./pages/form-elements/form-elements.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -142,40 +142,6 @@ eval("document.querySelectorAll('.dropdown .arrow_direction_bottom').forEach(e =
 
 /***/ }),
 
-/***/ "./components/form-login/form-login.js":
-/*!*********************************************!*\
-  !*** ./components/form-login/form-login.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("\n\n//# sourceURL=webpack:///./components/form-login/form-login.js?");
-
-/***/ }),
-
-/***/ "./components/form-registration/form-registration.js":
-/*!***********************************************************!*\
-  !*** ./components/form-registration/form-registration.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("\n\n//# sourceURL=webpack:///./components/form-registration/form-registration.js?");
-
-/***/ }),
-
-/***/ "./components/form-selection/form-selection.js":
-/*!*****************************************************!*\
-  !*** ./components/form-selection/form-selection.js ***!
-  \*****************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../date-dropdown/date-dropdown */ \"./components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n/* harmony import */ var _dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\n\n//# sourceURL=webpack:///./components/form-selection/form-selection.js?");
-
-/***/ }),
-
 /***/ "./components/input/input.js":
 /*!***********************************!*\
   !*** ./components/input/input.js ***!
@@ -188,26 +154,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 
 /***/ }),
 
-/***/ "./pages/cards/cards.js":
-/*!******************************!*\
-  !*** ./pages/cards/cards.js ***!
-  \******************************/
+/***/ "./pages/form-elements/form-elements.js":
+/*!**********************************************!*\
+  !*** ./pages/form-elements/form-elements.js ***!
+  \**********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.scss */ \"./pages/cards/cards.scss\");\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cards_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_form_selection_form_selection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/form-selection/form-selection */ \"./components/form-selection/form-selection.js\");\n/* harmony import */ var _components_form_registration_form_registration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/form-registration/form-registration */ \"./components/form-registration/form-registration.js\");\n/* harmony import */ var _components_form_registration_form_registration__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_form_registration_form_registration__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components_form_login_form_login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/form-login/form-login */ \"./components/form-login/form-login.js\");\n/* harmony import */ var _components_form_login_form_login__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_form_login_form_login__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./pages/cards/cards.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-elements.scss */ \"./pages/form-elements/form-elements.scss\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form_elements_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_input_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/input/input */ \"./components/input/input.js\");\n/* harmony import */ var _components_date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/date-dropdown/date-dropdown */ \"./components/date-dropdown/date-dropdown.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./pages/form-elements/form-elements.js?");
 
 /***/ }),
 
-/***/ "./pages/cards/cards.scss":
-/*!********************************!*\
-  !*** ./pages/cards/cards.scss ***!
-  \********************************/
+/***/ "./pages/form-elements/form-elements.scss":
+/*!************************************************!*\
+  !*** ./pages/form-elements/form-elements.scss ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/cards/cards.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/form-elements/form-elements.scss?");
 
 /***/ })
 
