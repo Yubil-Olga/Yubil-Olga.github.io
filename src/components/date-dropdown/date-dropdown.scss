@@ -24,3 +24,57 @@
         cursor: pointer;
     }
 }
+.datepicker {
+    font: {
+        family: Montserrat;
+        weight: normal;
+        size: 12px;
+    }
+    line-height: 15px;
+    color: $dark-shade-50;
+    .datepicker--cell {
+        border-radius: 50%;
+        background: #fff;
+    }
+    .-current- {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        color: #fff;
+        font-weight: bold;
+    }
+    .datepicker--cell.-selected- {
+        background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+        color: #fff;
+        font-weight: bold;
+    }
+}
+.datepicker--nav-title, .datepicker--nav-title i {
+    @include H2;
+}
+.datepicker--nav-action i.material-icons{
+    color: $purple;
+    font-family: Material Icons;
+    font-style: normal;
+    font-size: 24px;
+}
+.datepicker--day-name {
+    color: $purple;
+    font-weight: bold;
+}
+.datepicker--buttons {
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.datepicker--button {
+    @include H3;
+    color: $dark-shade-50;
+    display: inline;
+    height: unset;
+}
+.apply--button {
+    @include H3;
+    color: $purple;
+    cursor: pointer;
+}
