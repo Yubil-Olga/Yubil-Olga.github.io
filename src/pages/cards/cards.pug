@@ -2,11 +2,16 @@ extends ../base
 include ../../components/form-selection/form-selection
 include ../../components/form-registration/form-registration
 include ../../components/form-login/form-login
+include ../../components/form-booking/form-booking
+include ../../components/card-room/card-room
 
 block variables
     - var pageTitle = 'Cards'
 
 block main
+    +card-room('images/room1.png', 888, true, 9990, 5, 145)
+    +card-room('images/room2.png', 840, false, 9900, 4, 65)
+    +form-booking(888, 9990, 2179)
     +form-selection
     +form-registration
     +form-login

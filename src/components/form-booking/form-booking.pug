@@ -1,0 +1,38 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+
+mixin form-booking(number, price, discount)
+    form.form-booking.form
+        header.form-booking__room-details
+            h2.room-details__room-number=number
+                span  люкс
+            .room-details__price=price
+        .form-selection__date-picker-wrapper
+            .arrival
+                h3.form__sub-title прибытие
+                +date-dropdown
+            .departure
+                h3.form__sub-title выезд
+                +date-dropdown
+        .form-selection__dropdown-wrapper
+            h3.form__sub-title гости
+            +dropdown(false, "", "взрослые", "дети", "младенцы")
+        .form-booking__order-details
+            .order-details__order-item
+                .order-item__name #{price} ₽ х 
+                    span.order-item__days 0
+                .order-item__price 0
+            .order-details__order-item
+                .order-item__name.discount(date-discount=discount) Сбор за услуги: скидка #{discount} ₽
+                    span.order-item__info  i
+                .order-item__price 0
+            .order-details__order-item
+                .order-item__name Сбор за дополнительные услуги
+                    span.order-item__info  i
+                .order-item__price 300
+            .order-details__item-total
+                .item-total__name Итого
+                .item-total__dots
+                .item-total__price 38 081₽
+        .button_arrow забронировать
+            i.material-icons arrow_forward

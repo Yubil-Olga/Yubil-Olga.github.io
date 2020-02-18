@@ -1,0 +1,80 @@
+@import '../form/form.scss';
+@import '../date-dropdown/date-dropdown.scss';
+@import '../dropdown/dropdown.scss';
+@import '../button/button.scss';
+
+.form-booking__room-details {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.room-details__room-number {
+    @include H2;
+    margin: 0;
+    &:before {
+        content: "№ ";
+        font-size: 14px;
+    }
+    span {
+        @include H3;
+        color: $purple;
+    }
+}
+.room-details__price {
+    font: {
+        family: Montserrat;
+        weight: bold;
+        size: 14px;
+    }
+    line-height: 18px;
+    color: $dark-shade-50;
+    &:after {
+        content: " в сутки";
+        font-weight: normal;
+    }
+}
+.order-details__order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include Body;
+    padding-bottom: 10px;
+}
+.order-item__name {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+.order-details__order-item:first-of-type {
+    .order-item__name {
+        display: inline-block;
+    }
+}
+.order-item__price {
+    &:after {
+        content: ' ₽'
+    }
+}
+.order-item__info {
+    border-radius: 50%;
+    border: 1px solid $dark-shade-25;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.order-details__item-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    @include H2;
+    padding-top: 10px;
+}
+.item-total__dots {
+    border-bottom: 1px dashed $dark-shade-25;
+    width: auto;
+    flex: 1;
+}

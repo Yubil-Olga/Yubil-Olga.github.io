@@ -23,7 +23,6 @@ $('.datepicker-here').datepicker(
                  });
             }
         }
-        //startDate: "01.01.2020"
     }
 );
 $('.dropdown-arrow').click(function() {

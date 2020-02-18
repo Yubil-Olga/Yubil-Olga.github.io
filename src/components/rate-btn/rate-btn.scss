@@ -1,0 +1,16 @@
+.rate-btn {
+    .rate-btn__item {
+        position: relative;
+    }
+    i.material-icons {
+        font-family: Material Icons;
+        font-style: normal;
+        font-size: 24px;
+        color: $purple;
+    }
+    input {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+    }
+}
