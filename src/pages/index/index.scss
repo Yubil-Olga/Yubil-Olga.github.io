@@ -1,3 +1,26 @@
 @import '../colors', '../fonts', '../base.scss';
+@import '../../components/header/header.scss';
+@import '../../components/footer/footer.scss';
+@import '../../components/form-selection/form-selection.scss';
+
+.container {
+    width: 1440px;
+    height: 830px;
+    margin: 0 auto;
+    background: url('./bg-index.png') no-repeat;
+    padding: 70px 140px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container__item:last-child {
+    display: flex;
+    justify-content: flex-end;
+    .slogan {
+        @include Body;
+        width: 297px;
+    }
+}
 
 

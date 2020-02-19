@@ -9,12 +9,26 @@ block variables
     - var pageTitle = 'Cards'
 
 block main
-    +card-room('images/room1.png', 888, true, 9990, 5, 145)
-    +card-room('images/room2.png', 840, false, 9900, 4, 65)
-    +form-booking(888, 9990, 2179)
-    +form-selection
-    +form-registration
-    +form-login
+    .container
+        .container__item
+            +form-selection
+        .container__item
+            +form-registration
+        .container__item
+            +form-booking(888, 9990, 2179)
+        .container__item
+            +form-login
+        .container__item
+            .calendar
+        .container__item
+            +card-room('images/room1.png', 888, true, 9990, 5, 145)
+        .container__item
+            +card-room('images/room2.png', 840, false, 9900, 4, 65)
+    
+    
+    
+    
+    
     
     
 

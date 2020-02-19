@@ -13,7 +13,9 @@ module.exports = {
         index: './pages/index/index.js',
         headersfooters: './pages/headers-footers/headers-footers.js',
         formelements: './pages/form-elements/form-elements.js',
-        cards: './pages/cards/cards.js'
+        cards: './pages/cards/cards.js',
+        registration: './pages/registration/registration.js',
+        searchroom: './pages/search-room/search-room.js'
     },
     output: {
         filename: './js/[name].js',
@@ -26,11 +28,11 @@ module.exports = {
         hot: isDev,
         stats: 'errors-only'
       },
-    optimization: {
-      splitChunks: {
-        chunks: 'all'
-      }
-    },
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: 'all'
+    //   }
+    // },
     plugins: [
         new HTMLWebpackPlugin({
             filename: 'index.html',
@@ -51,6 +53,16 @@ module.exports = {
           filename: 'cards.html',
           chunks: ['cards', 'common'],
           template: './pages/cards/cards.pug'
+        }),
+        new HTMLWebpackPlugin({
+          filename: 'registration.html',
+          chunks: ['registration', 'common'],
+          template: './pages/registration/registration.pug'
+        }),
+        new HTMLWebpackPlugin({
+          filename: 'search-room.html',
+          chunks: ['searchroom', 'common'],
+          template: './pages/search-room/search-room.pug'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

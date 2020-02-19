@@ -1,6 +1,6 @@
 mixin header(auth)
     header.header
-        .logo
+        a(href="index.html").logo
             .logo__icon
             .logo__text
         .header__navigation
@@ -22,8 +22,8 @@ mixin header(auth)
                 if auth
                     .user=user
                 else
-                    a(href="#").button_border Login
-                    a(href="#").button Register
+                    a(href="registration.html").button_border Login
+                    a(href="registration.html").button Register
     
     
         

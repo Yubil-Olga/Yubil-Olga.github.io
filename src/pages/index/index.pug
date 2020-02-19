@@ -1,8 +1,17 @@
 extends ../base
+include ../../components/header/header
+include ../../components/footer/footer
+include ../../components/form-selection/form-selection
 
 
 block variables
     - var pageTitle = 'Index page'
 
 block main
-    
+    +header(false)
+    .container
+        .container__item
+            +form-selection
+        .container__item
+            p.slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +footer(false)

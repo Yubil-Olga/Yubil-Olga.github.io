@@ -1,0 +1,39 @@
+extends ../base
+include ../../components/header/header
+include ../../components/footer/footer
+include ../../components/dropdown/dropdown
+include ../../components/range-slider/range-slider
+include ../../components/card-room/card-room
+
+block variables
+    - var pageTitle = 'Search room page'
+
+block main
+    +header(false)
+    .container.grid_columns_4
+        .grid__fruction
+            .search-room__filter
+                h3 даты пребывания в отеле
+                h3 гости
+                +dropdown(false, "", "взрослые", "дети", "младенцы")
+                h3 диапазон цены
+                +range-slider
+                p Стоимость за сутки пребывания в номере
+        .grid__fraction_col_3
+            .grid_columns_3
+                +card-room('images/room1.png', 888, true, 9990, 5, 145)
+                +card-room('images/room2.png', 840, false, 9900, 4, 65)
+                +card-room('images/room1.png', 888, true, 9990, 5, 145)
+                +card-room('images/room2.png', 840, false, 9900, 4, 65)
+                +card-room('images/room1.png', 888, true, 9990, 5, 145)
+                +card-room('images/room2.png', 840, false, 9900, 4, 65)
+                +card-room('images/room1.png', 888, true, 9990, 5, 145)
+                +card-room('images/room2.png', 840, false, 9900, 4, 65)
+                +card-room('images/room1.png', 888, true, 9990, 5, 145)
+                +card-room('images/room2.png', 840, false, 9900, 4, 65)
+                +card-room('images/room1.png', 888, true, 9990, 5, 145)
+                +card-room('images/room2.png', 840, false, 9900, 4, 65)
+            .grid__fruction_col_3
+                .pagination
+
+    +footer(false)

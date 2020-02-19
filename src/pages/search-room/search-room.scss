@@ -1,0 +1,27 @@
+@import '../colors', '../fonts', '../base.scss';
+@import '../../components/header/header.scss';
+@import '../../components/footer/footer.scss';
+@import '../../components/dropdown/dropdown.scss';
+@import '../../components/range-slider/range-slider.scss';
+@import '../../components/card-room/card-room.scss';
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 140px;
+    box-sizing: border-box;
+}
+.grid_columns_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px 12px;
+}
+.grid_columns_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+}
+.grid__fruction_col_3 {
+    grid-column: span 3;
+}

@@ -1,0 +1,14 @@
+@import '../colors', '../fonts', '../base.scss';
+@import '../../components/header/header.scss';
+@import '../../components/footer/footer.scss';
+@import '../../components/form-registration/form-registration.scss';
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    background: url('./image4.png') no-repeat;
+    height: 702px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

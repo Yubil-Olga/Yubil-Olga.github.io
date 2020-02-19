@@ -4,3 +4,13 @@
 @import '../../components/form-login/form-login.scss';
 @import '../../components/form-booking/form-booking.scss';
 @import '../../components/card-room/card-room.scss';
+
+.container {
+    column-count: 3;
+    margin: 0 auto;
+    padding: 150px 140px;
+}
+.container__item {
+    margin-bottom: 40px;
+    break-inside: avoid;
+}
