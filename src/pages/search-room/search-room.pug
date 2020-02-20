@@ -1,15 +1,36 @@
-extends ../base
-include ../../components/header/header
-include ../../components/footer/footer
+extends ../page
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
 include ../../components/card-room/card-room
+include ../../components/checkbox/checkbox
+include ../../components/expandable-checkbox/expandable-checkbox
 
 block variables
     - var pageTitle = 'Search room page'
+    - var orders = ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]
+    - var accessibility = [
+    - {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
+    - {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
+    - ]
+    - var comfort = [
+    - "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"    
+    - ]
+    - var rooms = [
+    - {number: "888", price: "9990", url: "images/room1.png", lux: true, stars: "5", comments: "145"},
+    - {number: "840", price: "9900", url: "images/room2.png", lux: false, stars: "4", comments: "65"},
+    - {number: "980", price: "8500", url: "images/image3.png", lux: true, stars: "3", comments: "35"},
+    - {number: "856", price: "7300", url: "images/image5.png", lux: false, stars: "5", comments: "19"},
+    - {number: "740", price: "6000", url: "images/image4.png", lux: false, stars: "4", comments: "44"},
+    - {number: "982", price: "5800", url: "images/image6.png", lux: false, stars: "3", comments: "56"},
+    - {number: "678", price: "5500", url: "images/image11.png", lux: false, stars: "5", comments: "45"},
+    - {number: "450", price: "5300", url: "images/image7.png", lux: false, stars: "4", comments: "39"},
+    - {number: "350", price: "5000", url: "images/image12.png", lux: false, stars: "3", comments: "77"},
+    - {number: "666", price: "5000", url: "images/image8.png", lux: false, stars: "5", comments: "25"},
+    - {number: "444", price: "5000", url: "images/image9.png", lux: false, stars: "3", comments: "15"},
+    - {number: "352", price: "5000", url: "images/image10.png", lux: false, stars: "3", comments: "55"}    
+    - ]
 
 block main
-    +header(false)
     .container.grid_columns_4
         .grid__fruction
             .search-room__filter
@@ -19,21 +40,19 @@ block main
                 h3 диапазон цены
                 +range-slider
                 p Стоимость за сутки пребывания в номере
+                h3 Checkbox Buttons
+                +checkbox(false,...orders)
+                h3 доступность
+                +checkbox(true, ...accessibility)
+                h3 удобства номера
+                +dropdown(false, "room", "спальни", "кровати", "ванные комнаты")
+                +expandable-checkbox("дополнительные удобства", ...comfort)
         .grid__fraction_col_3
+            h1 Номера, которые мы для вас подобрали
             .grid_columns_3
-                +card-room('images/room1.png', 888, true, 9990, 5, 145)
-                +card-room('images/room2.png', 840, false, 9900, 4, 65)
-                +card-room('images/room1.png', 888, true, 9990, 5, 145)
-                +card-room('images/room2.png', 840, false, 9900, 4, 65)
-                +card-room('images/room1.png', 888, true, 9990, 5, 145)
-                +card-room('images/room2.png', 840, false, 9900, 4, 65)
-                +card-room('images/room1.png', 888, true, 9990, 5, 145)
-                +card-room('images/room2.png', 840, false, 9900, 4, 65)
-                +card-room('images/room1.png', 888, true, 9990, 5, 145)
-                +card-room('images/room2.png', 840, false, 9900, 4, 65)
-                +card-room('images/room1.png', 888, true, 9990, 5, 145)
-                +card-room('images/room2.png', 840, false, 9900, 4, 65)
+                each room in rooms
+                    +card-room(room)
             .grid__fruction_col_3
                 .pagination
 
-    +footer(false)
+    

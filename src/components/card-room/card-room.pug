@@ -1,19 +1,21 @@
 include ../rate-btn/rate-btn
 
-mixin card-room(url, number, lux, price, stars, comments)
-    .card-room
+mixin card-room(room)
+    a(href="room-details.html").card-room
         .card-room__image
-            img(src=url)
+            img(src=room.url)
             .card-room__slider
                 i.material-icons expand_more
                 i.material-icons expand_more
         footer.card-room__footer
             .card-room__room-details
-                h2.room-details__room-number=number
-                    if lux
+                h2.room-details__room-number=room.number
+                    if room.lux
                         span  люкс
-                .room-details__price=price
+                .room-details__price=room.price
             .card-room__room-rating
-                +rate-btn(5,stars)
-                .room-rating__comments=comments
+                +rate-btn(5,room.stars)
+                .room-rating__comments=room.comments
+
+
 

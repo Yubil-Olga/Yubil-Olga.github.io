@@ -1,11 +1,9 @@
-mixin checkbox
+mixin checkbox (rich, ...items)
     .input_checkbox
-        label Завтрак
-            input(type="checkbox")
-            .checkmark
-        label Письменный стол
-            input(type="checkbox")
-            .checkmark
-        label Стул для кормления
-            input(type="checkbox")
-            .checkmark
+        each item in items
+            label
+                if rich
+                    h4=item.title
+                p=rich ? item.description : item
+                input(type="checkbox")
+                .checkmark

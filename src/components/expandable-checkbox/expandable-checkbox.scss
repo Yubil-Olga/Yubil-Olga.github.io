@@ -1,0 +1,26 @@
+@import '../checkbox/checkbox.scss';
+
+.expanded-checkbox__selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .selection__button {
+        cursor: pointer;
+    }
+    i.material-icons {
+        font-family: Material Icons;
+        font-style: normal;
+        font-size: 24px;
+    }
+}
+.expanded-checkbox__list {
+    display: none;
+}
+.show {
+    .selection__button {
+        transform: rotate(180deg);
+    }
+    .expanded-checkbox__list {
+        display: block;
+    }
+}

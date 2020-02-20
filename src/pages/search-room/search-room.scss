@@ -1,9 +1,9 @@
-@import '../colors', '../fonts', '../base.scss';
-@import '../../components/header/header.scss';
-@import '../../components/footer/footer.scss';
+@import '../colors', '../fonts', '../page.scss';
 @import '../../components/dropdown/dropdown.scss';
 @import '../../components/range-slider/range-slider.scss';
 @import '../../components/card-room/card-room.scss';
+@import '../../components/checkbox/checkbox.scss';
+@import '../../components/expandable-checkbox/expandable-checkbox.scss';
 
 .container {
     width: 1440px;

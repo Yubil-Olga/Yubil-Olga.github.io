@@ -1,0 +1,20 @@
+@import '../fonts.scss', '../colors', '../components/header/header.scss', '../components/footer/footer.scss';
+
+body {
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 0;
+    background-color: #E5E5E5;
+}
+h1, h3 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}

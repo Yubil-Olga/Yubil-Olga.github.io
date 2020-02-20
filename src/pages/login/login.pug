@@ -1,0 +1,11 @@
+extends ../page
+include ../../components/form-login/form-login
+
+
+block variables
+    - var pageTitle = 'Login page'
+
+block main
+    .container
+        .container__item
+            +form-login

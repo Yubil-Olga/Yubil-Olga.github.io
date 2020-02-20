@@ -1,6 +1,4 @@
-extends ../base
-include ../../components/header/header
-include ../../components/footer/footer
+extends ../page
 include ../../components/form-registration/form-registration
 
 
@@ -8,8 +6,6 @@ block variables
     - var pageTitle = 'Registration page'
 
 block main
-    +header(false)
     .container
         .container__item
             +form-registration
-    +footer(false)

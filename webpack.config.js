@@ -15,7 +15,9 @@ module.exports = {
         formelements: './pages/form-elements/form-elements.js',
         cards: './pages/cards/cards.js',
         registration: './pages/registration/registration.js',
-        searchroom: './pages/search-room/search-room.js'
+        login: './pages/login/login.js',
+        searchroom: './pages/search-room/search-room.js',
+        roomdetails: './pages/room-details/room-details.js'
     },
     output: {
         filename: './js/[name].js',
@@ -60,9 +62,19 @@ module.exports = {
           template: './pages/registration/registration.pug'
         }),
         new HTMLWebpackPlugin({
+          filename: 'login.html',
+          chunks: ['login', 'common'],
+          template: './pages/login/login.pug'
+        }),
+        new HTMLWebpackPlugin({
           filename: 'search-room.html',
           chunks: ['searchroom', 'common'],
           template: './pages/search-room/search-room.pug'
+        }),
+        new HTMLWebpackPlugin({
+          filename: 'room-details.html',
+          chunks: ['roomdetails', 'common'],
+          template: './pages/room-details/room-details.pug'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
