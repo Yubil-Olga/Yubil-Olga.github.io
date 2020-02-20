@@ -119,6 +119,28 @@ eval("/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals 
 
 /***/ }),
 
+/***/ "./components/dropdown/dropdown.js":
+/*!*****************************************!*\
+  !*** ./components/dropdown/dropdown.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("document.querySelectorAll('.dropdown .arrow_direction_bottom').forEach(e => {\r\n    e.addEventListener('click', () => {\r\n        const path = e.closest('.dropdown');\r\n        path.classList.toggle(\"show\");\r\n        let totalCounter = 0;\r\n        dropdown(path, totalCounter);  \r\n    })\r\n})\r\n\r\nfunction dropdown(path, totalCounter){\r\n    path.querySelectorAll('.menu__option').forEach(el => {\r\n        el.addEventListener('click', (e)=> {\r\n            let counter = el.querySelector('.counter-item').value;\r\n            if (e.target == el.querySelector('.counter__increment') && counter<4) {\r\n                counter++;\r\n                el.querySelector('.counter-item').value = counter;\r\n                totalCounter++;\r\n            }\r\n            if (e.target == el.querySelector('.counter__decrement') && counter>0) {\r\n                counter--;\r\n                el.querySelector('.counter-item').value = counter;\r\n                totalCounter--;\r\n            }\r\n            if (totalCounter>0 && path.querySelectorAll('.clean').length>0) {\r\n                path.querySelector('.clean').style.visibility=\"visible\";\r\n            }\r\n            if (totalCounter == 0 && path.querySelectorAll('.clean').length>0) {\r\n                path.querySelector('.clean').style.visibility=\"hidden\";\r\n            }\r\n            path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);\r\n        })\r\n    })\r\n    if (path.querySelectorAll('.clean').length>0) {\r\n        path.querySelector('.clean').addEventListener('click', () => {\r\n            totalCounter = 0;\r\n            path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);\r\n            path.querySelector('.clean').style.visibility=\"hidden\";\r\n            path.querySelectorAll('.counter-item').forEach((item)=> {\r\n                item.value = 0;\r\n            })\r\n        })\r\n    } \r\n}\r\n\r\nfunction titleCounter(total, path) {\r\n    let word =\"\";\r\n    let title=\"\";\r\n    if (path.querySelector('.dropdown__title').classList.contains('room')){\r\n        path.querySelectorAll('.menu__option').forEach(el => {\r\n            title += el.querySelector('.counter-item').value +\" \"+ el.querySelector('.option__title').textContent + \", \";\r\n        })\r\n        if (total ==0) {\r\n            title= \"Сколько комнат\"\r\n        }\r\n    }\r\n    else {\r\n        title = \"Сколько гостей\";\r\n        switch(total) {\r\n            case 0:\r\n                return title;\r\n            case 1:\r\n                word= \"гость\";\r\n                title = `${total} ${word}`;\r\n                break;\r\n            case 2:\r\n            case 3:\r\n            case 4:\r\n                word= \"гостя\";\r\n                title = `${total} ${word}`;\r\n                break;\r\n            default:\r\n                word= \"гостей\";\r\n                title = `${total} ${word}`;\r\n    }\r\n    }\r\n    return title;\r\n}\r\n\n\n//# sourceURL=webpack:///./components/dropdown/dropdown.js?");
+
+/***/ }),
+
+/***/ "./components/expandable-checkbox/expandable-checkbox.js":
+/*!***************************************************************!*\
+  !*** ./components/expandable-checkbox/expandable-checkbox.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("document.querySelectorAll('.expanded-checkbox .selection__button').forEach(el => {\r\n    el.addEventListener('click', (e) => {\r\n        e.target.closest('.expanded-checkbox').classList.toggle('show');\r\n    })\r\n})\n\n//# sourceURL=webpack:///./components/expandable-checkbox/expandable-checkbox.js?");
+
+/***/ }),
+
 /***/ "./components/range-slider/range-slider.js":
 /*!*************************************************!*\
   !*** ./components/range-slider/range-slider.js ***!
@@ -139,7 +161,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _search_room_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search-room.scss */ \"./pages/search-room/search-room.scss\");\n/* harmony import */ var _search_room_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_search_room_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_range_slider_range_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/range-slider/range-slider */ \"./components/range-slider/range-slider.js\");\n\r\n\n\n//# sourceURL=webpack:///./pages/search-room/search-room.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _search_room_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search-room.scss */ \"./pages/search-room/search-room.scss\");\n/* harmony import */ var _search_room_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_search_room_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_range_slider_range_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/range-slider/range-slider */ \"./components/range-slider/range-slider.js\");\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components_expandable_checkbox_expandable_checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/expandable-checkbox/expandable-checkbox */ \"./components/expandable-checkbox/expandable-checkbox.js\");\n/* harmony import */ var _components_expandable_checkbox_expandable_checkbox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_expandable_checkbox_expandable_checkbox__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./pages/search-room/search-room.js?");
 
 /***/ }),
 
