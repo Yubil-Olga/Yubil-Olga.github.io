@@ -451,7 +451,8 @@ li {
       outline: none; }
 
 .dropdown {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .dropdown .dropdown__selection {
     display: flex;
     justify-content: space-between;
@@ -503,7 +504,7 @@ li {
   border-radius: 0 0 2px 2px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-top: none;
-  width: 320px;
+  width: 100%;
   box-sizing: border-box;
   background-color: #fff;
   z-index: 10;

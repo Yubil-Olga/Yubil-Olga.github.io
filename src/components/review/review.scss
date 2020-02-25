@@ -1,0 +1,20 @@
+@import '../like-btn/like-btn.scss';
+
+.review {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+.review__icon {
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.review__title {
+    @include Body;
+    align-self: center;
+}
+.review__text {
+    @include Body;
+}

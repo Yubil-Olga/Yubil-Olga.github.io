@@ -1,1 +1,36 @@
-@import '../../../node_modules/paginationjs/dist/pagination.css';
+.pagination {
+    display: flex;
+    justify-content: center;
+    a {
+        font: {
+            family: Montserrat;
+            weight: normal;
+            size: 12px;
+        }
+        line-height: 14px;
+        color: $dark-shade-50;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        &.current {
+            background: linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
+            color: #fff;
+        }
+    }
+    i.material-icons {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 13px 0;
+        box-sizing: border-box;
+        font-family: Material Icons;
+        font-style: normal;
+        font-size: 24px;
+        color: #fff;
+        background: linear-gradient(#6FCF97 0%, #66D2EA 100%);
+    }
+}

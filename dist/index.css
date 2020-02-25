@@ -282,7 +282,7 @@ body {
   margin: 0;
   background-color: #E5E5E5; }
 
-h1, h3 {
+h1, h2, h3, h4, p, ul {
   margin: 0; }
 
 a {
@@ -482,7 +482,8 @@ li {
   display: none; }
 
 .dropdown {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .dropdown .dropdown__selection {
     display: flex;
     justify-content: space-between;
@@ -534,7 +535,7 @@ li {
   border-radius: 0 0 2px 2px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-top: none;
-  width: 320px;
+  width: 100%;
   box-sizing: border-box;
   background-color: #fff;
   z-index: 10;

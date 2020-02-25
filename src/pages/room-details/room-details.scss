@@ -1,1 +1,95 @@
 @import '../page.scss';
+@import '../../components/form-booking/form-booking.scss';
+@import '../../components/advantages/advantages.scss';
+@import '../../components/bullet-list/bullet-list.scss';
+@import '../../components/review/review.scss';
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+.room-details__gallery {
+    display: grid;
+    grid-template-columns: 68.125% 31.875%;
+    grid-template-rows: 243px;
+    img {
+        width: 100%;
+        &:first-child {
+            grid-row: 1/3;
+        }
+    }
+}
+.room-details__description {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 60px;
+    padding: 70px 140px;
+    border-bottom: 1px solid rgba($dark-shade, 0.1);
+}
+.room-details__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .info__subtitle {
+        @include H2;
+    }
+    .info__details {
+        @include Body;
+    }
+    .room-details__reviews {
+        grid-column: 1/3;
+    }
+    .diagramma {
+        margin-top: 20px;
+    }
+}
+.chart-text {
+    @include H1;
+    font-size: 6px;
+    fill: $purple;
+  }
+  .chart-number {
+    text-anchor: middle;
+    -moz-transform: translateY(-0.25em);
+    -ms-transform: translateY(-0.25em);
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+  }
+  .chart-label {
+    text-anchor: middle;
+    -moz-transform: translateY(0.7em);
+    -ms-transform: translateY(0.7em);
+    -webkit-transform: translateY(0.7em);
+    transform: translateY(0.7em);
+  }
+.diagramma {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+}
+.diagramma__key {
+    @include Body;
+    margin-left: 30px;
+li:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+}
+.key_great:before {
+    background: linear-gradient(#FFE39C 0%, #FFBA9C 100%);
+}
+.key_good:before {
+    background: linear-gradient(#6FCF97 0%, #66D2EA 100%);
+}
+.key_satisfactorily:before {
+    background: linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
+}
+.key_disappointed:before {
+    background: linear-gradient(#909090 0%, #3D4975 100%);
+}

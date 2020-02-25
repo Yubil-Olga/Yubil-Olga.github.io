@@ -1,9 +1,11 @@
 extends ../page
+include ../../components/date-dropdown/date-dropdown 
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
 include ../../components/card-room/card-room
 include ../../components/checkbox/checkbox
 include ../../components/expandable-checkbox/expandable-checkbox
+include ../../components/pagination/pagination
 
 block variables
     - var pageTitle = 'Search room page'
@@ -30,29 +32,36 @@ block variables
     - {number: "352", price: "5000", url: "images/image10.png", lux: false, stars: "3", comments: "55"}    
     - ]
 
-block main
-    .container.grid_columns_4
-        .grid__fruction
-            .search-room__filter
-                h3 даты пребывания в отеле
-                h3 гости
+block main 
+    .container.search-room
+        .search-room__filter
+            .filter__item
+                h3.filter__title даты пребывания в отеле
+                +date-dropdown
+            .filter__item
+                h3.filter__title гости
                 +dropdown(false, "", "взрослые", "дети", "младенцы")
-                h3 диапазон цены
+            .filter__item
+                h3.filter__title диапазон цены
                 +range-slider
-                p Стоимость за сутки пребывания в номере
-                h3 Checkbox Buttons
+                p.filter__comment Стоимость за сутки пребывания в номере
+            .filter__item
+                h3.filter__title Checkbox Buttons
                 +checkbox(false,...orders)
-                h3 доступность
+            .filter__item
+                h3.filter__title доступность
                 +checkbox(true, ...accessibility)
-                h3 удобства номера
+            .filter__item
+                h3.filter__title удобства номера
                 +dropdown(false, "room", "спальни", "кровати", "ванные комнаты")
-                +expandable-checkbox("дополнительные удобства", ...comfort)
-        .grid__fraction_col_3
-            h1 Номера, которые мы для вас подобрали
-            .grid_columns_3
+            .filter__item
+                +expandable-checkbox("дополнительные удобства", ...comfort)    
+        .search-room__result
+            h1.search-room__title Номера, которые мы для вас подобрали
+            .search-room__rooms
                 each room in rooms
                     +card-room(room)
-            .grid__fruction_col_3
-                .pagination
+            .search-room__pagination
+                +pagination
 
     

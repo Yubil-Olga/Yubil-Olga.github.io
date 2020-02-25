@@ -1,6 +1,6 @@
-mixin advantages(title, description, icon)
+mixin advantages(item)
     .advantages
-        i.material-icons= icon
+        i.material-icons= item.icon
         .advantages__description
-            h4.description__title= title
-            p= description 
+            h4.description__title= item.title
+            p= item.description 
