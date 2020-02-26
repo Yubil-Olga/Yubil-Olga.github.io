@@ -1,4 +1,4 @@
-@import '../fonts.scss', '../colors', '../components/header/header.scss', '../components/footer/footer.scss';
+@import '../fonts.scss', '../colors', '../sizes';
 
 body {
     max-width: 1920px;
@@ -6,7 +6,7 @@ body {
     margin: 0;
     background-color: #E5E5E5;
 }
-h1, h3 {
+h1, h2, h3, h4, p, ul {
     margin: 0;
 }
 a {

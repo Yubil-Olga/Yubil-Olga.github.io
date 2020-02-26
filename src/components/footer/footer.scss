@@ -3,15 +3,13 @@
 .footer {
     box-shadow: 0px 1px 0px rgba($dark-shade, 0.1);
     background-color: #fff;
-    .copyright-bar {
-        padding-bottom: 110px;
-    }
     @media (max-width: 1300px) {
         .footer__section:not(:first-child) {
             display: none;
         }
         .footer__navigation {
             grid-template-columns: 1fr;
+            padding-bottom: 0;
         }
         .footer__section {
             max-width: 260px;
@@ -106,14 +104,14 @@
 }
 .footer__wrapper {
     border-top: 2px solid rgba($dark-shade, 0.1);
+    box-shadow:  0px 10px 20px $dark-shade-5;
 }
 .copyright-bar {
     @include Body;
     max-width: $content-width;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 23px 0;
-    box-shadow:  0px 10px 20px $dark-shade-5;
+    padding: 24px 0;
     p {
         line-height: 17px;
     }
@@ -122,7 +120,9 @@
         .social__icon {
             width: 24px;
             height: 24px;
-            margin-left: 20px;
+            &:not(:first-child) {
+                margin-left: 20px;
+            }
         }
         .twitter {
             background: url(./Bar.png) left no-repeat;
@@ -140,12 +140,19 @@
     box-shadow: none;
     padding-bottom: 0;
     .footer__section {
-        grid-column-start: 2;
-        grid-column-end: 5;
+        max-width: 560px;
         text-align: center;
+        justify-self: center;
         .logo {
             justify-content: center;
         }
+    }
+    .footer__navigation {
+        grid-template-columns: 1fr;
+        padding-bottom: 0;
+    }
+    .footer__wrapper {
+        border-top: none;
     }
     .copyright-bar {
         padding-bottom: 110px;

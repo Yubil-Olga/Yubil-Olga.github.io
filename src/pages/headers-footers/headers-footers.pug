@@ -5,9 +5,26 @@ include ../../components/footer/footer
 block variables
     - var pageTitle = 'Headers & Footers'
     - var user = "Cosmin Negoita"
+    - var navigation = [
+    - {name: "Home", href: "#", expanded: false},
+    - {name: "About Us", href: "#", expanded: false},
+    - {name: "Services", href: "#", expanded: true},
+    - {name: "Careers", href: "#", expanded: false},
+    - {name: "News", href: "#", expanded: false},
+    - {name: "Documentation", href: "#", expanded: false}
+    - ]
+    - var footernavigation = [
+    - {title: "Navigation", list: ["About Us", "News", "Support", "Products"]},
+    - {title: "About Us", list: ["Who we are", "Our team", "Careers", "Investors"]},
+    - {title: "Support", list: ["Documentation", "Community", "Get in Touch"]}
+    - ]
+    - var footerslogan = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+    - var footerformtitle = "Subscribe to our newsletter"
+    - var footerformdescription = "Receive our latest news and promotions in your inbox!"
+    - var copyright = "Copyright © 2018 Toxin UI Kit. All rights reserved."
 block main
-    +header(false)
-    +header(true)
-    +footer(false)
-    +footer(true)
+    +header(false, ...navigation)
+    +header(true, ...navigation)
+    +footer(false, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
+    +footer(true, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
     

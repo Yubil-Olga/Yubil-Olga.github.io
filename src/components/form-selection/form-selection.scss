@@ -6,6 +6,12 @@
 .form-selection__date-picker-wrapper {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 440px) {
+        flex-direction: column;
+        .date-dropdown {
+            width: unset;
+        }
+    }
 }
 .form-selection__footer {
     margin-top: 10px;

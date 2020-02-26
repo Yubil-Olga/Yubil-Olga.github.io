@@ -2,22 +2,33 @@ include ../logo/logo
 
 mixin header(auth, ...items)
     header.header
-        +logo
-        nav.header__navigation
-            ul.navigation__list
-                each item in items
-                    li
-                        if item.expanded
-                            details.navigation__details
-                                summary=item.name
-                        else 
-                            a(href=item.href).navigation__link=item.name
-            .navigation__toolbar
-                if auth
-                    .user=user
-                else
-                    a(href="login.html").button_border Login
-                    a(href="registration.html").button Register
+        .header__wrapper
+            +logo
+            nav.header__navigation
+                ul.navigation__list
+                    each item in items
+                        li
+                            if item.expanded
+                                details.navigation__details
+                                    summary=item.name
+                            else 
+                                a(href=item.href).navigation__link=item.name
+                details.burger
+                    summary.burger__toggle menu
+                    ul.burger__list
+                        each item in items
+                            li.list__item
+                                if item.expanded
+                                    details.navigation__details
+                                        summary.burger__link=item.name
+                                else 
+                                    a(href=item.href).burger__link=item.name
+                .navigation__toolbar
+                    if auth
+                        .user=user
+                    else
+                        a(href="login.html").button_border Login
+                        a(href="registration.html").button Register
     
     
         
