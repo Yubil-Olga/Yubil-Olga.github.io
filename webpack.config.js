@@ -30,56 +30,56 @@ module.exports = {
         hot: isDev,
         stats: 'errors-only'
       },
-    // optimization: {
-    //   splitChunks: {
-    //     chunks: 'all'
-    //   }
-    // },
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    },
     plugins: [
         new HTMLWebpackPlugin({
             filename: 'index.html',
-            chunks: ['index', 'common'],
+            chunks: ['index'],
             template: './pages/index/index.pug'
         }),
         new HTMLWebpackPlugin({
           filename: 'headers-footers.html',
-          chunks: ['headersfooters', 'common'],
+          chunks: ['headersfooters'],
           template: './pages/headers-footers/headers-footers.pug'
         }),
         new HTMLWebpackPlugin({
           filename: 'form-elements.html',
-          chunks: ['formelements', 'common'],
+          chunks: ['formelements'],
           template: './pages/form-elements/form-elements.pug'
         }),
         new HTMLWebpackPlugin({
           filename: 'cards.html',
-          chunks: ['cards', 'common'],
+          chunks: ['cards'],
           template: './pages/cards/cards.pug'
         }),
         new HTMLWebpackPlugin({
           filename: 'registration.html',
-          chunks: ['registration', 'common'],
+          chunks: ['registration'],
           template: './pages/registration/registration.pug'
         }),
         new HTMLWebpackPlugin({
           filename: 'login.html',
-          chunks: ['login', 'common'],
+          chunks: ['login'],
           template: './pages/login/login.pug'
         }),
         new HTMLWebpackPlugin({
           filename: 'search-room.html',
-          chunks: ['searchroom', 'common'],
+          chunks: ['searchroom'],
           template: './pages/search-room/search-room.pug'
         }),
         new HTMLWebpackPlugin({
           filename: 'room-details.html',
-          chunks: ['roomdetails', 'common'],
+          chunks: ['roomdetails'],
           template: './pages/room-details/room-details.pug'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css',
-            chunkFilename: '[id].css',
+            chunkFilename: 'css/[id].css',
         }),
         new webpack.ProvidePlugin({
           $: 'jquery',

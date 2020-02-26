@@ -9,9 +9,26 @@ html
         meta(name='viewport', content="initial-scale=1.0, width=device-width")
         title= pageTitle
     body
+        - var navigation = [
+        - {name: "О нас", href: "#", expanded: false},
+        - {name: "Услуги", href: "#", expanded: true},
+        - {name: "Вакансии", href: "#", expanded: false},
+        - {name: "Новости", href: "#", expanded: false},
+        - {name: "Соглашения", href: "#", expanded: true}
+        - ]
+        - var footernavigation = [
+        - {title: "навигация", list: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+        - {title: "о нас", list: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+        - {title: "Служба поддержки", list: ["Соглашения", "Сообщества", "Связь с нами"]}
+        - ]
+        - var footerslogan = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+        - var footerformtitle = "Подписка"
+        - var footerformdescription = "Получайте специальные предложения и новости сервиса"
+        - var copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
+
         block header
-            +header(false)
+            +header(false, ...navigation)
         block main
         block footer
-            +footer(false)
+            +footer(false, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
             

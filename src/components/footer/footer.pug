@@ -1,63 +1,38 @@
-mixin footer(creative)
-    footer.footer(class=creative ? "footer-creative" : "footer")
-        .grid__columns_5
-            .footer__block
-                .logo
-                    .logo__icon
-                    .logo__text
-                p.logo__description 
-                    |Lorem ipsum dolor sit amet consectetur adipiscing
-                    | elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+include ../logo/logo
+
+mixin footer(creative, text, formtitle, formtext, copyright, ...items)
+    footer.footer(class=creative ? "footer-creative" : "")
+        section.footer__navigation
+            section.footer__section
+                +logo
+                p.footer__description=text
             unless creative
-                .footer__block
-                    h3 Navigation
-                    ul
-                        li
-                            a(href="") About Us
-                        li
-                            a(href="") News
-                        li
-                            a(href="") Support
-                        li
-                            a(href="") Product
-                .footer__block
-                    h3 About us
-                    ul
-                        li
-                            a(href="") Who we are
-                        li
-                            a(href="") Our team
-                        li
-                            a(href="") Careers
-                        li
-                            a(href="") Investors
-                .footer__block
-                    h3 Support
-                    ul
-                        li
-                            a(href="") Documentation
-                        li
-                            a(href="") Community
-                        li
-                            a(href="") Get in Touch
-                form.footer__block
-                    h3 Subscribe to our newsletter
-                    p Receive our latest news and promotions in your inbox!
-                    .subscribe
+                each item in items
+                    section.footer__section
+                        h3.footer__subtitle=item.title
+                        ul.navigation__group
+                            each link in item.list
+                                li.navigation__item
+                                    a(href="#")=link
+                form.footer__section
+                    h3.footer__subtitle=formtitle
+                    p.footer__description=formtext
+                    .footer__subscribe
                         input(
                             type="text"
                             name="Subscribe"
-                            placeholder="Your email address"
+                            placeholder="Email"
                         )
-                        button
-                            .arrow
-        .copyright-bar(class=creative ? "center" : "space-between")
-            unless creative
-                p Copyright © 2018 Toxin UI Kit. All rights reserved.
-            .social
-                .social__icon.twitter
-                .social__icon.fb
-                .social__icon.instagram   
+                        button.footer__button
+                            i.material-icons arrow_forward
+        .footer__wrapper
+            .copyright-bar(class=creative ? "center" : "space-between")
+                unless creative
+                    p=copyright
+                .social
+                    .social__icon.twitter
+                    .social__icon.fb
+                    .social__icon.instagram   
 
             
         

@@ -1,23 +1,17 @@
-mixin header(auth)
+include ../logo/logo
+
+mixin header(auth, ...items)
     header.header
-        a(href="index.html").logo
-            .logo__icon
-            .logo__text
-        .header__navigation
+        +logo
+        nav.header__navigation
             ul.navigation__list
-                li 
-                    a(href="") Home
-                li
-                    a(href="") About us
-                li
-                    a(href="") Services
-                    i.material-icons expand_more
-                li
-                    a(href="") Careers
-                li
-                    a(href="") News
-                li
-                    a(href="") Documentation
+                each item in items
+                    li
+                        if item.expanded
+                            details.navigation__details
+                                summary=item.name
+                        else 
+                            a(href=item.href).navigation__link=item.name
             .navigation__toolbar
                 if auth
                     .user=user

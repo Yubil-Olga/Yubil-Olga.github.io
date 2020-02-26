@@ -1,57 +1,70 @@
 @import '../logo/logo.scss';
 @import '../button/button.scss';
+@import '../../pages/sizes';
 
 .header {
-    width: 1440px;
+    max-width: $content-width;
     box-sizing: border-box;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
     box-shadow:  0px 10px 20px $dark-shade-5;
-    padding: 15px $border-space;
-    .layout {
+    padding: 15px 0;
+    font: {
+        family: Montserrat;
+        weight: normal;
+        size: 14px;
+    }
+    line-height: 17px;
+}
+.navigation__details {
+    margin-right: 20px;
+    cursor: pointer;
+    summary::-webkit-details-marker {
+        display: none
+    }
+    &> summary {
+        list-style: none;
+    }
+    summary {
         display: flex;
-        justify-content: space-between;
+        color: $dark-shade-50;
+        &:after {
+            content: 'expand_more';
+            font-family: Material Icons;
+            font-size: 24px;
+        }
+    }
+    &[open] summary:after {
+        content: 'expand_less';
     }
 }
 
 .header__navigation {
     display: flex;
     align-items: center;
-    ul {
-        display: flex;
-        li {
-            margin-right: $space-x;
-            display: flex;
-        }
-    }
-    .navigation__list, .navigation__toolbar {
-        display: flex;
-        font: {
-            family: Montserrat;
-            weight: normal;
-            size: 14px;
-        }
-        line-height: 17px;
-    }
-    i.material-icons {
-        font-family: Material Icons;
-        font-style: normal;
-        font-size: 24px;
-    }
 }
-.navigation__toolbar a:not(:last-child) {
-    margin-right: 20px;
+.navigation__list {
+    display: flex;
+    .navigation__link {
+        color: $dark-shade-50;
+        margin-right: $space-x;
+    }
 }
 .navigation__toolbar {
+    display: flex;
     z-index: 0;
     .button_border {
         padding: 6px 18px;
     }
+    a:not(:last-child) {
+        margin-right: 20px;
+    }
+    .user {
+        border-left: 1px solid rgba($dark-shade, 0.1);
+        padding-left: 30px;
+    }
 }
-.navigation__toolbar .user {
-    border-left: 1px solid rgba($dark-shade, 0.1);
-    padding-left: 30px;
-}
+
 
