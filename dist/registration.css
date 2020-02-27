@@ -173,6 +173,9 @@
   .navigation__toolbar .user {
     border-left: 1px solid rgba(31, 32, 65, 0.1);
     padding-left: 30px; }
+  @media (max-width: 440px) {
+    .navigation__toolbar .button {
+      display: none; } }
 
 .burger {
   display: none;
@@ -208,6 +211,9 @@
       display: block;
       order: 3;
       margin-left: 20px; } }
+  @media (max-width: 440px) {
+    .burger {
+      margin-left: 0; } }
 
 .logo {
   display: flex;

@@ -70,6 +70,11 @@
         border-left: 1px solid rgba($dark-shade, 0.1);
         padding-left: 30px;
     }
+    @media (max-width: 440px) {
+        .button {
+            display: none;
+        }
+    }
 }
 
 
@@ -107,5 +112,8 @@
         display: block;
         order: 3;
         margin-left: 20px;
+    }
+    @media (max-width: 440px) {
+        margin-left: 0;
     }
 }

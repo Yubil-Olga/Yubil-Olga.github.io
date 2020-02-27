@@ -30,11 +30,11 @@ module.exports = {
         hot: isDev,
         stats: 'errors-only'
       },
-    optimization: {
-      splitChunks: {
-        chunks: 'all'
-      }
-    },
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: 'all'
+    //   }
+    // },
     plugins: [
         new HTMLWebpackPlugin({
             filename: 'index.html',
