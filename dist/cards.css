@@ -60,7 +60,7 @@ li {
   list-style: none; }
 
 .form {
-  max-width: 380px;
+  width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -81,6 +81,9 @@ li {
     line-height: 18px;
     color: #000;
     margin: 0; }
+  @media (max-width: 440px) {
+    .form {
+      width: unset; } }
 
 .form__title {
   font-family: Quicksand;
@@ -107,7 +110,8 @@ li {
 
 .form__button {
   width: 99px;
-  height: 44px; }
+  height: 44px;
+  margin-left: 20px; }
 
 .date-dropdown {
   width: 150px;
@@ -419,6 +423,7 @@ li {
     color: rgba(31, 32, 65, 0.5); }
   .button_arrow {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    width: 100%;
     max-width: 320px;
     color: #fff;
     text-align: center;
@@ -450,7 +455,7 @@ li {
   margin-top: 10px; }
 
 .form {
-  max-width: 380px;
+  width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -471,6 +476,9 @@ li {
     line-height: 18px;
     color: #000;
     margin: 0; }
+  @media (max-width: 440px) {
+    .form {
+      width: unset; } }
 
 .form__title {
   font-family: Quicksand;
@@ -497,7 +505,8 @@ li {
 
 .form__button {
   width: 99px;
-  height: 44px; }
+  height: 44px;
+  margin-left: 20px; }
 
 .input_default {
   display: grid;
@@ -581,7 +590,7 @@ li {
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
-  width: 260px;
+  max-width: 260px;
   position: relative; }
   .toggle .toggle__btn {
     width: 40px;
@@ -612,7 +621,7 @@ li {
         left: auto; }
 
 .form {
-  max-width: 380px;
+  width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -633,6 +642,9 @@ li {
     line-height: 18px;
     color: #000;
     margin: 0; }
+  @media (max-width: 440px) {
+    .form {
+      width: unset; } }
 
 .form__title {
   font-family: Quicksand;
@@ -659,7 +671,8 @@ li {
 
 .form__button {
   width: 99px;
-  height: 44px; }
+  height: 44px;
+  margin-left: 20px; }
 
 .input_default {
   display: grid;
@@ -741,6 +754,7 @@ li {
     color: rgba(31, 32, 65, 0.5); }
   .button_arrow {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    width: 100%;
     max-width: 320px;
     color: #fff;
     text-align: center;
@@ -758,7 +772,7 @@ li {
         justify-content: flex-start; } }
 
 .form {
-  max-width: 380px;
+  width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -779,6 +793,9 @@ li {
     line-height: 18px;
     color: #000;
     margin: 0; }
+  @media (max-width: 440px) {
+    .form {
+      width: unset; } }
 
 .form__title {
   font-family: Quicksand;
@@ -805,7 +822,8 @@ li {
 
 .form__button {
   width: 99px;
-  height: 44px; }
+  height: 44px;
+  margin-left: 20px; }
 
 .date-dropdown {
   width: 150px;
@@ -1117,6 +1135,7 @@ li {
     color: rgba(31, 32, 65, 0.5); }
   .button_arrow {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    width: 100%;
     max-width: 320px;
     color: #fff;
     text-align: center;
@@ -1236,8 +1255,7 @@ li {
   background-color: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
-  overflow: hidden;
-  height: 257px; }
+  overflow: hidden; }
 
 .card-room__footer {
   padding: 15px 20px 20px 20px; }
@@ -1296,6 +1314,8 @@ li {
 
 .card-room__image {
   position: relative; }
+  .card-room__image img {
+    width: 100%; }
 
 .card-room__slider {
   position: absolute;

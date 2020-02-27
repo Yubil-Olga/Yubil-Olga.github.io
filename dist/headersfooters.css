@@ -97,6 +97,7 @@ li {
     color: rgba(31, 32, 65, 0.5); }
   .button_arrow {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    width: 100%;
     max-width: 320px;
     color: #fff;
     text-align: center;
@@ -298,7 +299,7 @@ li {
   color: rgba(31, 32, 65, 0.75);
   text-transform: none; }
 
-.footer__subscribe {
+.footer__control {
   display: flex;
   justify-content: space-between;
   width: 260px;
@@ -307,12 +308,12 @@ li {
   border-radius: 4px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   overflow: hidden; }
-  .footer__subscribe input {
+  .footer__control input {
     border: none;
     padding-left: 15px;
     background-color: transparent;
     width: 100%; }
-    .footer__subscribe input::placeholder {
+    .footer__control input::placeholder {
       font-family: Montserrat;
       font-weight: normal;
       font-size: 14px;
@@ -320,12 +321,12 @@ li {
       color: rgba(31, 32, 65, 0.75);
       text-transform: none;
       color: rgba(31, 32, 65, 0.25); }
-  .footer__subscribe .footer__button {
+  .footer__control .footer__button {
     width: 44px;
     background-color: #fff;
     border: none;
     cursor: pointer; }
-    .footer__subscribe .footer__button i.material-icons {
+    .footer__control .footer__button i.material-icons {
       background: linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
       color: transparent;
       -webkit-background-clip: text;
