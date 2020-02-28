@@ -2,11 +2,14 @@
 @import '../../components/form-registration/form-registration.scss';
 
 .container {
-    width: 1440px;
+    width: 100%;
+    max-width: $max-width;
+    box-sizing: border-box;
     margin: 0 auto;
-    background: url('./bg-registration.png') no-repeat;
+    background: url('./bg-registration.png') center/cover no-repeat;
     height: 702px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    padding: 0 $space-x;
+}  

@@ -7,14 +7,11 @@
 @import '../../components/expandable-checkbox/expandable-checkbox.scss';
 @import '../../components/pagination/pagination.scss';
 
-.container {
-    width: 1440px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px 140px;
-    box-sizing: border-box;
-}
 .search-room {
+    width: $content-width;
+    margin: 30px auto;
+    box-sizing: border-box;
+    background-color: #fff;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-gap: 60px;
@@ -46,6 +43,28 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px 12px;
+    }
+    @media (max-width: 1200px) {
+        width: unset;
+        padding: 0 $space-x;
+        .search-room__rooms {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        .card-room {
+            width: 100%;
+        }
+    }
+    @media (max-width: 940px) {
+        grid-template-columns: 1fr;
+        .search-room__filter {
+            display: none;
+        }
+    }
+    @media (max-width: 600px) {
+        .search-room__rooms {
+            grid-template-columns: 1fr;
+        }
     }
 }
 .search-room__pagination {

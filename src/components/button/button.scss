@@ -51,6 +51,7 @@
     &_arrow {
         @extend %button;
         background: $color;
+        width: 100%;
         max-width: 320px;
         color: #fff;
         text-align: center;

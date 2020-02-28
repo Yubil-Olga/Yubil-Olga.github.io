@@ -66,7 +66,7 @@
 .footer__description {
     @include Body;
 }
-.footer__subscribe {
+.footer__control {
     display: flex;
     justify-content: space-between;
     width: 260px;

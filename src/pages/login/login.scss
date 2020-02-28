@@ -2,9 +2,12 @@
 @import '../../components/form-login/form-login.scss';
 
 .container {
-    width: 1440px;
+    width: 100%;
+    max-width: $max-width;
     margin: 0 auto;
-    background: url('./bg-registration.png') no-repeat;
+    padding: 0 $space-x;
+    box-sizing: border-box;
+    background: url('./bg-registration.png') center/cover no-repeat;
     height: 702px;
     display: flex;
     align-items: center;

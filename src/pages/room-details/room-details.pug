@@ -42,17 +42,18 @@ block variables
         ]
 
 block main
-    .container.room__details
+    .room-details
         .room-details__gallery
             each photo in gallery
-                img(src=photo.src, alt=photo.alt)
+                figure.gallery__item
+                    img(src=photo.src, alt=photo.alt).gallery__image
         .room-details__description
             .room-details__info
                 .info__item
                     h2.info__subtitle Сведения о номере
                     each advantage in advantages
                         +advantages(advantage)
-                .info__item
+                .info__item.info__chart
                     h2.info__subtitle Впечатления от номера
                     figure.diagramma
                         .diagramma__content

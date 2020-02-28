@@ -6,7 +6,7 @@
     box-shadow: 0px 10px 20px $dark-shade-5;
     border-radius: 4px;
     overflow: hidden;
-    height: 257px;
+    // height: 257px;
 }
 .card-room__footer {
     padding: 15px 20px 20px 20px;
@@ -64,6 +64,9 @@
 }
 .card-room__image {
     position: relative;
+    img {
+        width: 100%;
+    }
 }
 .card-room__slider {
     position: absolute;

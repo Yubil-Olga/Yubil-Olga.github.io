@@ -1199,7 +1199,7 @@ li {
   padding-bottom: 10px; }
 
 .order-item__name {
-  width: 240px;
+  max-width: 240px;
   display: flex;
   justify-content: space-between; }
 
