@@ -6,7 +6,12 @@ document.querySelectorAll('.dropdown .arrow_direction_bottom').forEach(e => {
         dropdown(path, totalCounter);  
     })
 })
-
+document.querySelectorAll('.dropdown .js-accept').forEach(e => {
+    e.addEventListener('click', (el) => {
+        el.preventDefault();
+        e.closest('.dropdown').classList.toggle("show");
+    })
+})
 function dropdown(path, totalCounter){
     path.querySelectorAll('.menu__option').forEach(el => {
         el.addEventListener('click', (e)=> {
@@ -21,20 +26,21 @@ function dropdown(path, totalCounter){
                 el.querySelector('.counter-item').value = counter;
                 totalCounter--;
             }
-            if (totalCounter>0 && path.querySelectorAll('.clean').length>0) {
-                path.querySelector('.clean').style.visibility="visible";
+            if (totalCounter>0 && path.querySelectorAll('.js-clean').length>0) {
+                path.querySelector('.js-clean').style.visibility="visible";
             }
-            if (totalCounter == 0 && path.querySelectorAll('.clean').length>0) {
-                path.querySelector('.clean').style.visibility="hidden";
+            if (totalCounter == 0 && path.querySelectorAll('.js-clean').length>0) {
+                path.querySelector('.js-clean').style.visibility="hidden";
             }
             path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);
         })
     })
-    if (path.querySelectorAll('.clean').length>0) {
-        path.querySelector('.clean').addEventListener('click', () => {
+    if (path.querySelectorAll('.js-clean').length>0) {
+        path.querySelector('.js-clean').addEventListener('click', (e) => {
+            e.preventDefault();
             totalCounter = 0;
             path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);
-            path.querySelector('.clean').style.visibility="hidden";
+            path.querySelector('.js-clean').style.visibility="hidden";
             path.querySelectorAll('.counter-item').forEach((item)=> {
                 item.value = 0;
             })

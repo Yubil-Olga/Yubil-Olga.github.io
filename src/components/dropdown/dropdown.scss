@@ -1,3 +1,5 @@
+@import '../button/button.scss';
+
 .dropdown {
     width: 100%;
     position: relative;
@@ -13,7 +15,6 @@
         @include Body;
         line-height: 18px;
         .dropdown__title {
-            // width: 160px;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;

@@ -17,5 +17,5 @@ mixin dropdown(show, title, ...items)
                         .counter__increment
             unless title == "room"
                 .menu__control
-                    .clean очистить
-                    .accept применить
+                    button.button_ghost.js-clean очистить
+                    button.button_simple.js-accept применить

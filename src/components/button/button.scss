@@ -44,9 +44,17 @@
     &_simple {
         @extend %button;
         color: $purple;
+        padding-left: 0;
+        padding-right: 0;
     }
     &_simple:hover {
         color: $dark-shade-50;
+    }
+    &_ghost {
+        @extend %button;
+        color: $dark-shade-50;
+        padding-left: 0;
+        padding-right: 0;
     }
     &_arrow {
         @extend %button;
@@ -66,7 +74,7 @@
             right: 12px;
         }
         @media (max-width: 350px) {
-            justify-content: flex-start;
+            // justify-content: flex-start;
         }
     }
 }

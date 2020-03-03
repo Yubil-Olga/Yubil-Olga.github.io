@@ -13,12 +13,19 @@
         border-radius: 4px;
         border: 1px solid $dark-shade-25;
         padding: 0 11px;
-        margin-top: 5px;
+        margin-top: 5px; 
+        @media (max-width: 440px) {
+            width: unset;
+        }
     }
     .date-dropdown__title {
         @include H3;
+        width: 100%;
         &:first-child {
             margin-right: 20px;
+            @media (max-width: 440px) {
+                margin-right: 6px;
+            }
         }
     }
     .datepicker-here {
