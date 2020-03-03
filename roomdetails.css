@@ -450,32 +450,22 @@ button {
   height: 44px;
   margin-left: 20px; }
 
-.date-dropdown {
-  width: 150px;
-  height: 44px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 11px; }
-  .date-dropdown .datepicker-here {
-    font-family: Montserrat;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
-    text-transform: none;
-    border: none;
-    width: 90px; }
-  .date-dropdown i.material-icons {
-    font-family: Material Icons;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: none;
-    font-size: 24px;
-    cursor: pointer; }
+.datepicker-here {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  text-transform: none;
+  border: none; }
+
+i.material-icons {
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 24px;
+  cursor: pointer; }
 
 .datepicker {
   width: 320px;
@@ -534,8 +524,6 @@ button {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
       position: absolute;
       z-index: -1; }
-  .datepicker .datepicker--cell.-focus-, .datepicker .datepicker--cell.-range-from-.-current-.-focus- {
-    background: none; }
 
 .datepicker--nav-title, .datepicker--nav-title i {
   font-family: Quicksand;
@@ -586,6 +574,46 @@ button {
 
 .datepicker--pointer {
   display: none; }
+
+.date-dropdown {
+  display: flex;
+  position: relative; }
+  .date-dropdown .date-dropdown__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 44px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    padding: 0 11px;
+    margin-top: 5px; }
+  .date-dropdown .date-dropdown__title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #1F2041;
+    text-transform: uppercase; }
+    .date-dropdown .date-dropdown__title:first-child {
+      margin-right: 20px; }
+  .date-dropdown .datepicker-here {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    text-transform: none;
+    border: none;
+    width: 90px; }
+  .date-dropdown i.material-icons {
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 24px;
+    cursor: pointer; }
 
 .dropdown {
   width: 100%;
