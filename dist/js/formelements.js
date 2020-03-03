@@ -210,6 +210,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 
 /***/ }),
 
+/***/ "./components/rate-btn/rate-btn.js":
+/*!*****************************************!*\
+  !*** ./components/rate-btn/rate-btn.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("document.querySelectorAll('.js-rate-btn').forEach(el => {\r\n    el.addEventListener('click', (e) => {\r\n        el.querySelectorAll('.material-icons').forEach(e => {\r\n            e.textContent = \"star_border\";\r\n        })\r\n        let rating = e.target.value;\r\n        for (let i=0; i<rating; i++){\r\n            el.querySelectorAll('.rate-btn__item')[i].querySelector('.material-icons').textContent = \"star\";\r\n        }\r\n    })\r\n})\n\n//# sourceURL=webpack:///./components/rate-btn/rate-btn.js?");
+
+/***/ }),
+
 /***/ "./pages/form-elements/form-elements.js":
 /*!**********************************************!*\
   !*** ./pages/form-elements/form-elements.js ***!
@@ -218,7 +229,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-elements.scss */ \"./pages/form-elements/form-elements.scss\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form_elements_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_input_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/input/input */ \"./components/input/input.js\");\n/* harmony import */ var _components_date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/date-dropdown/date-dropdown */ \"./components/date-dropdown/date-dropdown.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./pages/form-elements/form-elements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-elements.scss */ \"./pages/form-elements/form-elements.scss\");\n/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form_elements_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_input_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/input/input */ \"./components/input/input.js\");\n/* harmony import */ var _components_date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/date-dropdown/date-dropdown */ \"./components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _components_rate_btn_rate_btn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/rate-btn/rate-btn */ \"./components/rate-btn/rate-btn.js\");\n/* harmony import */ var _components_rate_btn_rate_btn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_rate_btn_rate_btn__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./pages/form-elements/form-elements.js?");
 
 /***/ }),
 

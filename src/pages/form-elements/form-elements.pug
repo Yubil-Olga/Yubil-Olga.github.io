@@ -3,20 +3,21 @@ include ../../components/like-btn/like-btn
 include ../../components/advantages/advantages
 include ../../components/input/input
 include ../../components/dropdown/dropdown
-//- include ../../components/date-dropdown/date-dropdown
+include ../../components/date-dropdown/date-dropdown
+include ../../components/rate-btn/rate-btn
 
 block variables
     - var pageTitle = 'Form elements'
 
 block main
      h1 Form elements
-     //- +date-dropdown
-     //- +date-dropdown
+     +date-dropdown
      +dropdown(false, "", "man", "child", "baby")
      +input(false, "Email")
      +input(false, "", "This is pretty awesome")
      +input(true, "ДД.ММ.ГГГГ")
      +like-btn(5, true)
+     +rate-btn(5, 4)
      .button click me
      .button click me
      .button_border click me

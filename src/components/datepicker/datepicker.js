@@ -27,6 +27,11 @@ $('.datepicker-here').datepicker(
                     dp.hide();
                  });
             }
+        },
+        onHide: function(dp, animationCompleted){
+            if (!animationCompleted) {
+                dp.$datepicker.appendTo('.datepickers-container');
+            } 
         }
     }
 );

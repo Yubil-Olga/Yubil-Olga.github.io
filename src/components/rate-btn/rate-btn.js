@@ -1,13 +1,11 @@
-document.querySelectorAll('.rate-btn').forEach(el => {
+document.querySelectorAll('.js-rate-btn').forEach(el => {
     el.addEventListener('click', (e) => {
-        if (el.querySelectorAll('.rate-btn__item_active').length>0) {
-            el.querySelectorAll('.rate-btn__item_active').forEach((e) => {
-                e.classList.remove('rate-btn__item_active');
-            })
-        }
+        el.querySelectorAll('.material-icons').forEach(e => {
+            e.textContent = "star_border";
+        })
         let rating = e.target.value;
         for (let i=0; i<rating; i++){
-            el.querySelectorAll('.rate-btn__item')[i].classList.add('rate-btn__item_active');
+            el.querySelectorAll('.rate-btn__item')[i].querySelector('.material-icons').textContent = "star";
         }
     })
 })
