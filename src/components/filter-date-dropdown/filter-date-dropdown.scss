@@ -1,0 +1,19 @@
+@import '../datepicker/datepicker.scss';
+
+.filter-date-dropdown {
+    position: relative;
+}
+.filter-date-dropdown__title {
+    @include H3;
+}
+.filter-date-dropdown__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid $dark-shade-25;
+    padding: 0 11px;
+    margin-top: 5px;
+}

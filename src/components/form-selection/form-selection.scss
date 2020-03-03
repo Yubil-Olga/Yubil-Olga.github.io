@@ -3,19 +3,6 @@
 @import '../dropdown/dropdown.scss';
 @import '../button/button.scss';
 
-.form-selection__date-picker-wrapper {
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: 440px) {
-        flex-direction: column;
-        .date-dropdown {
-            width: unset;
-        }
-        .departure {
-            margin-top: 20px;
-        }
-    }
-}
 .form-selection__footer {
     margin-top: 10px;
 }

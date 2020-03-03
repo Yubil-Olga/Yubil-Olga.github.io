@@ -1,5 +1,5 @@
 extends ../page
-include ../../components/date-dropdown/date-dropdown 
+include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
 include ../../components/card-room/card-room
@@ -36,8 +36,7 @@ block main
     .search-room
         .search-room__filter
             .filter__item
-                h3.filter__title даты пребывания в отеле
-                +date-dropdown
+                +filter-date-dropdown("даты пребывания в отеле")
             .filter__item
                 h3.filter__title гости
                 +dropdown(false, "", "взрослые", "дети", "младенцы")

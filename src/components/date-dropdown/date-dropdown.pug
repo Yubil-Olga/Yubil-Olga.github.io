@@ -1,4 +1,11 @@
-mixin date-dropdown(date)
+mixin date-dropdown(title1, title2)
     .date-dropdown
-        input.datepicker-here.mask(type="text" placeholder="ДД.ММ.ГГГГ")
-        i.material-icons.dropdown-arrow expand_more
+        label.date-dropdown__title=title1
+            .date-dropdown__control
+                input.datepicker-here.mask.datepicker-start(type="text" placeholder="ДД.ММ.ГГГГ")
+                i.material-icons.dropdown-arrow expand_more
+        label.date-dropdown__title=title2
+            .date-dropdown__control
+                input.datepicker-here.mask.datepicker-end(type="text" placeholder="ДД.ММ.ГГГГ")
+                i.material-icons.dropdown-arrow expand_more
+        
