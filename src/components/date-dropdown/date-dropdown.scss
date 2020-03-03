@@ -3,6 +3,9 @@
 .date-dropdown {
     display: flex;
     position: relative;
+    @media (max-width: 350px) {
+        flex-direction: column;
+    }
     .date-dropdown__control {
         display: flex;
         align-items: center;
@@ -14,6 +17,9 @@
         border: 1px solid $dark-shade-25;
         padding: 0 11px;
         margin-top: 5px; 
+        &:hover {
+            border-color: $dark-shade-50;
+        }
         @media (max-width: 440px) {
             width: unset;
         }

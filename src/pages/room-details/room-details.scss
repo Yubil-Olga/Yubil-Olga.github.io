@@ -47,8 +47,9 @@
         width: unset;
         padding: 70px;
         grid-template-columns: 1fr;
+        justify-items: center;
     }
-    @media (max-width: 900px) {
+    @media (max-width: 450px) {
         padding: $space-x/2;
     }
 }
@@ -68,7 +69,7 @@
     .diagramma {
         margin-top: 20px;
     }
-    @media (max-width: 900px) {
+    @media (max-width: 670px) {
         grid-template-columns: 1fr;
         .info__chart {
             grid-row: 1/2;
@@ -101,6 +102,12 @@
     display: flex;
     align-items: flex-end;
     margin: 0;
+    @media (max-width: 350px) {
+        flex-wrap: wrap;
+        .diagramma__key {
+            margin-top: 10px;
+        }
+    }
 }
 .diagramma__key {
     @include Body;

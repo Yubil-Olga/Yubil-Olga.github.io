@@ -126,9 +126,16 @@ i.material-icons {
    .datepicker {
        width: 100%;
        padding: 0;
-   }
-   .datepicker--cell-day {
-    width: 20px;
-    height: 20px;
-}
+       .datepicker--content {
+        width: 100%;
+        }
+        .datepicker--cell-day {
+            width: 34px;
+            height: 34px;
+        }
+        .-current-:before, .datepicker--cell.-selected-.-current-:before {
+            width: 34px;
+            height: 34px;
+        }
+    }
 }

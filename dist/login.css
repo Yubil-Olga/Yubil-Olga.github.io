@@ -138,6 +138,9 @@
   @media (max-width: 1200px) {
     .header__wrapper {
       padding: 0 30px; } }
+  @media (max-width: 450px) {
+    .header__wrapper {
+      padding: 0 15px; } }
 
 .navigation__details {
   margin-right: 20px;

@@ -1,13 +1,13 @@
-document.querySelectorAll('.like-btn').forEach(el => {
-    el.addEventListener('click', () => {
+document.querySelectorAll('.js-like-btn').forEach(el => {
+    el.addEventListener('change', () => {
         let likes = el.getAttribute('data-count');
         if (el.querySelector('input').checked) {
-            likes++; 
+            likes++;
             el.querySelector('.material-icons').textContent = 'favorite';
             el.classList.add('like-btn_active');
         }
         else {
-            likes--;
+            likes--; 
             el.querySelector('.material-icons').textContent = 'favorite_border';
             el.classList.remove('like-btn_active');
         }

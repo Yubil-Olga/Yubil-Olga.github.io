@@ -89,8 +89,8 @@ block main
                                 li.key_disappointed Разочарован
                 .info__item.room-details__reviews
                     h2.info__subtitle Отзывы посетителей номера
-                    each review in reviews
-                        +review(review)
+                    each comment in reviews
+                        +review(comment)
                 .info__item
                     h2.info__subtitle Правила
                     +bullet-list

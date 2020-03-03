@@ -23,6 +23,9 @@
     @media (max-width: 1200px) {
         padding: 0 $space-x;
     }
+    @media (max-width: 450px) {
+        padding: 0 $space-x/2;
+    }
 }
 .navigation__details {
     margin-right: 20px;

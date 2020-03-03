@@ -541,13 +541,21 @@ i.material-icons {
   .datepicker {
     width: 100%;
     padding: 0; }
-  .datepicker--cell-day {
-    width: 20px;
-    height: 20px; } }
+    .datepicker .datepicker--content {
+      width: 100%; }
+    .datepicker .datepicker--cell-day {
+      width: 34px;
+      height: 34px; }
+    .datepicker .-current-:before, .datepicker .datepicker--cell.-selected-.-current-:before {
+      width: 34px;
+      height: 34px; } }
 
 .date-dropdown {
   display: flex;
   position: relative; }
+  @media (max-width: 350px) {
+    .date-dropdown {
+      flex-direction: column; } }
   .date-dropdown .date-dropdown__control {
     display: flex;
     align-items: center;
@@ -559,6 +567,8 @@ i.material-icons {
     border: 1px solid rgba(31, 32, 65, 0.25);
     padding: 0 11px;
     margin-top: 5px; }
+    .date-dropdown .date-dropdown__control:hover {
+      border-color: rgba(31, 32, 65, 0.5); }
     @media (max-width: 440px) {
       .date-dropdown .date-dropdown__control {
         width: unset; } }

@@ -141,6 +141,9 @@
   @media (max-width: 1200px) {
     .header__wrapper {
       padding: 0 30px; } }
+  @media (max-width: 450px) {
+    .header__wrapper {
+      padding: 0 15px; } }
 
 .navigation__details {
   margin-right: 20px;
@@ -552,9 +555,14 @@ i.material-icons {
   .datepicker {
     width: 100%;
     padding: 0; }
-  .datepicker--cell-day {
-    width: 20px;
-    height: 20px; } }
+    .datepicker .datepicker--content {
+      width: 100%; }
+    .datepicker .datepicker--cell-day {
+      width: 34px;
+      height: 34px; }
+    .datepicker .-current-:before, .datepicker .datepicker--cell.-selected-.-current-:before {
+      width: 34px;
+      height: 34px; } }
 
 .filter-date-dropdown {
   position: relative; }
