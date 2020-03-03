@@ -83,7 +83,9 @@ li {
     margin: 0; }
   @media (max-width: 440px) {
     .form {
-      width: unset; } }
+      width: unset;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 .form__title {
   font-family: Quicksand;
@@ -238,6 +240,14 @@ i.material-icons {
 .datepicker--pointer {
   display: none; }
 
+@media (max-width: 370px) {
+  .datepicker {
+    width: 100%;
+    padding: 0; }
+  .datepicker--cell-day {
+    width: 20px;
+    height: 20px; } }
+
 .date-dropdown {
   display: flex;
   position: relative; }
@@ -252,15 +262,22 @@ i.material-icons {
     border: 1px solid rgba(31, 32, 65, 0.25);
     padding: 0 11px;
     margin-top: 5px; }
+    @media (max-width: 440px) {
+      .date-dropdown .date-dropdown__control {
+        width: unset; } }
   .date-dropdown .date-dropdown__title {
     font-family: Montserrat;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     color: #1F2041;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 100%; }
     .date-dropdown .date-dropdown__title:first-child {
       margin-right: 20px; }
+      @media (max-width: 440px) {
+        .date-dropdown .date-dropdown__title:first-child {
+          margin-right: 6px; } }
   .date-dropdown .datepicker-here {
     font-family: Montserrat;
     font-weight: normal;
@@ -277,6 +294,72 @@ i.material-icons {
     text-transform: none;
     font-size: 24px;
     cursor: pointer; }
+
+.button, .button_border, .button_simple, .button_ghost, .button_arrow {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 22px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px; }
+
+.button {
+  color: #fff;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .button:hover {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+  .button_border {
+    color: #BC9CFF;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    position: relative; }
+    .button_border:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .button_border:hover::before {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+  .button_simple {
+    color: #BC9CFF;
+    padding-left: 0;
+    padding-right: 0; }
+  .button_simple:hover {
+    color: rgba(31, 32, 65, 0.5); }
+  .button_ghost {
+    color: rgba(31, 32, 65, 0.5);
+    padding-left: 0;
+    padding-right: 0; }
+  .button_arrow {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    width: 100%;
+    max-width: 320px;
+    color: #fff;
+    text-align: center;
+    position: relative; }
+    .button_arrow i.material-icons {
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none;
+      font-size: 24px;
+      position: absolute;
+      right: 12px; }
 
 .dropdown {
   width: 100%;
@@ -405,7 +488,7 @@ i.material-icons {
       color: #BC9CFF;
       cursor: pointer; }
 
-.button, .button_border, .button_simple, .button_arrow {
+.button, .button_border, .button_simple, .button_ghost, .button_arrow {
   font-family: Montserrat;
   font-weight: bold;
   font-size: 12px;
@@ -446,9 +529,15 @@ i.material-icons {
   .button_border:hover::before {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_simple {
-    color: #BC9CFF; }
+    color: #BC9CFF;
+    padding-left: 0;
+    padding-right: 0; }
   .button_simple:hover {
     color: rgba(31, 32, 65, 0.5); }
+  .button_ghost {
+    color: rgba(31, 32, 65, 0.5);
+    padding-left: 0;
+    padding-right: 0; }
   .button_arrow {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     width: 100%;
@@ -464,9 +553,6 @@ i.material-icons {
       font-size: 24px;
       position: absolute;
       right: 12px; }
-    @media (max-width: 350px) {
-      .button_arrow {
-        justify-content: flex-start; } }
 
 .form-selection__footer {
   margin-top: 10px; }
@@ -495,7 +581,9 @@ i.material-icons {
     margin: 0; }
   @media (max-width: 440px) {
     .form {
-      width: unset; } }
+      width: unset;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 .form__title {
   font-family: Quicksand;
@@ -661,7 +749,9 @@ i.material-icons {
     margin: 0; }
   @media (max-width: 440px) {
     .form {
-      width: unset; } }
+      width: unset;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 .form__title {
   font-family: Quicksand;
@@ -725,7 +815,7 @@ i.material-icons {
       box-shadow: 0 0 0 0.5px rgba(31, 32, 65, 0.5);
       outline: none; }
 
-.button, .button_border, .button_simple, .button_arrow {
+.button, .button_border, .button_simple, .button_ghost, .button_arrow {
   font-family: Montserrat;
   font-weight: bold;
   font-size: 12px;
@@ -766,9 +856,15 @@ i.material-icons {
   .button_border:hover::before {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_simple {
-    color: #BC9CFF; }
+    color: #BC9CFF;
+    padding-left: 0;
+    padding-right: 0; }
   .button_simple:hover {
     color: rgba(31, 32, 65, 0.5); }
+  .button_ghost {
+    color: rgba(31, 32, 65, 0.5);
+    padding-left: 0;
+    padding-right: 0; }
   .button_arrow {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     width: 100%;
@@ -784,9 +880,6 @@ i.material-icons {
       font-size: 24px;
       position: absolute;
       right: 12px; }
-    @media (max-width: 350px) {
-      .button_arrow {
-        justify-content: flex-start; } }
 
 .form {
   width: 380px;
@@ -812,7 +905,9 @@ i.material-icons {
     margin: 0; }
   @media (max-width: 440px) {
     .form {
-      width: unset; } }
+      width: unset;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 .form__title {
   font-family: Quicksand;
@@ -967,6 +1062,14 @@ i.material-icons {
 .datepicker--pointer {
   display: none; }
 
+@media (max-width: 370px) {
+  .datepicker {
+    width: 100%;
+    padding: 0; }
+  .datepicker--cell-day {
+    width: 20px;
+    height: 20px; } }
+
 .date-dropdown {
   display: flex;
   position: relative; }
@@ -981,15 +1084,22 @@ i.material-icons {
     border: 1px solid rgba(31, 32, 65, 0.25);
     padding: 0 11px;
     margin-top: 5px; }
+    @media (max-width: 440px) {
+      .date-dropdown .date-dropdown__control {
+        width: unset; } }
   .date-dropdown .date-dropdown__title {
     font-family: Montserrat;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     color: #1F2041;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 100%; }
     .date-dropdown .date-dropdown__title:first-child {
       margin-right: 20px; }
+      @media (max-width: 440px) {
+        .date-dropdown .date-dropdown__title:first-child {
+          margin-right: 6px; } }
   .date-dropdown .datepicker-here {
     font-family: Montserrat;
     font-weight: normal;
@@ -1006,6 +1116,72 @@ i.material-icons {
     text-transform: none;
     font-size: 24px;
     cursor: pointer; }
+
+.button, .button_border, .button_simple, .button_ghost, .button_arrow {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 22px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px; }
+
+.button {
+  color: #fff;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .button:hover {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+  .button_border {
+    color: #BC9CFF;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    position: relative; }
+    .button_border:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .button_border:hover::before {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+  .button_simple {
+    color: #BC9CFF;
+    padding-left: 0;
+    padding-right: 0; }
+  .button_simple:hover {
+    color: rgba(31, 32, 65, 0.5); }
+  .button_ghost {
+    color: rgba(31, 32, 65, 0.5);
+    padding-left: 0;
+    padding-right: 0; }
+  .button_arrow {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    width: 100%;
+    max-width: 320px;
+    color: #fff;
+    text-align: center;
+    position: relative; }
+    .button_arrow i.material-icons {
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none;
+      font-size: 24px;
+      position: absolute;
+      right: 12px; }
 
 .dropdown {
   width: 100%;
@@ -1134,7 +1310,7 @@ i.material-icons {
       color: #BC9CFF;
       cursor: pointer; }
 
-.button, .button_border, .button_simple, .button_arrow {
+.button, .button_border, .button_simple, .button_ghost, .button_arrow {
   font-family: Montserrat;
   font-weight: bold;
   font-size: 12px;
@@ -1175,9 +1351,15 @@ i.material-icons {
   .button_border:hover::before {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_simple {
-    color: #BC9CFF; }
+    color: #BC9CFF;
+    padding-left: 0;
+    padding-right: 0; }
   .button_simple:hover {
     color: rgba(31, 32, 65, 0.5); }
+  .button_ghost {
+    color: rgba(31, 32, 65, 0.5);
+    padding-left: 0;
+    padding-right: 0; }
   .button_arrow {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     width: 100%;
@@ -1193,9 +1375,6 @@ i.material-icons {
       font-size: 24px;
       position: absolute;
       right: 12px; }
-    @media (max-width: 350px) {
-      .button_arrow {
-        justify-content: flex-start; } }
 
 .form-booking__room-details {
   display: flex;
