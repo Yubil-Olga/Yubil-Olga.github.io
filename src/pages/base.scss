@@ -4,7 +4,8 @@ body {
     max-width: 1920px;
     min-width: 320px;
     margin: 0;
-    background-color: #E5E5E5;
+    padding: $space-y 0;
+    // background: url('../components/logo/logo2.png') 30px 30px no-repeat;
 }
 h1, h2, h3, h4, p, ul {
     margin: 0;
@@ -17,4 +18,8 @@ ul {
 }
 li {
     list-style: none;
+}
+button {
+    border: none;
+    background: none;
 }

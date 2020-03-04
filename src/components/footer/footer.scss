@@ -1,4 +1,5 @@
 @import '../logo/logo.scss';
+@import '../subscription-input/subscription-input.scss';
 
 .footer {
     box-shadow: 0px 1px 0px rgba($dark-shade, 0.1);
@@ -65,42 +66,6 @@
 }
 .footer__description {
     @include Body;
-}
-.footer__control {
-    display: flex;
-    justify-content: space-between;
-    width: 260px;
-    height: 44px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid $dark-shade-25;
-    overflow: hidden;
-    input {
-        border: none;
-        padding-left: 15px; 
-        background-color: transparent;
-        width: 100%;
-        &::placeholder {
-            @include Body;
-            color: $dark-shade-25;
-        } 
-    }
-    .footer__button {
-        width: 44px;
-        background-color: #fff;
-        border: none;
-        cursor: pointer;
-        i.material-icons {
-            background: linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
-            color: transparent;
-            -webkit-background-clip: text;
-            font: {
-                family: Material Icons;
-                weight: normal;
-                size: 24px;
-            }
-        }
-    }
 }
 .footer__wrapper {
     border-top: 2px solid rgba($dark-shade, 0.1);

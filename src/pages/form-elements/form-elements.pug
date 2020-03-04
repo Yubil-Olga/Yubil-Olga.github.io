@@ -4,28 +4,129 @@ include ../../components/advantages/advantages
 include ../../components/input/input
 include ../../components/dropdown/dropdown
 include ../../components/date-dropdown/date-dropdown
+include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/rate-btn/rate-btn
+include ../../components/expandable-checkbox/expandable-checkbox
+include ../../components/toggle/toggle
+include ../../components/radiobutton/radiobutton
+include ../../components/checkbox/checkbox
+include ../../components/range-slider/range-slider
+include ../../components/pagination/pagination
+include ../../components/review/review
+include ../../components/bullet-list/bullet-list
+include ../../components/subscription-input/subscription-input
 
 block variables
     - var pageTitle = 'Form elements'
+    - 
+        var comment = 
+        {
+            name: "Мурад Сарафанов", 
+            src: "images/reviews/review2.png", 
+            counter: 11,
+            liked: true,
+            comment: 
+            "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+        }
+    - 
+        var accessibility = [
+            {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
+            {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
+        ]
+        
 
 block main
-     h1 Form elements
-     +date-dropdown
-     +dropdown(false, "", "man", "child", "baby")
-     +input(false, "Email")
-     +input(false, "", "This is pretty awesome")
-     +input(true, "ДД.ММ.ГГГГ")
-     +like-btn(5, true)
-     +rate-btn(5, 4)
-     .button click me
-     .button click me
-     .button_border click me
-     .button_border click me
-     .button_simple click me
-     .button_simple click me
-     .button_arrow click me
-          i.material-icons arrow_forward
-     +advantages("Комфорт", "Шумопоглощающие стены", "insert_emoticon")
-     +advantages("Удобство", "Окно в каждой из спален", "location_city")
-        
+     section.form-elements
+        .form-elements__section
+            .form-elements__item
+                h3.form-elements__subtitle Text Field       
+                +input(false, "Email")
+            .form-elements__item
+                h3.form-elements__subtitle Text Field 
+                +input(false, "", "This is pretty awesome")
+            .form-elements__item
+                h3.form-elements__subtitle Dropdown
+                +dropdown(false, "", "man", "child", "baby")
+            .form-elements__item
+                h3.form-elements__subtitle masked text field
+                +input(true, "ДД.ММ.ГГГГ")
+            .form-elements__item
+                +date-dropdown("date dropdown", "date dropdown")
+            .form-elements__item
+                h3.form-elements__subtitle filter date dropdown
+                +filter-date-dropdown
+            .form-elements__item
+                h3.form-elements__subtitle subscription text field
+                +subscription-input
+        .form-elements__section 
+            .form-elements__item
+                h3.form-elements__subtitle Checkbox buttons
+                +checkbox(false,"Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)")
+            .form-elements__item
+                h3.form-elements__subtitle Radio buttons
+                +radiobutton
+            .form-elements__item.grid_gap_10
+                h3.form-elements__subtitle Toggle
+                +toggle("Получать спецпредложения", true)
+                +toggle("Получать спецпредложения", false)
+            .form-elements__item.grid_gap_10
+                h3.form-elements__subtitle Like button
+                .form-elements__grid_col_2
+                    +like-btn(2, false)
+                    +like-btn(12, true)
+            .form-elements__item
+                h3.form-elements__subtitle Rate button
+                .form-elements__grid
+                    +rate-btn(5, 4)
+                    +rate-btn(5, 5)
+        .form-elements__section 
+            .form-elements__item
+                h3.form-elements__subtitle Range slider
+                +range-slider
+            .form-elements__item.grid_gap_10
+                h3.form-elements__subtitle Buttons
+                .form-elements__grid
+                    .button click me
+                    .button click me
+                    .button_border click me
+                    .button_border click me
+                    .button_simple click me
+                    .button_ghost click me
+                    .button_arrow click me
+                        i.material-icons arrow_forward
+            .form-elements__item.grid_gap_10
+                h3.form-elements__subtitle Pagination
+                +pagination
+                p.form-elements__description 1 – 12 из 100+ вариантов аренды
+        .form-elements__section 
+            .form-elements__item
+                h3.form-elements__subtitle dropdown
+                +dropdown(false, "room", "спальни", "кровати", "ванные комнаты")
+            .form-elements__item
+                h3.form-elements__subtitle dropdown
+                +dropdown(true, "room", "спальни", "кровати", "ванные комнаты")
+        .form-elements__section
+            .form-elements__item
+                +dropdown(true, "", "взрослые", "дети", "младенцы")
+        .form-elements__section
+            .form-elements__item
+                +dropdown(true, "", "взрослые", "дети", "младенцы")
+        .form-elements__section
+            .form-elements__item
+                +expandable-checkbox("expandable-checkbox")
+            .form-elements__item
+                +expandable-checkbox("expandable-checkbox", "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь")
+        .form-elements__section
+            .form-elements__item
+                h3.form-elements__subtitle Bullet list
+                +bullet-list
+        .form-elements__section
+            .form-elements__item
+                h3.form-elements__subtitle Rich checkbox buttons
+                +checkbox(true, ...accessibility)
+        .form-elements__section
+            .form-elements__item
+                +advantages({title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"})
+                +advantages({title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"})
+        .form-elements__section.grid_span_2
+            +review(comment)

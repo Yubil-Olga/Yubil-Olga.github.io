@@ -45,7 +45,7 @@ body {
   max-width: 1920px;
   min-width: 320px;
   margin: 0;
-  background-color: #E5E5E5; }
+  padding: 70px 0; }
 
 h1, h2, h3, h4, p, ul {
   margin: 0; }
@@ -58,6 +58,10 @@ ul {
 
 li {
   list-style: none; }
+
+button {
+  border: none;
+  background: none; }
 
 .form {
   width: 380px;
@@ -240,26 +244,15 @@ i.material-icons {
 .datepicker--pointer {
   display: none; }
 
-@media (max-width: 370px) {
-  .datepicker {
-    width: 100%;
-    padding: 0; }
-    .datepicker .datepicker--content {
-      width: 100%; }
-    .datepicker .datepicker--cell-day {
-      width: 34px;
-      height: 34px; }
-    .datepicker .-current-:before, .datepicker .datepicker--cell.-selected-.-current-:before {
-      width: 34px;
-      height: 34px; } }
-
 .date-dropdown {
   display: flex;
-  position: relative; }
+  position: relative;
+  max-width: 320px; }
   @media (max-width: 350px) {
     .date-dropdown {
       flex-direction: column; } }
   .date-dropdown .date-dropdown__control {
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -319,7 +312,8 @@ i.material-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px; }
+  padding: 8px 18px;
+  max-width: 320px; }
 
 .button {
   color: #fff;
@@ -330,7 +324,7 @@ i.material-icons {
     color: #BC9CFF;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid transparent;
+    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";
@@ -512,7 +506,8 @@ i.material-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px; }
+  padding: 8px 18px;
+  max-width: 320px; }
 
 .button {
   color: #fff;
@@ -523,7 +518,7 @@ i.material-icons {
     color: #BC9CFF;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid transparent;
+    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";
@@ -839,7 +834,8 @@ i.material-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px; }
+  padding: 8px 18px;
+  max-width: 320px; }
 
 .button {
   color: #fff;
@@ -850,7 +846,7 @@ i.material-icons {
     color: #BC9CFF;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid transparent;
+    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";
@@ -1072,26 +1068,15 @@ i.material-icons {
 .datepicker--pointer {
   display: none; }
 
-@media (max-width: 370px) {
-  .datepicker {
-    width: 100%;
-    padding: 0; }
-    .datepicker .datepicker--content {
-      width: 100%; }
-    .datepicker .datepicker--cell-day {
-      width: 34px;
-      height: 34px; }
-    .datepicker .-current-:before, .datepicker .datepicker--cell.-selected-.-current-:before {
-      width: 34px;
-      height: 34px; } }
-
 .date-dropdown {
   display: flex;
-  position: relative; }
+  position: relative;
+  max-width: 320px; }
   @media (max-width: 350px) {
     .date-dropdown {
       flex-direction: column; } }
   .date-dropdown .date-dropdown__control {
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1151,7 +1136,8 @@ i.material-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px; }
+  padding: 8px 18px;
+  max-width: 320px; }
 
 .button {
   color: #fff;
@@ -1162,7 +1148,7 @@ i.material-icons {
     color: #BC9CFF;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid transparent;
+    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";
@@ -1344,7 +1330,8 @@ i.material-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px; }
+  padding: 8px 18px;
+  max-width: 320px; }
 
 .button {
   color: #fff;
@@ -1355,7 +1342,7 @@ i.material-icons {
     color: #BC9CFF;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid transparent;
+    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";

@@ -1,4 +1,5 @@
 include ../logo/logo
+include ../subscription-input/subscription-input
 
 mixin footer(creative, text, formtitle, formtext, copyright, ...items)
     footer.footer(class=creative ? "footer-creative" : "")
@@ -18,13 +19,7 @@ mixin footer(creative, text, formtitle, formtext, copyright, ...items)
                     h3.footer__subtitle=formtitle
                     p.footer__description=formtext
                     .footer__control
-                        input(
-                            type="text"
-                            name="Subscribe"
-                            placeholder="Email"
-                        )
-                        button.footer__button
-                            i.material-icons arrow_forward
+                        +subscription-input
         .footer__wrapper
             .copyright-bar(class=creative ? "center" : "space-between")
                 unless creative

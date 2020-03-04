@@ -122,20 +122,20 @@ i.material-icons {
 .datepicker--pointer {
     display: none;
 }
-@media (max-width: 370px) {
-   .datepicker {
-       width: 100%;
-       padding: 0;
-       .datepicker--content {
-        width: 100%;
-        }
-        .datepicker--cell-day {
-            width: 34px;
-            height: 34px;
-        }
-        .-current-:before, .datepicker--cell.-selected-.-current-:before {
-            width: 34px;
-            height: 34px;
-        }
-    }
-}
+// @media (max-width: 370px) {
+//    .datepicker {
+//        width: 100%;
+//        padding: 0;
+//        .datepicker--content {
+//         width: 100%;
+//         }
+//         .datepicker--cell-day {
+//             width: 34px;
+//             height: 34px;
+//         }
+//         .-current-:before, .datepicker--cell.-selected-.-current-:before {
+//             width: 34px;
+//             height: 34px;
+//         }
+//     }
+// }

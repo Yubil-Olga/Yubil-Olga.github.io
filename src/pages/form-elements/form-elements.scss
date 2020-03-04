@@ -6,4 +6,76 @@
 @import '../../components/input/input.scss';
 @import '../../components/dropdown/dropdown.scss';
 @import '../../components/date-dropdown/date-dropdown.scss';
+@import '../../components/filter-date-dropdown/filter-date-dropdown.scss';
 @import '../../components/rate-btn/rate-btn.scss';
+@import '../../components/expandable-checkbox/expandable-checkbox.scss';
+@import '../../components/toggle/toggle.scss';
+@import '../../components/radiobutton/radiobutton.scss';
+@import '../../components/checkbox/checkbox.scss';
+@import '../../components/range-slider/range-slider.scss';
+@import '../../components/pagination/pagination.scss';
+@import '../../components/review/review.scss';
+@import '../../components/bullet-list/bullet-list.scss';
+@import '../../components/subscription-input/subscription-input.scss';
+
+.form-elements {
+    background-color: #fff;
+    width: $content-width;
+    margin: 0 auto;
+    padding: $space-y 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 130px;
+    .button_arrow {
+        grid-column: span 2;
+    }
+    .pagination {
+        justify-content: flex-start;
+    }
+    @media (max-width: 1240px) {
+        width: unset;
+        padding-right: $space-x;
+        padding-left: $space-x;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        justify-items: center;
+        .form-elements__item {
+            width: 266px;
+        }
+    }
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+}
+.form-elements__section {
+    display: grid;
+    grid-row-gap: 20px;
+    max-width: 320px;
+}
+.form-elements__subtitle {
+    @include H3;
+}
+.form-elements__description {
+    @include Body;
+}
+.form-elements__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.form-elements__grid_col_2 {
+    display: grid;
+    grid-template-columns: 50px 50px;
+}
+.grid_span_2 {
+    grid-column: span 2;
+    max-width: unset;
+    @media (max-width: 800px) {
+        grid-column: unset;
+    }
+}
+.grid_gap_10 {
+    display: grid;
+    grid-gap: 10px;
+}

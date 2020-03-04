@@ -3,10 +3,12 @@
 .date-dropdown {
     display: flex;
     position: relative;
+    max-width: 320px;
     @media (max-width: 350px) {
         flex-direction: column;
     }
     .date-dropdown__control {
+        background-color: #fff;
         display: flex;
         align-items: center;
         justify-content: space-between;
