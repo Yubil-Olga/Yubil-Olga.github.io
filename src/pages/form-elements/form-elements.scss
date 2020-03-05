@@ -18,6 +18,89 @@
 @import '../../components/bullet-list/bullet-list.scss';
 @import '../../components/subscription-input/subscription-input.scss';
 
+// Colors and Type
+.colors {
+    width: $content-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    .colors__palette {
+        display: flex;
+        padding-bottom: 20px;
+    }
+    .palette__name {
+        @include H2;
+    }
+    .palette__code {
+        @include Body;
+    }
+    .palette__box {
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+        margin-right: 40px;
+    }
+    .color {
+        &_dark-shade {
+            background-color: $dark-shade;
+        }
+        &_dark-shade-75 {
+            background-color: $dark-shade-75;
+        }
+        &_dark-shade-50 {
+            background-color: $dark-shade-50;
+        }
+        &_dark-shade-25 {
+            background-color: $dark-shade-25;
+        }
+        &_dark-shade-5 {
+            background-color: $dark-shade-5;
+        }
+        &_purple {
+            background-color: $purple;
+        }
+        &_green {
+            background-color: $green;
+        }
+    }
+    @media (max-width: 1240px) {
+        width: unset;
+        padding-right: $space-x;
+        padding-left: $space-x;
+        .form-elements__item {
+            width: 266px;
+        }
+    }
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+}
+.colors__font {
+    display: grid;
+    grid-template-columns: 80px auto;
+    padding-bottom: 20px;
+    .font__tag {
+        padding-right: 30px;
+        color: $dark-shade-25;
+        text-align: center;
+    }
+}
+.font {
+    &_H1 {
+        @include H1;
+    }
+    &_H2 {
+        @include H2;
+    }
+    &_H3 {
+        @include H3;
+    }
+    &_Body {
+        @include Body;
+    }
+}
+// Form Elements
 .form-elements {
     background-color: #fff;
     width: $content-width;
@@ -26,6 +109,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 130px;
+    .show .dropdown__menu {
+        position: relative;
+    }
     .button_arrow {
         grid-column: span 2;
     }

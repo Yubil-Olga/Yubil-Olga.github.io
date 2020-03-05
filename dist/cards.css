@@ -367,6 +367,7 @@ i.material-icons {
 
 .dropdown {
   width: 100%;
+  max-width: 320px;
   position: relative; }
   .dropdown .dropdown__selection {
     display: flex;
@@ -1191,6 +1192,7 @@ i.material-icons {
 
 .dropdown {
   width: 100%;
+  max-width: 320px;
   position: relative; }
   .dropdown .dropdown__selection {
     display: flex;
@@ -1483,6 +1485,7 @@ i.material-icons {
 
 .card-room {
   width: 270px;
+  display: inline-block;
   background-color: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
@@ -1569,8 +1572,25 @@ i.material-icons {
 
 .container {
   column-count: 3;
+  column-gap: 40px;
   margin: 0 auto;
-  padding: 150px 140px; }
+  width: 1220px; }
+  @media (max-width: 1300px) {
+    .container {
+      width: unset;
+      column-count: 2;
+      padding: 0 30px; } }
+  @media (max-width: 850px) {
+    .container {
+      column-count: unset;
+      display: grid;
+      justify-items: center; }
+      .container .form {
+        padding-left: 30px;
+        padding-right: 30px; } }
+  @media (max-width: 450px) {
+    .container {
+      padding: 0; } }
 
 .container__item {
   margin-bottom: 40px;

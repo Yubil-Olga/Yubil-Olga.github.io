@@ -2,6 +2,7 @@
 
 .dropdown {
     width: 100%;
+    max-width: 320px;
     position: relative;
     .dropdown__selection {
         display: flex;

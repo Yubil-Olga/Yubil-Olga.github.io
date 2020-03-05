@@ -295,6 +295,7 @@ button {
 
 .dropdown {
   width: 100%;
+  max-width: 320px;
   position: relative; }
   .dropdown .dropdown__selection {
     display: flex;
@@ -1157,6 +1158,97 @@ i.material-icons {
       font-weight: normal;
       font-size: 24px; }
 
+.colors {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px; }
+  .colors .colors__palette {
+    display: flex;
+    padding-bottom: 20px; }
+  .colors .palette__name {
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1F2041; }
+  .colors .palette__code {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    text-transform: none; }
+  .colors .palette__box {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px; }
+  .colors .color_dark-shade {
+    background-color: #1F2041; }
+  .colors .color_dark-shade-75 {
+    background-color: rgba(31, 32, 65, 0.75); }
+  .colors .color_dark-shade-50 {
+    background-color: rgba(31, 32, 65, 0.5); }
+  .colors .color_dark-shade-25 {
+    background-color: rgba(31, 32, 65, 0.25); }
+  .colors .color_dark-shade-5 {
+    background-color: rgba(31, 32, 65, 0.05); }
+  .colors .color_purple {
+    background-color: #BC9CFF; }
+  .colors .color_green {
+    background-color: #6FCF97; }
+  @media (max-width: 1240px) {
+    .colors {
+      width: unset;
+      padding-right: 30px;
+      padding-left: 30px; }
+      .colors .form-elements__item {
+        width: 266px; } }
+  @media (max-width: 800px) {
+    .colors {
+      grid-template-columns: 1fr; } }
+
+.colors__font {
+  display: grid;
+  grid-template-columns: 80px auto;
+  padding-bottom: 20px; }
+  .colors__font .font__tag {
+    padding-right: 30px;
+    color: rgba(31, 32, 65, 0.25);
+    text-align: center; }
+
+.font_H1 {
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #1F2041; }
+
+.font_H2 {
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1F2041; }
+
+.font_H3 {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  text-transform: uppercase; }
+
+.font_Body {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  text-transform: none; }
+
 .form-elements {
   background-color: #fff;
   width: 1160px;
@@ -1165,6 +1257,8 @@ i.material-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 130px; }
+  .form-elements .show .dropdown__menu {
+    position: relative; }
   .form-elements .button_arrow {
     grid-column: span 2; }
   .form-elements .pagination {

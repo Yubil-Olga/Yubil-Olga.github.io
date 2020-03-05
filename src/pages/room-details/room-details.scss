@@ -50,7 +50,7 @@
         justify-items: center;
     }
     @media (max-width: 450px) {
-        padding: $space-x/2;
+        padding: 0;
     }
 }
 .room-details__info {
@@ -77,6 +77,9 @@
         .room-details__reviews {
             grid-column: 1/2;
         }
+    }
+    @media (max-width: 450px) {
+        padding: $space-x/2;
     }
 }
 .chart-text {

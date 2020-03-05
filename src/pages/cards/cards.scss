@@ -7,8 +7,26 @@
 
 .container {
     column-count: 3;
+    column-gap: 40px;
     margin: 0 auto;
-    padding: 150px 140px;
+    width: 1220px;
+    @media (max-width: 1300px) {
+        width: unset;
+        column-count: 2;
+        padding: 0 $space-x;
+    }
+    @media (max-width: 850px) {
+        column-count: unset;
+        display: grid;
+        justify-items: center;
+        .form {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    @media (max-width: 450px) {
+        padding: 0;
+    }
 }
 .container__item {
     margin-bottom: 40px;

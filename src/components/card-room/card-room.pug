@@ -1,7 +1,7 @@
 include ../rate-btn/rate-btn
 
-mixin card-room(room)
-    a(href="room-details.html").card-room
+mixin card-room(room) 
+    a(href=room.link).card-room
         .card-room__image
             img(src=room.url)
             .card-room__slider

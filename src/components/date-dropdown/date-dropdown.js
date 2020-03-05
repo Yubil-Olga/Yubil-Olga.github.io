@@ -1,4 +1,5 @@
 import '../datepicker/datepicker';
+import '../input/input';
 
 $('.datepicker-here').datepicker(
     {   

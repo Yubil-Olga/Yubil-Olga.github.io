@@ -33,10 +33,40 @@ block variables
             {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
             {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
         ]
+    -
+        var colors = [
+            {name: "Dark Shade 100%", code: "#1F2041", group:"dark-shade"},
+            {name: "Dark Shade 75%", code: "#1F2041", group:"dark-shade-75"},
+            {name: "Dark Shade 50%", code: "#1F2041", group: "dark-shade-50"},
+            {name: "Dark Shade 25%", code: "#1F2041", group: "dark-shade-25"},
+            {name: "Dark Shade 5%", code: "#1F2041", group: "dark-shade-5"},
+            {name: "Purple", code: "#BC9CFF", group: "purple"},
+            {name: "Green", code: "#6FCF97", group:"green"}
+        ]
+    -
+        var fonts = [
+            {tag: "H1", description: "This one is the sub-section or widget title"},
+            {tag: "H2", description: "Next one is the item title inside widgets"},
+            {tag: "H3", description: "This is a label or CTA text"},
+            {tag: "Body", description: "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
+        ]
         
 
 block main
-     section.form-elements
+    section.colors
+        .colors__section
+            for color in colors
+                .colors__palette
+                    .palette__box(class="color_"+color.group)
+                    .palette__description
+                        h2.palette__name=color.name
+                        p.palette__code=color.code
+        .colors__section
+            for font in fonts
+                .colors__font(class="font_"+font.tag)
+                    .font__tag=font.tag
+                    .font__description=font.description
+    section.form-elements
         .form-elements__section
             .form-elements__item
                 h3.form-elements__subtitle Text Field       

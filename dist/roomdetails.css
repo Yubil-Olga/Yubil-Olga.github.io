@@ -710,6 +710,7 @@ i.material-icons {
 
 .dropdown {
   width: 100%;
+  max-width: 320px;
   position: relative; }
   .dropdown .dropdown__selection {
     display: flex;
@@ -1148,7 +1149,7 @@ i.material-icons {
       justify-items: center; } }
   @media (max-width: 450px) {
     .room-details__description {
-      padding: 15px; } }
+      padding: 0; } }
 
 .room-details__info {
   display: grid;
@@ -1178,6 +1179,9 @@ i.material-icons {
         grid-row: 1/2; }
       .room-details__info .room-details__reviews {
         grid-column: 1/2; } }
+  @media (max-width: 450px) {
+    .room-details__info {
+      padding: 15px; } }
 
 .chart-text {
   font-family: Quicksand;
