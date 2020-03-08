@@ -582,7 +582,8 @@ i.material-icons {
       margin-right: 20px; }
       @media (max-width: 440px) {
         .date-dropdown .date-dropdown__title:first-child {
-          margin-right: 6px; } }
+          margin-right: 6px;
+          margin-bottom: 20px; } }
   .date-dropdown .datepicker-here {
     font-family: Montserrat;
     font-weight: normal;
@@ -726,7 +727,8 @@ i.material-icons {
   display: none; }
 
 .filter-date-dropdown {
-  position: relative; }
+  position: relative;
+  max-width: 320px; }
 
 .filter-date-dropdown__title {
   font-family: Montserrat;
