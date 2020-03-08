@@ -426,7 +426,8 @@ button {
   background: none; }
 
 .form {
-  width: 380px;
+  min-width: 320px;
+  max-width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -449,9 +450,8 @@ button {
     margin: 0; }
   @media (max-width: 440px) {
     .form {
-      width: unset;
-      padding-left: 10px;
-      padding-right: 10px; } }
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .form__title {
   font-family: Quicksand;
@@ -642,7 +642,8 @@ i.material-icons {
       margin-right: 20px; }
       @media (max-width: 440px) {
         .date-dropdown .date-dropdown__title:first-child {
-          margin-right: 6px; } }
+          margin-right: 6px;
+          margin-bottom: 20px; } }
   .date-dropdown .datepicker-here {
     font-family: Montserrat;
     font-weight: normal;
@@ -930,7 +931,7 @@ i.material-icons {
   max-width: 1920px;
   height: 830px;
   margin: 0 auto;
-  background: url(images/bg-index.png) center/cover no-repeat;
+  background: url(images/bg-index.jpg) center/cover no-repeat;
   padding: 70px 0 20px 0;
   box-sizing: border-box;
   display: flex;

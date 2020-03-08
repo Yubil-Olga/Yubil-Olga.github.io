@@ -18,12 +18,14 @@ mixin form-booking(number, price, discount)
                     span.order-item__days 0
                 .order-item__price 0
             .order-details__order-item
-                .order-item__name.discount(date-discount=discount) Сбор за услуги: скидка #{discount} ₽
-                    span.order-item__info  i
+                .order-item__name.discount(date-discount=discount) 
+                    .order-item__title Сбор за услуги: скидка #{discount} ₽
+                    span.order-item__info(title="Сбор за услуги: скидка")  i
                 .order-item__price 0
             .order-details__order-item
-                .order-item__name Сбор за дополнительные услуги
-                    span.order-item__info  i
+                .order-item__name 
+                    .order-item__title Сбор за дополнительные услуги
+                    span.order-item__info(title="Сбор за дополнительные услуги")  i
                 .order-item__price 300
             .order-details__item-total
                 .item-total__name Итого

@@ -41,16 +41,16 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 60px;
-    padding: 70px 0;
+    padding: $space-y 0;
     border-bottom: 1px solid rgba($dark-shade, 0.1);
     @media (max-width: 1200px) {
         width: unset;
-        padding: 70px;
+        // padding: $space-y;
         grid-template-columns: 1fr;
         justify-items: center;
     }
     @media (max-width: 450px) {
-        padding: 0;
+        padding: $space-y/2 0;
     }
 }
 .room-details__info {
@@ -68,6 +68,9 @@
     }
     .diagramma {
         margin-top: 20px;
+    }
+    @media (max-width: 1200px) {
+        padding: 0 $space-y;
     }
     @media (max-width: 670px) {
         grid-template-columns: 1fr;

@@ -1,5 +1,6 @@
 .form {
-    width: 380px;
+    min-width: 320px;
+    max-width: 380px;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -18,9 +19,8 @@
         margin: 0;
     }
     @media (max-width: 440px) {
-        width: unset;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: $space-x/2;
+        padding-right: $space-x/2;
     }
 }
 .form__title {

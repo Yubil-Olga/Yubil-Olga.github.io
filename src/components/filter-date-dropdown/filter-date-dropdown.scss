@@ -2,6 +2,7 @@
 
 .filter-date-dropdown {
     position: relative;
+    max-width: 320px;
 }
 .filter-date-dropdown__title {
     @include H3;

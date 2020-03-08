@@ -407,7 +407,8 @@ button {
   background: none; }
 
 .form {
-  width: 380px;
+  min-width: 320px;
+  max-width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -430,9 +431,8 @@ button {
     margin: 0; }
   @media (max-width: 440px) {
     .form {
-      width: unset;
-      padding-left: 10px;
-      padding-right: 10px; } }
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .form__title {
   font-family: Quicksand;
@@ -623,7 +623,8 @@ i.material-icons {
       margin-right: 20px; }
       @media (max-width: 440px) {
         .date-dropdown .date-dropdown__title:first-child {
-          margin-right: 6px; } }
+          margin-right: 6px;
+          margin-bottom: 20px; } }
   .date-dropdown .datepicker-here {
     font-family: Montserrat;
     font-weight: normal;
@@ -950,9 +951,11 @@ i.material-icons {
   padding-bottom: 10px; }
 
 .order-item__name {
-  max-width: 240px;
   display: flex;
   justify-content: space-between; }
+
+.order-item__title {
+  max-width: 220px; }
 
 .order-details__order-item:first-of-type .order-item__name {
   display: inline-block; }
@@ -969,7 +972,8 @@ i.material-icons {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-left: 5px; }
 
 .order-details__item-total {
   display: flex;
@@ -1144,12 +1148,11 @@ i.material-icons {
   @media (max-width: 1200px) {
     .room-details__description {
       width: unset;
-      padding: 70px;
       grid-template-columns: 1fr;
       justify-items: center; } }
   @media (max-width: 450px) {
     .room-details__description {
-      padding: 0; } }
+      padding: 35px 0; } }
 
 .room-details__info {
   display: grid;
@@ -1172,6 +1175,9 @@ i.material-icons {
     grid-column: 1/3; }
   .room-details__info .diagramma {
     margin-top: 20px; }
+  @media (max-width: 1200px) {
+    .room-details__info {
+      padding: 0 70px; } }
   @media (max-width: 670px) {
     .room-details__info {
       grid-template-columns: 1fr; }

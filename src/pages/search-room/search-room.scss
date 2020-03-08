@@ -26,7 +26,7 @@
         color: $dark-shade-50;
         padding-top: 10px;
     }
-    .filter__item {
+    .filter__item:not(:last-child) {
         padding-bottom: 30px;
         &:first-child {
             padding-bottom: 20px;
@@ -58,8 +58,12 @@
     }
     @media (max-width: 940px) {
         grid-template-columns: 1fr;
-        .search-room__filter {
-            display: none;
+        .filter__toggle {
+            display: block;
+            font-family: Material Icons;
+            font-size: 24px;
+            text-align: right;
+            cursor: pointer;
         }
     }
     @media (max-width: 600px) {

@@ -553,7 +553,8 @@ i.material-icons {
   display: none; }
 
 .filter-date-dropdown {
-  position: relative; }
+  position: relative;
+  max-width: 320px; }
 
 .filter-date-dropdown__title {
   font-family: Montserrat;
@@ -1080,9 +1081,9 @@ i.material-icons {
     line-height: 14px;
     color: rgba(31, 32, 65, 0.5);
     padding-top: 10px; }
-  .search-room .filter__item {
+  .search-room .filter__item:not(:last-child) {
     padding-bottom: 30px; }
-    .search-room .filter__item:first-child {
+    .search-room .filter__item:not(:last-child):first-child {
       padding-bottom: 20px; }
   .search-room .filter__title {
     font-family: Montserrat;
@@ -1115,8 +1116,12 @@ i.material-icons {
   @media (max-width: 940px) {
     .search-room {
       grid-template-columns: 1fr; }
-      .search-room .search-room__filter {
-        display: none; } }
+      .search-room .filter__toggle {
+        display: block;
+        font-family: Material Icons;
+        font-size: 24px;
+        text-align: right;
+        cursor: pointer; } }
   @media (max-width: 600px) {
     .search-room .search-room__rooms {
       grid-template-columns: 1fr; } }
