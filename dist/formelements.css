@@ -428,7 +428,10 @@ button {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   text-transform: none;
-  border: none; }
+  border: none;
+  padding: 9px 0 9px 11px;
+  box-sizing: border-box;
+  width: calc(100% - 40px); }
 
 i.material-icons {
   font-family: Material Icons;
@@ -436,7 +439,12 @@ i.material-icons {
   font-weight: normal;
   text-transform: none;
   font-size: 24px;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .datepicker {
   width: 320px;
@@ -554,6 +562,8 @@ i.material-icons {
     .date-dropdown {
       flex-direction: column; } }
   .date-dropdown .date-dropdown__control {
+    overflow: hidden;
+    margin-top: 5px;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -562,9 +572,7 @@ i.material-icons {
     height: 44px;
     box-sizing: border-box;
     border-radius: 4px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    padding: 0 11px;
-    margin-top: 5px; }
+    border: 1px solid rgba(31, 32, 65, 0.25); }
     .date-dropdown .date-dropdown__control:hover {
       border-color: rgba(31, 32, 65, 0.5); }
     @media (max-width: 440px) {
@@ -584,22 +592,6 @@ i.material-icons {
         .date-dropdown .date-dropdown__title:first-child {
           margin-right: 6px;
           margin-bottom: 20px; } }
-  .date-dropdown .datepicker-here {
-    font-family: Montserrat;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
-    text-transform: none;
-    border: none;
-    width: 90px; }
-  .date-dropdown i.material-icons {
-    font-family: Material Icons;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: none;
-    font-size: 24px;
-    cursor: pointer; }
 
 .datepicker-here {
   font-family: Montserrat;
@@ -608,7 +600,10 @@ i.material-icons {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   text-transform: none;
-  border: none; }
+  border: none;
+  padding: 9px 0 9px 11px;
+  box-sizing: border-box;
+  width: calc(100% - 40px); }
 
 i.material-icons {
   font-family: Material Icons;
@@ -616,7 +611,12 @@ i.material-icons {
   font-weight: normal;
   text-transform: none;
   font-size: 24px;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .datepicker {
   width: 320px;
@@ -746,8 +746,8 @@ i.material-icons {
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  padding: 0 11px;
-  margin-top: 5px; }
+  margin-top: 5px;
+  overflow: hidden; }
 
 .rate-btn .rate-btn__item {
   position: relative; }

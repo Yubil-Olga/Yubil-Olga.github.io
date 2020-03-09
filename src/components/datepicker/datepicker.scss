@@ -3,6 +3,9 @@
 .datepicker-here {
     @include Body;
     border: none;
+    padding: 9px 0 9px 11px;
+    box-sizing: border-box;
+    width: calc(100% - 40px);
 }
 i.material-icons {
     font-family: Material Icons;
@@ -11,6 +14,11 @@ i.material-icons {
     text-transform: none;
     font-size: 24px;
     cursor: pointer;
+    width: 40px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .datepicker {
@@ -123,19 +131,18 @@ i.material-icons {
     display: none;
 }
 // @media (max-width: 370px) {
-//    .datepicker {
-//        width: 100%;
-//        padding: 0;
-//        .datepicker--content {
+//     .datepicker {
+//         width: 290px;
+//         padding: 0;
+//         .datepicker--nav {
+//             border-bottom: none;
+//             padding: 0 0 20px 0;
+//             }
+//         .datepicker--content {
+//             width: unset;
+//         }
+//         .datepicker--content {
 //         width: 100%;
-//         }
-//         .datepicker--cell-day {
-//             width: 34px;
-//             height: 34px;
-//         }
-//         .-current-:before, .datepicker--cell.-selected-.-current-:before {
-//             width: 34px;
-//             height: 34px;
 //         }
 //     }
 // }
