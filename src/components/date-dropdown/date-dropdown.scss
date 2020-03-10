@@ -6,36 +6,21 @@
     max-width: 320px;
     @media (max-width: 350px) {
         flex-direction: column;
-    }
-    .date-dropdown__control {
-        overflow: hidden;
-        margin-top: 5px; 
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 150px;
-        height: 44px;
-        box-sizing: border-box;
-        border-radius: 4px;
-        border: 1px solid $dark-shade-25;
-        &:hover {
-            border-color: $dark-shade-50;
-        }
+}}
+.date-dropdown__title {
+    @include H3;
+    width: 100%;
+    &:first-child {
+        margin-right: 20px;
         @media (max-width: 440px) {
-            width: unset;
+            margin-right: 6px;
+            margin-bottom: 20px;
         }
-    }
-    .date-dropdown__title {
-        @include H3;
-        width: 100%;
-        &:first-child {
-            margin-right: 20px;
-            @media (max-width: 440px) {
-                margin-right: 6px;
-                margin-bottom: 20px;
-            }
-        }
+}}
+.date-dropdown__control {
+    width: 150px;
+    @media (max-width: 440px) {
+        width: unset;
     }
 }
 

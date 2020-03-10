@@ -7,14 +7,3 @@
 .filter-date-dropdown__title {
     @include H3;
 }
-.filter-date-dropdown__control {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 44px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid $dark-shade-25;
-    margin-top: 5px;
-    overflow: hidden;
-}

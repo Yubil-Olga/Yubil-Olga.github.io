@@ -9,4 +9,9 @@ $('.datepicker-here').datepicker(
           }
     }
 );
+$('.datepicker-end').datepicker(
+    {   
+        position: "bottom right"
+    }
+);
 
