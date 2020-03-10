@@ -4,7 +4,7 @@
     display: flex;
     position: relative;
     max-width: 320px;
-    @media (max-width: 350px) {
+    @media (max-width: 380px) {
         flex-direction: column;
 }}
 .date-dropdown__title {
@@ -12,14 +12,14 @@
     width: 100%;
     &:first-child {
         margin-right: 20px;
-        @media (max-width: 440px) {
+        @media (max-width: 380px) {
             margin-right: 6px;
             margin-bottom: 20px;
         }
 }}
 .date-dropdown__control {
     width: 150px;
-    @media (max-width: 440px) {
+    @media (max-width: 380px) {
         width: unset;
     }
 }

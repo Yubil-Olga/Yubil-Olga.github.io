@@ -447,10 +447,11 @@ button {
     line-height: 18px;
     color: #000;
     margin: 0; }
-  @media (max-width: 440px) {
+  @media (max-width: 380px) {
     .form {
       padding-left: 15px;
-      padding-right: 15px; } }
+      padding-right: 15px;
+      width: 320px; } }
 
 .form__title {
   font-family: Quicksand;

@@ -7,6 +7,12 @@
     padding-left: 11px;
     box-sizing: border-box;
     width: 100%;
+    border-radius: 4px;
+    border: 1px solid $dark-shade-25;
+    outline: none;
+    &:hover, &:focus {
+        border-color: $dark-shade-50;
+    }
 }
 .datepicker__control {
     position: relative;
@@ -17,12 +23,6 @@
     align-items: center;
     justify-content: space-between;
     height: 44px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid $dark-shade-25;
-    &:hover {
-        border-color: $dark-shade-50;
-    }
     i.material-icons {
         position: absolute;
         right: 11px;
@@ -143,10 +143,11 @@
 .datepicker--pointer {
     display: none;
 }
-@media (max-width: 370px) {
+@media (max-width: 380px) {
     .datepicker {
         width: 290px;
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
     .datepicker--buttons {
         padding-left: $space-x/2;

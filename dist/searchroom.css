@@ -438,7 +438,12 @@ button {
   height: 42px;
   padding-left: 11px;
   box-sizing: border-box;
-  width: 100%; }
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  outline: none; }
+  .datepicker-here:hover, .datepicker-here:focus {
+    border-color: rgba(31, 32, 65, 0.5); }
 
 .datepicker__control {
   position: relative;
@@ -448,12 +453,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 44px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 1px solid rgba(31, 32, 65, 0.25); }
-  .datepicker__control:hover {
-    border-color: rgba(31, 32, 65, 0.5); }
+  height: 44px; }
   .datepicker__control i.material-icons {
     position: absolute;
     right: 11px;
@@ -572,10 +572,11 @@ button {
 .datepicker--pointer {
   display: none; }
 
-@media (max-width: 370px) {
+@media (max-width: 380px) {
   .datepicker {
     width: 290px;
-    padding: 0; }
+    padding-left: 0;
+    padding-right: 0; }
   .datepicker--buttons {
     padding-left: 15px;
     padding-right: 15px; } }

@@ -18,9 +18,10 @@
         color: #000;
         margin: 0;
     }
-    @media (max-width: 440px) {
+    @media (max-width: 380px) {
         padding-left: $space-x/2;
         padding-right: $space-x/2;
+        width: 320px;
     }
 }
 .form__title {
