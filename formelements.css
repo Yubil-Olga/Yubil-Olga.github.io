@@ -429,22 +429,34 @@ button {
   color: rgba(31, 32, 65, 0.75);
   text-transform: none;
   border: none;
-  padding: 9px 0 9px 11px;
+  height: 42px;
+  padding-left: 11px;
   box-sizing: border-box;
-  width: calc(100% - 40px); }
+  width: 100%; }
 
-i.material-icons {
-  font-family: Material Icons;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: none;
-  font-size: 24px;
-  cursor: pointer;
-  width: 40px;
-  height: 44px;
+.datepicker__control {
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+  background-color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: space-between;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25); }
+  .datepicker__control:hover {
+    border-color: rgba(31, 32, 65, 0.5); }
+  .datepicker__control i.material-icons {
+    position: absolute;
+    right: 11px;
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 24px;
+    cursor: pointer; }
 
 .datepicker {
   width: 320px;
@@ -554,6 +566,14 @@ i.material-icons {
 .datepicker--pointer {
   display: none; }
 
+@media (max-width: 370px) {
+  .datepicker {
+    width: 290px;
+    padding: 0; }
+  .datepicker--buttons {
+    padding-left: 15px;
+    padding-right: 15px; } }
+
 .date-dropdown {
   display: flex;
   position: relative;
@@ -561,37 +581,27 @@ i.material-icons {
   @media (max-width: 350px) {
     .date-dropdown {
       flex-direction: column; } }
-  .date-dropdown .date-dropdown__control {
-    overflow: hidden;
-    margin-top: 5px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 150px;
-    height: 44px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid rgba(31, 32, 65, 0.25); }
-    .date-dropdown .date-dropdown__control:hover {
-      border-color: rgba(31, 32, 65, 0.5); }
+
+.date-dropdown__title {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  text-transform: uppercase;
+  width: 100%; }
+  .date-dropdown__title:first-child {
+    margin-right: 20px; }
     @media (max-width: 440px) {
-      .date-dropdown .date-dropdown__control {
-        width: unset; } }
-  .date-dropdown .date-dropdown__title {
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    color: #1F2041;
-    text-transform: uppercase;
-    width: 100%; }
-    .date-dropdown .date-dropdown__title:first-child {
-      margin-right: 20px; }
-      @media (max-width: 440px) {
-        .date-dropdown .date-dropdown__title:first-child {
-          margin-right: 6px;
-          margin-bottom: 20px; } }
+      .date-dropdown__title:first-child {
+        margin-right: 6px;
+        margin-bottom: 20px; } }
+
+.date-dropdown__control {
+  width: 150px; }
+  @media (max-width: 440px) {
+    .date-dropdown__control {
+      width: unset; } }
 
 .datepicker-here {
   font-family: Montserrat;
@@ -601,22 +611,34 @@ i.material-icons {
   color: rgba(31, 32, 65, 0.75);
   text-transform: none;
   border: none;
-  padding: 9px 0 9px 11px;
+  height: 42px;
+  padding-left: 11px;
   box-sizing: border-box;
-  width: calc(100% - 40px); }
+  width: 100%; }
 
-i.material-icons {
-  font-family: Material Icons;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: none;
-  font-size: 24px;
-  cursor: pointer;
-  width: 40px;
-  height: 44px;
+.datepicker__control {
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+  background-color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: space-between;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25); }
+  .datepicker__control:hover {
+    border-color: rgba(31, 32, 65, 0.5); }
+  .datepicker__control i.material-icons {
+    position: absolute;
+    right: 11px;
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 24px;
+    cursor: pointer; }
 
 .datepicker {
   width: 320px;
@@ -725,6 +747,14 @@ i.material-icons {
 
 .datepicker--pointer {
   display: none; }
+
+@media (max-width: 370px) {
+  .datepicker {
+    width: 290px;
+    padding: 0; }
+  .datepicker--buttons {
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 .filter-date-dropdown {
   position: relative;
@@ -737,17 +767,6 @@ i.material-icons {
   line-height: 15px;
   color: #1F2041;
   text-transform: uppercase; }
-
-.filter-date-dropdown__control {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 44px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  margin-top: 5px;
-  overflow: hidden; }
 
 .rate-btn .rate-btn__item {
   position: relative; }
