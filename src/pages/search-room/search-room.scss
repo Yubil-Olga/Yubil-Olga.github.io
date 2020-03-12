@@ -58,6 +58,11 @@
     }
     @media (max-width: 940px) {
         grid-template-columns: 1fr;
+        .search-room__filter {
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+            grid-column-gap: $space-x;
+        }
         .filter__toggle {
             display: block;
             font-family: Material Icons;
@@ -67,7 +72,7 @@
         }
     }
     @media (max-width: 600px) {
-        .search-room__rooms {
+        .search-room__filter, .search-room__rooms {
             grid-template-columns: 1fr;
         }
     }

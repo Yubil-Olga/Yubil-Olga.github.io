@@ -278,9 +278,6 @@ button {
   display: flex;
   position: relative;
   max-width: 320px; }
-  @media (max-width: 380px) {
-    .date-dropdown {
-      flex-direction: column; } }
 
 .date-dropdown__title {
   font-family: Montserrat;
@@ -294,8 +291,7 @@ button {
     margin-right: 20px; }
     @media (max-width: 380px) {
       .date-dropdown__title:first-child {
-        margin-right: 6px;
-        margin-bottom: 20px; } }
+        margin-right: 10px; } }
 
 .date-dropdown__control {
   width: 150px; }
@@ -408,6 +404,9 @@ button {
       cursor: pointer; }
   .dropdown .dropdown__menu {
     display: none; }
+
+.dropdown_room {
+  max-width: 266px; }
 
 .show .dropdown__selection {
   border: 1px solid rgba(31, 32, 65, 0.5); }
@@ -1110,9 +1109,6 @@ button {
   display: flex;
   position: relative;
   max-width: 320px; }
-  @media (max-width: 380px) {
-    .date-dropdown {
-      flex-direction: column; } }
 
 .date-dropdown__title {
   font-family: Montserrat;
@@ -1126,8 +1122,7 @@ button {
     margin-right: 20px; }
     @media (max-width: 380px) {
       .date-dropdown__title:first-child {
-        margin-right: 6px;
-        margin-bottom: 20px; } }
+        margin-right: 10px; } }
 
 .date-dropdown__control {
   width: 150px; }
@@ -1240,6 +1235,9 @@ button {
       cursor: pointer; }
   .dropdown .dropdown__menu {
     display: none; }
+
+.dropdown_room {
+  max-width: 266px; }
 
 .show .dropdown__selection {
   border: 1px solid rgba(31, 32, 65, 0.5); }

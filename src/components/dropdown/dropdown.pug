@@ -1,6 +1,6 @@
 include ../input/input
 mixin dropdown(show, title, ...items)
-    .dropdown(class=show ? "show": "")
+    .dropdown(class=show ? "show": "", class= (title == "room" ? "dropdown_room" : ""))
         .dropdown__selection
             if title == "room"
                 p.dropdown__title.room Сколько комнат

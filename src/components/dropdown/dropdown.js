@@ -60,23 +60,36 @@ function titleCounter(total, path) {
         }
     }
     else {
+        let baby = 0;
+        let babyCount="";
+        path.querySelectorAll('.menu__option').forEach(el => {
+            if (el.querySelector('.option__title').textContent == "младенцы"){
+                baby = el.querySelector('.counter-item').value;
+            }
+        })
+        if (baby == 1) {
+            babyCount= `, ${baby} младенец`;
+        }
+        if (baby > 1) {
+            babyCount = `, ${baby} младенца`;
+        }
         title = "Сколько гостей";
         switch(total) {
             case 0:
                 return title;
             case 1:
                 word= "гость";
-                title = `${total} ${word}`;
+                title = `${total} ${word} ${babyCount}`;
                 break;
             case 2:
             case 3:
             case 4:
                 word= "гостя";
-                title = `${total} ${word}`;
+                title = `${total} ${word} ${babyCount}`;
                 break;
             default:
                 word= "гостей";
-                title = `${total} ${word}`;
+                title = `${total} ${word} ${babyCount}`;
     }
     }
     return title;

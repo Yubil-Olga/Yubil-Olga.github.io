@@ -38,6 +38,9 @@
         display: none;
     }
 }
+.dropdown_room {
+    max-width: 266px;
+}
 .show {
     $border: 1px solid $dark-shade-50;
     .dropdown__selection {
