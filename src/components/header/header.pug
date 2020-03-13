@@ -1,6 +1,6 @@
 include ../logo/logo
 
-mixin header(auth, ...items)
+mixin header(auth, lang, ...items)
     header.header
         .header__wrapper
             +logo
@@ -26,9 +26,9 @@ mixin header(auth, ...items)
                 .navigation__toolbar
                     if auth
                         .user=user
-                    else
-                        a(href="login.html").button_border Login
-                        a(href="registration.html").button Register
+                    else 
+                        a(href="login.html").button_border= (lang == "ru") ? "войти" : "Login"
+                        a(href="registration.html").button= (lang == "ru") ? "зарегистрироваться" : "Register"
     
     
         

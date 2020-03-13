@@ -114,7 +114,10 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpeg|jpg|gif)$/i,
+                test: /\.(png|jpeg|jpg|svg|gif)$/i,
+                exclude: [
+                  path.resolve(__dirname, "src/fonts/")
+                ],
                 use: [
                   {
                     loader: 'file-loader',

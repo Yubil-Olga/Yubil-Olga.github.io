@@ -3,7 +3,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: Quicksand;
-  src: url(fonts/Quicksand-Bold.ttf) format("truetype"), url(fonts/Quicksand-Bold.woff) format("woff"), url(fonts/Quicksand-Bold.svg) format("svg");
+  src: url(fonts/OpenSans-Bold.ttf) format("truetype"), url(fonts/Quicksand-Bold.woff) format("woff"), url(fonts/Quicksand-Bold.svg) format("svg");
   font-weight: bold; }
 
 @font-face {
@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: Quicksand;
-  src: url(fonts/Quicksand-Bold.ttf) format("truetype"), url(fonts/Quicksand-Bold.woff) format("woff"), url(fonts/Quicksand-Bold.svg) format("svg");
+  src: url(fonts/OpenSans-Bold.ttf) format("truetype"), url(fonts/Quicksand-Bold.woff) format("woff"), url(fonts/Quicksand-Bold.svg) format("svg");
   font-weight: bold; }
 
 @font-face {
