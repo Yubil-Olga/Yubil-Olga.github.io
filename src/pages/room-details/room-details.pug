@@ -3,6 +3,7 @@ include ../../components/form-booking/form-booking
 include ../../components/advantages/advantages
 include ../../components/bullet-list/bullet-list
 include ../../components/review/review
+include ../../components/chart/chart
 
 block variables
     - var pageTitle = 'Room details page'
@@ -12,10 +13,10 @@ block variables
     - {src: "images/room888-3.jpg", alt: "room #888"}
     - ]
     - var voices = [
-    - {name: "Великолепно", quantity: 130},
-    - {name: "Хорошо", quantity: 65},
-    - {name: "Удовлетворительно", quantity: 65},
-    - {name: "Разочарован", quantity: 0}
+    - {name: "Великолепно", quantity: 130, class: "great", color1: "#FFE39C", color2: "#FFBA9C"},
+    - {name: "Хорошо", quantity: 65, class: "good", color1: "#BC9CFF", color2: "#8BA4F9"},
+    - {name: "Удовлетворительно", quantity: 65, class: "satisfactorily", color1: "#6FCF97", color2: "#66D2EA"},
+    - {name: "Разочарован", quantity: 0, class: "disappointed", color1: "#909090", color2: "#3D4975"}
     - ]
     - var advantages = [
     - {title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"},
@@ -55,38 +56,7 @@ block main
                         +advantages(advantage)
                 .info__item.info__chart
                     h2.info__subtitle Впечатления от номера
-                    figure.diagramma
-                        .diagramma__content
-                            svg(width="120px" height="120px" viewBox="0 0 34 34" class="donut")
-                                defs
-                                    linearGradient(id="Gradient1" x1="0" x2="0" y1="0" y2="1")
-                                        stop(offset="0%" stop-color="#FFE39C")
-                                        stop(offset="100%" stop-color="#FFBA9C")
-                                    linearGradient(id="Gradient2" x1="0" x2="0" y1="0" y2="1")
-                                        stop(offset="0%" stop-color="#BC9CFF")
-                                        stop(offset="100%" stop-color="#8BA4F9")
-                                    linearGradient(id="Gradient3" x1="0" x2="0" y1="0" y2="1")
-                                        stop(offset="0%" stop-color="#6FCF97")
-                                        stop(offset="100%" stop-color="#66D2EA")
-                                    linearGradient(id="Gradient3" x1="0" x2="0" y1="0" y2="1")
-                                        stop(offset="0%" stop-color="#909090")
-                                        stop(offset="100%" stop-color="#3D4975")
-                                circle(class="donut-segment" cx="17" cy="17" r="15.91549430918954" fill="transparent" stroke="url(#Gradient1)" stroke-width="2" stroke-dasharray="50 50" stroke-dashoffset="75")
-                                    title(id="donut-segment-1-title") Великолепно
-                                circle(class="donut-segment" cx="17" cy="17" r="15.91549430918954" fill="transparent" stroke="url(#Gradient2)" stroke-width="2" stroke-dasharray="25 75" stroke-dashoffset="25")
-                                    title(id="donut-segment-2-title") Хорошо
-                                circle(class="donut-segment" cx="17" cy="17" r="15.91549430918954" fill="transparent" stroke="url(#Gradient3)" stroke-width="2" stroke-dasharray="25 75" stroke-dashoffset="0")
-                                    title(id="donut-segment-3-title") Удовлетворительно
-                                circle(class="donut-segment" cx="17" cy="17" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="2" stroke-dasharray="1 23 1 49 1 25" stroke-dashoffset="0")
-                                g.chart-text
-                                    text(x="50%" y="50%" class="chart-number") 260
-                                    text(x="50%" y="50%" class="chart-label") голосов
-                        .diagramma__key
-                            ul
-                                li.key_great Великолепно
-                                li.key_good Хорошо
-                                li.key_satisfactorily Удовлетворительно
-                                li.key_disappointed Разочарован
+                    +chart(...voices)
                 .info__item.room-details__reviews
                     h2.info__subtitle Отзывы посетителей номера
                     each comment in reviews
