@@ -1113,6 +1113,60 @@ button {
   color: rgba(31, 32, 65, 0.75);
   text-transform: none; }
 
+.chart {
+  display: flex;
+  align-items: flex-end;
+  margin: 0; }
+  @media (max-width: 350px) {
+    .chart {
+      flex-wrap: wrap; } }
+
+.chart__legend {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  text-transform: none;
+  margin-left: 30px; }
+  .chart__legend .legend__item:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    background: var(--legend-color); }
+  @media (max-width: 350px) {
+    .chart__legend {
+      margin-top: 10px; } }
+
+.chart-text {
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #1F2041;
+  font-size: 6px;
+  fill: #BC9CFF; }
+
+.chart-number {
+  text-anchor: middle;
+  -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em); }
+
+.chart-label {
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em); }
+
+.donut__segment:hover, .donut__segment:hover + .donut__split {
+  stroke-width: 4px; }
+
 .room-details {
   max-width: 1920px;
   margin: 0 auto;
@@ -1176,7 +1230,7 @@ button {
     text-transform: none; }
   .room-details__info .room-details__reviews {
     grid-column: 1/3; }
-  .room-details__info .diagramma {
+  .room-details__info .chart {
     margin-top: 20px; }
   @media (max-width: 1200px) {
     .room-details__info {
@@ -1191,65 +1245,4 @@ button {
   @media (max-width: 450px) {
     .room-details__info {
       padding: 15px; } }
-
-.chart-text {
-  font-family: Quicksand;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  color: #1F2041;
-  font-size: 6px;
-  fill: #BC9CFF; }
-
-.chart-number {
-  text-anchor: middle;
-  -moz-transform: translateY(-0.25em);
-  -ms-transform: translateY(-0.25em);
-  -webkit-transform: translateY(-0.25em);
-  transform: translateY(-0.25em); }
-
-.chart-label {
-  text-anchor: middle;
-  -moz-transform: translateY(0.7em);
-  -ms-transform: translateY(0.7em);
-  -webkit-transform: translateY(0.7em);
-  transform: translateY(0.7em); }
-
-.diagramma {
-  display: flex;
-  align-items: flex-end;
-  margin: 0; }
-  @media (max-width: 350px) {
-    .diagramma {
-      flex-wrap: wrap; }
-      .diagramma .diagramma__key {
-        margin-top: 10px; } }
-
-.diagramma__key {
-  font-family: Montserrat;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  text-transform: none;
-  margin-left: 30px; }
-  .diagramma__key li:before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 5px; }
-
-.key_great:before {
-  background: linear-gradient(#FFE39C 0%, #FFBA9C 100%); }
-
-.key_good:before {
-  background: linear-gradient(#6FCF97 0%, #66D2EA 100%); }
-
-.key_satisfactorily:before {
-  background: linear-gradient(#BC9CFF 0%, #8BA4F9 100%); }
-
-.key_disappointed:before {
-  background: linear-gradient(#909090 0%, #3D4975 100%); }
 
