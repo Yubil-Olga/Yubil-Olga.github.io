@@ -7,6 +7,11 @@
   font-weight: bold; }
 
 @font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
+
+@font-face {
   font-family: Montserrat;
   src: url(fonts/montserrat-bold.ttf) format("truetype"), url(fonts/montserrat-bold.woff) format("woff"), url(fonts/montserrat-bold.svg) format("svg");
   font-weight: bold; }
@@ -25,6 +30,11 @@
   font-family: Quicksand;
   src: url(fonts/OpenSans-Bold.ttf) format("truetype"), url(fonts/Quicksand-Bold.woff) format("woff"), url(fonts/Quicksand-Bold.svg) format("svg");
   font-weight: bold; }
+
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
 
 @font-face {
   font-family: Montserrat;
@@ -419,7 +429,7 @@ button {
   color: #1F2041;
   text-transform: uppercase;
   display: block;
-  padding: 7px 7px 7px 15px;
+  padding: 5px 5px 1px 15px;
   border-radius: 0 0 2px 2px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-top: none;
@@ -459,7 +469,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__decrement {
       width: 30px;
       height: 30px;
@@ -467,7 +478,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__increment:before {
       font-family: Montserrat;
       font-weight: normal;
@@ -1250,7 +1262,7 @@ button {
   color: #1F2041;
   text-transform: uppercase;
   display: block;
-  padding: 7px 7px 7px 15px;
+  padding: 5px 5px 1px 15px;
   border-radius: 0 0 2px 2px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-top: none;
@@ -1290,7 +1302,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__decrement {
       width: 30px;
       height: 30px;
@@ -1298,7 +1311,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__increment:before {
       font-family: Montserrat;
       font-weight: normal;

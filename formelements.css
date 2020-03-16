@@ -7,6 +7,11 @@
   font-weight: bold; }
 
 @font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
+
+@font-face {
   font-family: Montserrat;
   src: url(fonts/montserrat-bold.ttf) format("truetype"), url(fonts/montserrat-bold.woff) format("woff"), url(fonts/montserrat-bold.svg) format("svg");
   font-weight: bold; }
@@ -47,6 +52,11 @@ button {
   font-family: Quicksand;
   src: url(fonts/OpenSans-Bold.ttf) format("truetype"), url(fonts/Quicksand-Bold.woff) format("woff"), url(fonts/Quicksand-Bold.svg) format("svg");
   font-weight: bold; }
+
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
 
 @font-face {
   font-family: Montserrat;
@@ -168,6 +178,10 @@ button {
   width: 280px;
   padding: 20px 0;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
+  .advantages:first-of-type {
+    padding-top: 0; }
+  .advantages:last-of-type {
+    padding-bottom: 0; }
   .advantages i.material-icons {
     font-family: Material Icons;
     font-style: normal;
@@ -346,7 +360,7 @@ button {
   color: #1F2041;
   text-transform: uppercase;
   display: block;
-  padding: 7px 7px 7px 15px;
+  padding: 5px 5px 1px 15px;
   border-radius: 0 0 2px 2px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-top: none;
@@ -386,7 +400,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__decrement {
       width: 30px;
       height: 30px;
@@ -394,7 +409,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__increment:before {
       font-family: Montserrat;
       font-weight: normal;
@@ -759,7 +775,7 @@ button {
 
 .filter-date-dropdown {
   position: relative;
-  max-width: 320px; }
+  max-width: 265px; }
 
 .filter-date-dropdown__title {
   font-family: Montserrat;
@@ -785,16 +801,17 @@ button {
 
 .input_checkbox {
   padding-top: 10px;
+  max-width: 240px;
   font-family: Montserrat;
   font-weight: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
   color: rgba(31, 32, 65, 0.5); }
   .input_checkbox label {
     display: block;
     position: relative;
     padding-left: 30px;
-    margin-bottom: 12px; }
+    margin-bottom: 8px; }
     .input_checkbox label input {
       position: absolute;
       opacity: 0;
@@ -811,6 +828,9 @@ button {
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
+    .input_checkbox label .checkbox__description {
+      font-size: 12px;
+      line-height: 16px; }
     .input_checkbox label .checkmark {
       position: absolute;
       top: 0;
@@ -940,16 +960,17 @@ button {
 
 .input_checkbox {
   padding-top: 10px;
+  max-width: 240px;
   font-family: Montserrat;
   font-weight: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
   color: rgba(31, 32, 65, 0.5); }
   .input_checkbox label {
     display: block;
     position: relative;
     padding-left: 30px;
-    margin-bottom: 12px; }
+    margin-bottom: 8px; }
     .input_checkbox label input {
       position: absolute;
       opacity: 0;
@@ -966,6 +987,9 @@ button {
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
+    .input_checkbox label .checkbox__description {
+      font-size: 12px;
+      line-height: 16px; }
     .input_checkbox label .checkmark {
       position: absolute;
       top: 0;
@@ -1011,10 +1035,11 @@ button {
     visibility: visible !important;
     left: auto !important;
     right: 0;
+    padding: 0;
+    line-height: 0;
     font-family: Montserrat;
     font-weight: normal;
     font-size: 12px;
-    line-height: 15px;
     color: rgba(31, 32, 65, 0.5);
     text-transform: uppercase;
     background-color: #fff; }
@@ -1139,7 +1164,8 @@ button {
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
     padding-left: 20px;
-    position: relative; }
+    position: relative;
+    padding-bottom: 10px; }
     .bullet-list li:before {
       content: "";
       width: 10px;
@@ -1153,7 +1179,7 @@ button {
 .subscription-input {
   display: flex;
   justify-content: space-between;
-  width: 260px;
+  max-width: 265px;
   height: 44px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1161,7 +1187,7 @@ button {
   overflow: hidden; }
   .subscription-input input {
     border: none;
-    padding-left: 15px;
+    padding: 7px 15px;
     background-color: transparent;
     width: 100%; }
     .subscription-input input::placeholder {
@@ -1189,24 +1215,24 @@ button {
   width: 1160px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto 465px;
   grid-gap: 20px; }
   .colors .colors__palette {
     display: flex;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    align-items: center; }
   .colors .palette__name {
     font-family: Quicksand;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
-    color: #1F2041; }
+    color: #1F2041;
+    line-height: 31px;
+    word-spacing: -2px; }
   .colors .palette__code {
-    font-family: Montserrat;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
-    text-transform: none; }
+    font-family: Quicksand;
+    font-size: 19px;
+    font-weight: normal; }
   .colors .palette__box {
     width: 70px;
     height: 70px;
@@ -1239,12 +1265,15 @@ button {
 
 .colors__font {
   display: grid;
-  grid-template-columns: 80px auto;
-  padding-bottom: 20px; }
+  grid-template-columns: 70px auto;
+  padding-bottom: 50px;
+  max-width: 420px; }
   .colors__font .font__tag {
-    padding-right: 30px;
+    padding-right: 20px;
     color: rgba(31, 32, 65, 0.25);
     text-align: center; }
+  .colors__font .font__description {
+    word-spacing: -2px; }
 
 .font_H1 {
   font-family: Quicksand;
@@ -1290,6 +1319,8 @@ button {
     grid-column: span 2; }
   .form-elements .pagination {
     justify-content: flex-start; }
+  .form-elements .bullet-list {
+    margin-top: 15px; }
   @media (max-width: 1240px) {
     .form-elements {
       width: unset;
@@ -1309,6 +1340,10 @@ button {
   display: grid;
   grid-row-gap: 20px;
   max-width: 320px; }
+  .form-elements__section .input_radio {
+    margin-top: 15px; }
+  .form-elements__section .toggle {
+    margin-top: 10px; }
 
 .form-elements__subtitle {
   font-family: Montserrat;
@@ -1316,7 +1351,15 @@ button {
   font-size: 12px;
   line-height: 15px;
   color: #1F2041;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  position: relative; }
+  .form-elements__subtitle:after {
+    content: attr(data-comment);
+    position: absolute;
+    right: 0;
+    color: rgba(31, 32, 65, 0.5);
+    font-weight: normal; }
 
 .form-elements__description {
   font-family: Montserrat;
@@ -1334,6 +1377,9 @@ button {
 .form-elements__grid_col_2 {
   display: grid;
   grid-template-columns: 50px 50px; }
+
+.grid {
+  display: grid; }
 
 .grid_span_2 {
   grid-column: span 2;
