@@ -49,7 +49,7 @@
     .dropdown__menu {
         @include H3;
         display: block;
-        padding: 7px 7px 7px 15px;
+        padding: 5px 5px 1px 15px;
         border-radius: 0 0 2px 2px;
         border: $border;
         border-top: none;
@@ -84,6 +84,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    box-sizing: border-box;
                 }
             }
             @each $counter in increment, decrement {

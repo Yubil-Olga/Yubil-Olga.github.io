@@ -4,6 +4,12 @@
     width: 280px;
     padding: 20px 0;
     border-bottom: 1px solid rgba($dark-shade, 0.1);
+    &:first-of-type {
+        padding-top: 0;
+    }
+    &:last-of-type {
+        padding-bottom: 0;
+    }
     i.material-icons{
         font-family: Material Icons;
         font-style: normal;

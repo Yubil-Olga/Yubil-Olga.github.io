@@ -4,6 +4,6 @@ mixin checkbox (rich, ...items)
             label
                 if rich
                     h4=item.title
-                p=rich ? item.description : item
+                p.checkbox__description=rich ? item.description : item
                 input(type="checkbox")
                 .checkmark

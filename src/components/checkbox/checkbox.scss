@@ -1,17 +1,18 @@
 .input_checkbox {
     padding-top: 10px;
+    max-width: 240px;
     font: {
         family: Montserrat;
         weight: normal;
         size: 14px;
     }
-    line-height: 18px;
+    line-height: 22px;
     color: $dark-shade-50;
     label {
         display: block;
         position: relative;
         padding-left: 30px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         input {
             position: absolute;
             opacity: 0;
@@ -30,6 +31,10 @@
                 -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
               }
+        }
+        .checkbox__description {
+            font-size: 12px;
+            line-height: 16px;
         }
         .checkmark {
             position: absolute;

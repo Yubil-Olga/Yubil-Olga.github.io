@@ -8,6 +8,7 @@
         @include Body;
         padding-left: 20px;
         position: relative;
+        padding-bottom: 10px;
         &:before {
             content: "";
             width: 10px;

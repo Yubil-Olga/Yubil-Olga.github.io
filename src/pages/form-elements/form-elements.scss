@@ -23,17 +23,22 @@
     width: $content-width;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: auto 465px;
     grid-gap: 20px;
     .colors__palette {
         display: flex;
         padding-bottom: 20px;
+        align-items: center;
     }
     .palette__name {
         @include H2;
+        line-height: 31px;
+        word-spacing: -2px;
     }
     .palette__code {
-        @include Body;
+        font-family: Quicksand;
+        font-size: 19px;
+        font-weight: normal;
     }
     .palette__box {
         width: 70px;
@@ -78,12 +83,16 @@
 }
 .colors__font {
     display: grid;
-    grid-template-columns: 80px auto;
-    padding-bottom: 20px;
+    grid-template-columns: 70px auto;
+    padding-bottom: 50px;
+    max-width: 420px;
     .font__tag {
-        padding-right: 30px;
+        padding-right: 20px;
         color: $dark-shade-25;
         text-align: center;
+    }
+    .font__description {
+        word-spacing: -2px;
     }
 }
 .font {
@@ -118,6 +127,9 @@
     .pagination {
         justify-content: flex-start;
     }
+    .bullet-list {
+        margin-top: 15px;
+    }
     @media (max-width: 1240px) {
         width: unset;
         padding-right: $space-x;
@@ -138,9 +150,24 @@
     display: grid;
     grid-row-gap: 20px;
     max-width: 320px;
+    .input_radio {
+        margin-top: 15px;
+    }
+    .toggle {
+        margin-top: 10px;
+    }
 }
 .form-elements__subtitle {
     @include H3;
+    margin-bottom: 5px;
+    position: relative;
+    &:after {
+        content: attr(data-comment);
+        position: absolute;
+        right: 0;
+        color: $dark-shade-50;
+        font-weight: normal;
+    }
 }
 .form-elements__description {
     @include Body;
@@ -153,6 +180,9 @@
 .form-elements__grid_col_2 {
     display: grid;
     grid-template-columns: 50px 50px;
+}
+.grid {
+    display: grid;
 }
 .grid_span_2 {
     grid-column: span 2;

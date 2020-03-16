@@ -8,7 +8,7 @@
 }
 .chart__legend {
     @include Body;
-    margin-left: 30px;
+    margin-left: 26px;
     .legend__item:before {
         content: "";
         width: 10px;
@@ -35,6 +35,7 @@
     transform: translateY(-0.25em);
 }
 .chart-label {
+    font-size: 4px;
     text-anchor: middle;
     -moz-transform: translateY(0.7em);
     -ms-transform: translateY(0.7em);

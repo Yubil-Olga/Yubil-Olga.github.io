@@ -69,16 +69,16 @@ block main
     section.form-elements
         .form-elements__section
             .form-elements__item
-                h3.form-elements__subtitle Text Field       
+                h3.form-elements__subtitle(data-comment="default") Text Field       
                 +input(false, "Email")
             .form-elements__item
-                h3.form-elements__subtitle Text Field 
+                h3.form-elements__subtitle(data-comment="hover/focus") Text Field 
                 +input(false, "", "This is pretty awesome")
             .form-elements__item
-                h3.form-elements__subtitle Dropdown
+                h3.form-elements__subtitle(data-comment="default") Dropdown
                 +dropdown(false, "", "man", "child", "baby")
             .form-elements__item
-                h3.form-elements__subtitle masked text field
+                h3.form-elements__subtitle(data-comment="default") masked text field
                 +input(true, "ДД.ММ.ГГГГ")
             .form-elements__item
                 +date-dropdown("date dropdown", "date dropdown")
@@ -95,16 +95,16 @@ block main
             .form-elements__item
                 h3.form-elements__subtitle Radio buttons
                 +radiobutton
-            .form-elements__item.grid_gap_10
+            .form-elements__item
                 h3.form-elements__subtitle Toggle
                 +toggle("Получать спецпредложения", true)
                 +toggle("Получать спецпредложения", false)
-            .form-elements__item.grid_gap_10
+            .form-elements__item.grid
                 h3.form-elements__subtitle Like button
                 .form-elements__grid_col_2
                     +like-btn(2, false)
                     +like-btn(12, true)
-            .form-elements__item
+            .form-elements__item.grid
                 h3.form-elements__subtitle Rate button
                 .form-elements__grid
                     +rate-btn(5, 4)
@@ -130,10 +130,10 @@ block main
                 p.form-elements__description 1 – 12 из 100+ вариантов аренды
         .form-elements__section 
             .form-elements__item
-                h3.form-elements__subtitle dropdown
+                h3.form-elements__subtitle(data-comment="default") dropdown
                 +dropdown(false, "room", "спальни", "кровати", "ванные комнаты")
             .form-elements__item
-                h3.form-elements__subtitle dropdown
+                h3.form-elements__subtitle(data-comment="expanded") dropdown
                 +dropdown(true, "room", "спальни", "кровати", "ванные комнаты")
         .form-elements__section
             .form-elements__item
@@ -143,17 +143,17 @@ block main
                 +dropdown(true, "", "взрослые", "дети", "младенцы")
         .form-elements__section
             .form-elements__item
-                +expandable-checkbox("expandable-checkbox")
+                +expandable-checkbox("expandable-checkbox-list")
             .form-elements__item
-                +expandable-checkbox("expandable-checkbox", "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь")
-        .form-elements__section
-            .form-elements__item
-                h3.form-elements__subtitle Bullet list
-                +bullet-list
+                +expandable-checkbox("expandable-checkbox-list", "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь")
         .form-elements__section
             .form-elements__item
                 h3.form-elements__subtitle Rich checkbox buttons
                 +checkbox(true, ...accessibility)
+        .form-elements__section
+            .form-elements__item
+                h3.form-elements__subtitle Bullet list
+                +bullet-list
         .form-elements__section
             .form-elements__item
                 +advantages({title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"})

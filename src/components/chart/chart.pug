@@ -1,7 +1,7 @@
 mixin chart(...data)
     figure.chart
         .chart__content
-            svg(width="124px" height="124px" viewBox="0 0 36 36" class="donut")
+            svg(width="125px" height="125px" viewBox="0 0 34 34" class="donut")
                 - var total=0
                 - var dashoffset = -24
                 each item in data
@@ -14,18 +14,18 @@ mixin chart(...data)
                     - var percent = Math.round((item.quantity/total)*100)
                     circle(class="donut__segment" 
                             data-test=percent 
-                            cx="18" 
-                            cy="18" 
+                            cx="17" 
+                            cy="17" 
                             r="15.91549430918954" 
                             fill="transparent" 
-                            stroke-width="2" 
+                            stroke-width="1" 
                             stroke=`url(#Gradient${index})`
                             stroke-dasharray=`${percent} ${100-percent}`
                             stroke-dashoffset=dashoffset)
                         title=`${item.name} ${item.quantity}`
                     circle(class="donut__split" 
-                            cx="18" 
-                            cy="18" 
+                            cx="17" 
+                            cy="17" 
                             r="15.91549430918954" 
                             fill="transparent" 
                             stroke="#fff" 

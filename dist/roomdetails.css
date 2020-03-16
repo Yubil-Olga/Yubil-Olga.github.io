@@ -6,6 +6,11 @@
   font-weight: bold; }
 
 @font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
+
+@font-face {
   font-family: Montserrat;
   src: url(fonts/montserrat-bold.ttf) format("truetype"), url(fonts/montserrat-bold.woff) format("woff"), url(fonts/montserrat-bold.svg) format("svg");
   font-weight: bold; }
@@ -225,7 +230,7 @@
 .subscription-input {
   display: flex;
   justify-content: space-between;
-  width: 260px;
+  max-width: 265px;
   height: 44px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -233,7 +238,7 @@
   overflow: hidden; }
   .subscription-input input {
     border: none;
-    padding-left: 15px;
+    padding: 7px 15px;
     background-color: transparent;
     width: 100%; }
     .subscription-input input::placeholder {
@@ -762,7 +767,7 @@ button {
   color: #1F2041;
   text-transform: uppercase;
   display: block;
-  padding: 7px 7px 7px 15px;
+  padding: 5px 5px 1px 15px;
   border-radius: 0 0 2px 2px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-top: none;
@@ -802,7 +807,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__decrement {
       width: 30px;
       height: 30px;
@@ -810,7 +816,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__increment:before {
       font-family: Montserrat;
       font-weight: normal;
@@ -1000,6 +1007,10 @@ button {
   width: 280px;
   padding: 20px 0;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
+  .advantages:first-of-type {
+    padding-top: 0; }
+  .advantages:last-of-type {
+    padding-bottom: 0; }
   .advantages i.material-icons {
     font-family: Material Icons;
     font-style: normal;
@@ -1042,7 +1053,8 @@ button {
     color: rgba(31, 32, 65, 0.75);
     text-transform: none;
     padding-left: 20px;
-    position: relative; }
+    position: relative;
+    padding-bottom: 10px; }
     .bullet-list li:before {
       content: "";
       width: 10px;
@@ -1128,7 +1140,7 @@ button {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   text-transform: none;
-  margin-left: 30px; }
+  margin-left: 26px; }
   .chart__legend .legend__item:before {
     content: "";
     width: 10px;
@@ -1158,6 +1170,7 @@ button {
   transform: translateY(-0.25em); }
 
 .chart-label {
+  font-size: 4px;
   text-anchor: middle;
   -moz-transform: translateY(0.7em);
   -ms-transform: translateY(0.7em);
@@ -1214,13 +1227,14 @@ button {
 .room-details__info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px; }
+  grid-row-gap: 30px; }
   .room-details__info .info__subtitle {
     font-family: Quicksand;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
-    color: #1F2041; }
+    color: #1F2041;
+    margin-bottom: 18px; }
   .room-details__info .info__details {
     font-family: Montserrat;
     font-weight: normal;
@@ -1230,8 +1244,10 @@ button {
     text-transform: none; }
   .room-details__info .room-details__reviews {
     grid-column: 1/3; }
-  .room-details__info .chart {
-    margin-top: 20px; }
+    .room-details__info .room-details__reviews .review:not(:first-child) {
+      margin-top: 25px; }
+  .room-details__info .room-details__rules .info__subtitle {
+    padding-left: 22px; }
   @media (max-width: 1200px) {
     .room-details__info {
       padding: 0 70px; } }

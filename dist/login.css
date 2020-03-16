@@ -4,6 +4,11 @@
   font-weight: bold; }
 
 @font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
+
+@font-face {
   font-family: Montserrat;
   src: url(fonts/montserrat-bold.ttf) format("truetype"), url(fonts/montserrat-bold.woff) format("woff"), url(fonts/montserrat-bold.svg) format("svg");
   font-weight: bold; }
@@ -22,6 +27,11 @@
   font-family: Quicksand;
   src: url(fonts/OpenSans-Bold.ttf) format("truetype"), url(fonts/Quicksand-Bold.woff) format("woff"), url(fonts/Quicksand-Bold.svg) format("svg");
   font-weight: bold; }
+
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
 
 @font-face {
   font-family: Montserrat;
@@ -243,7 +253,7 @@
 .subscription-input {
   display: flex;
   justify-content: space-between;
-  width: 260px;
+  max-width: 265px;
   height: 44px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -251,7 +261,7 @@
   overflow: hidden; }
   .subscription-input input {
     border: none;
-    padding-left: 15px;
+    padding: 7px 15px;
     background-color: transparent;
     width: 100%; }
     .subscription-input input::placeholder {

@@ -7,6 +7,11 @@
   font-weight: bold; }
 
 @font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
+
+@font-face {
   font-family: Montserrat;
   src: url(fonts/montserrat-bold.ttf) format("truetype"), url(fonts/montserrat-bold.woff) format("woff"), url(fonts/montserrat-bold.svg) format("svg");
   font-weight: bold; }
@@ -25,6 +30,11 @@
   font-family: Quicksand;
   src: url(fonts/OpenSans-Bold.ttf) format("truetype"), url(fonts/Quicksand-Bold.woff) format("woff"), url(fonts/Quicksand-Bold.svg) format("svg");
   font-weight: bold; }
+
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-Light.ttf) format("truetype"), url(fonts/Quicksand-Light.woff) format("woff"), url(fonts/Quicksand-Light.svg) format("svg");
+  font-weight: light; }
 
 @font-face {
   font-family: Montserrat;
@@ -246,7 +256,7 @@
 .subscription-input {
   display: flex;
   justify-content: space-between;
-  width: 260px;
+  max-width: 265px;
   height: 44px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -254,7 +264,7 @@
   overflow: hidden; }
   .subscription-input input {
     border: none;
-    padding-left: 15px;
+    padding: 7px 15px;
     background-color: transparent;
     width: 100%; }
     .subscription-input input::placeholder {
@@ -583,7 +593,7 @@ button {
 
 .filter-date-dropdown {
   position: relative;
-  max-width: 320px; }
+  max-width: 265px; }
 
 .filter-date-dropdown__title {
   font-family: Montserrat;
@@ -713,7 +723,7 @@ button {
   color: #1F2041;
   text-transform: uppercase;
   display: block;
-  padding: 7px 7px 7px 15px;
+  padding: 5px 5px 1px 15px;
   border-radius: 0 0 2px 2px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-top: none;
@@ -753,7 +763,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__decrement {
       width: 30px;
       height: 30px;
@@ -761,7 +772,8 @@ button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-sizing: border-box; }
     .show .dropdown__menu .menu__option .counter__increment:before {
       font-family: Montserrat;
       font-weight: normal;
@@ -820,10 +832,11 @@ button {
     visibility: visible !important;
     left: auto !important;
     right: 0;
+    padding: 0;
+    line-height: 0;
     font-family: Montserrat;
     font-weight: normal;
     font-size: 12px;
-    line-height: 15px;
     color: rgba(31, 32, 65, 0.5);
     text-transform: uppercase;
     background-color: #fff; }
@@ -942,16 +955,17 @@ button {
 
 .input_checkbox {
   padding-top: 10px;
+  max-width: 240px;
   font-family: Montserrat;
   font-weight: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
   color: rgba(31, 32, 65, 0.5); }
   .input_checkbox label {
     display: block;
     position: relative;
     padding-left: 30px;
-    margin-bottom: 12px; }
+    margin-bottom: 8px; }
     .input_checkbox label input {
       position: absolute;
       opacity: 0;
@@ -968,6 +982,9 @@ button {
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
+    .input_checkbox label .checkbox__description {
+      font-size: 12px;
+      line-height: 16px; }
     .input_checkbox label .checkmark {
       position: absolute;
       top: 0;
@@ -986,16 +1003,17 @@ button {
 
 .input_checkbox {
   padding-top: 10px;
+  max-width: 240px;
   font-family: Montserrat;
   font-weight: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
   color: rgba(31, 32, 65, 0.5); }
   .input_checkbox label {
     display: block;
     position: relative;
     padding-left: 30px;
-    margin-bottom: 12px; }
+    margin-bottom: 8px; }
     .input_checkbox label input {
       position: absolute;
       opacity: 0;
@@ -1012,6 +1030,9 @@ button {
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
+    .input_checkbox label .checkbox__description {
+      font-size: 12px;
+      line-height: 16px; }
     .input_checkbox label .checkmark {
       position: absolute;
       top: 0;
