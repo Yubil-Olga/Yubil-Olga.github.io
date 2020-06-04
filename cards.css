@@ -74,8 +74,7 @@ button {
   background: none; }
 
 .form {
-  min-width: 320px;
-  max-width: 380px;
+  width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -83,7 +82,8 @@ button {
   box-sizing: border-box;
   padding: 40px 30px 30px 30px;
   display: grid;
-  grid-row-gap: 20px; }
+  grid-row-gap: 20px;
+  border: none; }
   .form .input_default:not(:last-child) {
     margin-bottom: 10px; }
   .form p {
@@ -126,9 +126,8 @@ button {
   z-index: 0; }
 
 .form__button {
-  width: 99px;
-  height: 44px;
-  margin-left: 20px; }
+  min-width: 99px;
+  height: 44px; }
 
 .datepicker-here {
   font-family: Montserrat;
@@ -139,12 +138,13 @@ button {
   text-transform: none;
   border: none;
   height: 42px;
-  padding-left: 11px;
+  padding-left: 15px;
   box-sizing: border-box;
   width: 100%;
   border-radius: 4px;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  outline: none; }
+  outline: none;
+  height: 100%; }
   .datepicker-here:hover, .datepicker-here:focus {
     border-color: rgba(31, 32, 65, 0.5); }
 
@@ -376,6 +376,10 @@ button {
       position: absolute;
       right: 12px; }
 
+.form__button {
+  min-width: 99px;
+  height: 44px; }
+
 .dropdown {
   width: 100%;
   max-width: 320px;
@@ -576,12 +580,15 @@ button {
       position: absolute;
       right: 12px; }
 
+.form__button {
+  min-width: 99px;
+  height: 44px; }
+
 .form-selection__footer {
   margin-top: 10px; }
 
 .form {
-  min-width: 320px;
-  max-width: 380px;
+  width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -589,7 +596,8 @@ button {
   box-sizing: border-box;
   padding: 40px 30px 30px 30px;
   display: grid;
-  grid-row-gap: 20px; }
+  grid-row-gap: 20px;
+  border: none; }
   .form .input_default:not(:last-child) {
     margin-bottom: 10px; }
   .form p {
@@ -632,9 +640,8 @@ button {
   z-index: 0; }
 
 .form__button {
-  width: 99px;
-  height: 44px;
-  margin-left: 20px; }
+  min-width: 99px;
+  height: 44px; }
 
 .input_default {
   display: grid;
@@ -680,7 +687,8 @@ button {
   .input_radio label {
     position: relative;
     padding-left: 35px;
-    margin-right: 20px; }
+    margin-right: 15px;
+    display: inline-block; }
     .input_radio label input {
       position: absolute;
       opacity: 0;
@@ -749,8 +757,7 @@ button {
         left: auto; }
 
 .form {
-  min-width: 320px;
-  max-width: 380px;
+  width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -758,7 +765,8 @@ button {
   box-sizing: border-box;
   padding: 40px 30px 30px 30px;
   display: grid;
-  grid-row-gap: 20px; }
+  grid-row-gap: 20px;
+  border: none; }
   .form .input_default:not(:last-child) {
     margin-bottom: 10px; }
   .form p {
@@ -801,9 +809,8 @@ button {
   z-index: 0; }
 
 .form__button {
-  width: 99px;
-  height: 44px;
-  margin-left: 20px; }
+  min-width: 99px;
+  height: 44px; }
 
 .input_default {
   display: grid;
@@ -906,9 +913,12 @@ button {
       position: absolute;
       right: 12px; }
 
+.form__button {
+  min-width: 99px;
+  height: 44px; }
+
 .form {
-  min-width: 320px;
-  max-width: 380px;
+  width: 380px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -916,7 +926,8 @@ button {
   box-sizing: border-box;
   padding: 40px 30px 30px 30px;
   display: grid;
-  grid-row-gap: 20px; }
+  grid-row-gap: 20px;
+  border: none; }
   .form .input_default:not(:last-child) {
     margin-bottom: 10px; }
   .form p {
@@ -959,9 +970,8 @@ button {
   z-index: 0; }
 
 .form__button {
-  width: 99px;
-  height: 44px;
-  margin-left: 20px; }
+  min-width: 99px;
+  height: 44px; }
 
 .datepicker-here {
   font-family: Montserrat;
@@ -972,12 +982,13 @@ button {
   text-transform: none;
   border: none;
   height: 42px;
-  padding-left: 11px;
+  padding-left: 15px;
   box-sizing: border-box;
   width: 100%;
   border-radius: 4px;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  outline: none; }
+  outline: none;
+  height: 100%; }
   .datepicker-here:hover, .datepicker-here:focus {
     border-color: rgba(31, 32, 65, 0.5); }
 
@@ -1209,6 +1220,10 @@ button {
       position: absolute;
       right: 12px; }
 
+.form__button {
+  min-width: 99px;
+  height: 44px; }
+
 .dropdown {
   width: 100%;
   max-width: 320px;
@@ -1409,6 +1424,10 @@ button {
       position: absolute;
       right: 12px; }
 
+.form__button {
+  min-width: 99px;
+  height: 44px; }
+
 .form-booking__room-details {
   display: flex;
   align-items: baseline;
@@ -1420,6 +1439,7 @@ button {
   font-size: 19px;
   line-height: 24px;
   color: #1F2041;
+  font-size: 24px;
   margin: 0; }
   .room-details__room-number:before {
     content: "№ ";
@@ -1525,7 +1545,7 @@ button {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding-bottom: 5px; }
+  padding-bottom: 8px; }
 
 .room-details__room-number {
   font-family: Quicksand;
@@ -1535,8 +1555,9 @@ button {
   color: #1F2041;
   margin: 0; }
   .room-details__room-number:before {
-    content: "№ ";
-    font-size: 14px; }
+    content: "№";
+    font-size: 14px;
+    padding-right: 8px; }
   .room-details__room-number span {
     font-family: Montserrat;
     font-weight: bold;
@@ -1561,7 +1582,7 @@ button {
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid rgba(31, 32, 65, 0.1);
-  padding-top: 8px; }
+  padding-top: 5px; }
 
 .room-rating__comments {
   font-family: Montserrat;
@@ -1577,6 +1598,20 @@ button {
   position: relative; }
   .card-room__image img {
     width: 100%; }
+  .card-room__image .card-room__circles {
+    position: absolute;
+    display: flex;
+    bottom: 10%;
+    right: 5%; }
+  .card-room__image .image__circle {
+    width: 7.5px;
+    height: 7.5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-left: 4px;
+    box-sizing: border-box; }
+  .card-room__image .image__circle_fill {
+    background-color: #fff; }
 
 .card-room__slider {
   position: absolute;
@@ -1587,7 +1622,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px; }
+  padding: 12px; }
   .card-room__slider i.material-icons {
     font-family: Material Icons;
     font-style: normal;
