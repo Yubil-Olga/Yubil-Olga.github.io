@@ -10,6 +10,7 @@
 }
 .room-details__room-number {
     @include H2;
+    font-size: 24px;
     margin: 0;
     &:before {
         content: "№ ";

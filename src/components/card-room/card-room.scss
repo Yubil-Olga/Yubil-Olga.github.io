@@ -15,14 +15,15 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 .room-details__room-number {
     @include H2;
     margin: 0;
     &:before {
-        content: "№ ";
+        content: "№";
         font-size: 14px;
+        padding-right: 8px;
     }
     span {
         @include H3;
@@ -47,7 +48,7 @@
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid rgba($dark-shade, 0.1);
-    padding-top: 8px;
+    padding-top: 5px;
 }
 .room-rating__comments {
     font: {
@@ -67,6 +68,23 @@
     img {
         width: 100%;
     }
+    .card-room__circles {
+        position: absolute;
+        display: flex;
+        bottom: 10%;
+        right: 5%;
+    }
+    .image__circle {
+        width: 7.5px;
+        height: 7.5px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        margin-left: 4px;
+        box-sizing: border-box;
+    }
+    .image__circle_fill {
+        background-color: #fff;
+    }
 }
 .card-room__slider {
     position: absolute;
@@ -77,7 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 12px;
     i.material-icons {
         font-family: Material Icons;
         font-style: normal;

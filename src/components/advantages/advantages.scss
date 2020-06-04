@@ -19,6 +19,7 @@
         line-height: 41px;
         background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         color: transparent;
     }
     .advantages__description {

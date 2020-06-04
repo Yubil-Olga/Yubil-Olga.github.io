@@ -1,5 +1,5 @@
 import 'inputmask/dist/jquery.inputmask';
-$('.mask').inputmask({
+$('.js-mask').inputmask({
     alias: 'datetime',
     inputFormat: 'dd.mm.yyyy',
     placeholder: 'ДД.ММ.ГГГГ',

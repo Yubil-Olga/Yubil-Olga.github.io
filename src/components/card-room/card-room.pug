@@ -4,9 +4,15 @@ mixin card-room(room)
     a(href=room.link).card-room
         .card-room__image
             img(src=room.url)
-            .card-room__slider
-                i.material-icons expand_more
-                i.material-icons expand_more
+            if room.arrows
+                .card-room__slider
+                    i.material-icons expand_more
+                    i.material-icons expand_more
+            .card-room__circles
+                .image__circle.image__circle_fill
+                .image__circle
+                .image__circle
+                .image__circle
         footer.card-room__footer
             .card-room__room-details
                 h2.room-details__room-number=room.number

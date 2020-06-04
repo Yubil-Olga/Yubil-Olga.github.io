@@ -91,7 +91,13 @@ module.exports = {
             from: path.resolve(__dirname, 'src/images'),
             to: path.resolve(__dirname, 'dist/images')
           }
-        ])
+        ]),
+        new CopyPlugin([
+          { 
+            from: path.resolve(__dirname, 'src/favicons'), 
+            to: path.resolve(__dirname, 'dist/favicons') 
+          }
+        ]),
     ],
     module: {
         rules: [

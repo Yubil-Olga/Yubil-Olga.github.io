@@ -1,5 +1,5 @@
 mixin checkbox (rich, ...items)
-    .input_checkbox
+    .input_checkbox(class = rich ? "input__checkbox_rich" : "")
         each item in items
             label
                 if rich

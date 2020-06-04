@@ -1,18 +1,19 @@
 @import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
 .irs--flat {
     width: 266px;
+    height: 30px;
     .irs-line {
         box-sizing: border-box;
         height: 6px;
         border-radius: 3px;
         border: 1px solid $dark-shade-25;
         background-color: #fff;
-        top: 30px;
+        top: 20px;
     }
     .irs-bar {
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         height: 6px;
-        top: 30px;
+        top: 20px;
     }
     .irs-handle {
         width: 12px;
@@ -21,7 +22,7 @@
         border: 2px solid #fff;
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         box-sizing: content-box;
-        top: 25px;
+        top: 15px;
     }
     .irs-from, .irs-to, .irs-single {
         visibility: hidden !important;
@@ -35,6 +36,7 @@
         right: 0;
         padding: 0;
         line-height: 0;
+        top: -10px;
         font: {
             family: Montserrat;
             weight: normal;

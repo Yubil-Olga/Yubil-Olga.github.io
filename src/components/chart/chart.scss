@@ -8,6 +8,7 @@
 }
 .chart__legend {
     @include Body;
+    line-height: 25px;
     margin-left: 26px;
     .legend__item:before {
         content: "";

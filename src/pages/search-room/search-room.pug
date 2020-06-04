@@ -18,7 +18,7 @@ block variables
     - "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"    
     - ]
     - var rooms = [
-    - {number: "888", price: "9990", url: "images/room1.png", lux: true, stars: "5", comments: "145", link: "room-details.html"},
+    - {number: "888", price: "9990", url: "images/room1.png", lux: true, stars: "5", comments: "145", link: "room-details.html", arrows: true},
     - {number: "840", price: "9900", url: "images/room2.png", lux: false, stars: "4", comments: "65", link: "room-details.html"},
     - {number: "980", price: "8500", url: "images/image3.png", lux: true, stars: "3", comments: "35", link: "room-details.html"},
     - {number: "856", price: "7300", url: "images/image5.png", lux: false, stars: "5", comments: "19", link: "room-details.html"},
@@ -40,11 +40,11 @@ block main
             .filter__item
                 h3.filter__title гости
                 +dropdown(false, "", "взрослые", "дети", "младенцы")
-            .filter__item
+            .filter__item.filter__indent_top
                 h3.filter__title диапазон цены
                 +range-slider
                 p.filter__comment Стоимость за сутки пребывания в номере
-            .filter__item
+            .filter__item.filter__indent_top
                 h3.filter__title Checkbox Buttons
                 +checkbox(false,...orders)
             .filter__item

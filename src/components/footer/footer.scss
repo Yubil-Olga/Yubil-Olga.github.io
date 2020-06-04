@@ -63,6 +63,7 @@
 }
 .footer__subtitle {
     @include H3;
+    padding-top: 5px;
 }
 .footer__description {
     @include Body;

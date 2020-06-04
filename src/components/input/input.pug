@@ -1,7 +1,7 @@
 mixin input(mask, placeholder, text)
     .input_default
         input(
-            class= mask ? "mask" : ""
+            class= mask ? "mask js-mask" : ""
             placeholder= placeholder
             value=text
         )
