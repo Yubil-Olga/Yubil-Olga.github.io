@@ -1,5 +1,7 @@
-document.querySelectorAll('.expanded-checkbox .selection__button').forEach(el => {
-    el.addEventListener('click', (e) => {
-        e.target.closest('.expanded-checkbox').classList.toggle('show');
-    })
+document.querySelectorAll('.js-expanded-checkbox .js-selection__button').forEach(el => {
+    el.addEventListener('click', expandCheckbox)
+    function expandCheckbox(event) {
+        event.target.closest('.js-expanded-checkbox').classList.toggle('show');
+    }
 })
+

@@ -39,6 +39,9 @@
             background: $color;
         }
     }
+    &_border:hover {
+        color: $color-ghost;
+    }
     &_border:hover::before {
         background: $color-ghost;
     }

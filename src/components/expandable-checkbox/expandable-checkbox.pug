@@ -1,9 +1,9 @@
 include ../checkbox/checkbox
 mixin expandable-checkbox(title, ...items)
-    .expanded-checkbox
+    .expanded-checkbox.js-expanded-checkbox
         .expanded-checkbox__selection
             h3.selection__title=title
-            .selection__button
+            .selection__button.js-selection__button
                 i.material-icons expand_more
         .expanded-checkbox__list
             +checkbox(false, ...items)

@@ -1,6 +1,6 @@
 import 'air-datepicker';
 
-$('.datepicker-here').datepicker(
+$('.js-datepicker-here').datepicker(
     {   
         showButtonPanel: true,
         clearButton: true,
@@ -39,7 +39,7 @@ function applyButton(dp) {
     if (dp.$datepicker.find('.apply--button').html()===undefined) {
         dp.$datepicker.children('.datepicker--buttons').append('<span class="apply--button">Применить</span></div>')
     }
-    dp.$datepicker.find('.apply--button').click(function(event) {
+    dp.$datepicker.find('.apply--button').click(function() {
         dp.hide();
      });
 }

@@ -1,6 +1,6 @@
 import '../datepicker/datepicker';
 
-$('.js-date-dropdown .datepicker-here').datepicker(
+$('.js-date-dropdown .js-datepicker-here').datepicker(
     {   
         onSelect: function (fd, d, picker) {
             let container = picker.$el.closest('.js-date-dropdown');
@@ -13,4 +13,4 @@ $('.js-datepicker-end').datepicker(
     {   
         position: 'bottom right'
     }
-);
+); 

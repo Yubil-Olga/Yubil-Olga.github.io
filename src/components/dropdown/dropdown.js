@@ -1,96 +1,104 @@
-document.querySelectorAll('.dropdown .arrow_direction_bottom').forEach(e => {
-    e.addEventListener('click', () => {
-        const path = e.closest('.dropdown');
-        path.classList.toggle("show");
-        let totalCounter = 0;
-        dropdown(path, totalCounter);  
+document.querySelectorAll('.js-dropdown').forEach(dropdown => {
+    let totalCounter = 0
+    dropdown.querySelectorAll('.js-counter-item').forEach(el => {
+        totalCounter += Number(el.value)
     })
-})
-document.querySelectorAll('.dropdown .js-accept').forEach(e => {
-    e.addEventListener('click', (el) => {
-        el.preventDefault();
-        e.closest('.dropdown').classList.toggle("show");
-    })
-})
-function dropdown(path, totalCounter){
-    path.querySelectorAll('.menu__option').forEach(el => {
-        el.addEventListener('click', (e)=> {
-            let counter = el.querySelector('.counter-item').value;
-            if (e.target == el.querySelector('.counter__increment') && counter<4) {
-                counter++;
-                el.querySelector('.counter-item').value = counter;
-                totalCounter++;
-            }
-            if (e.target == el.querySelector('.counter__decrement') && counter>0) {
-                counter--;
-                el.querySelector('.counter-item').value = counter;
-                totalCounter--;
-            }
-            if (totalCounter>0 && path.querySelectorAll('.js-clean').length>0) {
-                path.querySelector('.js-clean').style.visibility="visible";
-            }
-            if (totalCounter == 0 && path.querySelectorAll('.js-clean').length>0) {
-                path.querySelector('.js-clean').style.visibility="hidden";
-            }
-            path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);
-        })
-    })
-    if (path.querySelectorAll('.js-clean').length>0) {
-        path.querySelector('.js-clean').addEventListener('click', (e) => {
-            e.preventDefault();
+    dropdown.addEventListener('click', dropdownClicked)
+
+    function dropdownClicked(event) {
+        if (event.target.className.indexOf('js-arrow_direction_bottom')>=0) {
+            showDropdown()
+        }
+        if (event.target.className.indexOf('js-accept')>=0) {
+            event.preventDefault();
+            showDropdown()
+        }
+        if (event.target.className.indexOf('js-clean')>=0) {
+            event.preventDefault();
             totalCounter = 0;
-            path.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, path);
-            path.querySelector('.js-clean').style.visibility="hidden";
-            path.querySelectorAll('.counter-item').forEach((item)=> {
+            dropdown.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, dropdown);
+            dropdown.querySelectorAll('.counter-item').forEach((item)=> {
                 item.value = 0;
             })
-        })
-    } 
-}
+        }
+        if (event.target.closest('.js-menu__option')) {
+            changeOptions()
+        }
+        
+    }
 
-function titleCounter(total, path) {
-    let word ="";
-    let title="";
-    if (path.querySelector('.dropdown__title').classList.contains('room')){
-        path.querySelectorAll('.menu__option').forEach(el => {
-            title += el.querySelector('.counter-item').value +" "+ el.querySelector('.option__title').textContent + ", ";
-        })
-        if (total ==0) {
-            title= "Сколько комнат"
-        }
+    function showDropdown() {
+        dropdown.classList.toggle('show')
     }
-    else {
-        let baby = 0;
-        let babyCount="";
-        path.querySelectorAll('.menu__option').forEach(el => {
-            if (el.querySelector('.option__title').textContent == "младенцы"){
-                baby = el.querySelector('.counter-item').value;
+
+    function changeOptions() {
+        let item = event.target.closest('.js-menu__option').querySelector('.js-counter-item')
+        let counter = Number(item.value)
+        if (event.target.className === 'counter__increment' && counter<4) {
+            counter++;
+            totalCounter++;
+        }
+        if (event.target.className === 'counter__decrement' && counter>0) {
+            counter--;
+            totalCounter--;
+        }
+        if (totalCounter == 0 && dropdown.querySelectorAll('.js-clean').length>0) {
+            dropdown.querySelector('.js-clean').style.visibility='hidden';
+        }
+        if (totalCounter>0 && dropdown.querySelectorAll('.js-clean').length>0) {
+            dropdown.querySelector('.js-clean').style.visibility='visible';
+        }
+        item.value = counter.toString();
+        dropdown.querySelector('.js-dropdown__title').textContent = titleCounter();
+    }
+
+    function titleCounter() {
+        let word ='';
+        let title='';
+        if (dropdown.querySelector('.dropdown__title').classList.contains('room')){
+            dropdown.querySelectorAll('.menu__option').forEach(el => {
+                title += el.querySelector('.counter-item').value +" "+ el.querySelector('.option__title').textContent + ', ';
+            })
+            if (totalCounter === 0) {
+                title= 'Сколько комнат'
             }
-        })
-        if (baby == 1) {
-            babyCount= `, ${baby} младенец`;
         }
-        if (baby > 1) {
-            babyCount = `, ${baby} младенца`;
+        else {
+            let baby = 0;
+            let babyCount='';
+            dropdown.querySelectorAll('.menu__option').forEach(el => {
+                if (el.querySelector('.option__title').textContent === 'младенцы'){
+                    baby = el.querySelector('.counter-item').value;
+                }
+            })
+            if (baby == 1) {
+                babyCount= `, ${baby} младенец`;
+            }
+            if (baby > 1) {
+                babyCount = `, ${baby} младенца`;
+            }
+            title = 'Сколько гостей';
+            switch(totalCounter) {
+                case 0:
+                    return title;
+                case 1:
+                    word= 'гость';
+                    title = `${totalCounter} ${word} ${babyCount}`;
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    word= 'гостя';
+                    title = `${totalCounter} ${word} ${babyCount}`;
+                    break;
+                default:
+                    word= 'гостей';
+                    title = `${totalCounter} ${word} ${babyCount}`;
         }
-        title = "Сколько гостей";
-        switch(total) {
-            case 0:
-                return title;
-            case 1:
-                word= "гость";
-                title = `${total} ${word} ${babyCount}`;
-                break;
-            case 2:
-            case 3:
-            case 4:
-                word= "гостя";
-                title = `${total} ${word} ${babyCount}`;
-                break;
-            default:
-                word= "гостей";
-                title = `${total} ${word} ${babyCount}`;
+        }
+        return title;
     }
-    }
-    return title;
-}
+    
+})
+
+
