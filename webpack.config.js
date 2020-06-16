@@ -30,11 +30,6 @@ module.exports = {
         hot: isDev,
         stats: 'errors-only'
       },
-    // optimization: {
-    //   splitChunks: {
-    //     chunks: 'all'
-    //   }
-    // },
     plugins: [
         new HTMLWebpackPlugin({
             filename: 'index.html',
@@ -135,6 +130,9 @@ module.exports = {
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                include: [
+                  path.resolve(__dirname, "src/fonts/")
+                ],
                 use: [
                   {
                     loader: 'file-loader',
