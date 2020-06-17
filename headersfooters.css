@@ -26,7 +26,7 @@
 body {
   max-width: 1920px;
   min-width: 320px;
-  margin: 0;
+  margin: 0 auto;
   padding: 70px 0; }
 
 h1, h2, h3, h4, p, ul {
@@ -52,13 +52,13 @@ button {
 .logo__icon {
   width: 40px;
   height: 40px;
-  background: url(images/Logo.png) center/contain no-repeat;
+  background: url(images/logo.svg) center/contain no-repeat;
   margin-right: 12px; }
 
 .logo__text {
   width: 54px;
   height: 13px;
-  background: url(images/TOXIN.png) center/contain no-repeat; }
+  background: url(images/TOXIN.svg) center/contain no-repeat; }
 
 .button, .button_border, .button_simple, .button_ghost, .button_arrow {
   font-family: Montserrat;
@@ -84,9 +84,9 @@ button {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_border {
     color: #BC9CFF;
+    border-color: red;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";
@@ -99,10 +99,8 @@ button {
       margin: -2px;
       border-radius: inherit;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
-  .button_border:hover {
-    color: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
-  .button_border:hover::before {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+    .button_border:hover:before {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_simple {
     color: #BC9CFF;
     padding-left: 0;
@@ -245,13 +243,13 @@ button {
 .logo__icon {
   width: 40px;
   height: 40px;
-  background: url(images/Logo.png) center/contain no-repeat;
+  background: url(images/logo.svg) center/contain no-repeat;
   margin-right: 12px; }
 
 .logo__text {
   width: 54px;
   height: 13px;
-  background: url(images/TOXIN.png) center/contain no-repeat; }
+  background: url(images/TOXIN.svg) center/contain no-repeat; }
 
 .subscription-input {
   display: flex;
@@ -422,5 +420,5 @@ body {
   grid-row-gap: 40px;
   padding-top: 150px;
   padding-bottom: 130px;
-  background: url(images/Logo2.png) 30px 30px no-repeat #E5E5E5; }
+  background: url(images/logo2.svg) 30px 30px no-repeat #E5E5E5; }
 

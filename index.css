@@ -56,13 +56,13 @@
 .logo__icon {
   width: 40px;
   height: 40px;
-  background: url(images/Logo.png) center/contain no-repeat;
+  background: url(images/logo.svg) center/contain no-repeat;
   margin-right: 12px; }
 
 .logo__text {
   width: 54px;
   height: 13px;
-  background: url(images/TOXIN.png) center/contain no-repeat; }
+  background: url(images/TOXIN.svg) center/contain no-repeat; }
 
 .button, .button_border, .button_simple, .button_ghost, .button_arrow {
   font-family: Montserrat;
@@ -88,9 +88,9 @@
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_border {
     color: #BC9CFF;
+    border-color: red;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";
@@ -103,10 +103,8 @@
       margin: -2px;
       border-radius: inherit;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
-  .button_border:hover {
-    color: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
-  .button_border:hover::before {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+    .button_border:hover:before {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_simple {
     color: #BC9CFF;
     padding-left: 0;
@@ -249,13 +247,13 @@
 .logo__icon {
   width: 40px;
   height: 40px;
-  background: url(images/Logo.png) center/contain no-repeat;
+  background: url(images/logo.svg) center/contain no-repeat;
   margin-right: 12px; }
 
 .logo__text {
   width: 54px;
   height: 13px;
-  background: url(images/TOXIN.png) center/contain no-repeat; }
+  background: url(images/TOXIN.svg) center/contain no-repeat; }
 
 .subscription-input {
   display: flex;
@@ -424,7 +422,13 @@
 body {
   max-width: 1920px;
   min-width: 320px;
-  margin: 0; }
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
 
 h1, h2, h3, h4, p, ul, figure {
   margin: 0; }
@@ -705,9 +709,9 @@ button {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_border {
     color: #BC9CFF;
+    border-color: red;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";
@@ -720,10 +724,8 @@ button {
       margin: -2px;
       border-radius: inherit;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
-  .button_border:hover {
-    color: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
-  .button_border:hover::before {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+    .button_border:hover:before {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_simple {
     color: #BC9CFF;
     padding-left: 0;
@@ -911,9 +913,9 @@ button {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_border {
     color: #BC9CFF;
+    border-color: red;
     background-color: #fff;
     background-clip: padding-box;
-    border: 2px solid;
     position: relative; }
     .button_border:before {
       content: "";
@@ -926,10 +928,8 @@ button {
       margin: -2px;
       border-radius: inherit;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
-  .button_border:hover {
-    color: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
-  .button_border:hover::before {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+    .button_border:hover:before {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button_simple {
     color: #BC9CFF;
     padding-left: 0;
@@ -968,7 +968,7 @@ button {
   max-width: 1920px;
   height: 830px;
   margin: 0 auto;
-  background: url(images/bg-index.jpg) center -67px no-repeat;
+  background: url(images/bg-index.jpg) center/cover no-repeat;
   padding: 70px 0 20px 0;
   box-sizing: border-box;
   display: flex;
