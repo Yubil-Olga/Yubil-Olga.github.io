@@ -11,6 +11,7 @@
     border: 1px solid $dark-shade-25;
     outline: none;
     height: 100%;
+    cursor: pointer;
     &:hover, &:focus {
         border-color: $dark-shade-50;
     }
