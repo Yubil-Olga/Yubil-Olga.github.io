@@ -6,7 +6,8 @@ document.querySelectorAll('.js-dropdown').forEach(dropdown => {
     dropdown.addEventListener('click', dropdownClicked)
 
     function dropdownClicked(event) {
-        if (event.target.className.indexOf('js-arrow_direction_bottom')>=0) {
+        window.addEventListener('click', closeDropdown)
+        if (event.target.closest('.js-dropdown__selection')) {
             showDropdown()
         }
         if (event.target.className.indexOf('js-accept')>=0) {
@@ -56,14 +57,58 @@ document.querySelectorAll('.js-dropdown').forEach(dropdown => {
         let word ='';
         let title='';
         if (dropdown.querySelector('.dropdown__title').classList.contains('room')){
-            dropdown.querySelectorAll('.menu__option').forEach(el => {
-                title += el.querySelector('.counter-item').value +" "+ el.querySelector('.option__title').textContent + ', ';
-            })
+            roomsTitle()
+        }
+        else {
+            guestsTitle()
+        }
+        return title;
+        function roomsTitle() {
             if (totalCounter === 0) {
                 title= 'Сколько комнат'
             }
+            else {
+                let arr = []
+                dropdown.querySelectorAll('.menu__option').forEach(el => {
+                    if (el.querySelector('.counter-item').value>0) {
+                        arr.push(elementTitle(el.querySelector('.option__title').textContent, parseInt(el.querySelector('.counter-item').value)))
+                    }
+                    title = arr.join(', ')
+                    function elementTitle(name, value) {
+                        if (name === 'спальни') {
+                            switch(value) {
+                                case 1: 
+                                    name = 'спальня';
+                                    break;
+                                default:
+                                    name = 'спальни';
+                            }
+                        }
+                        if (name === 'кровати') {
+                            switch(value) {
+                                case 1: 
+                                    name = 'кровать';
+                                    break;
+                                default:
+                                    name = 'кровати';
+                            }
+                        }
+                        if (name === 'ванные комнаты') {
+                            switch(value) {
+                                case 1: 
+                                    name = 'ванная комната';
+                                    break;
+                                default:
+                                    name = 'ванные комнаты';
+                            }
+                        }
+                        const elementTitle = value + ' ' + name
+                        return elementTitle
+                    }
+                })
+            }
         }
-        else {
+        function guestsTitle() {
             let baby = 0;
             let babyCount='';
             dropdown.querySelectorAll('.menu__option').forEach(el => {
@@ -96,9 +141,14 @@ document.querySelectorAll('.js-dropdown').forEach(dropdown => {
                     title = `${totalCounter} ${word} ${babyCount}`;
         }
         }
-        return title;
     }
-    
+
+    function closeDropdown() {
+        if (event.target.closest('.js-dropdown') !== dropdown) {
+            showDropdown();   
+            window.removeEventListener('click', closeDropdown);
+        }
+    }
 })
 
 
