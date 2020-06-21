@@ -19,13 +19,15 @@ mixin form-booking(number, price, discount)
                 .order-item__price 39 960₽
             .order-details__order-item
                 .order-item__name.discount(date-discount=discount) 
-                    .order-item__title Сбор за услуги: скидка #{discount} ₽
-                    span.order-item__info(title="Сбор за услуги: скидка")  i
+                    span.order-item__title Сбор за услуги: скидка #{discount} ₽
+                    //- .order-item__title Сбор за услуги: скидка #{discount} ₽
+                    //- span.order-item__info(title="Сбор за услуги: скидка")  i
                 .order-item__price 0
             .order-details__order-item
                 .order-item__name 
-                    .order-item__title Сбор за дополнительные услуги
-                    span.order-item__info(title="Сбор за дополнительные услуги")  i
+                    span.order-item__title Сбор за дополнительные услуги
+                    //- .order-item__title Сбор за дополнительные услуги
+                    //- span.order-item__info(title="Сбор за дополнительные услуги")  i
                 .order-item__price 300
             .order-details__item-total
                 .item-total__name Итого

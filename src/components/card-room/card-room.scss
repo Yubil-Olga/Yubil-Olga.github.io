@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 .card-room__footer {
-    padding: 15px 20px 20px 20px;
+    padding: 20px;
 }
 .card-room__room-details {
     display: flex;
@@ -67,23 +67,25 @@
     position: relative;
     img {
         width: 100%;
+        display: block;
     }
     .card-room__circles {
         position: absolute;
         display: flex;
         bottom: 10%;
         right: 5%;
-    }
-    .image__circle {
-        width: 7.5px;
-        height: 7.5px;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        margin-left: 4px;
-        box-sizing: border-box;
-    }
-    .image__circle_fill {
-        background-color: #fff;
+        visibility: hidden;
+        .image__circle {
+            width: 7.5px;
+            height: 7.5px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin-left: 4px;
+            box-sizing: border-box;
+        }
+        .image__circle_fill {
+            background-color: #fff;
+        }
     }
 }
 .card-room__slider {
@@ -93,9 +95,12 @@
     right: 0;
     bottom: 0;
     display: flex;
+    opacity: 0;
     align-items: center;
     justify-content: space-between;
     padding: 12px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 15.99%, rgba(255, 255, 255, 0) 16%),
+    linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 15.99%, rgba(255, 255, 255, 0) 16%);
     i.material-icons {
         font-family: Material Icons;
         font-style: normal;
@@ -106,4 +111,8 @@
             transform: rotate(90deg);
         }
     }
+}
+.card-room__image:hover .card-room__slider, .card-room__image:hover .card-room__circles {
+    opacity: 1;
+    transition: 1s;
 }

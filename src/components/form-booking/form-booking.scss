@@ -36,7 +36,7 @@
 }
 .order-details__order-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     @include Body;
     padding-bottom: 10px;
@@ -46,7 +46,25 @@
     justify-content: space-between;
 }
 .order-item__title {
-    max-width: 220px;
+    max-width: 214px;
+    position: relative;
+    padding-right: 25px;
+    line-height: 20px;
+    &:after {
+        content: 'i';
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid $dark-shade-25;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        cursor: help;
+        text-align: center;
+        line-height: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
 .order-details__order-item:first-of-type {
     .order-item__name {
@@ -67,7 +85,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: help;
     margin-left: 5px;
 }
 .order-details__item-total {
@@ -75,7 +93,7 @@
     justify-content: space-between;
     align-items: baseline;
     @include H2;
-    padding-top: 10px;
+    padding-top: 18px;
 }
 .item-total__dots {
     border-bottom: 1px dashed $dark-shade-25;
