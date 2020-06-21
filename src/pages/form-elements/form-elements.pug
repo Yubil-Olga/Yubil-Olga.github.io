@@ -145,7 +145,13 @@ block main
             .form-elements__item
                 +expandable-checkbox("expandable-checkbox-list")
             .form-elements__item
-                +expandable-checkbox("expandable-checkbox-list", "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь")
+                +expandable-checkbox("expandable-checkbox-list", 
+                    {description: "Завтрак"}, 
+                    {description: "Письменный стол", check: true}, 
+                    {description: "Стул для кормления", check: true}, 
+                    {description: "Кроватка", check: true}, 
+                    {description: "Телевизор"}, 
+                    {description: "Шампунь"})
         .form-elements__section
             .form-elements__item
                 h3.form-elements__subtitle Rich checkbox buttons

@@ -9,7 +9,7 @@ include ../../components/pagination/pagination
 
 block variables
     - var pageTitle = 'Search room page'
-    - var orders = ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]
+    - var orders = [{description: "Можно курить"}, {description: "Можно с питомцами", check: true}, {description: "Можно пригласить гостей (до 10 человек)", check: true}]
     - var accessibility = [
     - {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
     - {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
