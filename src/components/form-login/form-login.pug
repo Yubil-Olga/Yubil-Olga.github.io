@@ -3,8 +3,8 @@ mixin form-login
     .form.form-login
         h1.form__title Войти
         .form__section
-            +input(false, "Email")
-            +input(false, "Пароль")
+            +input(false, "email", "Email")
+            +input(false, "password", "Пароль")
         .form__section
             button.button.button_arrow.form__button(type="submit") войти
                 i.material-icons arrow_forward
