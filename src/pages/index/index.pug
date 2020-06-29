@@ -1,13 +1,13 @@
-extends ../page
+extends ../../components/layout_page/layout_page
 include ../../components/form-selection/form-selection
 
 block variables
     - var pageTitle = 'Index page'
 
 block main
-    main.container
-        .container__item
+    main.landing
+        .landing__item
             +form-selection
-        .container__item
+        .landing__item
             p.slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
     

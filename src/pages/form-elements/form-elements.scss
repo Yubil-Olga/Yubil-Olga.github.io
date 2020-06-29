@@ -1,5 +1,5 @@
-@import '../base.scss';
-@import '../colors', '../fonts';
+@import '../../components/layout_base/layout_base.scss';
+@import '../colors', '../fonts', '../sizes';
 @import '../../components/button/button.scss';
 @import  '../../components/like-btn/like-btn.scss';
 @import '../../components/advantages/advantages.scss';

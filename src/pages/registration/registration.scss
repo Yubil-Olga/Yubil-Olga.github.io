@@ -1,15 +1,6 @@
-@import '../colors', '../fonts', '../page.scss';
+@import '../../components/container/container.scss';
 @import '../../components/form-registration/form-registration.scss';
 
 .container {
-    width: 100%;
-    max-width: $max-width;
-    box-sizing: border-box;
-    margin: 0 auto;
-    background: url('./bg-registration.jpg') center/cover no-repeat;
-    height: 702px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 $space-x;
-}  
+    background-image: url('./bg-registration.jpg');
+}

@@ -1,7 +1,7 @@
-@import '../colors', '../fonts', '../page.scss';
+@import '../colors', '../fonts', '../../components/layout_page/layout_page.scss';
 @import '../../components/form-selection/form-selection.scss';
 
-.container {
+.landing {
     width: 100%;
     max-width: $max-width;
     height: 830px;
@@ -28,7 +28,7 @@
         padding-left: $space-x/2;
     }
 }
-.container__item {
+.landing__item {
     width: $content-width;
     margin: 0 auto;
     @media (max-width: 1200px) {
@@ -36,7 +36,7 @@
         margin: 0;
     }
 }
-.container__item:last-child {
+.landing__item:last-child {
     display: flex;
     justify-content: flex-end;
     .slogan {

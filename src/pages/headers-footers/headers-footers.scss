@@ -1,11 +1,9 @@
-@import '../base.scss';
+@import '../../components/layout_base/layout_base.scss';
+@import '../sizes';
 @import '../../components/header/header.scss';
 @import '../../components/footer/footer.scss';
 
-body {
+.headers-footers {
     display: grid;
     grid-row-gap: 40px;
-    padding-top: 150px;
-    padding-bottom: 130px;
-    background: url(../../components/logo/logo2.svg) 30px 30px no-repeat #E5E5E5;
 }

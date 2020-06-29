@@ -1,9 +1,10 @@
-extends ../base
+extends ../../components/layout_base/layout_base
 include ../../components/header/header
 include ../../components/footer/footer
 
 block variables
     - var pageTitle = 'Headers & Footers'
+    - var bglogo = true
     - var user = "Cosmin Negoita"
     - var navigation = [
     - {name: "Home", href: "#", expanded: false},
@@ -23,8 +24,9 @@ block variables
     - var footerformdescription = "Receive our latest news and promotions in your inbox!"
     - var copyright = "Copyright © 2018 Toxin UI Kit. All rights reserved."
 block main
-    +header(false, "en", ...navigation)
-    +header(true, "en", ...navigation)
-    +footer(false, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
-    +footer(true, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
+    section.headers-footers
+        +header(false, "en", ...navigation)
+        +header(true, "en", ...navigation)
+        +footer(false, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
+        +footer(true, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
     

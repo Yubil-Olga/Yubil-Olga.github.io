@@ -1,5 +1,5 @@
-include ../components/header/header
-include ../components/footer/footer
+include ../header/header
+include ../footer/footer
 block variables
 
 doctype html
@@ -14,7 +14,7 @@ html
         meta(name="description", content="Toxin - бронирование номеров в отеле")
         meta(name="keywords", content="Toxin, бронирование номеров, отель")
         title= pageTitle
-    body
+    body.layout_page
         - var navigation = [
         - {name: "О нас", href: "/mock-address/change-me", expanded: false},
         - {name: "Услуги", href: "/mock-address/change-me", expanded: true},

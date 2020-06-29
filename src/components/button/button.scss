@@ -1,3 +1,6 @@
+@import '../../pages/fonts';
+@import '../../pages/colors';
+
 %button {
     @include H3;
     display: inline-block;
@@ -9,6 +12,9 @@
     justify-content: center;
     padding: 8px 18px;
     max-width: 320px;
+    &:focus {
+        outline: none;
+    }
 }
 .button {
     $color: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
@@ -17,12 +23,11 @@
     color: #fff;
     background: $color;
     &:hover {
-        background: $color-ghost 
+        background: $color-ghost; 
     }
     &_border {
         @extend %button;
         color: $purple;
-        border-color: red;
         background-color: #fff;
         background-clip: padding-box;
         position: relative;

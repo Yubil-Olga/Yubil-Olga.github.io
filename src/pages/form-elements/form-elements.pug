@@ -1,4 +1,4 @@
-extends ../base
+extends ../../components/layout_base/layout_base
 include ../../components/like-btn/like-btn
 include ../../components/advantages/advantages
 include ../../components/input/input
@@ -18,6 +18,13 @@ include ../../components/subscription-input/subscription-input
 
 block variables
     - var pageTitle = 'Form elements'
+    - 
+        var orders = 
+        [
+            {description: "Можно курить"}, 
+            {description: "Можно с питомцами"}, 
+            {description: "Можно пригласить гостей (до 10 человек)"}
+        ]
     - 
         var comment = 
         {
@@ -91,7 +98,7 @@ block main
         .form-elements__section 
             .form-elements__item
                 h3.form-elements__subtitle Checkbox buttons
-                +checkbox(false,"Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)")
+                +checkbox(false,...orders)
             .form-elements__item
                 h3.form-elements__subtitle Radio buttons
                 +radiobutton
@@ -122,7 +129,7 @@ block main
                     .button_border.form__button click me
                     .button_simple click me
                     .button_ghost click me
-                    .button_arrow.form__button перейти к оплате
+                    .button.button_arrow.form__button перейти к оплате
                         i.material-icons arrow_forward
             .form-elements__item.grid_gap_10
                 h3.form-elements__subtitle Pagination

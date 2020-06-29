@@ -1,11 +1,11 @@
-@import '../colors', '../fonts', '../base.scss';
+@import '../colors', '../fonts', '../sizes', '../../components/layout_base/layout_base.scss';
 @import '../../components/form-selection/form-selection.scss';
 @import '../../components/form-registration/form-registration.scss';
 @import '../../components/form-login/form-login.scss';
 @import '../../components/form-booking/form-booking.scss';
 @import '../../components/card-room/card-room.scss';
 
-.container {
+.cards {
     column-count: 3;
     column-gap: 40px;
     margin: 0 auto;
@@ -28,7 +28,7 @@
         padding: 0;
     }
 }
-.container__item {
+.cards__item {
     margin-bottom: 40px;
     break-inside: avoid;
 }

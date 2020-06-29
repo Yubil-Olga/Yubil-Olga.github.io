@@ -1,4 +1,4 @@
-extends ../base
+extends ../../components/layout_base/layout_base
 include ../../components/form-selection/form-selection
 include ../../components/form-registration/form-registration
 include ../../components/form-login/form-login
@@ -14,19 +14,19 @@ block variables
         ]
 
 block main
-    .container
-        .container__item
+    .cards
+        .cards__item
             +form-selection
-        .container__item
+        .cards__item
             +form-registration
-        .container__item
+        .cards__item
             +form-booking(888, 9990, 2179)
-        .container__item
+        .cards__item
             +form-login
-        .container__item
+        .cards__item
             .calendar
         for room in rooms
-            .container__item
+            .cards__item
                 +card-room(room)
         
     

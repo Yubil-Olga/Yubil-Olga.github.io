@@ -1,0 +1,29 @@
+.layout_page {
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    main {
+        flex: 1 0 auto;
+    }
+    h1, h2, h3, h4, p, ul, figure {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        list-style: none;
+    }
+    button {
+        border: none;
+    }
+    .header__navigation .navigation__link{
+        margin-right: 22px;
+    }
+}

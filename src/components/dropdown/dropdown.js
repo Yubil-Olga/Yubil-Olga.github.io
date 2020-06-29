@@ -150,5 +150,3 @@ document.querySelectorAll('.js-dropdown').forEach(dropdown => {
         }
     }
 })
-
-
