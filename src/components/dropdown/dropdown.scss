@@ -93,7 +93,7 @@
             @each $counter in increment, decrement {
                 .counter__#{$counter}:before {
                     font: {
-                        family: Montserrat;
+                        family: Montserrat, Arial, sans-serif;
                         weight: normal;
                         size: 18px;
                     }
