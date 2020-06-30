@@ -17,7 +17,7 @@ mixin card-room(room)
                 h2.room-details__room-number=room.number
                     if room.lux
                         span  люкс
-                .room-details__price=room.price
+                .room-details__price #{room.price}₽
             .card-room__room-rating
                 +rate-btn(5,room.stars)
                 .room-rating__comments=room.comments

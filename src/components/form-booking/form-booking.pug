@@ -6,7 +6,7 @@ mixin form-booking(number, price, discount)
         header.form-booking__room-details
             h2.room-details__room-number=number
                 span  люкс
-            .room-details__price.js-room-details__price=price
+            .room-details__price.js-room-details__price #{price}₽
         .form-selection__date-picker-wrapper
             +date-dropdown("прибытие", "выезд")
         .form-selection__dropdown-wrapper
@@ -20,14 +20,10 @@ mixin form-booking(number, price, discount)
             .order-details__order-item
                 .order-item__name.discount(date-discount=discount) 
                     span.order-item__title Сбор за услуги: скидка #{discount} ₽
-                    //- .order-item__title Сбор за услуги: скидка #{discount} ₽
-                    //- span.order-item__info(title="Сбор за услуги: скидка")  i
                 .order-item__price 0
             .order-details__order-item
                 .order-item__name 
                     span.order-item__title Сбор за дополнительные услуги
-                    //- .order-item__title Сбор за дополнительные услуги
-                    //- span.order-item__info(title="Сбор за дополнительные услуги")  i
                 .order-item__price 300
             .order-details__item-total
                 .item-total__name Итого

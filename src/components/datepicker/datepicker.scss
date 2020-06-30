@@ -133,8 +133,8 @@
 .datepicker--button {
     @include H3;
     color: $dark-shade-50;
-    display: inline;
-    height: unset;
+    display: inline-block;
+    height: initial;
     &:hover {
         background: none;
     }

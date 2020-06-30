@@ -3,7 +3,7 @@
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "airbnb-base"],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -20,6 +20,8 @@
         "fsd/jq-use-js-prefix-in-selector": "error",
         "fsd/no-function-declaration-in-event-listener": "error",
         "fsd/split-conditionals": "error",
-        "no-undef": "off"
+        "no-undef": "off",
+        "linebreak-style": 0,
+        "no-param-reassign": ["error", { "props": false }]
     }
 }
