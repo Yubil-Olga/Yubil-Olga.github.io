@@ -1,4 +1,4 @@
-import '../../../node_modules/ion-rangeslider/js/ion.rangeSlider';
+import 'ion-rangeslider';
 
 $('.js-range-slider').ionRangeSlider({
   type: 'double',

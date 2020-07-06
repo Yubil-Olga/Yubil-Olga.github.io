@@ -1,8 +1,12 @@
-import 'inputmask/dist/jquery.inputmask';
+import Inputmask from 'inputmask';
 
-$('.js-mask').inputmask({
-  alias: 'datetime',
-  inputFormat: 'dd.mm.yyyy',
-  placeholder: 'ДД.ММ.ГГГГ',
-  max: '01.01.2020',
+$(document).ready(() => {
+  const field = document.getElementsByClassName('js-mask');
+  const im = new Inputmask('datetime', {
+    inputFormat: 'dd.mm.yyyy',
+    placeholder: 'ДД.ММ.ГГГГ',
+    min: '01.01.1900',
+    max: '01.01.2020',
+  });
+  im.mask(field);
 });
