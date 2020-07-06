@@ -1,10 +1,50 @@
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+const PAGES_DIR = path.resolve(__dirname, './src/pages');
+
+const searchRecursive = function (dir, pattern) {
+  let results = [];
+  fs.readdirSync(dir).forEach(
+    (dirInner) => {
+      dirInner = path.resolve(dir, dirInner);
+      const stat = fs.statSync(dirInner);
+      if (stat.isDirectory()) {
+        results = results.concat(searchRecursive(dirInner, pattern));
+      }
+      if (stat.isFile() && dirInner.endsWith(pattern)) {
+        results.push(dirInner);
+      }
+    },
+  );
+
+  return results;
+};
+function searchPug(dir, pattern) {
+  let results = [];
+  fs.readdirSync(dir).forEach(
+    (dirInner) => {
+      dirInner = path.resolve(dir, dirInner);
+      const stat = fs.statSync(dirInner);
+      if (stat.isDirectory()) {
+        results = results.concat(searchRecursive(dirInner, pattern));
+      }
+      if (stat.isFile() && dirInner.endsWith(pattern)) {
+        results.push(dirInner);
+      }
+    },
+  );
+
+  return results;
+}
+
+const PAGES = searchPug(PAGES_DIR, '.pug');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -31,38 +71,10 @@ module.exports = {
     },
   },
   plugins: [
-    new HTMLWebpackPlugin({
-      filename: 'index.html',
-      template: './pages/index/index.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'headers-footers.html',
-      template: './pages/headers-footers/headers-footers.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'form-elements.html',
-      template: './pages/form-elements/form-elements.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'cards.html',
-      template: './pages/cards/cards.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'registration.html',
-      template: './pages/registration/registration.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'login.html',
-      template: './pages/login/login.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'search-room.html',
-      template: './pages/search-room/search-room.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'room-details.html',
-      template: './pages/room-details/room-details.pug',
-    }),
+    ...PAGES.map((page) => new HtmlWebpackPlugin({
+      template: `${page}`,
+      filename: path.basename(page).replace(/\.pug/, '.html'),
+    })),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -86,7 +98,6 @@ module.exports = {
     ]),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
-      cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {
         preset: ['default', { discardComments: { removeAll: true } }],
       },
