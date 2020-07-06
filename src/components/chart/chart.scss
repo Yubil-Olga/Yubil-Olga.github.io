@@ -9,25 +9,25 @@
   @media (max-width: 350px) {
     flex-wrap: wrap;
   }
-}
 
-.chart__legend {
-  @include Body;
-  line-height: 25px;
-  margin-left: 26px;
-
-  .legend__item::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 5px;
-    background: var(--legend-color);
-  }
-
-  @media (max-width: 350px) {
-    margin-top: 10px;
+  .chart__legend {
+    @include Body;
+    line-height: 25px;
+    margin-left: 26px;
+  
+    .legend__item::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+      background: var(--legend-color);
+    }
+  
+    @media (max-width: 350px) {
+      margin-top: 10px;
+    }
   }
 }
 
