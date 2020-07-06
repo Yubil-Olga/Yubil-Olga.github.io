@@ -2,12 +2,12 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown  
 
 mixin form-selection
-    form.form-selection.form
-        h1.form__title Найдём номера под ваши пожелания
-        .form-selection__date-picker-wrapper
-            +date-dropdown("прибытие", "выезд")
-        .form-selection__dropdown-wrapper
-            h3.form__sub-title гости
-            +dropdown(false, "", "взрослые", "дети", "младенцы")
-        a(href="search-room.html" aria-label="подобрать номер").form-selection__footer.button.button_arrow.form__button подобрать номер
-            i.material-icons arrow_forward
+  form.form-selection.form
+    h1.form__title Найдём номера под ваши пожелания
+    .form-selection__date-picker-wrapper
+      +date-dropdown("прибытие", "выезд")
+    .form-selection__dropdown-wrapper
+      h3.form__sub-title гости
+      +dropdown(false, "", "взрослые", "дети", "младенцы")
+    a(href="search-room.html" aria-label="подобрать номер").form-selection__footer.button.button_arrow.form__button подобрать номер
+      i.material-icons arrow_forward

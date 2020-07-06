@@ -1,11 +1,11 @@
 include ../like-btn/like-btn
 
 mixin review(item)
-    .review
-        .review__icon
-            img(src=item.src, alt=item.name)
-        .review__title
-            h4.review__name=item.name
-            p.review__date 5 дней назад
-        +like-btn(item.counter, item.liked)
-        p.review__text=item.comment
+  .review
+    .review__icon
+      img(src=item.src, alt=item.name)
+    .review__title
+      h4.review__name=item.name
+      p.review__date 5 дней назад
+    +like-btn(item.counter, item.liked)
+    p.review__text=item.comment

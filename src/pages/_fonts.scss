@@ -1,69 +1,85 @@
-@font-face{
-    font-family: Quicksand;
-    src: url(../fonts/Quicksand-Bold/opensans-bold.woff2) format('woff2'),
-         url(../fonts/Quicksand-Bold/quicksand-bold.woff) format('woff');
-    font-weight: bold;
+@font-face {
+  font-family: Quicksand;
+  src:
+    url(../fonts/Quicksand-Bold/opensans-bold.woff2) format('woff2'),
+    url(../fonts/Quicksand-Bold/quicksand-bold.woff) format('woff');
+  font-weight: bold;
 }
-@font-face{
-    font-family: Quicksand;
-    src: url(../fonts/Quicksand-Light/quicksand-light.woff2) format('woff2'),
-         url(../fonts/Quicksand-Light/Quicksand-Light.woff) format('woff');
-    font-weight: light;
+
+@font-face {
+  font-family: Quicksand;
+  src:
+    url(../fonts/Quicksand-Light/quicksand-light.woff2) format('woff2'),
+    url(../fonts/Quicksand-Light/Quicksand-Light.woff) format('woff');
+  font-weight: light;
 }
-@font-face{
-    font-family: Montserrat;
-    src: url(../fonts/Montserrat-Bold/montserrat-v14-latin_cyrillic-700.woff2) format('woff2'),
-         url(../fonts/Montserrat-Bold/montserrat-v14-latin_cyrillic-700.woff) format('woff');
-    font-weight: bold;
+
+@font-face {
+  font-family: Montserrat;
+  src:
+    url(../fonts/Montserrat-Bold/montserrat-v14-latin_cyrillic-700.woff2) format('woff2'),
+    url(../fonts/Montserrat-Bold/montserrat-v14-latin_cyrillic-700.woff) format('woff');
+  font-weight: bold;
 }
-@font-face{
-    font-family: Montserrat;
-    src: url(../fonts/Montserrat-Regular/montserrat-v14-latin_cyrillic-regular.woff2) format('woff2'),
-         url(../fonts/Montserrat-Regular/montserrat-v14-latin_cyrillic-regular.woff) format('woff');
-    font-weight: normal;
+
+@font-face {
+  font-family: Montserrat;
+  src:
+    url(../fonts/Montserrat-Regular/montserrat-v14-latin_cyrillic-regular.woff2) format('woff2'),
+    url(../fonts/Montserrat-Regular/montserrat-v14-latin_cyrillic-regular.woff) format('woff');
+  font-weight: normal;
 }
-@font-face{
-    font-family: Material Icons;
-    src: url(../fonts/MaterialIcons-Regular/materialicons-regular.woff2) format('woff2'),
-         url(../fonts/MaterialIcons-Regular/MaterialIcons-Regular.woff) format('woff');
-    font-weight: normal;
+
+@font-face {
+  font-family: 'Material Icons';
+  src:
+    url(../fonts/MaterialIcons-Regular/materialicons-regular.woff2) format('woff2'),
+    url(../fonts/MaterialIcons-Regular/MaterialIcons-Regular.woff) format('woff');
+  font-weight: normal;
 }
 
 @mixin H1 {
-    font: {
-        family: Quicksand, Arial, sans-serif;
-        weight: bold;
-        size: 24px;
-    }
-    line-height: 30px;
-    color: $dark-shade;
+  font: {
+    family: quicksand, arial, sans-serif;
+    weight: bold;
+    size: 24px;
+  }
+
+  line-height: 30px;
+  color: $dark-shade;
 }
+
 @mixin H2 {
-    font: {
-        family: Quicksand, Arial, sans-serif;
-        weight: bold;
-        size: 19px;
-    }
-    line-height: 24px;
-    color: $dark-shade;
+  font: {
+    family: quicksand, arial, sans-serif;
+    weight: bold;
+    size: 19px;
+  }
+
+  line-height: 24px;
+  color: $dark-shade;
 }
+
 @mixin H3 {
-    font: {
-        family: Montserrat, Arial, sans-serif;
-        weight: bold;
-        size: 12px;
-    }
-    line-height: 15px;
-    color: $dark-shade;
-    text-transform: uppercase;
+  font: {
+    family: montserrat, arial, sans-serif;
+    weight: bold;
+    size: 12px;
+  }
+
+  line-height: 15px;
+  color: $dark-shade;
+  text-transform: uppercase;
 }
+
 @mixin Body {
-    font: {
-        family: Montserrat, Arial, sans-serif;
-        weight: normal;
-        size: 14px;
-    }
-    line-height: 24px;
-    color: $dark-shade-75;
-    text-transform: none;
+  font: {
+    family: montserrat, arial, sans-serif;
+    weight: normal;
+    size: 14px;
+  }
+
+  line-height: 24px;
+  color: $dark-shade-75;
+  text-transform: none;
 }

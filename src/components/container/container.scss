@@ -1,18 +1,19 @@
 @import '../../pages/colors', '../../pages/fonts', '../../pages/sizes';
 
 .container {
-    width: 100%;
-    max-width: $max-width;
-    box-sizing: border-box;
-    margin: 0 auto;
-    background: center/cover no-repeat;
-    height: 680px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 $space-x; 
-    @media (max-width: 400px) {
-        align-items: flex-start;
-        padding-top: $space-y;
-    }
+  width: 100%;
+  max-width: $max-width;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: center/cover no-repeat;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $space-x;
+
+  @media (max-width: 400px) {
+    align-items: flex-start;
+    padding-top: $space-y;
+  }
 }

@@ -1,39 +1,44 @@
 @import '../../pages/colors';
+
 .like-btn {
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-    border: 1px solid $dark-shade-25;
-    border-radius: 10px;
-    color: $dark-shade-25;
-    box-sizing: border-box;
-    padding-left: 6px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    i.material-icons {
-        font-family: Material Icons;
-        font-style: normal;
-        font-size: 10px;
+  width: 40px;
+  height: 20px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 10px;
+  color: $dark-shade-25;
+  box-sizing: border-box;
+  padding-left: 6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  i.material-icons {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-size: 10px;
+  }
+
+  &::after {
+    content: attr(data-count);
+    position: absolute;
+    right: 8px;
+    top: 3px;
+    font: {
+      family: montserrat, arial, sans-serif;
+      weight: normal;
+      size: 10px;
     }
-    &:after {
-        content: attr(data-count);
-        position: absolute;
-        right: 8px;
-        top: 3px;
-        font: {
-            family: Montserrat, Arial, sans-serif;
-            weight: normal;
-            size: 10px;
-        }
-        line-height: 12px;
-    }
-    input {
-        opacity: 0;
-    }
+
+    line-height: 12px;
+  }
+
+  input {
+    opacity: 0;
+  }
 }
+
 .like-btn_active {
-    border-color: $purple;
-    color: $purple;
+  border-color: $purple;
+  color: $purple;
 }

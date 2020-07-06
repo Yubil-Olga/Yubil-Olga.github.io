@@ -3,128 +3,151 @@
 @import '../button/button.scss';
 
 .dropdown {
-    width: 100%;
-    max-width: 320px;
-    position: relative;
-    cursor: pointer;
-    .dropdown__selection {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid $dark-shade-25;;
-        border-radius: 2px 2px 0 0;
-        padding: 0 12px;
-        height: 44px;
-        box-sizing: border-box;
-        @include Body;
-        line-height: 18px;
-        .dropdown__title {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        .arrow_direction_bottom {
-            font-family: Material Icons;
-            font-style: normal;
-            font-weight: normal;
-            text-transform: none;
-            font-size: 24px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            cursor: pointer;
-        }
+  width: 100%;
+  max-width: 320px;
+  position: relative;
+  cursor: pointer;
+
+  .dropdown__selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $dark-shade-25;
+    border-radius: 2px 2px 0 0;
+    padding: 0 12px;
+    height: 44px;
+    box-sizing: border-box;
+
+    @include Body;
+
+    line-height: 18px;
+
+    .dropdown__title {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
-    .dropdown__menu {
-        display: none;
+
+    .arrow_direction_bottom {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      cursor: pointer;
     }
+  }
+
+  .dropdown__menu {
+    display: none;
+  }
 }
+
 .dropdown_room {
-    max-width: 266px;
+  max-width: 266px;
 }
+
 .show {
-    $border: 1px solid $dark-shade-50;
-    .dropdown__selection {
-        border: $border;
-    }
-    .dropdown__menu {
+  $border: 1px solid $dark-shade-50;
+
+  .dropdown__selection {
+    border: $border;
+  }
+
+  .dropdown__menu {
+    @include H3;
+
+    display: block;
+    padding: 5px 5px 1px 15px;
+    border-radius: 0 0 2px 2px;
+    border: $border;
+    border-top: none;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 10;
+    position: absolute;
+
+    .menu__option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 7px;
+
+      .option__title {
         @include H3;
-        display: block;
-        padding: 5px 5px 1px 15px;
-        border-radius: 0 0 2px 2px;
-        border: $border;
-        border-top: none;
-        width: 100%;
-        box-sizing: border-box;
-        background-color: #fff;
-        z-index: 10;
-        position: absolute;
-        .menu__option {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 7px;
-            .option__title {
-                @include H3;
-            }
-            .option__counter {
-                display: flex;
-            }
-            input {
-                width: 30px;
-                border: none;
-                @include H3;
-                text-align: center;
-            }
-            @each $counter in increment, decrement {
-                .counter__#{$counter} {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    border: 1px solid $dark-shade-50;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    box-sizing: border-box;
-                }
-            }
-            @each $counter in increment, decrement {
-                .counter__#{$counter}:before {
-                    font: {
-                        family: Montserrat, Arial, sans-serif;
-                        weight: normal;
-                        size: 18px;
-                    }
-                    line-height: 22px;
-                    color: $dark-shade-50;
-                }
-            }
-            .counter__increment:before {
-                content: "+";
-            }
-            .counter__decrement:before {
-                content: "-";
-            }
-            
+      }
+
+      .option__counter {
+        display: flex;
+      }
+
+      input {
+        @include H3;
+
+        width: 30px;
+        border: none;
+        text-align: center;
+      }
+
+      @each $counter in increment, decrement {
+        .counter__#{$counter} {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 1px solid $dark-shade-50;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
         }
-        .menu__control {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 8px;
-            .clean {
-                color: $dark-shade-50;
-                cursor: pointer;
-                visibility: hidden;
-                background: none;
-            }
-            .accept {
-                color: $purple;
-                cursor: pointer;
-                background: none;
-            }
+      }
+
+      @each $counter in increment, decrement {
+        .counter__#{$counter}:before {
+          font: {
+            family: montserrat, arial, sans-serif;
+            weight: normal;
+            size: 18px;
+          }
+
+          line-height: 22px;
+          color: $dark-shade-50;
         }
+      }
+
+      .counter__increment::before {
+        content: '+';
+      }
+
+      .counter__decrement::before {
+        content: '-';
+      }
     }
+
+    .menu__control {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 8px;
+
+      .clean {
+        color: $dark-shade-50;
+        cursor: pointer;
+        visibility: hidden;
+        background: none;
+      }
+
+      .accept {
+        color: $purple;
+        cursor: pointer;
+        background: none;
+      }
+    }
+  }
 }

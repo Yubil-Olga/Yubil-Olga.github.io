@@ -2,11 +2,11 @@
 @import '../../pages/colors';
 @import '../datepicker/datepicker.scss';
 
-
 .filter-date-dropdown {
-    position: relative;
-    max-width: 265px;
+  position: relative;
+  max-width: 265px;
 }
+
 .filter-date-dropdown__title {
-    @include H3;
+  @include H3;
 }

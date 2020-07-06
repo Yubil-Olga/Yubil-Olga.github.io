@@ -6,72 +6,72 @@ include ../../components/review/review
 include ../../components/chart/chart
 
 block variables
-    - var pageTitle = 'Room details page'
-    - var gallery = [
-    - {src: "images/room888-1.jpg", alt: "room #888"},
-    - {src: "images/room888-2.jpg", alt: "room #888"},
-    - {src: "images/room888-3.jpg", alt: "room #888"}
-    - ]
-    - var voices = [
-    - {name: "Великолепно", quantity: 130, class: "great", color1: "#FFE39C", color2: "#FFBA9C"},
-    - {name: "Хорошо", quantity: 65, class: "good", color1: "#BC9CFF", color2: "#8BA4F9"},
-    - {name: "Удовлетворительно", quantity: 65, class: "satisfactorily", color1: "#6FCF97", color2: "#66D2EA"},
-    - {name: "Разочарован", quantity: 0, class: "disappointed", color1: "#909090", color2: "#3D4975"}
-    - ]
-    - var advantages = [
-    - {title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"},
-    - {title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"},
-    - {title: "Уют", description: "Номер оснащён камином", icon: "whatshot"}
-    - ]
-    -
-        var reviews = [
-        {
-            name: "Мурад Сарафанов", 
-            src: "images/reviews/review2.png", 
-            counter: 11,
-            liked: true,
-            comment: 
-            "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
-        },
-        {
-            name: "Патрисия Стёклышкова",
-            src: "images/reviews/review1.png",
-            counter: 2,
-            liked: false,
-            comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
-        }
-        ]
+  - var pageTitle = 'Room details page'
+  - var gallery = [
+  - {src: "images/room888-1.jpg", alt: "room #888"},
+  - {src: "images/room888-2.jpg", alt: "room #888"},
+  - {src: "images/room888-3.jpg", alt: "room #888"}
+  - ]
+  - var voices = [
+  - {name: "Великолепно", quantity: 130, class: "great", color1: "#FFE39C", color2: "#FFBA9C"},
+  - {name: "Хорошо", quantity: 65, class: "good", color1: "#BC9CFF", color2: "#8BA4F9"},
+  - {name: "Удовлетворительно", quantity: 65, class: "satisfactorily", color1: "#6FCF97", color2: "#66D2EA"},
+  - {name: "Разочарован", quantity: 0, class: "disappointed", color1: "#909090", color2: "#3D4975"}
+  - ]
+  - var advantages = [
+  - {title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"},
+  - {title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"},
+  - {title: "Уют", description: "Номер оснащён камином", icon: "whatshot"}
+  - ]
+  -
+    var reviews = [
+      {
+        name: "Мурад Сарафанов", 
+        src: "images/reviews/review2.png", 
+        counter: 11,
+        liked: true,
+        comment: 
+        "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+      },
+      {
+        name: "Патрисия Стёклышкова",
+        src: "images/reviews/review1.png",
+        counter: 2,
+        liked: false,
+        comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+      }
+    ]
 
 block main
-    main.room-details
-        .room-details__gallery
-            each photo in gallery
-                figure.gallery__item
-                    img(src=photo.src, alt=photo.alt).gallery__image
-        .room-details__description
-            .room-details__info
-                .info__item
-                    h2.info__subtitle Сведения о номере
-                    each advantage in advantages
-                        +advantages(advantage)
-                .info__item.info__chart
-                    h2.info__subtitle Впечатления от номера
-                    +chart(...voices)
-                .info__item.room-details__reviews
-                    h2.info__subtitle Отзывы посетителей номера
-                    each comment in reviews
-                        +review(comment)
-                .info__item.room-details__rules
-                    h2.info__subtitle Правила
-                    +bullet-list
-                .info__item
-                    h2.info__subtitle Отмена
-                    p.info__details
-                                    | Бесплатная отмена в течение 48 ч. 
-                                    |После этого при отмене не позднее чем за 5 дн. до прибытия 
-                                    |вы получите полный возврат за вычетом сбора за услуги.
-            .room-details__booking
-                +form-booking(888, 9990, 2179)
+  main.room-details
+    .room-details__gallery
+      each photo in gallery
+        figure.gallery__item
+          img(src=photo.src, alt=photo.alt).gallery__image
+    .room-details__description
+      .room-details__info
+        .info__item
+          h2.info__subtitle Сведения о номере
+          each advantage in advantages
+            +advantages(advantage)
+        .info__item.info__chart
+          h2.info__subtitle Впечатления от номера
+          +chart(...voices)
+        .info__item.room-details__reviews
+          h2.info__subtitle Отзывы посетителей номера
+          each comment in reviews
+            +review(comment)
+        .info__item.room-details__rules
+          h2.info__subtitle Правила
+          +bullet-list
+        .info__item
+          h2.info__subtitle Отмена
+          p.info__details
+            | Бесплатная отмена в течение 48 ч. 
+            |После этого при отмене не позднее чем за 5 дн. до прибытия 
+            |вы получите полный возврат за вычетом сбора за услуги.
+      .room-details__booking
+        +form-booking(888, 9990, 2179)
             
                
     

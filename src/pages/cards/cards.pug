@@ -6,28 +6,28 @@ include ../../components/form-booking/form-booking
 include ../../components/card-room/card-room
 
 block variables
-    - var pageTitle = 'Cards'
-    - 
-        var rooms = [
-        {number: "888", price: "9990", url: "images/room1.png", lux: true, stars: "5", comments: "145"},
-        {number: "840", price: "9900", url: "images/room2.png", lux: false, stars: "4", comments: "65"}
-        ]
+  - var pageTitle = 'Cards'
+  - 
+    var rooms = [
+    {number: "888", price: "9990", url: "images/room1.png", lux: true, stars: "5", comments: "145"},
+    {number: "840", price: "9900", url: "images/room2.png", lux: false, stars: "4", comments: "65"}
+    ]
 
 block main
-    .cards
-        .cards__item
-            +form-selection
-        .cards__item
-            +form-registration
-        .cards__item
-            +form-booking(888, 9990, 2179)
-        .cards__item
-            +form-login
-        .cards__item
-            .calendar
-        for room in rooms
-            .cards__item
-                +card-room(room)
+  .cards
+    .cards__item
+      +form-selection
+    .cards__item
+      +form-registration
+    .cards__item
+      +form-booking(888, 9990, 2179)
+    .cards__item
+      +form-login
+    .cards__item
+      .calendar
+    for room in rooms
+      .cards__item
+        +card-room(room)
         
     
     

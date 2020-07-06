@@ -8,64 +8,64 @@ include ../../components/expandable-checkbox/expandable-checkbox
 include ../../components/pagination/pagination
 
 block variables
-    - var pageTitle = 'Search room page'
-    - var orders = [{description: "Можно курить"}, {description: "Можно с питомцами", check: true}, {description: "Можно пригласить гостей (до 10 человек)", check: true}]
-    - var accessibility = [
-    - {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
-    - {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
-    - ]
-    - var comfort = [
-    - {description: "Завтрак"}, 
-    - {description: "Письменный стол", check: true}, 
-    - {description: "Стул для кормления", check: true}, 
-    - {description: "Кроватка", check: true}, 
-    - {description: "Телевизор"}, 
-    - {description: "Шампунь"}    
-    - ]
-    - var rooms = [
-    - {number: "888", price: "9990", url: "images/room1.png", lux: true, stars: "5", comments: "145", link: "room-details.html"},
-    - {number: "840", price: "9900", url: "images/room2.png", lux: false, stars: "4", comments: "65", link: "room-details.html"},
-    - {number: "980", price: "8500", url: "images/image3.png", lux: true, stars: "3", comments: "35", link: "room-details.html"},
-    - {number: "856", price: "7300", url: "images/image5.png", lux: false, stars: "5", comments: "19", link: "room-details.html"},
-    - {number: "740", price: "6000", url: "images/image4.png", lux: false, stars: "4", comments: "44", link: "room-details.html"},
-    - {number: "982", price: "5800", url: "images/image6.png", lux: false, stars: "3", comments: "56", link: "room-details.html"},
-    - {number: "678", price: "5500", url: "images/image11.png", lux: false, stars: "5", comments: "45", link: "room-details.html"},
-    - {number: "450", price: "5300", url: "images/image7.png", lux: false, stars: "4", comments: "39", link: "room-details.html"},
-    - {number: "350", price: "5000", url: "images/image12.png", lux: false, stars: "3", comments: "77", link: "room-details.html"},
-    - {number: "666", price: "5000", url: "images/image8.png", lux: false, stars: "5", comments: "25", link: "room-details.html"},
-    - {number: "444", price: "5000", url: "images/image9.png", lux: false, stars: "3", comments: "15", link: "room-details.html"},
-    - {number: "352", price: "5000", url: "images/image10.png", lux: false, stars: "3", comments: "55", link: "room-details.html"}    
-    - ]
+  - var pageTitle = 'Search room page'
+  - var orders = [{description: "Можно курить"}, {description: "Можно с питомцами", check: true}, {description: "Можно пригласить гостей (до 10 человек)", check: true}]
+  - var accessibility = [
+  - {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
+  - {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
+  - ]
+  - var comfort = [
+  - {description: "Завтрак"}, 
+  - {description: "Письменный стол", check: true}, 
+  - {description: "Стул для кормления", check: true}, 
+  - {description: "Кроватка", check: true}, 
+  - {description: "Телевизор"}, 
+  - {description: "Шампунь"}    
+  - ]
+  - var rooms = [
+  - {number: "888", price: "9990", url: "images/room1.png", lux: true, stars: "5", comments: "145", link: "room-details.html"},
+  - {number: "840", price: "9900", url: "images/room2.png", lux: false, stars: "4", comments: "65", link: "room-details.html"},
+  - {number: "980", price: "8500", url: "images/image3.png", lux: true, stars: "3", comments: "35", link: "room-details.html"},
+  - {number: "856", price: "7300", url: "images/image5.png", lux: false, stars: "5", comments: "19", link: "room-details.html"},
+  - {number: "740", price: "6000", url: "images/image4.png", lux: false, stars: "4", comments: "44", link: "room-details.html"},
+  - {number: "982", price: "5800", url: "images/image6.png", lux: false, stars: "3", comments: "56", link: "room-details.html"},
+  - {number: "678", price: "5500", url: "images/image11.png", lux: false, stars: "5", comments: "45", link: "room-details.html"},
+  - {number: "450", price: "5300", url: "images/image7.png", lux: false, stars: "4", comments: "39", link: "room-details.html"},
+  - {number: "350", price: "5000", url: "images/image12.png", lux: false, stars: "3", comments: "77", link: "room-details.html"},
+  - {number: "666", price: "5000", url: "images/image8.png", lux: false, stars: "5", comments: "25", link: "room-details.html"},
+  - {number: "444", price: "5000", url: "images/image9.png", lux: false, stars: "3", comments: "15", link: "room-details.html"},
+  - {number: "352", price: "5000", url: "images/image10.png", lux: false, stars: "3", comments: "55", link: "room-details.html"}    
+  - ]
 
 block main 
-    main.search-room
-        aside.search-room__filter
-            .filter__item
-                +filter-date-dropdown("даты пребывания в отеле")
-            .filter__item
-                h3.filter__title гости
-                +dropdown(false, "", "взрослые", "дети", "младенцы")
-            .filter__item.filter__indent_top
-                h3.filter__title диапазон цены
-                +range-slider
-                p.filter__comment Стоимость за сутки пребывания в номере
-            .filter__item.filter__indent_top
-                h3.filter__title Checkbox Buttons
-                +checkbox(false,...orders)
-            .filter__item
-                h3.filter__title доступность
-                +checkbox(true, ...accessibility)
-            .filter__item
-                h3.filter__title удобства номера
-                +dropdown(false, "room", "спальни", "кровати", "ванные комнаты")
-            .filter__item
-                +expandable-checkbox("дополнительные удобства", ...comfort)    
-        .search-room__result
-            h1.search-room__title Номера, которые мы для вас подобрали
-            .search-room__rooms
-                each room in rooms
-                    +card-room(room)
-            .search-room__pagination
-                +pagination
+  main.search-room
+    aside.search-room__filter
+      .filter__item
+        +filter-date-dropdown("даты пребывания в отеле")
+      .filter__item
+        h3.filter__title гости
+        +dropdown(false, "", "взрослые", "дети", "младенцы")
+      .filter__item.filter__indent_top
+        h3.filter__title диапазон цены
+        +range-slider
+        p.filter__comment Стоимость за сутки пребывания в номере
+      .filter__item.filter__indent_top
+        h3.filter__title Checkbox Buttons
+        +checkbox(false,...orders)
+      .filter__item
+        h3.filter__title доступность
+        +checkbox(true, ...accessibility)
+      .filter__item
+        h3.filter__title удобства номера
+        +dropdown(false, "room", "спальни", "кровати", "ванные комнаты")
+      .filter__item
+        +expandable-checkbox("дополнительные удобства", ...comfort)    
+    .search-room__result
+      h1.search-room__title Номера, которые мы для вас подобрали
+      .search-room__rooms
+        each room in rooms
+          +card-room(room)
+      .search-room__pagination
+        +pagination
 
     

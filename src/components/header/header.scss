@@ -4,122 +4,148 @@
 @import '../../pages/colors';
 
 .header {
-    max-width: $max-width;
-    background-color: #fff;
-    box-shadow:  0px 10px 20px $dark-shade-5;
-    padding: 14px 0;
-    font: {
-        family: Montserrat, Arial, sans-serif;
-        weight: normal;
-        size: 14px;
-    }
-    line-height: 17px;
-}
-.header__wrapper {
-    display: flex;
-    justify-content: space-between;
-    max-width: $content-width;
-    box-sizing: border-box;
-    margin: 0 auto;
-    @media (max-width: 1200px) {
-        padding: 0 $space-x;
-    }
-    @media (max-width: 450px) {
-        padding: 0 $space-x/2;
-    }
-}
-.navigation__details {
-    margin-right: 20px;
-    cursor: pointer;
-    summary::-webkit-details-marker {
-        display: none
-    }
-    &> summary {
-        list-style: none;
-    }
-    summary {
-        display: flex;
-        color: $dark-shade-50;
-        &:after {
-            content: 'expand_more';
-            font-family: Material Icons;
-            font-size: 24px;
-        }
-    }
-    &[open] summary:after {
-        content: 'expand_less';
-    }
-}
-.header__navigation {
-    display: flex;
-    align-items: center;
-}
-.navigation__list {
-    display: flex;
-    .navigation__link {
-        color: $dark-shade-50;
-        margin-right: $space-x;
-    }
-    @media (max-width: 900px) {
-        display: none;
-    }
-}
-.navigation__toolbar {
-    display: flex;
-    z-index: 0;
-    a:not(:last-child) {
-        margin-right: 20px;
-    }
-    .user {
-        border-left: 1px solid rgba($dark-shade, 0.1);
-        padding-left: 30px;
-    }
-    @media (max-width: 440px) {
-        .button {
-            display: none;
-        }
-    }
+  max-width: $max-width;
+  background-color: #fff;
+  box-shadow: 0 10px 20px $dark-shade-5;
+  padding: 14px 0;
+  font: {
+    family: montserrat, arial, sans-serif;
+    weight: normal;
+    size: 14px;
+  }
+
+  line-height: 17px;
 }
 
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: $content-width;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    padding: 0 $space-x;
+  }
+
+  @media (max-width: 450px) {
+    padding: 0 $space-x/2;
+  }
+}
+
+.navigation__details {
+  margin-right: 20px;
+  cursor: pointer;
+
+  & > summary {
+    list-style: none;
+  }
+
+  summary {
+    display: flex;
+    color: $dark-shade-50;
+
+    &::after {
+      content: 'expand_more';
+      font-family: 'Material Icons';
+      font-size: 24px;
+    }
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  &[open] summary::after {
+    content: 'expand_less';
+  }
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__list {
+  display: flex;
+
+  .navigation__link {
+    color: $dark-shade-50;
+    margin-right: $space-x;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.navigation__toolbar {
+  display: flex;
+  z-index: 0;
+
+  a:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .user {
+    border-left: 1px solid rgba($dark-shade, 0.1);
+    padding-left: 30px;
+  }
+
+  @media (max-width: 440px) {
+    .button {
+      display: none;
+    }
+  }
+}
 
 .burger {
+  display: none;
+  cursor: pointer;
+
+  .burger__toggle {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: $dark-shade-75;
+  }
+
+  & > .burger__toggle {
+    list-style: none;
+  }
+
+  .burger__toggle::-webkit-details-marker {
     display: none;
-    cursor: pointer;
-    .burger__toggle::-webkit-details-marker {
-        display: none
+  }
+
+  .burger__list {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: 0 10px 10px $dark-shade-50;
+
+    .list__item {
+      padding: 10px $space-x;
+      border-bottom: 1px solid $dark-shade-50;
     }
-    &>.burger__toggle {
-        list-style: none;
+
+    .burger__link {
+      @include Body;
+
+      display: flex;
+      width: 100%;
     }
-    .burger__toggle {
-        font-family: Material Icons;
-        font-size: 24px;
-        color: $dark-shade-75;
-    }
-    .burger__list {
-        position: absolute;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        background-color: #fff;
-        z-index: 1;
-        box-shadow: 0 10px 10px $dark-shade-50;
-        .list__item {
-            padding: 10px $space-x;
-            border-bottom: 1px solid $dark-shade-50;
-        }
-        .burger__link {
-            @include Body;
-            display: flex;
-            width: 100%;
-        }
-    }
-    @media (max-width: 900px) {
-        display: block;
-        order: 3;
-        margin-left: 20px;
-    }
-    @media (max-width: 440px) {
-        margin-left: 0;
-    }
+  }
+
+  @media (max-width: 900px) {
+    display: block;
+    order: 3;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 440px) {
+    margin-left: 0;
+  }
 }

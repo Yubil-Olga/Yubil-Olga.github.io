@@ -4,37 +4,37 @@ block variables
 
 doctype html
 html
-    head
-        meta(charset = 'utf-8')
-        meta(name='viewport', content="initial-scale=1.0, width=device-width")
-        link(rel="apple-touch-icon", sizes="120x120", href="favicons/apple-touch-icon-120.png")
-        link(rel="shortcut icon", type="image/png", sizes="16x16", href="favicons/favicon-16.png")
-        link(rel="shortcut icon", type="image/png", sizes="32x32", href="favicons/favicon-32.png")
-        link(rel="shortcut icon", type="image/png", sizes="48x48", href="favicons/favicon-48.png")
-        meta(name="description", content="Toxin - бронирование номеров в отеле")
-        meta(name="keywords", content="Toxin, бронирование номеров, отель")
-        title= pageTitle
-    body.layout_page
-        - var navigation = [
-        - {name: "О нас", href: "/mock-address/change-me", expanded: false},
-        - {name: "Услуги", href: "/mock-address/change-me", expanded: true},
-        - {name: "Вакансии", href: "/mock-address/change-me", expanded: false},
-        - {name: "Новости", href: "/mock-address/change-me", expanded: false},
-        - {name: "Соглашения", href: "/mock-address/change-me", expanded: true}
-        - ]
-        - var footernavigation = [
-        - {title: "навигация", list: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
-        - {title: "о нас", list: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
-        - {title: "Служба поддержки", list: ["Соглашения", "Сообщества", "Связь с нами"]}
-        - ]
-        - var footerslogan = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
-        - var footerformtitle = "Подписка"
-        - var footerformdescription = "Получайте специальные предложения и новости сервиса"
-        - var copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    link(rel="apple-touch-icon", sizes="120x120", href="favicons/apple-touch-icon-120.png")
+    link(rel="shortcut icon", type="image/png", sizes="16x16", href="favicons/favicon-16.png")
+    link(rel="shortcut icon", type="image/png", sizes="32x32", href="favicons/favicon-32.png")
+    link(rel="shortcut icon", type="image/png", sizes="48x48", href="favicons/favicon-48.png")
+    meta(name="description", content="Toxin - бронирование номеров в отеле")
+    meta(name="keywords", content="Toxin, бронирование номеров, отель")
+    title= pageTitle
+  body.layout_page
+    - var navigation = [
+    - {name: "О нас", href: "/mock-address/change-me", expanded: false},
+    - {name: "Услуги", href: "/mock-address/change-me", expanded: true},
+    - {name: "Вакансии", href: "/mock-address/change-me", expanded: false},
+    - {name: "Новости", href: "/mock-address/change-me", expanded: false},
+    - {name: "Соглашения", href: "/mock-address/change-me", expanded: true}
+    - ]
+    - var footernavigation = [
+    - {title: "навигация", list: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+    - {title: "о нас", list: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+    - {title: "Служба поддержки", list: ["Соглашения", "Сообщества", "Связь с нами"]}
+    - ]
+    - var footerslogan = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+    - var footerformtitle = "Подписка"
+    - var footerformdescription = "Получайте специальные предложения и новости сервиса"
+    - var copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
 
-        block header
-            +header(false, "ru", ...navigation)
-        block main
-        block footer
-            +footer(false, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
-            
+    block header
+      +header(false, "ru", ...navigation)
+    block main
+    block footer
+      +footer(false, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
+          

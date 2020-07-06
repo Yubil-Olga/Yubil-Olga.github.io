@@ -2,48 +2,53 @@
 @import '../../components/form-selection/form-selection.scss';
 
 .landing {
-    width: 100%;
-    max-width: $max-width;
-    height: 830px;
-    margin: 0 auto;
-    background: url('./bg-index.jpg') center/cover no-repeat;
-    padding: 70px 0 20px 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  max-width: $max-width;
+  height: 830px;
+  margin: 0 auto;
+  background: url('./bg-index.jpg') center/cover no-repeat;
+  padding: 70px 0 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1200px) {
+    padding-right: $space-x;
+    padding-left: $space-x;
+    align-items: stretch;
+  }
+
+  @media (max-width: 600px) {
+    padding-right: $space-x;
+    padding-left: $space-x;
     align-items: center;
-    @media (max-width: 1200px) {
-        padding-right: $space-x;
-        padding-left: $space-x;
-        align-items: stretch;
-    }
-    @media (max-width: 600px) {
-        padding-right: $space-x;
-        padding-left: $space-x;
-        align-items: center;
-    }
-    @media (max-width: 450px) {
-        padding-right: $space-x/2;
-        padding-left: $space-x/2;
-    }
+  }
+
+  @media (max-width: 450px) {
+    padding-right: $space-x/2;
+    padding-left: $space-x/2;
+  }
 }
+
 .landing__item {
-    width: $content-width;
-    margin: 0 auto;
-    @media (max-width: 1200px) {
-        width: unset;
-        margin: 0;
-    }
+  width: $content-width;
+  margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    width: unset;
+    margin: 0;
+  }
 }
+
 .landing__item:last-child {
-    display: flex;
-    justify-content: flex-end;
-    .slogan {
-        @include Body;
-        width: 297px;
-        text-align: right;
-    }
+  display: flex;
+  justify-content: flex-end;
+
+  .slogan {
+    @include Body;
+    width: 297px;
+    text-align: right;
+  }
 }
-
-

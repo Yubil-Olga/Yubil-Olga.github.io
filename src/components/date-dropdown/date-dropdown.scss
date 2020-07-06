@@ -3,23 +3,28 @@
 @import '../datepicker/datepicker.scss';
 
 .date-dropdown {
-    display: flex;
-    position: relative;
-    max-width: 320px;
-}
-.date-dropdown__title {
-    @include H3;
-    width: 100%;
-    &:first-child {
-        margin-right: 20px;
-        @media (max-width: 380px) {
-            margin-right: 10px;
-        }
-}}
-.date-dropdown__control {
-    width: 150px;
-    @media (max-width: 380px) {
-        width: unset;
-    }
+  display: flex;
+  position: relative;
+  max-width: 320px;
 }
 
+.date-dropdown__title {
+  @include H3;
+  width: 100%;
+
+  &:first-child {
+    margin-right: 20px;
+
+    @media (max-width: 380px) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.date-dropdown__control {
+  width: 150px;
+
+  @media (max-width: 380px) {
+    width: unset;
+  }
+}

@@ -2,86 +2,100 @@
 @import '../../pages/colors';
 
 %button {
-    @include H3;
-    display: inline-block;
-    border-radius: 22px;
-    cursor: pointer;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 18px;
-    max-width: 320px;
-    &:focus {
-        outline: none;
-    }
+  @include H3;
+  border-radius: 22px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  max-width: 320px;
+
+  &:focus {
+    outline: none;
+  }
 }
+
 .button {
-    $color: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-    $color-ghost: linear-gradient(180deg, transparentize($purple,0.5) 0%, transparentize(#8BA4F9,0.5) 100%);
+  $color: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+  $color-ghost: linear-gradient(180deg, transparentize($purple, 0.5) 0%, transparentize(#8ba4f9, 0.5) 100%);
+  @extend %button;
+  color: #fff;
+  background: $color;
+
+  &:hover {
+    background: $color-ghost;
+  }
+
+  &_border {
     @extend %button;
-    color: #fff;
+    color: $purple;
+    background-color: #fff;
+    background-clip: padding-box;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: $color;
+    }
+
+    &:hover::before {
+      background: $color-ghost;
+    }
+  }
+
+  &_simple {
+    @extend %button;
+
+    color: $purple;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &_simple:hover {
+    color: $dark-shade-50;
+  }
+
+  &_ghost {
+    @extend %button;
+
+    color: $dark-shade-50;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &_arrow {
+    @extend %button;
+
     background: $color;
-    &:hover {
-        background: $color-ghost; 
+    width: 100%;
+    max-width: 320px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    i.material-icons {
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none;
+      font-size: 24px;
+      position: absolute;
+      right: 12px;
     }
-    &_border {
-        @extend %button;
-        color: $purple;
-        background-color: #fff;
-        background-clip: padding-box;
-        position: relative;
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            margin: -2px;
-            border-radius: inherit;
-            background: $color;
-        }
-        &:hover:before {
-            background: $color-ghost;
-        }
-    }
-    &_simple {
-        @extend %button;
-        color: $purple;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    &_simple:hover {
-        color: $dark-shade-50;
-    }
-    &_ghost {
-        @extend %button;
-        color: $dark-shade-50;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    &_arrow {
-        @extend %button;
-        background: $color;
-        width: 100%;
-        max-width: 320px;
-        color: #fff;
-        text-align: center;
-        position: relative;
-        i.material-icons {
-            font-family: Material Icons;
-            font-style: normal;
-            font-weight: normal;
-            text-transform: none;
-            font-size: 24px;
-            position: absolute;
-            right: 12px;
-        }
-    }
+  }
 }
+
 .form__button {
-    min-width: 99px;
-    height: 44px;
+  min-width: 99px;
+  height: 44px;
 }

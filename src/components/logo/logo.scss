@@ -1,15 +1,17 @@
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
+
 .logo__icon {
-    width: 40px;
-    height: 40px;
-    background: url("./logo.svg") center/contain no-repeat;
-    margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  background: url('./logo.svg') center/contain no-repeat;
+  margin-right: 12px;
 }
+
 .logo__text {
-    width: 54px;
-    height: 13px;
-    background: url("./TOXIN.svg") center/contain no-repeat;
+  width: 54px;
+  height: 13px;
+  background: url('./TOXIN.svg') center/contain no-repeat;
 }

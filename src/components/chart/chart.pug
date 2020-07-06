@@ -1,42 +1,42 @@
 mixin chart(...data)
-    figure.chart
-        .chart__content
-            svg(width="125px" height="125px" viewBox="0 0 34 34" class="donut")
-                - var total=0
-                - var dashoffset = -24
-                each item in data
-                    - total+=item.quantity
-                each item, index in data
-                    defs
-                        linearGradient(id=`Gradient${index}` x1="0" x2="0" y1="0" y2="1")
-                            stop(offset="0%" stop-color=item.color1)
-                            stop(offset="100%" stop-color=item.color2)
-                    - var percent = Math.round((item.quantity/total)*100)
-                    circle(class="donut__segment" 
-                            data-test=percent 
-                            cx="17" 
-                            cy="17" 
-                            r="15.91549430918954" 
-                            fill="transparent" 
-                            stroke-width="1" 
-                            stroke=`url(#Gradient${index})`
-                            stroke-dasharray=`${percent} ${100-percent}`
-                            stroke-dashoffset=dashoffset)
-                        title=`${item.name} ${item.quantity}`
-                    circle(class="donut__split" 
-                            cx="17" 
-                            cy="17" 
-                            r="15.91549430918954" 
-                            fill="transparent" 
-                            stroke="#fff" 
-                            stroke-width="2"
-                            stroke-dasharray="1 99"
-                            stroke-dashoffset=dashoffset)
-                    - dashoffset-= percent
-                g.chart-text
-                    text(x="50%" y="50%" class="chart-number")=total
-                    text(x="50%" y="50%" class="chart-label") голосов
-        ul.chart__legend
-            each item in data
-                li(class="legend__item" style=`--legend-color: linear-gradient(${item.color1} 0%, ${item.color2} 100%)`)=item.name
-                
+  figure.chart
+    .chart__content
+      svg(width="125px" height="125px" viewBox="0 0 34 34" class="donut")
+        - var total=0
+        - var dashoffset = -24
+        each item in data
+          - total+=item.quantity
+        each item, index in data
+          defs
+            linearGradient(id=`Gradient${index}` x1="0" x2="0" y1="0" y2="1")
+              stop(offset="0%" stop-color=item.color1)
+              stop(offset="100%" stop-color=item.color2)
+          - var percent = Math.round((item.quantity/total)*100)
+          circle(class="donut__segment" 
+                data-test=percent 
+                cx="17" 
+                cy="17" 
+                r="15.91549430918954" 
+                fill="transparent" 
+                stroke-width="1" 
+                stroke=`url(#Gradient${index})`
+                stroke-dasharray=`${percent} ${100-percent}`
+                stroke-dashoffset=dashoffset)
+            title=`${item.name} ${item.quantity}`
+          circle(class="donut__split" 
+                  cx="17" 
+                  cy="17" 
+                  r="15.91549430918954" 
+                  fill="transparent" 
+                  stroke="#fff" 
+                  stroke-width="2"
+                  stroke-dasharray="1 99"
+                  stroke-dashoffset=dashoffset)
+          - dashoffset-= percent
+        g.chart-text
+          text(x="50%" y="50%" class="chart-number")=total
+          text(x="50%" y="50%" class="chart-label") голосов
+    ul.chart__legend
+      each item in data
+        li(class="legend__item" style=`--legend-color: linear-gradient(${item.color1} 0%, ${item.color2} 100%)`)=item.name
+            

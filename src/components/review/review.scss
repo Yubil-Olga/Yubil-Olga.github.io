@@ -2,20 +2,24 @@
 @import '../../pages/fonts';
 
 .review {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
 }
+
 .review__icon {
-    width: 47px;
-    height: 47px;
-    border-radius: 50%;
-    overflow: hidden;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
 .review__title {
-    @include Body;
-    align-self: center;
+  @include Body;
+
+  align-self: center;
 }
+
 .review__text {
-    @include Body;
+  @include Body;
 }

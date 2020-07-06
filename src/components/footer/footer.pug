@@ -2,32 +2,29 @@ include ../logo/logo
 include ../subscription-input/subscription-input
 
 mixin footer(creative, text, formtitle, formtext, copyright, ...items)
-    footer.footer(class=creative ? "footer-creative" : "")
-        section.footer__navigation
-            section.footer__section
-                +logo
-                p.footer__description=text
-            unless creative
-                each item in items
-                    section.footer__section
-                        h3.footer__subtitle=item.title
-                        ul.navigation__group
-                            each link in item.list
-                                li.navigation__item
-                                    a(href="/mock-address/change-me")=link
-                form.footer__section
-                    h3.footer__subtitle=formtitle
-                    p.footer__description=formtext
-                    .footer__control
-                        +subscription-input
-        .footer__wrapper
-            .copyright-bar(class=creative ? "center" : "space-between")
-                unless creative
-                    p=copyright
-                .social
-                    .social__icon.twitter
-                    .social__icon.fb
-                    .social__icon.instagram   
-
-            
-        
+  footer.footer(class=creative ? "footer-creative" : "")
+    section.footer__navigation
+      section.footer__section
+        +logo
+        p.footer__description=text
+      unless creative
+        each item in items
+          section.footer__section
+            h3.footer__subtitle=item.title
+            ul.navigation__group
+              each link in item.list
+                li.navigation__item
+                  a(href="/mock-address/change-me")=link
+        form.footer__section
+          h3.footer__subtitle=formtitle
+          p.footer__description=formtext
+          .footer__control
+            +subscription-input
+    .footer__wrapper
+      .copyright-bar(class=creative ? "center" : "space-between")
+        unless creative
+          p=copyright
+        .social
+          .social__icon.twitter
+          .social__icon.fb
+          .social__icon.instagram   

@@ -1,38 +1,44 @@
 @import '../../pages/fonts';
 @import '../../pages/colors';
+
 .subscription-input {
-    display: flex;
-    justify-content: space-between;
-    max-width: 265px;
-    height: 44px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid $dark-shade-25;
-    overflow: hidden;
-    input {
-        border: none;
-        padding: 7px 15px; 
-        background-color: transparent;
-        width: 100%;
-        &::placeholder {
-            @include Body;
-            color: $dark-shade-25;
-        } 
+  display: flex;
+  justify-content: space-between;
+  max-width: 265px;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid $dark-shade-25;
+  overflow: hidden;
+
+  input {
+    border: none;
+    padding: 7px 15px;
+    background-color: transparent;
+    width: 100%;
+
+    &::placeholder {
+      @include Body;
+
+      color: $dark-shade-25;
     }
-    .subscription-input__button {
-        width: 44px;
-        background-color: #fff;
-        border: none;
-        cursor: pointer;
-        i.material-icons {
-            background: linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
-            color: transparent;
-            -webkit-background-clip: text;
-            font: {
-                family: Material Icons;
-                weight: normal;
-                size: 24px;
-            }
-        }
+  }
+
+  .subscription-input__button {
+    width: 44px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+
+    i.material-icons {
+      background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
+      color: transparent;
+      -webkit-background-clip: text;
+      font: {
+        family: 'Material Icons';
+        weight: normal;
+        size: 24px;
+      }
     }
+  }
 }

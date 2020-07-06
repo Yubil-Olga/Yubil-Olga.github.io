@@ -1,26 +1,31 @@
 @import '../../pages/fonts';
 @import '../../pages/colors';
+
 .bullet-list {
-    @include H3;
-    ul {
-        list-style: none;
-        padding-left: 0;
+  @include H3;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    @include Body;
+
+    padding-left: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    max-width: 240px;
+
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $dark-shade-25;
+      position: absolute;
+      left: 0;
+      top: 7px;
     }
-    li {
-        @include Body;
-        padding-left: 20px;
-        position: relative;
-        padding-bottom: 10px;
-        max-width: 240px;
-        &:before {
-            content: "";
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: $dark-shade-25;
-            position: absolute;
-            left: 0;
-            top: 7px;
-        }
-    }
+  }
 }
