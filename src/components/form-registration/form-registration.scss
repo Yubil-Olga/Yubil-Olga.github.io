@@ -1,4 +1,40 @@
-@import '../form/form.scss';
-@import '../input/input.scss';
+@import '../../pages/mixins';
+@import '../../pages/fonts';
+@import '../../pages/sizes';
+@import '../field/field.scss';
 @import '../radiobutton/radiobutton.scss';
 @import '../toggle/toggle.scss';
+
+.form-registration {
+  @include form;
+
+  .form-registration__title {
+    @include H1;
+  }
+
+  .form-registration__sub-title {
+    @include H3;
+  }
+
+  .form-registration__section {
+    display: grid;
+    grid-row-gap: 8px;
+  }
+
+  .form-registration__footer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 0;
+  }
+
+  [class^=button] {
+    height: 44px;
+    padding: 8px 24px;
+  }
+
+  p {
+    @include Body;
+  }
+}

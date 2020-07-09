@@ -1,8 +1,29 @@
-@import '../form/form.scss';
+@import '../../pages/mixins';
+@import '../../pages/fonts';
 @import '../date-dropdown/date-dropdown.scss';
 @import '../dropdown/dropdown.scss';
 @import '../button/button.scss';
 
-.form-selection__footer {
-  margin-top: 10px;
+.form-selection {
+  @include form;
+
+  .form-selection__title {
+    @include H1;
+  }
+
+  .form-selection__sub-title {
+    @include H3;
+    padding-bottom: 5px;
+  }
+
+  .form-selection__footer {
+    margin-top: 10px;
+  }
+
+  [class^=button] {
+    height: 44px;
+  }
 }
+
+
+

@@ -1,7 +1,7 @@
 extends ../../components/layout_base/layout_base
 include ../../components/like-btn/like-btn
 include ../../components/advantages/advantages
-include ../../components/input/input
+include ../../components/field/field
 include ../../components/dropdown/dropdown
 include ../../components/date-dropdown/date-dropdown
 include ../../components/filter-date-dropdown/filter-date-dropdown
@@ -76,16 +76,16 @@ block main
     .form-elements__section
       .form-elements__item
         h3.form-elements__subtitle(data-comment="default") Text Field       
-        +input(false, "Email")
+        +field(false, "Email")
       .form-elements__item
         h3.form-elements__subtitle(data-comment="hover/focus") Text Field 
-        +input(false, "", "This is pretty awesome")
+        +field(false, "", "This is pretty awesome")
       .form-elements__item
         h3.form-elements__subtitle(data-comment="default") Dropdown
         +dropdown(false, "", "man", "child", "baby")
       .form-elements__item
         h3.form-elements__subtitle(data-comment="default") masked text field
-        +input(true, "ДД.ММ.ГГГГ")
+        +field(true, "ДД.ММ.ГГГГ")
       .form-elements__item
         +date-dropdown("date dropdown", "date dropdown")
       .form-elements__item
@@ -122,13 +122,15 @@ block main
       .form-elements__item.grid_gap_10
         h3.form-elements__subtitle Buttons
         .form-elements__grid
-          .button.form__button click me
-          .button.form__button click me
-          .button_border.form__button click me
-          .button_border.form__button click me
+          .button click me
+          .button click me
+          .button-wrapper
+            .button_border click me
+          .button-wrapper
+            .button_border click me
           .button_simple click me
           .button_ghost click me
-          .button.button_arrow.form__button перейти к оплате
+          .button.button_arrow перейти к оплате
             i.material-icons arrow_forward
         .form-elements__item.grid_gap_10
           h3.form-elements__subtitle Pagination

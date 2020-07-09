@@ -1,0 +1,37 @@
+@import './sizes';
+
+@mixin container {
+  width: 100%;
+  max-width: $max-width;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: center/cover no-repeat;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $space-x;
+
+  @media (max-width: 400px) {
+    align-items: flex-start;
+    padding-top: $space-y;
+  }
+}
+
+@mixin form {
+  width: 380px;
+  background-color: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 40px 30px 30px 30px;
+  display: grid;
+  grid-row-gap: 20px;
+  border: none;
+
+  @media (max-width: 380px) {
+    padding-left: $space-x/2;
+    padding-right: $space-x/2;
+    width: 320px;
+  }
+}

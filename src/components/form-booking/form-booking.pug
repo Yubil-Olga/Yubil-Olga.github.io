@@ -2,21 +2,21 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 
 mixin form-booking(number, price, discount)
-  form.form-booking.form
+  form.form-booking
     header.form-booking__room-details
       h2.room-details__room-number=number
         span  люкс
       .room-details__price.js-room-details__price #{price}₽
-    .form-selection__date-picker-wrapper
+    .form-booking__date-picker-wrapper
       +date-dropdown("прибытие", "выезд")
-    .form-selection__dropdown-wrapper
-      h3.form__sub-title гости
+    .form-booking__dropdown-wrapper
+      h3.form-booking__sub-title гости
       +dropdown(false, "", "взрослые", "дети", "младенцы")
     .form-booking__order-details
       .order-details__order-item
         .order-item__name #{price} ₽ х 
           span.order-item__days 4 суток
-        .order-item__price 39 960₽
+        .order-item__price 39 960
       .order-details__order-item
         .order-item__name.discount(date-discount=discount) 
           span.order-item__title Сбор за услуги: скидка #{discount} ₽
@@ -29,5 +29,5 @@ mixin form-booking(number, price, discount)
         .item-total__name Итого
         .item-total__dots
         .item-total__price 38 081₽
-    button.button_arrow.form__button(type="submit") забронировать
+    button.button_arrow(type="submit") забронировать
       i.material-icons arrow_forward

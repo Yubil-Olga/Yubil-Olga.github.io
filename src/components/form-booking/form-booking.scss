@@ -1,123 +1,136 @@
-@import '../form/form.scss';
+@import '../../pages/mixins';
+@import '../../pages/fonts';
 @import '../date-dropdown/date-dropdown.scss';
 @import '../dropdown/dropdown.scss';
 @import '../button/button.scss';
+
+.form-booking {
+  @include form;
+
+  [class^=button] {
+    height: 44px;
+  }
+  .form-booking__sub-title {
+    @include H3;
+  }
+}
 
 .form-booking__room-details {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-}
 
-.room-details__room-number {
-  @include H2;
-
-  font-size: 24px;
-  margin: 0;
-
-  &::before {
-    content: '№ ';
-    font-size: 14px;
+  .room-details__room-number {
+    @include H2;
+  
+    font-size: 24px;
+    margin: 0;
+  
+    &::before {
+      content: '№ ';
+      font-size: 14px;
+    }
+  
+    span {
+      @include H3;
+      color: $purple;
+    }
   }
 
-  span {
-    @include H3;
-
-    color: $purple;
-  }
-}
-
-.room-details__price {
-  font: {
-    family: montserrat, arial, sans-serif;
-    weight: bold;
-    size: 14px;
-  }
-
-  line-height: 18px;
-  color: $dark-shade-50;
-
-  &::after {
-    content: ' в сутки';
-    font-weight: normal;
-  }
-}
-
-.order-details__order-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  @include Body;
-
-  padding-bottom: 10px;
-}
-
-.order-item__name {
-  display: flex;
-  justify-content: space-between;
-}
-
-.order-item__title {
-  max-width: 214px;
-  position: relative;
-  padding-right: 25px;
-  line-height: 20px;
-
-  &::after {
-    content: 'i';
-    display: inline-block;
-    border-radius: 50%;
-    border: 1px solid $dark-shade-25;
-    width: 20px;
-    height: 20px;
-    box-sizing: border-box;
-    cursor: help;
-    text-align: center;
-    line-height: 16px;
-    position: absolute;
-    top: 0;
-    right: 0;
+  .room-details__price {
+    font: {
+      family: montserrat, arial, sans-serif;
+      weight: bold;
+      size: 14px;
+    }
+  
+    line-height: 18px;
+    color: $dark-shade-50;
+  
+    &::after {
+      content: ' в сутки';
+      font-weight: normal;
+    }
   }
 }
 
-.order-details__order-item:first-of-type {
-  .order-item__name {
-    display: inline-block;
+.form-booking__order-details {
+  .order-details__order-item {
+    @include Body;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    
+    .order-item__name {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .order-item__title {
+      max-width: 214px;
+      position: relative;
+      padding-right: 25px;
+      line-height: 20px;
+    
+      &::after {
+        content: 'i';
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid $dark-shade-25;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        cursor: help;
+        text-align: center;
+        line-height: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .order-item__price {
+      &::after {
+        content: ' ₽';
+      }
+    }
+    
+    .order-item__info {
+      border-radius: 50%;
+      border: 1px solid $dark-shade-25;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: help;
+      margin-left: 5px;
+    }
   }
-}
-
-.order-item__price {
-  &::after {
-    content: ' ₽';
+  
+  .order-details__order-item:first-of-type {
+    .order-item__name {
+      display: inline-block;
+    }
   }
+  
+  .order-details__item-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  
+    @include H2;
+  
+    padding-top: 18px;
+  
+    .item-total__dots {
+      border-bottom: 1px dashed $dark-shade-25;
+      width: auto;
+      flex: 1;
+    }
+  }  
 }
 
-.order-item__info {
-  border-radius: 50%;
-  border: 1px solid $dark-shade-25;
-  width: 20px;
-  height: 20px;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: help;
-  margin-left: 5px;
-}
 
-.order-details__item-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-
-  @include H2;
-
-  padding-top: 18px;
-}
-
-.item-total__dots {
-  border-bottom: 1px dashed $dark-shade-25;
-  width: auto;
-  flex: 1;
-}

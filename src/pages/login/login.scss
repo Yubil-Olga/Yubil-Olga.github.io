@@ -1,6 +1,7 @@
-@import '../../components/container/container.scss';
+@import '../mixins';
 @import '../../components/form-login/form-login.scss';
 
-.container {
+.login-page {
+  @include container;
   background-image: url('./bg-registration.jpg');
 }

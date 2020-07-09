@@ -3,7 +3,7 @@
 @import '../../components/button/button.scss';
 @import '../../components/like-btn/like-btn.scss';
 @import '../../components/advantages/advantages.scss';
-@import '../../components/input/input.scss';
+@import '../../components/field/field.scss';
 @import '../../components/dropdown/dropdown.scss';
 @import '../../components/date-dropdown/date-dropdown.scss';
 @import '../../components/filter-date-dropdown/filter-date-dropdown.scss';
@@ -145,8 +145,19 @@
     position: relative;
   }
 
+  .button-wrapper {
+    z-index: 1;
+  }
+
+  [class^=button] {
+    height: 44px;
+    width: 100px;
+    padding: 0;
+  }
+
   .button_arrow {
     grid-column: span 2;
+    width: 320px;
   }
 
   .pagination {

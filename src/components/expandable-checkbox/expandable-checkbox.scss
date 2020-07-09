@@ -1,12 +1,12 @@
 @import '../checkbox/checkbox.scss';
 @import '../../pages/fonts';
 
-.expanded-checkbox {
+.expandable-checkbox {
   max-width: 266px;
   box-sizing: border-box;
 }
 
-.expanded-checkbox__selection {
+.expandable-checkbox__selection {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,7 @@
   }
 }
 
-.expanded-checkbox__list {
+.expandable-checkbox__list {
   display: none;
 }
 
@@ -39,7 +39,7 @@
     transform: rotate(180deg);
   }
 
-  .expanded-checkbox__list {
+  .expandable-checkbox__list {
     display: block;
   }
 }

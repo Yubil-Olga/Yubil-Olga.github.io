@@ -92,8 +92,11 @@ document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
     return title;
   }
   function closeDropdown(event) {
-    if (event.target.closest('.js-dropdown') !== dropdown) {
-      showDropdown();
+    function toBeClosed() {
+      return (event.target.closest('.js-dropdown') !== dropdown && dropdown.classList.contains('show'));
+    }
+    if (toBeClosed()) {
+      dropdown.classList.remove('show');
       window.removeEventListener('click', closeDropdown);
     }
   }

@@ -9,34 +9,17 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const PAGES_DIR = path.resolve(__dirname, './src/pages');
 
-const searchRecursive = function (dir, pattern) {
-  let results = [];
-  fs.readdirSync(dir).forEach(
-    (dirInner) => {
-      dirInner = path.resolve(dir, dirInner);
-      const stat = fs.statSync(dirInner);
-      if (stat.isDirectory()) {
-        results = results.concat(searchRecursive(dirInner, pattern));
-      }
-      if (stat.isFile() && dirInner.endsWith(pattern)) {
-        results.push(dirInner);
-      }
-    },
-  );
-
-  return results;
-};
 function searchPug(dir, pattern) {
   let results = [];
   fs.readdirSync(dir).forEach(
     (dirInner) => {
-      dirInner = path.resolve(dir, dirInner);
-      const stat = fs.statSync(dirInner);
+      const dirInnerSeach = path.resolve(dir, dirInner);
+      const stat = fs.statSync(dirInnerSeach);
       if (stat.isDirectory()) {
-        results = results.concat(searchRecursive(dirInner, pattern));
+        results = results.concat(searchPug(dirInnerSeach, pattern));
       }
-      if (stat.isFile() && dirInner.endsWith(pattern)) {
-        results.push(dirInner);
+      if (stat.isFile() && dirInnerSeach.endsWith(pattern)) {
+        results.push(dirInnerSeach);
       }
     },
   );

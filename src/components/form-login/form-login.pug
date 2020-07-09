@@ -1,15 +1,15 @@
-include ../input/input
+include ../field/field
 
 mixin form-login
-  .form.form-login
-    h1.form__title Войти
-    .form__section
-      +input(false, "email", "Email")
-      +input(false, "password", "Пароль")
-    .form__section
-      button.button.button_arrow.form__button(type="submit") войти
+  .form-login
+    h1.form-login__title Войти
+    .form-login__section
+      +field(false, "email", "Email")
+      +field(false, "password", "Пароль")
+    .form-login__section
+      button.button.button_arrow(type="submit") войти
         i.material-icons arrow_forward
-    .form__footer
+    .form-login__footer
       p Нет аккаунта на Toxin?
-      a(href="registration.html").button_border.form__button создать
+      a(href="registration.html").button_border создать
 

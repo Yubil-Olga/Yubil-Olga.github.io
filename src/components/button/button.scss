@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 8px 20px;
   max-width: 320px;
 
   &:focus {
@@ -32,6 +32,7 @@
     @extend %button;
     color: $purple;
     background-color: #fff;
+    border: 2px solid transparent;
     background-clip: padding-box;
     position: relative;
 
@@ -55,7 +56,6 @@
 
   &_simple {
     @extend %button;
-
     color: $purple;
     padding-left: 0;
     padding-right: 0;
@@ -67,7 +67,6 @@
 
   &_ghost {
     @extend %button;
-
     color: $dark-shade-50;
     padding-left: 0;
     padding-right: 0;
@@ -75,7 +74,6 @@
 
   &_arrow {
     @extend %button;
-
     background: $color;
     width: 100%;
     max-width: 320px;
@@ -84,7 +82,7 @@
     position: relative;
 
     i.material-icons {
-      font-family: Material Icons;
+      font-family: 'Material Icons';
       font-style: normal;
       font-weight: normal;
       text-transform: none;
@@ -95,7 +93,3 @@
   }
 }
 
-.form__button {
-  min-width: 99px;
-  height: 44px;
-}
