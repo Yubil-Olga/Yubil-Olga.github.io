@@ -162,7 +162,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./components/advantages/advantages.scss\": \"./components/advantages/advantages.scss\",\n\t\"./components/bullet-list/bullet-list.scss\": \"./components/bullet-list/bullet-list.scss\",\n\t\"./components/button/button.scss\": \"./components/button/button.scss\",\n\t\"./components/card-room/card-room.scss\": \"./components/card-room/card-room.scss\",\n\t\"./components/chart/chart.scss\": \"./components/chart/chart.scss\",\n\t\"./components/checkbox/checkbox.scss\": \"./components/checkbox/checkbox.scss\",\n\t\"./components/container/container.scss\": \"./components/container/container.scss\",\n\t\"./components/date-dropdown/date-dropdown.js\": \"./components/date-dropdown/date-dropdown.js\",\n\t\"./components/date-dropdown/date-dropdown.scss\": \"./components/date-dropdown/date-dropdown.scss\",\n\t\"./components/datepicker/datepicker.js\": \"./components/datepicker/datepicker.js\",\n\t\"./components/datepicker/datepicker.scss\": \"./components/datepicker/datepicker.scss\",\n\t\"./components/dropdown/dropdown.js\": \"./components/dropdown/dropdown.js\",\n\t\"./components/dropdown/dropdown.scss\": \"./components/dropdown/dropdown.scss\",\n\t\"./components/expandable-checkbox/expandable-checkbox.js\": \"./components/expandable-checkbox/expandable-checkbox.js\",\n\t\"./components/expandable-checkbox/expandable-checkbox.scss\": \"./components/expandable-checkbox/expandable-checkbox.scss\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.js\": \"./components/filter-date-dropdown/filter-date-dropdown.js\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.scss\": \"./components/filter-date-dropdown/filter-date-dropdown.scss\",\n\t\"./components/footer/footer.scss\": \"./components/footer/footer.scss\",\n\t\"./components/form-booking/form-booking.js\": \"./components/form-booking/form-booking.js\",\n\t\"./components/form-booking/form-booking.scss\": \"./components/form-booking/form-booking.scss\",\n\t\"./components/form-login/form-login.scss\": \"./components/form-login/form-login.scss\",\n\t\"./components/form-registration/form-registration.js\": \"./components/form-registration/form-registration.js\",\n\t\"./components/form-registration/form-registration.scss\": \"./components/form-registration/form-registration.scss\",\n\t\"./components/form-selection/form-selection.js\": \"./components/form-selection/form-selection.js\",\n\t\"./components/form-selection/form-selection.scss\": \"./components/form-selection/form-selection.scss\",\n\t\"./components/form/form.scss\": \"./components/form/form.scss\",\n\t\"./components/header/header.scss\": \"./components/header/header.scss\",\n\t\"./components/input/input.js\": \"./components/input/input.js\",\n\t\"./components/input/input.scss\": \"./components/input/input.scss\",\n\t\"./components/layout_base/layout_base.scss\": \"./components/layout_base/layout_base.scss\",\n\t\"./components/layout_page/layout_page.scss\": \"./components/layout_page/layout_page.scss\",\n\t\"./components/like-btn/like-btn.js\": \"./components/like-btn/like-btn.js\",\n\t\"./components/like-btn/like-btn.scss\": \"./components/like-btn/like-btn.scss\",\n\t\"./components/logo/logo.scss\": \"./components/logo/logo.scss\",\n\t\"./components/pagination/pagination.scss\": \"./components/pagination/pagination.scss\",\n\t\"./components/radiobutton/radiobutton.scss\": \"./components/radiobutton/radiobutton.scss\",\n\t\"./components/range-slider/range-slider.js\": \"./components/range-slider/range-slider.js\",\n\t\"./components/range-slider/range-slider.scss\": \"./components/range-slider/range-slider.scss\",\n\t\"./components/rate-btn/rate-btn.js\": \"./components/rate-btn/rate-btn.js\",\n\t\"./components/rate-btn/rate-btn.scss\": \"./components/rate-btn/rate-btn.scss\",\n\t\"./components/review/review.js\": \"./components/review/review.js\",\n\t\"./components/review/review.scss\": \"./components/review/review.scss\",\n\t\"./components/subscription-input/subscription-input.scss\": \"./components/subscription-input/subscription-input.scss\",\n\t\"./components/toggle/toggle.scss\": \"./components/toggle/toggle.scss\",\n\t\"./pages/_colors.scss\": \"./pages/_colors.scss\",\n\t\"./pages/_fonts.scss\": \"./pages/_fonts.scss\",\n\t\"./pages/_sizes.scss\": \"./pages/_sizes.scss\",\n\t\"./pages/cards/cards.scss\": \"./pages/cards/cards.scss\",\n\t\"./pages/form-elements/form-elements.scss\": \"./pages/form-elements/form-elements.scss\",\n\t\"./pages/headers-footers/headers-footers.scss\": \"./pages/headers-footers/headers-footers.scss\",\n\t\"./pages/index/index.js\": \"./pages/index/index.js\",\n\t\"./pages/index/index.scss\": \"./pages/index/index.scss\",\n\t\"./pages/login/login.scss\": \"./pages/login/login.scss\",\n\t\"./pages/registration/registration.scss\": \"./pages/registration/registration.scss\",\n\t\"./pages/room-details/room-details.scss\": \"./pages/room-details/room-details.scss\",\n\t\"./pages/search-room/search-room.scss\": \"./pages/search-room/search-room.scss\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./ sync recursive \\\\.js$|\\\\.scss$\";\n\n//# sourceURL=webpack:///._sync_\\.js$%7C\\.scss$?");
+eval("var map = {\n\t\"./components/advantages/advantages.scss\": \"./components/advantages/advantages.scss\",\n\t\"./components/bullet-list/bullet-list.scss\": \"./components/bullet-list/bullet-list.scss\",\n\t\"./components/button/button.scss\": \"./components/button/button.scss\",\n\t\"./components/card-room/card-room.scss\": \"./components/card-room/card-room.scss\",\n\t\"./components/chart/chart.scss\": \"./components/chart/chart.scss\",\n\t\"./components/checkbox/checkbox.scss\": \"./components/checkbox/checkbox.scss\",\n\t\"./components/date-dropdown/date-dropdown.js\": \"./components/date-dropdown/date-dropdown.js\",\n\t\"./components/date-dropdown/date-dropdown.scss\": \"./components/date-dropdown/date-dropdown.scss\",\n\t\"./components/datepicker/datepicker.js\": \"./components/datepicker/datepicker.js\",\n\t\"./components/datepicker/datepicker.scss\": \"./components/datepicker/datepicker.scss\",\n\t\"./components/dropdown/dropdown.js\": \"./components/dropdown/dropdown.js\",\n\t\"./components/dropdown/dropdown.scss\": \"./components/dropdown/dropdown.scss\",\n\t\"./components/expandable-checkbox/expandable-checkbox.js\": \"./components/expandable-checkbox/expandable-checkbox.js\",\n\t\"./components/expandable-checkbox/expandable-checkbox.scss\": \"./components/expandable-checkbox/expandable-checkbox.scss\",\n\t\"./components/field/field.js\": \"./components/field/field.js\",\n\t\"./components/field/field.scss\": \"./components/field/field.scss\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.js\": \"./components/filter-date-dropdown/filter-date-dropdown.js\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.scss\": \"./components/filter-date-dropdown/filter-date-dropdown.scss\",\n\t\"./components/footer/footer.scss\": \"./components/footer/footer.scss\",\n\t\"./components/form-booking/form-booking.js\": \"./components/form-booking/form-booking.js\",\n\t\"./components/form-booking/form-booking.scss\": \"./components/form-booking/form-booking.scss\",\n\t\"./components/form-login/form-login.scss\": \"./components/form-login/form-login.scss\",\n\t\"./components/form-registration/form-registration.js\": \"./components/form-registration/form-registration.js\",\n\t\"./components/form-registration/form-registration.scss\": \"./components/form-registration/form-registration.scss\",\n\t\"./components/form-selection/form-selection.js\": \"./components/form-selection/form-selection.js\",\n\t\"./components/form-selection/form-selection.scss\": \"./components/form-selection/form-selection.scss\",\n\t\"./components/header/header.scss\": \"./components/header/header.scss\",\n\t\"./components/layout_base/layout_base.scss\": \"./components/layout_base/layout_base.scss\",\n\t\"./components/layout_page/layout_page.scss\": \"./components/layout_page/layout_page.scss\",\n\t\"./components/like-btn/like-btn.js\": \"./components/like-btn/like-btn.js\",\n\t\"./components/like-btn/like-btn.scss\": \"./components/like-btn/like-btn.scss\",\n\t\"./components/logo/logo.scss\": \"./components/logo/logo.scss\",\n\t\"./components/pagination/pagination.scss\": \"./components/pagination/pagination.scss\",\n\t\"./components/radiobutton/radiobutton.scss\": \"./components/radiobutton/radiobutton.scss\",\n\t\"./components/range-slider/range-slider.js\": \"./components/range-slider/range-slider.js\",\n\t\"./components/range-slider/range-slider.scss\": \"./components/range-slider/range-slider.scss\",\n\t\"./components/rate-btn/rate-btn.js\": \"./components/rate-btn/rate-btn.js\",\n\t\"./components/rate-btn/rate-btn.scss\": \"./components/rate-btn/rate-btn.scss\",\n\t\"./components/review/review.js\": \"./components/review/review.js\",\n\t\"./components/review/review.scss\": \"./components/review/review.scss\",\n\t\"./components/subscription-input/subscription-input.scss\": \"./components/subscription-input/subscription-input.scss\",\n\t\"./components/toggle/toggle.scss\": \"./components/toggle/toggle.scss\",\n\t\"./pages/_colors.scss\": \"./pages/_colors.scss\",\n\t\"./pages/_fonts.scss\": \"./pages/_fonts.scss\",\n\t\"./pages/_mixins.scss\": \"./pages/_mixins.scss\",\n\t\"./pages/_sizes.scss\": \"./pages/_sizes.scss\",\n\t\"./pages/cards/cards.scss\": \"./pages/cards/cards.scss\",\n\t\"./pages/form-elements/form-elements.scss\": \"./pages/form-elements/form-elements.scss\",\n\t\"./pages/headers-footers/headers-footers.scss\": \"./pages/headers-footers/headers-footers.scss\",\n\t\"./pages/index/index.js\": \"./pages/index/index.js\",\n\t\"./pages/index/index.scss\": \"./pages/index/index.scss\",\n\t\"./pages/login/login.scss\": \"./pages/login/login.scss\",\n\t\"./pages/registration/registration.scss\": \"./pages/registration/registration.scss\",\n\t\"./pages/room-details/room-details.scss\": \"./pages/room-details/room-details.scss\",\n\t\"./pages/search-room/search-room.scss\": \"./pages/search-room/search-room.scss\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./ sync recursive \\\\.js$|\\\\.scss$\";\n\n//# sourceURL=webpack:///._sync_\\.js$%7C\\.scss$?");
 
 /***/ }),
 
@@ -232,17 +232,6 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
-/***/ "./components/container/container.scss":
-/*!*********************************************!*\
-  !*** ./components/container/container.scss ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/container/container.scss?");
-
-/***/ }),
-
 /***/ "./components/date-dropdown/date-dropdown.js":
 /*!***************************************************!*\
   !*** ./components/date-dropdown/date-dropdown.js ***!
@@ -296,7 +285,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.querySelectorAll('.js-dropdown').forEach((dropdown) => {\r\n  let totalCounter = 0;\r\n  function showDropdown() {\r\n    dropdown.classList.toggle('show');\r\n  }\r\n  function titleCounter() {\r\n    let word = '';\r\n    let title = '';\r\n    function roomsTitle() {\r\n      if (totalCounter === 0) {\r\n        title = 'Сколько комнат';\r\n      } else {\r\n        const arr = [];\r\n        dropdown.querySelectorAll('.menu__option').forEach((el) => {\r\n          function elementTitle(name, value) {\r\n            let legend = '';\r\n            if (name === 'спальни') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'спальня';\r\n                  break;\r\n                default:\r\n                  legend = 'спальни';\r\n              }\r\n            }\r\n            if (name === 'кровати') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'кровать';\r\n                  break;\r\n                default:\r\n                  legend = 'кровати';\r\n              }\r\n            }\r\n            if (name === 'ванные комнаты') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'ванная комната';\r\n                  break;\r\n                default:\r\n                  legend = 'ванные комнаты';\r\n              }\r\n            }\r\n            return `${value} ${legend}`;\r\n          }\r\n          if (el.querySelector('.counter-item').value > 0) {\r\n            arr.push(elementTitle(el.querySelector('.option__title').textContent, parseInt(el.querySelector('.counter-item').value, 10)));\r\n          }\r\n          title = arr.join(', ');\r\n        });\r\n      }\r\n    }\r\n    function guestsTitle() {\r\n      let baby = 0;\r\n      let babyCount = '';\r\n      dropdown.querySelectorAll('.menu__option').forEach((el) => {\r\n        if (el.querySelector('.option__title').textContent === 'младенцы') {\r\n          baby = el.querySelector('.counter-item').value;\r\n        }\r\n      });\r\n      if (baby === '1') {\r\n        babyCount = `, ${baby} младенец`;\r\n      }\r\n      if (baby > 1) {\r\n        babyCount = `, ${baby} младенца`;\r\n      }\r\n      title = 'Сколько гостей';\r\n      switch (totalCounter) {\r\n        case 0:\r\n          return title;\r\n        case 1:\r\n          word = 'гость';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n          break;\r\n        case 2:\r\n        case 3:\r\n        case 4:\r\n          word = 'гостя';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n          break;\r\n        default:\r\n          word = 'гостей';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n      }\r\n      return title;\r\n    }\r\n    if (dropdown.querySelector('.dropdown__title').classList.contains('room')) {\r\n      roomsTitle();\r\n    } else {\r\n      guestsTitle();\r\n    }\r\n    return title;\r\n  }\r\n  function closeDropdown(event) {\r\n    if (event.target.closest('.js-dropdown') !== dropdown) {\r\n      showDropdown();\r\n      window.removeEventListener('click', closeDropdown);\r\n    }\r\n  }\r\n  function changeOptions(event) {\r\n    const item = event.target.closest('.js-menu__option').querySelector('.js-counter-item');\r\n    let counter = Number(item.value);\r\n    if (event.target.className === 'counter__increment' && counter < 4) {\r\n      counter += 1;\r\n      totalCounter += 1;\r\n    }\r\n    if (event.target.className === 'counter__decrement' && counter > 0) {\r\n      counter -= 1;\r\n      totalCounter -= 1;\r\n    }\r\n    if (totalCounter === 0 && dropdown.querySelectorAll('.js-clean').length > 0) {\r\n      dropdown.querySelector('.js-clean').style.visibility = 'hidden';\r\n    }\r\n    if (totalCounter > 0 && dropdown.querySelectorAll('.js-clean').length > 0) {\r\n      dropdown.querySelector('.js-clean').style.visibility = 'visible';\r\n    }\r\n    item.value = counter.toString();\r\n    dropdown.querySelector('.js-dropdown__title').textContent = titleCounter();\r\n  }\r\n  function dropdownClicked(event) {\r\n    window.addEventListener('click', closeDropdown);\r\n    if (event.target.closest('.js-dropdown__selection')) {\r\n      showDropdown();\r\n    }\r\n    if (event.target.className.indexOf('js-accept') >= 0) {\r\n      event.preventDefault();\r\n      showDropdown();\r\n      window.removeEventListener('click', closeDropdown);\r\n    }\r\n    if (event.target.className.indexOf('js-clean') >= 0) {\r\n      event.preventDefault();\r\n      totalCounter = 0;\r\n      dropdown.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, dropdown);\r\n      dropdown.querySelectorAll('.counter-item').forEach((item) => {\r\n        item.value = 0;\r\n      });\r\n    }\r\n    if (event.target.closest('.js-menu__option')) {\r\n      changeOptions(event);\r\n    }\r\n  }\r\n  dropdown.querySelectorAll('.js-counter-item').forEach((el) => {\r\n    totalCounter += Number(el.value);\r\n  });\r\n  dropdown.addEventListener('click', dropdownClicked);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/dropdown/dropdown.js?");
+eval("document.querySelectorAll('.js-dropdown').forEach((dropdown) => {\r\n  let totalCounter = 0;\r\n  function showDropdown() {\r\n    dropdown.classList.toggle('show');\r\n  }\r\n  function titleCounter() {\r\n    let word = '';\r\n    let title = '';\r\n    function roomsTitle() {\r\n      if (totalCounter === 0) {\r\n        title = 'Сколько комнат';\r\n      } else {\r\n        const arr = [];\r\n        dropdown.querySelectorAll('.menu__option').forEach((el) => {\r\n          function elementTitle(name, value) {\r\n            let legend = '';\r\n            if (name === 'спальни') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'спальня';\r\n                  break;\r\n                default:\r\n                  legend = 'спальни';\r\n              }\r\n            }\r\n            if (name === 'кровати') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'кровать';\r\n                  break;\r\n                default:\r\n                  legend = 'кровати';\r\n              }\r\n            }\r\n            if (name === 'ванные комнаты') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'ванная комната';\r\n                  break;\r\n                default:\r\n                  legend = 'ванные комнаты';\r\n              }\r\n            }\r\n            return `${value} ${legend}`;\r\n          }\r\n          if (el.querySelector('.counter-item').value > 0) {\r\n            arr.push(elementTitle(el.querySelector('.option__title').textContent, parseInt(el.querySelector('.counter-item').value, 10)));\r\n          }\r\n          title = arr.join(', ');\r\n        });\r\n      }\r\n    }\r\n    function guestsTitle() {\r\n      let baby = 0;\r\n      let babyCount = '';\r\n      dropdown.querySelectorAll('.menu__option').forEach((el) => {\r\n        if (el.querySelector('.option__title').textContent === 'младенцы') {\r\n          baby = el.querySelector('.counter-item').value;\r\n        }\r\n      });\r\n      if (baby === '1') {\r\n        babyCount = `, ${baby} младенец`;\r\n      }\r\n      if (baby > 1) {\r\n        babyCount = `, ${baby} младенца`;\r\n      }\r\n      title = 'Сколько гостей';\r\n      switch (totalCounter) {\r\n        case 0:\r\n          return title;\r\n        case 1:\r\n          word = 'гость';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n          break;\r\n        case 2:\r\n        case 3:\r\n        case 4:\r\n          word = 'гостя';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n          break;\r\n        default:\r\n          word = 'гостей';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n      }\r\n      return title;\r\n    }\r\n    if (dropdown.querySelector('.dropdown__title').classList.contains('room')) {\r\n      roomsTitle();\r\n    } else {\r\n      guestsTitle();\r\n    }\r\n    return title;\r\n  }\r\n  function closeDropdown(event) {\r\n    function toBeClosed() {\r\n      return (event.target.closest('.js-dropdown') !== dropdown && dropdown.classList.contains('show'));\r\n    }\r\n    if (toBeClosed()) {\r\n      dropdown.classList.remove('show');\r\n      window.removeEventListener('click', closeDropdown);\r\n    }\r\n  }\r\n  function changeOptions(event) {\r\n    const item = event.target.closest('.js-menu__option').querySelector('.js-counter-item');\r\n    let counter = Number(item.value);\r\n    if (event.target.className === 'counter__increment' && counter < 4) {\r\n      counter += 1;\r\n      totalCounter += 1;\r\n    }\r\n    if (event.target.className === 'counter__decrement' && counter > 0) {\r\n      counter -= 1;\r\n      totalCounter -= 1;\r\n    }\r\n    if (totalCounter === 0 && dropdown.querySelectorAll('.js-clean').length > 0) {\r\n      dropdown.querySelector('.js-clean').style.visibility = 'hidden';\r\n    }\r\n    if (totalCounter > 0 && dropdown.querySelectorAll('.js-clean').length > 0) {\r\n      dropdown.querySelector('.js-clean').style.visibility = 'visible';\r\n    }\r\n    item.value = counter.toString();\r\n    dropdown.querySelector('.js-dropdown__title').textContent = titleCounter();\r\n  }\r\n  function dropdownClicked(event) {\r\n    window.addEventListener('click', closeDropdown);\r\n    if (event.target.closest('.js-dropdown__selection')) {\r\n      showDropdown();\r\n    }\r\n    if (event.target.className.indexOf('js-accept') >= 0) {\r\n      event.preventDefault();\r\n      showDropdown();\r\n      window.removeEventListener('click', closeDropdown);\r\n    }\r\n    if (event.target.className.indexOf('js-clean') >= 0) {\r\n      event.preventDefault();\r\n      totalCounter = 0;\r\n      dropdown.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, dropdown);\r\n      dropdown.querySelectorAll('.counter-item').forEach((item) => {\r\n        item.value = 0;\r\n      });\r\n    }\r\n    if (event.target.closest('.js-menu__option')) {\r\n      changeOptions(event);\r\n    }\r\n  }\r\n  dropdown.querySelectorAll('.js-counter-item').forEach((el) => {\r\n    totalCounter += Number(el.value);\r\n  });\r\n  dropdown.addEventListener('click', dropdownClicked);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/dropdown/dropdown.js?");
 
 /***/ }),
 
@@ -318,7 +307,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.querySelectorAll('.js-expanded-checkbox__selection').forEach((el) => {\r\n  function expandCheckbox(event) {\r\n    event.target.closest('.js-expanded-checkbox').classList.toggle('show');\r\n  }\r\n  el.addEventListener('click', expandCheckbox);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/expandable-checkbox/expandable-checkbox.js?");
+eval("document.querySelectorAll('.js-expandable-checkbox__selection').forEach((el) => {\r\n  function expandCheckbox(event) {\r\n    event.target.closest('.js-expandable-checkbox').classList.toggle('show');\r\n  }\r\n  el.addEventListener('click', expandCheckbox);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/expandable-checkbox/expandable-checkbox.js?");
 
 /***/ }),
 
@@ -330,6 +319,29 @@ eval("document.querySelectorAll('.js-expanded-checkbox__selection').forEach((el)
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/expandable-checkbox/expandable-checkbox.scss?");
+
+/***/ }),
+
+/***/ "./components/field/field.js":
+/*!***********************************!*\
+  !*** ./components/field/field.js ***!
+  \***********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inputmask */ \"../node_modules/inputmask/index.js\");\n/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n$(document).ready(() => {\r\n  const field = document.getElementsByClassName('js-mask');\r\n  const im = new inputmask__WEBPACK_IMPORTED_MODULE_0___default.a('datetime', {\r\n    inputFormat: 'dd.mm.yyyy',\r\n    placeholder: 'ДД.ММ.ГГГГ',\r\n    min: '01.01.1900',\r\n    max: '01.01.2020',\r\n  });\r\n  im.mask(field);\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/field/field.js?");
+
+/***/ }),
+
+/***/ "./components/field/field.scss":
+/*!*************************************!*\
+  !*** ./components/field/field.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/field/field.scss?");
 
 /***/ }),
 
@@ -409,7 +421,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _input_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../input/input */ \"./components/input/input.js\");\n\r\n\n\n//# sourceURL=webpack:///./components/form-registration/form-registration.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _field_field__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../field/field */ \"./components/field/field.js\");\n\r\n\n\n//# sourceURL=webpack:///./components/form-registration/form-registration.js?");
 
 /***/ }),
 
@@ -447,17 +459,6 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
-/***/ "./components/form/form.scss":
-/*!***********************************!*\
-  !*** ./components/form/form.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/form/form.scss?");
-
-/***/ }),
-
 /***/ "./components/header/header.scss":
 /*!***************************************!*\
   !*** ./components/header/header.scss ***!
@@ -466,29 +467,6 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/header/header.scss?");
-
-/***/ }),
-
-/***/ "./components/input/input.js":
-/*!***********************************!*\
-  !*** ./components/input/input.js ***!
-  \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inputmask/dist/jquery.inputmask */ \"../node_modules/inputmask/dist/jquery.inputmask.js\");\n/* harmony import */ var inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inputmask_dist_jquery_inputmask__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n$('.js-mask').inputmask({\r\n  alias: 'datetime',\r\n  inputFormat: 'dd.mm.yyyy',\r\n  placeholder: 'ДД.ММ.ГГГГ',\r\n  max: '01.01.2020',\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/input/input.js?");
-
-/***/ }),
-
-/***/ "./components/input/input.scss":
-/*!*************************************!*\
-  !*** ./components/input/input.scss ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/input/input.scss?");
 
 /***/ }),
 
@@ -577,7 +555,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _node_modules_ion_rangeslider_js_ion_rangeSlider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/ion-rangeslider/js/ion.rangeSlider */ \"../node_modules/ion-rangeslider/js/ion.rangeSlider.js\");\n/* harmony import */ var _node_modules_ion_rangeslider_js_ion_rangeSlider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_ion_rangeslider_js_ion_rangeSlider__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n$('.js-range-slider').ionRangeSlider({\r\n  type: 'double',\r\n  min: 0,\r\n  max: 15000,\r\n  hide_min_max: true,\r\n  from: 5000,\r\n  to: 10000,\r\n  postfix: ' ₽',\r\n  values_separator: '-',\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/range-slider/range-slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ion-rangeslider */ \"../node_modules/ion-rangeslider/js/ion.rangeSlider.js\");\n/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(ion_rangeslider__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n$('.js-range-slider').ionRangeSlider({\r\n  type: 'double',\r\n  min: 0,\r\n  max: 15000,\r\n  hide_min_max: true,\r\n  from: 5000,\r\n  to: 10000,\r\n  postfix: ' ₽',\r\n  values_separator: '-',\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/range-slider/range-slider.js?");
 
 /***/ }),
 
@@ -678,6 +656,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./page
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/_fonts.scss?");
+
+/***/ }),
+
+/***/ "./pages/_mixins.scss":
+/*!****************************!*\
+  !*** ./pages/_mixins.scss ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/_mixins.scss?");
 
 /***/ }),
 
