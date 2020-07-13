@@ -74,18 +74,19 @@ block main
           .font__description=font.description
   section.form-elements
     .form-elements__section
-      .form-elements__item
-        h3.form-elements__subtitle(data-comment="default") Text Field       
-        +field(false, "Email")
-      .form-elements__item
-        h3.form-elements__subtitle(data-comment="hover/focus") Text Field 
-        +field(false, "", "This is pretty awesome")
-      .form-elements__item
-        h3.form-elements__subtitle(data-comment="default") Dropdown
-        +dropdown(false, "", "man", "child", "baby")
-      .form-elements__item
-        h3.form-elements__subtitle(data-comment="default") masked text field
-        +field(true, "ДД.ММ.ГГГГ")
+      .form-elements__block
+          .form-elements__item
+            h3.form-elements__subtitle(data-comment="default") Text Field       
+            +field(false, "Email")
+          .form-elements__item
+            h3.form-elements__subtitle(data-comment="hover/focus") Text Field 
+            +field(false, "", "This is pretty awesome")
+          .form-elements__item
+            h3.form-elements__subtitle(data-comment="default") Dropdown
+            +dropdown(false, "", "man", "child", "baby")
+          .form-elements__item
+            h3.form-elements__subtitle(data-comment="default") masked text field
+            +field(true, "ДД.ММ.ГГГГ")
       .form-elements__item
         +date-dropdown("date dropdown", "date dropdown")
       .form-elements__item

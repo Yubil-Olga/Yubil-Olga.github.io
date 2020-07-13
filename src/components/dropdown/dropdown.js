@@ -133,6 +133,7 @@ document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
     if (event.target.className.indexOf('js-clean') >= 0) {
       event.preventDefault();
       totalCounter = 0;
+      dropdown.querySelector('.js-clean').style.visibility = 'hidden';
       dropdown.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, dropdown);
       dropdown.querySelectorAll('.counter-item').forEach((item) => {
         item.value = 0;

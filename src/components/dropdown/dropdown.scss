@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid $dark-shade-25;
-    border-radius: 2px 2px 0 0;
+    border-radius: 4px;
     padding: 0 12px;
     height: 44px;
     box-sizing: border-box;
@@ -57,14 +57,16 @@
 
   .dropdown__selection {
     border: $border;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .dropdown__menu {
     @include H3;
 
     display: block;
-    padding: 5px 5px 1px 15px;
-    border-radius: 0 0 2px 2px;
+    padding: 5px 5px 0 15px;
+    border-radius: 0 0 4px 4px;
     border: $border;
     border-top: none;
     width: 100%;
@@ -134,7 +136,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 8px;
+      height: 40px;
 
       .clean {
         color: $dark-shade-50;
