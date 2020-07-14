@@ -1,6 +1,6 @@
 include ../field/field
 
-mixin dropdown(show, title, ...items)
+mixin dropdown({show, title}, items)
   .dropdown.js-dropdown(class=show ? "show": "", class= (title == "room" ? "dropdown_room" : ""))
     .dropdown__selection.js-dropdown__selection
       if title == "room"

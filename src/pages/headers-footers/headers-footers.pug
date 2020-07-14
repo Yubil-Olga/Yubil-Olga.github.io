@@ -14,20 +14,29 @@ block variables
   - {name: "News", href: "#", expanded: false},
   - {name: "Documentation", href: "#", expanded: false}
   - ]
-  - var footernavigation = [
+  - var footerNavigation = [
   - {title: "Navigation", list: ["About Us", "News", "Support", "Products"]},
   - {title: "About Us", list: ["Who we are", "Our team", "Careers", "Investors"]},
   - {title: "Support", list: ["Documentation", "Community", "Get in Touch"]}
   - ]
-  - var footerslogan = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
-  - var footerformtitle = "Subscribe to our newsletter"
-  - var footerformdescription = "Receive our latest news and promotions in your inbox!"
-  - var copyright = "Copyright © 2018 Toxin UI Kit. All rights reserved."
-
+  
 block main
   section.headers-footers
-    +header(false, "en", ...navigation)
-    +header(true, "en", ...navigation)
-    +footer(false, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
-    +footer(true, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
+    +header({auth: false, lang: "en"}, navigation)
+    +header({auth: true, lang: "en"}, navigation)
+    +footer({
+      creative: false,
+      slogan: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+      formTitle: "Subscribe to our newsletter",
+      formDescription: "Receive our latest news and promotions in your inbox!",
+      copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."
+    }, footerNavigation)
+    +footer({
+      creative: true,
+      slogan: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+      formTitle: "Subscribe to our newsletter",
+      formDescription: "Receive our latest news and promotions in your inbox!",
+      copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."
+    }, footerNavigation)
+
     

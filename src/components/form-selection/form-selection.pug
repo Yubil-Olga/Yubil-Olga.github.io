@@ -8,7 +8,7 @@ mixin form-selection
       +date-dropdown("прибытие", "выезд")
     .form-selection__dropdown-wrapper
       h3.form-selection__sub-title гости
-      +dropdown(false, "", "взрослые", "дети", "младенцы")
+      +dropdown({show: false, title: ""}, ["взрослые", "дети", "младенцы"])
     .form-selection__footer
       a(href="search-room.html" aria-label="подобрать номер").button.button_arrow подобрать номер
         i.material-icons arrow_forward

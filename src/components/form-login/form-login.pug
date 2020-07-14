@@ -4,8 +4,8 @@ mixin form-login
   form.form-login
     h1.form-login__title Войти
     .form-login__section
-      +field(false, "email", "Email")
-      +field(false, "password", "Пароль")
+      +field({mask: false, type: "email", placeholder: "Email"})
+      +field({mask: false, type: "password", placeholder: "Пароль"})
     .form-login__section
       button.button.button_arrow(type="submit") войти
         i.material-icons arrow_forward

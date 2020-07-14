@@ -1,12 +1,12 @@
 include ../logo/logo
 include ../subscription-input/subscription-input
-
-mixin footer(creative, text, formtitle, formtext, copyright, ...items)
+ 
+mixin footer({creative, slogan, formTitle, formDescription, copyright}, items)
   footer.footer(class=creative ? "footer-creative" : "")
     section.footer__navigation
       section.footer__section
         +logo
-        p.footer__description=text
+        p.footer__description=slogan
       unless creative
         each item in items
           section.footer__section
@@ -16,8 +16,8 @@ mixin footer(creative, text, formtitle, formtext, copyright, ...items)
                 li.navigation__item
                   a(href="/mock-address/change-me")=link
         form.footer__section
-          h3.footer__subtitle=formtitle
-          p.footer__description=formtext
+          h3.footer__subtitle=formTitle
+          p.footer__description=formDescription
           .footer__control
             +subscription-input
     .footer__wrapper

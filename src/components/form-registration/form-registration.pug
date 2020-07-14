@@ -6,16 +6,16 @@ mixin form-registration
   form.form-registration
     h1.form-registration__title Регистрация аккаунта
     .form-registration__section
-      +field(false, "text", "Имя")
-      +field(false, "text", "Фамилия")
+      +field({mask: false, type: "text", placeholder: "Имя"})
+      +field({mask: false, yupe: "text", placeholder: "Фамилия"})
       +radiobutton
     .form-registration__section
       h3.form-registration__sub-title дата рождения
-      +field(true, "date", "ДД.ММ.ГГГГ")
+      +field({mask: true, type: "date", placeholder: "ДД.ММ.ГГГГ"})
     .form-registration__section
       h3.form-registration__sub-title данные для входа в сервис
-      +field(false, "email", "Email")
-      +field(false, "password", "Пароль")
+      +field({mask: false, type: "email", placeholder: "Email"})
+      +field({mask: false, type: "password", placeholder: "Пароль"})
       +toggle("Получать спецпредложения", false)
     .form-registration__section
       button.button.button_arrow(type="submit") перейти к оплате

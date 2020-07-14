@@ -1,11 +1,11 @@
 include ../like-btn/like-btn
 
-mixin review(item)
+mixin review({name, src, voiceCounter, liked, comment})
   .review
     .review__icon
-      img(src=item.src, alt=item.name)
+      img(src=src, alt=name)
     .review__title
-      h4.review__name=item.name
+      h4.review__name=name
       p.review__date 5 дней назад
-    +like-btn(item.counter, item.liked)
-    p.review__text=item.comment
+    +like-btn({count: voiceCounter, liked: liked})
+    p.review__text=comment

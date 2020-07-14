@@ -44,22 +44,22 @@ block main
         +filter-date-dropdown("даты пребывания в отеле")
       .filter__item
         h3.filter__title гости
-        +dropdown(false, "", "взрослые", "дети", "младенцы")
+        +dropdown({show: false, title: ""}, ["взрослые", "дети", "младенцы"])
       .filter__item.filter__indent_top
         h3.filter__title диапазон цены
         +range-slider
         p.filter__comment Стоимость за сутки пребывания в номере
       .filter__item.filter__indent_top
         h3.filter__title Checkbox Buttons
-        +checkbox(false,...orders)
+        +checkbox(false, orders)
       .filter__item
         h3.filter__title доступность
-        +checkbox(true, ...accessibility)
+        +checkbox(true, accessibility)
       .filter__item
         h3.filter__title удобства номера
-        +dropdown(false, "room", "спальни", "кровати", "ванные комнаты")
+        +dropdown({show: false, title: "room"}, ["спальни", "кровати", "ванные комнаты"])
       .filter__item
-        +expandable-checkbox("дополнительные удобства", ...comfort)    
+        +expandable-checkbox("дополнительные удобства", comfort)    
     .search-room__result
       h1.search-room__title Номера, которые мы для вас подобрали
       .search-room__rooms

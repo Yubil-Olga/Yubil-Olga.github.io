@@ -1,4 +1,4 @@
-mixin field(mask, type, placeholder, text)
+mixin field({mask, type, placeholder, text})
   .field
     input(
       class= mask ? "mask js-mask" : ""

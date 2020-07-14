@@ -30,7 +30,7 @@ block variables
     {
       name: "Мурад Сарафанов", 
       src: "images/reviews/review2.png", 
-      counter: 11,
+      voiceCounter: 11,
       liked: true,
       comment: 
       "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
@@ -77,16 +77,16 @@ block main
       .form-elements__block
           .form-elements__item
             h3.form-elements__subtitle(data-comment="default") Text Field       
-            +field(false, "Email")
+            +field({mask: false, type: "email", placeholder: "Email"})
           .form-elements__item
             h3.form-elements__subtitle(data-comment="hover/focus") Text Field 
-            +field(false, "", "This is pretty awesome")
+            +field({mask: false, type: "text", text: "This is pretty awesome"})
           .form-elements__item
             h3.form-elements__subtitle(data-comment="default") Dropdown
-            +dropdown(false, "", "man", "child", "baby")
+            +dropdown({show: false, title: ""}, ["man", "child", "baby"])
           .form-elements__item
             h3.form-elements__subtitle(data-comment="default") masked text field
-            +field(true, "ДД.ММ.ГГГГ")
+            +field({mask: true, placeholder: "ДД.ММ.ГГГГ"})
       .form-elements__item
         +date-dropdown("date dropdown", "date dropdown")
       .form-elements__item
@@ -98,7 +98,7 @@ block main
     .form-elements__section 
       .form-elements__item
         h3.form-elements__subtitle Checkbox buttons
-        +checkbox(false,...orders)
+        +checkbox(false, orders)
       .form-elements__item
         h3.form-elements__subtitle Radio buttons
         +radiobutton
@@ -109,8 +109,8 @@ block main
       .form-elements__item.grid
         h3.form-elements__subtitle Like button
         .form-elements__grid_col_2
-          +like-btn(2, false)
-          +like-btn(12, true)
+          +like-btn({count: 2, liked: false})
+          +like-btn({count: 12, liked: true})
       .form-elements__item.grid
         h3.form-elements__subtitle Rate button
         .form-elements__grid
@@ -140,31 +140,32 @@ block main
     .form-elements__section 
       .form-elements__item
         h3.form-elements__subtitle(data-comment="default") dropdown
-        +dropdown(false, "room", "спальни", "кровати", "ванные комнаты")
+        +dropdown({show: false, title: "room"}, ["спальни", "кровати", "ванные комнаты"])
       .form-elements__item
         h3.form-elements__subtitle(data-comment="expanded") dropdown
-        +dropdown(true, "room", "спальни", "кровати", "ванные комнаты")
+        +dropdown({show: true, title: "room"}, ["спальни", "кровати", "ванные комнаты"])
     .form-elements__section
       .form-elements__item
-        +dropdown(true, "", "взрослые", "дети", "младенцы")
+        +dropdown({show: true, title: ""}, ["взрослые", "дети", "младенцы"])
     .form-elements__section
       .form-elements__item
-        +dropdown(true, "", "взрослые", "дети", "младенцы")
+        +dropdown({show: true, title: ""}, ["взрослые", "дети", "младенцы"])
     .form-elements__section
       .form-elements__item
-        +expandable-checkbox("expandable-checkbox-list")
+        +expandable-checkbox("expandable-checkbox-list", [])
       .form-elements__item
-        +expandable-checkbox("expandable-checkbox-list", 
+        +expandable-checkbox("expandable-checkbox-list", [
           {description: "Завтрак"}, 
           {description: "Письменный стол", check: true}, 
           {description: "Стул для кормления", check: true}, 
           {description: "Кроватка", check: true}, 
           {description: "Телевизор"}, 
-          {description: "Шампунь"})
+          {description: "Шампунь"}
+        ])
     .form-elements__section
       .form-elements__item
         h3.form-elements__subtitle Rich checkbox buttons
-        +checkbox(true, ...accessibility)
+        +checkbox(true, accessibility)
     .form-elements__section
       .form-elements__item
         h3.form-elements__subtitle Bullet list

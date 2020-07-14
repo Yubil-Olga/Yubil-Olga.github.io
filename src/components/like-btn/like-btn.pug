@@ -1,4 +1,4 @@
-mixin like-btn(count, liked)
+mixin like-btn({count, liked})
   label.like-btn.js-like-btn(data-count=checked ? count+1 : count class= liked ? "like-btn_active" : "")
     if liked
       i.material-icons favorite

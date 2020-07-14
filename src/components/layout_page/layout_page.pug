@@ -15,26 +15,28 @@ html
     meta(name="keywords", content="Toxin, бронирование номеров, отель")
     title= pageTitle
   body.layout_page
-    - var navigation = [
+    - var headerNavigation = [
     - {name: "О нас", href: "/mock-address/change-me", expanded: false},
     - {name: "Услуги", href: "/mock-address/change-me", expanded: true},
     - {name: "Вакансии", href: "/mock-address/change-me", expanded: false},
     - {name: "Новости", href: "/mock-address/change-me", expanded: false},
     - {name: "Соглашения", href: "/mock-address/change-me", expanded: true}
     - ]
-    - var footernavigation = [
+    - var footerNavigation = [
     - {title: "навигация", list: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
     - {title: "о нас", list: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
     - {title: "Служба поддержки", list: ["Соглашения", "Сообщества", "Связь с нами"]}
     - ]
-    - var footerslogan = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
-    - var footerformtitle = "Подписка"
-    - var footerformdescription = "Получайте специальные предложения и новости сервиса"
-    - var copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
-
+  
     block header
-      +header(false, "ru", ...navigation)
+      +header({auth: false, lang: "ru"}, headerNavigation)
     block main
     block footer
-      +footer(false, footerslogan, footerformtitle, footerformdescription, copyright, ...footernavigation)
+      +footer({
+        creative: false,
+        slogan: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+        formTitle: "Подписка",
+        formDescription: "Получайте специальные предложения и новости сервиса",
+        copyright: "Copyright © 2018 Toxin отель. Все права зачищены."
+      }, footerNavigation)
           

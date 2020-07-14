@@ -1,7 +1,7 @@
 include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 
-mixin form-booking(number, price, discount)
+mixin form-booking({number, price, discount}) 
   form.form-booking
     header.form-booking__room-details
       h2.room-details__room-number=number
@@ -11,7 +11,7 @@ mixin form-booking(number, price, discount)
       +date-dropdown("прибытие", "выезд")
     .form-booking__dropdown-wrapper
       h3.form-booking__sub-title гости
-      +dropdown(false, "", "взрослые", "дети", "младенцы")
+      +dropdown({show: false, title: ""}, ["взрослые", "дети", "младенцы"])
     .form-booking__order-details
       .order-details__order-item
         .order-item__name #{price} ₽ х 
