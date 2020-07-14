@@ -1,5 +1,5 @@
 include ../field/field
-include ../radiobutton/radiobutton
+include ../radio-button/radio-button
 include ../toggle/toggle
 
 mixin form-registration
@@ -8,7 +8,7 @@ mixin form-registration
     .form-registration__section
       +field({mask: false, type: "text", placeholder: "Имя"})
       +field({mask: false, yupe: "text", placeholder: "Фамилия"})
-      +radiobutton
+      +radio-button
     .form-registration__section
       h3.form-registration__sub-title дата рождения
       +field({mask: true, type: "date", placeholder: "ДД.ММ.ГГГГ"})

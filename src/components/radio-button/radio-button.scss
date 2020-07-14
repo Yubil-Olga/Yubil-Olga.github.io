@@ -1,7 +1,7 @@
-@import '../../pages/fonts';
-@import '../../pages/colors';
+@import '../../scss/fonts';
+@import '../../scss/colors';
 
-.radiobutton {
+.radio-button {
   @include Body;
 
   label {

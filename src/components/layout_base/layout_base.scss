@@ -1,4 +1,4 @@
-@import '../../pages/sizes';
+@import '../../scss/sizes';
 
 .layout_base {
   max-width: 1920px;
@@ -7,7 +7,7 @@
   padding: $space-y 0;
 
   &_logo {
-    background: url(../logo/logo2.svg) 30px 30px no-repeat #e5e5e5;
+    background: url(../logo/img/logo2.svg) 30px 30px no-repeat #e5e5e5;
     padding-top: 150px;
   }
 

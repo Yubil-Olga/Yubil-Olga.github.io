@@ -8,7 +8,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/rate-btn/rate-btn
 include ../../components/expandable-checkbox/expandable-checkbox
 include ../../components/toggle/toggle
-include ../../components/radiobutton/radiobutton
+include ../../components/radio-button/radio-button
 include ../../components/checkbox/checkbox
 include ../../components/range-slider/range-slider
 include ../../components/pagination/pagination
@@ -101,7 +101,7 @@ block main
         +checkbox(false, orders)
       .form-elements__item
         h3.form-elements__subtitle Radio buttons
-        +radiobutton
+        +radio-button
       .form-elements__item
         h3.form-elements__subtitle Toggle
         +toggle("Получать спецпредложения", true)

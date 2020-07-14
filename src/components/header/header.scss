@@ -1,7 +1,7 @@
 @import '../logo/logo.scss';
 @import '../button/button.scss';
-@import '../../pages/sizes';
-@import '../../pages/colors';
+@import '../../scss/sizes';
+@import '../../scss/colors';
 
 .header {
   max-width: $max-width;
