@@ -7,21 +7,17 @@
 .form-selection {
   @include form;
 
-  .form-selection__title {
+  &__title {
     @include H1;
   }
 
-  .form-selection__sub-title {
+  &__sub-title {
     @include H3;
     padding-bottom: 5px;
   }
 
-  .form-selection__footer {
+  &__footer {
     margin-top: 10px;
-  }
-
-  [class^=button] {
-    height: 44px;
   }
 }
 

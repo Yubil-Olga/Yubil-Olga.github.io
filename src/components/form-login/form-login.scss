@@ -7,16 +7,16 @@
 .form-login {
   @include form;
 
-  .form-login__title {
+  &__title {
     @include H1;
   }
 
-  .form-login__section {
+  &__section {
     display: grid;
     grid-row-gap: 10px;
   }
 
-  .form-login__footer {
+  &__footer {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -24,12 +24,7 @@
     z-index: 0;
   }
 
-  [class^=button] {
-    height: 44px;
-    padding: 8px 18px;
-  }
-
-  p {
+  &__question {
     @include Body;
   }
 }

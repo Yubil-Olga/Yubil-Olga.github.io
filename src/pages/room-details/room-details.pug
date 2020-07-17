@@ -52,8 +52,9 @@ block main
       .room-details__info
         .info__item
           h2.info__subtitle Сведения о номере
-          each advantage in advantages
-            +advantages(advantage)
+          .room-details__advantages
+            each advantage in advantages
+              +advantages(advantage)
         .info__item.info__chart
           h2.info__subtitle Впечатления от номера
           +chart(voices)

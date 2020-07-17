@@ -1,6 +1,6 @@
 mixin field({mask, type, placeholder, text})
   .field
-    input(
+    input.field__input(
       class= mask ? "mask js-mask" : ""
       type=type
       placeholder= placeholder

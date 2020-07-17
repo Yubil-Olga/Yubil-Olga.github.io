@@ -5,13 +5,7 @@
   display: grid;
   max-width: 320px;
 
-  label {
-    @include H3;
-
-    margin-bottom: 5px;
-  }
-
-  input {
+  &__input {
     @include Body;
 
     border-radius: 4px;

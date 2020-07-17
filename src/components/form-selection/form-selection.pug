@@ -1,5 +1,6 @@
 include ../date-dropdown/date-dropdown
-include ../dropdown/dropdown  
+include ../dropdown/dropdown 
+include ../button/button 
 
 mixin form-selection
   form.form-selection
@@ -10,5 +11,4 @@ mixin form-selection
       h3.form-selection__sub-title гости
       +dropdown({show: false, title: ""}, ["взрослые", "дети", "младенцы"])
     .form-selection__footer
-      a(href="search-room.html" aria-label="подобрать номер").button.button_arrow подобрать номер
-        i.material-icons arrow_forward
+      +button({href:"search-room.html", text: "подобрать номер", style: "arrow", size: "m"})

@@ -1,33 +1,32 @@
 include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
+include ../button/button
 
 mixin form-booking({number, price, discount}) 
   form.form-booking
-    header.form-booking__room-details
-      h2.room-details__room-number=number
-        span  люкс
-      .room-details__price.js-room-details__price #{price}₽
+    header.form-booking__header
+      h2.form-booking__header__room-number=number
+        span.form-booking__header__luxury  люкс
+      .form-booking__header__price #{price}₽
     .form-booking__date-picker-wrapper
       +date-dropdown("прибытие", "выезд")
     .form-booking__dropdown-wrapper
       h3.form-booking__sub-title гости
       +dropdown({show: false, title: ""}, ["взрослые", "дети", "младенцы"])
     .form-booking__order-details
-      .order-details__order-item
-        .order-item__name #{price} ₽ х 
-          span.order-item__days 4 суток
-        .order-item__price 39 960
-      .order-details__order-item
-        .order-item__name.discount(date-discount=discount) 
-          span.order-item__title Сбор за услуги: скидка #{discount} ₽
-        .order-item__price 0
-      .order-details__order-item
-        .order-item__name 
-          span.order-item__title Сбор за дополнительные услуги
-        .order-item__price 300
-      .order-details__item-total
-        .item-total__name Итого
-        .item-total__dots
-        .item-total__price 38 081₽
-    button.button_arrow(type="submit") забронировать
-      i.material-icons arrow_forward
+      .form-booking__order-item
+        .form-booking__order-item__name #{price} ₽ х 4 суток
+        .form-booking__order-item__price 39 960
+      .form-booking__order-item
+        span.form-booking__order-item__title Сбор за услуги: скидка #{discount} ₽
+        .form-booking__order-item__price 0
+      .form-booking__order-item
+        .form-booking__order-item__name 
+          span.form-booking__order-item__title Сбор за дополнительные услуги
+        .form-booking__order-item__price 300
+      .form-booking__item-total
+        .form-booking__item-total__name Итого
+        .form-booking__item-total__dots
+        .form-booking__item-total__price 38 081₽
+    .form-booking__book-button
+      +button({text: "забронировать", style: "arrow", size: "m"})

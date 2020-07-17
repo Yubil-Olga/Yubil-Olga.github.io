@@ -7,67 +7,60 @@
 .form-booking {
   @include form;
 
-  [class^=button] {
-    height: 44px;
-  }
-  .form-booking__sub-title {
-    @include H3;
-  }
-}
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 
-.form-booking__room-details {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-
-  .room-details__room-number {
-    @include H2;
-  
-    font-size: 24px;
-    margin: 0;
-  
-    &::before {
-      content: '№ ';
-      font-size: 14px;
+    &__room-number {
+      @include H2;
+      font-size: 24px;
+      margin: 0;
+    
+      &::before {
+        content: '№ ';
+        font-size: 14px;
+      }
     }
-  
-    span {
+
+    &__luxury {
       @include H3;
       color: $purple;
     }
+
+    &__price {
+      font: {
+        family: montserrat, arial, sans-serif;
+        weight: bold;
+        size: 14px;
+      }
+      line-height: 18px;
+      color: $dark-shade-50;
+    
+      &::after {
+        content: ' в сутки';
+        font-weight: normal;
+      }
+    }
   }
 
-  .room-details__price {
-    font: {
-      family: montserrat, arial, sans-serif;
-      weight: bold;
-      size: 14px;
-    }
-  
-    line-height: 18px;
-    color: $dark-shade-50;
-  
-    &::after {
-      content: ' в сутки';
-      font-weight: normal;
-    }
-  }
-}
-
-.form-booking__order-details {
-  .order-details__order-item {
+  &__order-item {
     @include Body;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding-bottom: 10px;
-    
-    .order-item__name {
+
+    &__name {
       display: flex;
       justify-content: space-between;
     }
-  
-    .order-item__title {
+
+    &__price::after {
+      content: ' ₽';
+    }
+
+    &__title {
       max-width: 214px;
       position: relative;
       padding-right: 25px;
@@ -90,13 +83,7 @@
       }
     }
 
-    .order-item__price {
-      &::after {
-        content: ' ₽';
-      }
-    }
-    
-    .order-item__info {
+    &__info {
       border-radius: 50%;
       border: 1px solid $dark-shade-25;
       width: 20px;
@@ -109,28 +96,20 @@
       margin-left: 5px;
     }
   }
-  
-  .order-details__order-item:first-of-type {
-    .order-item__name {
-      display: inline-block;
-    }
-  }
-  
-  .order-details__item-total {
+
+  &__item-total {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-  
     @include H2;
-  
     padding-top: 18px;
-  
-    .item-total__dots {
+
+    &__dots {
       border-bottom: 1px dashed $dark-shade-25;
       width: auto;
       flex: 1;
     }
-  }  
+  }
 }
 
 

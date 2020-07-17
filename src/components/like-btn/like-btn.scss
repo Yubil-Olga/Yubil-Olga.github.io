@@ -13,7 +13,7 @@
   align-items: center;
   cursor: pointer;
 
-  i.material-icons {
+  &__icon {
     font-family: 'Material Icons';
     font-style: normal;
     font-size: 10px;
@@ -33,7 +33,7 @@
     line-height: 12px;
   }
 
-  input {
+  &__input {
     opacity: 0;
   }
 }

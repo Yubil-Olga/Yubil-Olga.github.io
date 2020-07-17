@@ -4,42 +4,40 @@
 .expandable-checkbox {
   max-width: 266px;
   box-sizing: border-box;
-}
 
-.expandable-checkbox__selection {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 12px;
+  &__selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 12px;
+  }
 
-  .selection__title {
+  &__title {
     @include H3;
-
     cursor: pointer;
   }
 
-  .selection__button {
+  &__button {
     cursor: pointer;
-  }
-
-  i.material-icons {
     font-family: 'Material Icons';
     font-style: normal;
     font-size: 24px;
     color: $dark-shade-50;
   }
-}
 
-.expandable-checkbox__list {
-  display: none;
-}
-
-.show {
-  .selection__button {
-    transform: rotate(180deg);
+  &__list {
+    display: none;
   }
 
-  .expandable-checkbox__list {
-    display: block;
+  &_open {
+    .expandable-checkbox__button {
+      transform: rotate(180deg);
+    }
+  
+    .expandable-checkbox__list {
+      display: block;
+    }
   }
 }
+
+

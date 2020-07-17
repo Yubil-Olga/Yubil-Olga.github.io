@@ -13,139 +13,129 @@
     weight: normal;
     size: 14px;
   }
-
   line-height: 17px;
-}
 
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  max-width: $content-width;
-  box-sizing: border-box;
-  margin: 0 auto;
-
-  @media (max-width: 1200px) {
-    padding: 0 $space-x;
-  }
-
-  @media (max-width: 450px) {
-    padding: 0 $space-x/2;
-  }
-}
-
-.navigation__details {
-  margin-right: 20px;
-  cursor: pointer;
-
-  & > summary {
-    list-style: none;
-  }
-
-  summary {
+  &__wrapper {
     display: flex;
-    color: $dark-shade-50;
+    justify-content: space-between;
+    max-width: $content-width;
+    box-sizing: border-box;
+    margin: 0 auto;
 
-    &::after {
-      content: 'expand_more';
+    @media (max-width: 1200px) {
+      padding: 0 $space-x;
+    }
+  
+    @media (max-width: 450px) {
+      padding: 0 $space-x/2;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+
+    &__details {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    &__summary {
+      display: flex;
+      color: $dark-shade-50;
+      list-style: none;
+
+      &::after {
+        content: 'expand_more';
+        font-family: 'Material Icons';
+        font-size: 24px;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    &__details[open] &__summary::after {
+      content: 'expand_less';
+    }
+
+    &__list {
+      display: flex;
+
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+
+    &__link {
+      color: $dark-shade-50;
+      margin-right: $space-x;
+    }
+
+    &__toolbar {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
+      z-index: 0;
+    }
+
+    &__user {
+      border-left: 1px solid rgba($dark-shade, 0.1);
+      padding-left: 30px;
+    }
+  }
+
+  &__burger {
+    display: none;
+    cursor: pointer;
+
+    &__toggle {
       font-family: 'Material Icons';
       font-size: 24px;
+      color: $dark-shade-75;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
     }
-  }
 
-  summary::-webkit-details-marker {
-    display: none;
-  }
-
-  &[open] summary::after {
-    content: 'expand_less';
-  }
-}
-
-.header__navigation {
-  display: flex;
-  align-items: center;
-}
-
-.navigation__list {
-  display: flex;
-
-  .navigation__link {
-    color: $dark-shade-50;
-    margin-right: $space-x;
-  }
-
-  @media (max-width: 900px) {
-    display: none;
-  }
-}
-
-.navigation__toolbar {
-  display: flex;
-  z-index: 0;
-
-  a:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  .user {
-    border-left: 1px solid rgba($dark-shade, 0.1);
-    padding-left: 30px;
-  }
-
-  @media (max-width: 440px) {
-    .button {
-      display: none;
+    &__list {
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 100%;
+      background-color: #fff;
+      z-index: 10;
+      box-shadow: 0 10px 10px $dark-shade-50;
     }
-  }
-}
 
-.burger {
-  display: none;
-  cursor: pointer;
-
-  .burger__toggle {
-    font-family: 'Material Icons';
-    font-size: 24px;
-    color: $dark-shade-75;
-  }
-
-  & > .burger__toggle {
-    list-style: none;
-  }
-
-  .burger__toggle::-webkit-details-marker {
-    display: none;
-  }
-
-  .burger__list {
-    position: absolute;
-    left: 0;
-    top: 60px;
-    width: 100%;
-    background-color: #fff;
-    z-index: 1;
-    box-shadow: 0 10px 10px $dark-shade-50;
-
-    .list__item {
+    &__item {
       padding: 10px $space-x;
       border-bottom: 1px solid $dark-shade-50;
     }
 
-    .burger__link {
+    &__link {
       @include Body;
-
       display: flex;
       width: 100%;
     }
-  }
 
-  @media (max-width: 900px) {
-    display: block;
-    order: 3;
-    margin-left: 20px;
+    @media (max-width: 900px) {
+      display: block;
+      order: 3;
+      margin-left: 20px;
+    }
+  
+    @media (max-width: 440px) {
+      margin-left: 0;
+    }
   }
-
-  @media (max-width: 440px) {
-    margin-left: 0;
+  
+  &__sign-up-btn {
+    @media (max-width: 530px) {
+      display: none;
+    }
   }
 }

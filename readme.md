@@ -27,7 +27,7 @@
 * [Room details](https://yubil-olga.github.io/Education/room-details)
 * [Preferences](https://yubil-olga.github.io/Education/search-room.html)
 * UI-kit
-  * [Colors-type]((https://yubil-olga.github.io/Education/colors-type)
+  * [Colors-type](https://yubil-olga.github.io/Education/colors-type)
   * [Form-elements](https://yubil-olga.github.io/Education/form-elements)
   * [Cards](https://yubil-olga.github.io/Education/cards)
   * [Headers&Footers](https://yubil-olga.github.io/Education/headers-footers)

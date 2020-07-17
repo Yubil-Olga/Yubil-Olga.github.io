@@ -1,6 +1,7 @@
 include ../field/field
 include ../radio-button/radio-button
 include ../toggle/toggle
+include ../button/button
 
 mixin form-registration
   form.form-registration
@@ -18,8 +19,7 @@ mixin form-registration
       +field({mask: false, type: "password", placeholder: "Пароль"})
       +toggle("Получать спецпредложения", false)
     .form-registration__section
-      button.button.button_arrow(type="submit") перейти к оплате
-        i.material-icons arrow_forward
+      +button({text: "перейти к оплате", style: "arrow", size: "m"})
     .form-registration__footer
-      p Уже есть аккаунт на Toxin
-      a(href="login.html").button_border войти
+      p.form-registration__question Уже есть аккаунт на Toxin
+      +button({href: "login.html", text: "войти", style: "border", size: "m"})

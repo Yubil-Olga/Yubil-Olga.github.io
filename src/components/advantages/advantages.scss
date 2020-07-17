@@ -5,18 +5,10 @@
   display: flex;
   align-items: center;
   width: 280px;
-  padding: 20px 0;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba($dark-shade, 0.1);
 
-  &:first-of-type {
-    padding-top: 0;
-  }
-
-  // &:last-of-type {
-  //   padding-bottom: 0;
-  // }
-
-  i.material-icons {
+  &__icon {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: normal;
@@ -29,18 +21,13 @@
     color: transparent;
   }
 
-  .advantages__description {
+  &__description {
     @include Body;
-
     padding-left: 10px;
   }
 
-  .description__title {
+  &__title {
     font-weight: bold;
-    margin: 0;
-  }
-
-  p {
     margin: 0;
   }
 }

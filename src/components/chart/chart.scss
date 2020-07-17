@@ -10,12 +10,38 @@
     flex-wrap: wrap;
   }
 
-  .chart__legend {
+  &__content {
+    margin-right: 26px;
+  }
+
+  &__text {
+    @include H1;
+    font-size: 6px;
+    fill: $purple;
+
+    &__number {
+      text-anchor: middle;
+      -moz-transform: translateY(-0.25em);
+      -ms-transform: translateY(-0.25em);
+      -webkit-transform: translateY(-0.25em);
+      transform: translateY(-0.25em);
+    }
+
+    &__label {
+      font-size: 4px;
+      text-anchor: middle;
+      -moz-transform: translateY(0.7em);
+      -ms-transform: translateY(0.7em);
+      -webkit-transform: translateY(0.7em);
+      transform: translateY(0.7em);
+    }
+  }
+
+  &__legend {
     @include Body;
     line-height: 25px;
-    margin-left: 26px;
   
-    .legend__item::before {
+    &__item::before {
       content: '';
       width: 10px;
       height: 10px;
@@ -29,32 +55,9 @@
       margin-top: 10px;
     }
   }
-}
 
-.chart-text {
-  @include H1;
-  font-size: 6px;
-  fill: $purple;
-}
-
-.chart-number {
-  text-anchor: middle;
-  -moz-transform: translateY(-0.25em);
-  -ms-transform: translateY(-0.25em);
-  -webkit-transform: translateY(-0.25em);
-  transform: translateY(-0.25em);
-}
-
-.chart-label {
-  font-size: 4px;
-  text-anchor: middle;
-  -moz-transform: translateY(0.7em);
-  -ms-transform: translateY(0.7em);
-  -webkit-transform: translateY(0.7em);
-  transform: translateY(0.7em);
-}
-
-.donut__segment:hover,
-.donut__segment:hover + .donut__split {
-  stroke-width: 4px;
+  &__segment:hover,
+  &__segment:hover + .chart__split {
+    stroke-width: 4px;
+  }
 }

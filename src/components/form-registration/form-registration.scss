@@ -4,24 +4,25 @@
 @import '../field/field.scss';
 @import '../radio-button/radio-button.scss';
 @import '../toggle/toggle.scss';
+@import '../button//button.scss';
 
 .form-registration {
   @include form;
 
-  .form-registration__title {
+  &__title {
     @include H1;
   }
 
-  .form-registration__sub-title {
+  &__sub-title {
     @include H3;
   }
 
-  .form-registration__section {
+  &__section {
     display: grid;
     grid-row-gap: 8px;
   }
 
-  .form-registration__footer {
+  &__footer {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -29,12 +30,7 @@
     z-index: 0;
   }
 
-  [class^=button] {
-    height: 44px;
-    padding: 8px 24px;
-  }
-
-  p {
+  &__question {
     @include Body;
   }
 }

@@ -12,7 +12,7 @@ mixin chart(data)
               stop(offset="0%" stop-color=item.color1)
               stop(offset="100%" stop-color=item.color2)
           - var percent = Math.round((item.quantity/total)*100)
-          circle(class="donut__segment" 
+          circle(class="chart__segment" 
                 data-test=percent 
                 cx="17" 
                 cy="17" 
@@ -23,7 +23,7 @@ mixin chart(data)
                 stroke-dasharray=`${percent} ${100-percent}`
                 stroke-dashoffset=dashoffset)
             title=`${item.name} ${item.quantity}`
-          circle(class="donut__split" 
+          circle(class="chart__split" 
                   cx="17" 
                   cy="17" 
                   r="15.91549430918954" 
@@ -33,10 +33,10 @@ mixin chart(data)
                   stroke-dasharray="1 99"
                   stroke-dashoffset=dashoffset)
           - dashoffset-= percent
-        g.chart-text
-          text(x="50%" y="50%" class="chart-number")=total
-          text(x="50%" y="50%" class="chart-label") голосов
+        g.chart__text
+          text(x="50%" y="50%" class="chart__text__number")=total
+          text(x="50%" y="50%" class="chart__text__label") голосов
     ul.chart__legend
       each item in data
-        li(class="legend__item" style=`--legend-color: linear-gradient(${item.color1} 0%, ${item.color2} 100%)`)=item.name
+        li(class="chart__legend__item" style=`--legend-color: linear-gradient(${item.color1} 0%, ${item.color2} 100%)`)=item.name
             

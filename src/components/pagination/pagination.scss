@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
 
-  a {
+  &__link {
     font: {
       family: montserrat, arial, sans-serif;
       weight: normal;
@@ -20,13 +20,13 @@
     justify-content: center;
     border-radius: 50%;
 
-    &.current {
+    &_current {
       background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
       color: #fff;
     }
   }
 
-  i.material-icons {
+  &__next {
     width: 40px;
     height: 40px;
     border-radius: 50%;
