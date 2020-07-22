@@ -3,45 +3,6 @@
 @import '../../scss/colors';
 @import '../../scss/sizes';
 
-.datepicker-here {
-  @include Body;
-  padding-left: 15px;
-  box-sizing: border-box;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid $dark-shade-25;
-  outline: none;
-  height: 100%;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    border-color: $dark-shade-50;
-  }
-}
-
-.datepicker__control {
-  position: relative;
-  overflow: hidden;
-  margin-top: 5px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 44px;
-
-  i.material-icons {
-    position: absolute;
-    right: 11px;
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: normal;
-    text-transform: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-}
-
 .datepicker {
   width: 320px;
   padding: 20px;
@@ -55,66 +16,111 @@
   line-height: 15px;
   color: $dark-shade-50;
 
-  .datepicker--nav {
+  &--nav {
     border-bottom: none;
     padding: 0 0 20px 0;
-  }
 
-  .datepicker--content {
-    width: 280px;
-  }
+    &-title,
+    &-title i {
+      @include H2;
+    }
 
-  .datepicker--cell-day {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-  }
-
-  .-in-range- {
-    background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
-    border-radius: 0;
-  }
-
-  .datepicker--cell.-range-to-,
-  .datepicker--cell.-range-from- {
-    border: 1px solid $purple;
-  }
-
-  .datepicker--cell.-range-from-.-selected- {
-    border: none;
-  }
-
-  .datepicker--cell.-range-from-,
-  .datepicker--cell.-range-from-.-current- {
-    background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
-    border-radius: 50% 0 0 50%;
-  }
-
-  .datepicker--cell.-selected-.-range-to- {
-    background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
-    border-radius: 0 50% 50% 0;
-    border: none;
-  }
-
-  .datepicker--cell.-selected- {
-    color: #fff;
-    font-weight: bold;
-    position: relative;
-
-    &::before {
-      content: '';
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
-      position: absolute;
-      z-index: -1;
+    &-action i.material-icons {
+      color: $purple;
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-size: 24px;
     }
   }
 
-  .-current-,
-  .datepicker--cell.-selected-.-current- {
+  &--content {
+    width: 280px;
+  }
+
+  &--day-name {
+    color: $purple;
+    font-weight: bold;
+  }
+
+  &--cell {
+    &-day {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    &.-in-range- {
+      background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
+      border-radius: 0;
+    }
+
+    &.-selected- {
+      color: #fff;
+      font-weight: bold;
+      position: relative;
+      border: 1px solid $purple;
+  
+      &::before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+        position: absolute;
+        z-index: -1;
+      }
+
+      &.-range-from- {
+        border: none;
+        background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
+        border-radius: 50% 0 0 50%;
+      }
+  
+      &.-range-to- {
+        background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
+        border-radius: 0 50% 50% 0;
+        border: none;
+      }
+    }
+  }
+
+  &--buttons {
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    .apply--button {
+      @include H3;
+    
+      color: $purple;
+      cursor: pointer;
+    }
+
+    @media (max-width: 380px) {
+      padding-left: $space-x/2;
+      padding-right: $space-x/2;
+    }
+  }
+
+  &--button {
+    @include H3;
+    color: $dark-shade-50;
+    display: inline-block;
+    height: initial;
+  
+    &:hover {
+      background: none;
+    }
+  }
+
+  &--pointer {
+    display: none;
+  }
+
+  .-current- {
     color: #fff;
     font-weight: bold;
     position: relative;
@@ -129,65 +135,10 @@
       z-index: -1;
     }
   }
-}
 
-.datepicker--nav-title,
-.datepicker--nav-title i {
-  @include H2;
-}
-
-.datepicker--nav-action i.material-icons {
-  color: $purple;
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-size: 24px;
-}
-
-.datepicker--day-name {
-  color: $purple;
-  font-weight: bold;
-}
-
-.datepicker--buttons {
-  border-top: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-
-.datepicker--button {
-  @include H3;
-
-  color: $dark-shade-50;
-  display: inline-block;
-  height: initial;
-
-  &:hover {
-    background: none;
-  }
-}
-
-.apply--button {
-  @include H3;
-
-  color: $purple;
-  cursor: pointer;
-}
-
-.datepicker--pointer {
-  display: none;
-}
-
-@media (max-width: 380px) {
-  .datepicker {
+  @media (max-width: 380px) {
     width: 290px;
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .datepicker--buttons {
-    padding-left: $space-x/2;
-    padding-right: $space-x/2;
   }
 }

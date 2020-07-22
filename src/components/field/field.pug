@@ -1,8 +1,12 @@
-mixin field({mask, type, placeholder, text})
+mixin field({mask, type, placeholder, text, datepicker, readonly})
   .field
     input.field__input(
       class= mask ? "mask js-mask" : ""
+      class= datepicker ? "js-datepicker-here" : ""
       type=type
       placeholder= placeholder
       value=text
+      readonly= readonly
     )
+    if datepicker
+      i.field__icon expand_more

@@ -1,4 +1,4 @@
-@import '../../scss/colors';
+@import '../../scss/colors', '../../scss/fonts';
 
 .like-btn {
   width: 40px;
@@ -29,7 +29,7 @@
       weight: normal;
       size: 10px;
     }
-
+  
     line-height: 12px;
   }
 

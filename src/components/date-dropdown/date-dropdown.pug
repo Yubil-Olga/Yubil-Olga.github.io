@@ -1,11 +1,10 @@
+include ../field/field
+
 mixin date-dropdown(title1, title2)
   .date-dropdown.js-date-dropdown
     label.date-dropdown__title=title1
-      .date-dropdown__control.datepicker__control
-        input.datepicker-here.js-datepicker-here.datepicker-start.js-datepicker-start(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
-        i.material-icons.dropdown-arrow expand_more
+      .date-dropdown__control.js-date-dropdown__arrival
+        +field({type: "text", placeholder: "ДД.ММ.ГГГГ", datepicker: true, readonly: true})
     label.date-dropdown__title=title2
-      .date-dropdown__control.datepicker__control
-        input.datepicker-here.js-datepicker-here.datepicker-end.js-datepicker-end(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
-        i.material-icons.dropdown-arrow expand_more
-        
+      .date-dropdown__control.js-date-dropdown__departure
+        +field({type: "text", placeholder: "ДД.ММ.ГГГГ", datepicker: true, readonly: true})

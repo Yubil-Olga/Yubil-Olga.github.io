@@ -27,22 +27,9 @@ $('.js-datepicker-here').datepicker(
     nextHtml: '<i class="material-icons">arrow_forward</i>',
     onShow(dp, animationCompleted) {
       if (!animationCompleted) {
-        if (dp.$el.parents('.date-dropdown').length > 0) {
-          const start = dp.$el.closest('.date-dropdown').find('.datepicker-start').datepicker().data('datepicker').selectedDates;
-          const end = dp.$el.closest('.date-dropdown').find('.datepicker-end').datepicker().data('datepicker').selectedDates;
-          if (dp.el.classList.contains('datepicker-start')) {
-            dp.$el.closest('.date-dropdown').find('.datepicker-end').datepicker().data('datepicker')
-              .clear();
-            dp.selectDate(end);
-          }
-          if (dp.el.classList.contains('datepicker-end')) {
-            dp.$el.closest('.date-dropdown').find('.datepicker-start').datepicker().data('datepicker')
-              .clear();
-            dp.selectDate(start);
-          }
-        }
         applyButton(dp);
       }
     },
   },
 );
+

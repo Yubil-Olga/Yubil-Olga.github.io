@@ -2,4 +2,8 @@ mixin button({href, text, style, size}={})
   if href
     a(href=href aria-label=text class=`button__style_${style} button__size_${size}`)=text
   else
-    button(type="submit" class=`button__style_${style} button__size_${size}`)=text
+    button(
+      type="submit" 
+      class=`button__style_${style}`
+      class= size ?  `button__size_${size}` : ""
+    )=text

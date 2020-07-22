@@ -11,11 +11,12 @@
   border: 1px solid $dark-shade-25;
   overflow: hidden;
 
-  input {
+  &__input {
     border: none;
     padding: 7px 15px;
     background-color: transparent;
     width: 100%;
+    box-sizing: border-box;
 
     &::placeholder {
       @include Body;
@@ -24,13 +25,14 @@
     }
   }
 
-  .subscription-input__button {
+  &__button {
     width: 44px;
     background-color: #fff;
     border: none;
     cursor: pointer;
 
-    i.material-icons {
+    &:after {
+      content: 'arrow_forward';
       background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
       color: transparent;
       -webkit-background-clip: text;

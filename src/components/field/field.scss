@@ -2,8 +2,10 @@
 @import '../../scss/colors';
 
 .field {
-  display: grid;
   max-width: 320px;
+  display: flex;
+  align-items: center;
+  position: relative;
 
   &__input {
     @include Body;
@@ -12,6 +14,7 @@
     border: 1px solid $dark-shade-25;
     padding: 13px;
     height: 44px;
+    width: 100%;
     box-sizing: border-box;
 
     &::placeholder {
@@ -32,5 +35,16 @@
       box-shadow: 0 0 0 0.5px $dark-shade-50;
       outline: none;
     }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 11px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 24px;
+    cursor: pointer;
   }
 }

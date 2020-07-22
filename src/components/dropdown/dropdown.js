@@ -11,7 +11,7 @@ document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
         title = 'Сколько комнат';
       } else {
         const arr = [];
-        dropdown.querySelectorAll('.menu__option').forEach((el) => {
+        dropdown.querySelectorAll('.js-dropdown__option').forEach((el) => {
           function elementTitle(name, value) {
             let legend = '';
             if (name === 'спальни') {
@@ -43,8 +43,8 @@ document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
             }
             return `${value} ${legend}`;
           }
-          if (el.querySelector('.counter-item').value > 0) {
-            arr.push(elementTitle(el.querySelector('.option__title').textContent, parseInt(el.querySelector('.counter-item').value, 10)));
+          if (el.querySelector('.js-dropdown__counter__input').value > 0) {
+            arr.push(elementTitle(el.querySelector('.dropdown__option__title').textContent, parseInt(el.querySelector('.js-dropdown__counter__input').value, 10)));
           }
           title = arr.join(', ');
         });
@@ -53,9 +53,9 @@ document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
     function guestsTitle() {
       let baby = 0;
       let babyCount = '';
-      dropdown.querySelectorAll('.menu__option').forEach((el) => {
-        if (el.querySelector('.option__title').textContent === 'младенцы') {
-          baby = el.querySelector('.counter-item').value;
+      dropdown.querySelectorAll('.js-dropdown__option').forEach((el) => {
+        if (el.querySelector('.dropdown__option__title').textContent === 'младенцы') {
+          baby = el.querySelector('.js-dropdown__counter__input').value;
         }
       });
       if (baby === '1') {
@@ -101,21 +101,21 @@ document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
     }
   }
   function changeOptions(event) {
-    const item = event.target.closest('.js-menu__option').querySelector('.js-counter-item');
+    const item = event.target.closest('.js-dropdown__option').querySelector('.js-dropdown__counter__input');
     let counter = Number(item.value);
-    if (event.target.className === 'counter__increment' && counter < 4) {
+    if (event.target.className === 'dropdown__counter__increment' && counter < 4) {
       counter += 1;
       totalCounter += 1;
     }
-    if (event.target.className === 'counter__decrement' && counter > 0) {
+    if (event.target.className === 'dropdown__counter__decrement' && counter > 0) {
       counter -= 1;
       totalCounter -= 1;
     }
-    if (totalCounter === 0 && dropdown.querySelectorAll('.js-clean').length > 0) {
-      dropdown.querySelector('.js-clean').style.visibility = 'hidden';
+    if (totalCounter === 0 && dropdown.querySelectorAll('.js-dropdown__clean-btn').length > 0) {
+      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'hidden';
     }
-    if (totalCounter > 0 && dropdown.querySelectorAll('.js-clean').length > 0) {
-      dropdown.querySelector('.js-clean').style.visibility = 'visible';
+    if (totalCounter > 0 && dropdown.querySelectorAll('.js-dropdown__clean-btn').length > 0) {
+      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'visible';
     }
     item.value = counter.toString();
     dropdown.querySelector('.js-dropdown__title').textContent = titleCounter();
@@ -125,25 +125,25 @@ document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
     if (event.target.closest('.js-dropdown__selection')) {
       showDropdown();
     }
-    if (event.target.className.indexOf('js-accept') >= 0) {
+    if (event.target.parentElement.className.indexOf('js-dropdown__accept-btn') >= 0) {
       event.preventDefault();
       showDropdown();
       window.removeEventListener('click', closeDropdown);
     }
-    if (event.target.className.indexOf('js-clean') >= 0) {
+    if (event.target.parentElement.className.indexOf('js-dropdown__clean-btn') >= 0) {
       event.preventDefault();
       totalCounter = 0;
-      dropdown.querySelector('.js-clean').style.visibility = 'hidden';
+      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'hidden';
       dropdown.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, dropdown);
-      dropdown.querySelectorAll('.counter-item').forEach((item) => {
+      dropdown.querySelectorAll('.dropdown__counter__input').forEach((item) => {
         item.value = 0;
       });
     }
-    if (event.target.closest('.js-menu__option')) {
+    if (event.target.closest('.js-dropdown__option')) {
       changeOptions(event);
     }
   }
-  dropdown.querySelectorAll('.js-counter-item').forEach((el) => {
+  dropdown.querySelectorAll('.js-dropdown__counter__input').forEach((el) => {
     totalCounter += Number(el.value);
   });
   dropdown.addEventListener('click', dropdownClicked);

@@ -1,30 +1,35 @@
 @import '../../scss/fonts';
 @import '../../scss/colors';
 @import '../datepicker/datepicker.scss';
+@import '../field/field.scss';
 
 .date-dropdown {
   display: flex;
   position: relative;
   max-width: 320px;
-}
 
-.date-dropdown__title {
-  @include H3;
-  width: 100%;
-
-  &:first-child {
-    margin-right: 20px;
-
-    @media (max-width: 380px) {
-      margin-right: 10px;
+  &__title {
+    @include H3;
+    width: 100%;
+  
+    &:first-child {
+      margin-right: 20px;
+  
+      @media (max-width: 380px) {
+        margin-right: 10px;
+      }
     }
   }
-}
 
-.date-dropdown__control {
-  width: 150px;
-
-  @media (max-width: 380px) {
-    width: unset;
+  &__control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    margin-top: 5px;
+    
+    @media (max-width: 380px) {
+      width: unset;
+    }
   }
 }

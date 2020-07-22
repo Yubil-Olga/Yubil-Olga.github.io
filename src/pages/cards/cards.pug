@@ -7,6 +7,7 @@ include ../../components/card-room/card-room
 
 block variables
   - var pageTitle = 'Cards'
+  - var bglogo = true
   - 
     var rooms = [
     {number: "888", price: "9990", url: "images/room1.png", lux: true, stars: "5", comments: "145"},
@@ -23,8 +24,6 @@ block main
       +form-booking({number: 888, price: 9990, discount: 2179})
     .cards__item
       +form-login
-    .cards__item
-      .calendar
     for room in rooms
       .cards__item
         +card-room(room)

@@ -87,19 +87,21 @@
       color: $purple;
       padding-left: 0;
       padding-right: 0;
+      background: none;
 
       &:hover {
         color: $dark-shade-50;
       }
     }
-  }
 
-  // &_ghost {
-  //   @extend %button;
-  //   color: $dark-shade-50;
-  //   padding-left: 0;
-  //   padding-right: 0;
-  // }
+    &_ghost {
+      @extend %button;
+      color: $dark-shade-50;
+      padding-left: 0;
+      padding-right: 0;
+      background: none;
+    }
+  }
   
   &__size_x {
     padding: 8px 20px;

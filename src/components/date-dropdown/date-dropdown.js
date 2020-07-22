@@ -1,15 +1,15 @@
 import '../datepicker/datepicker';
 
-$('.js-date-dropdown .js-datepicker-here').datepicker(
+$('.js-datepicker-here').datepicker(
   {
     onSelect(fd, d, picker) {
-      const container = picker.$el.closest('.js-date-dropdown');
-      container.find('.js-datepicker-start').val(fd.split('-')[0]);
-      container.find('.js-datepicker-end').val(fd.split('-')[1]);
+      $('.js-date-dropdown__arrival .js-datepicker-here').val(fd.split('-')[0]);
+      $('.js-date-dropdown__departure .js-datepicker-here').val(fd.split('-')[1]);
+
     },
   },
 );
-$('.js-datepicker-end').datepicker(
+$('.js-date-dropdown__departure .js-datepicker-here').datepicker(
   {
     position: 'bottom right',
   },

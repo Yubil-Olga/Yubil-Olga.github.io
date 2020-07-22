@@ -15,6 +15,7 @@ include ../../components/pagination/pagination
 include ../../components/review/review
 include ../../components/bullet-list/bullet-list
 include ../../components/subscription-input/subscription-input
+include ../../components/button/button
 
 block variables
   - var pageTitle = 'Form elements'
@@ -71,42 +72,46 @@ block main
         +checkbox(false, orders)
       .form-elements__item
         h3.form-elements__subtitle Radio buttons
-        +radio-button
+        .form-elements__radio-btn
+          +radio-button
       .form-elements__item
         h3.form-elements__subtitle Toggle
-        +toggle("Получать спецпредложения", true)
-        +toggle("Получать спецпредложения", false)
-      .form-elements__item.grid
+        .form-elements__toggle
+          +toggle("Получать спецпредложения", true)
+        .form-elements__toggle
+          +toggle("Получать спецпредложения", false)
+      .form-elements__item
         h3.form-elements__subtitle Like button
-        .form-elements__grid_col_2
+        .form-elements__like-btn
           +like-btn({count: 2, liked: false})
           +like-btn({count: 12, liked: true})
-      .form-elements__item.grid
+      .form-elements__item
         h3.form-elements__subtitle Rate button
-        .form-elements__grid
+        .form-elements__rate-btn
           +rate-btn(5, 4)
           +rate-btn(5, 5)
     .form-elements__section 
       .form-elements__item
         h3.form-elements__subtitle Range slider
         +range-slider
-      .form-elements__item.grid_gap_10
+      .form-elements__item
         h3.form-elements__subtitle Buttons
-        .form-elements__grid
-          .button click me
-          .button click me
-          .button-wrapper
-            .button_border click me
-          .button-wrapper
-            .button_border click me
-          .button_simple click me
-          .button_ghost click me
-          .button.button_arrow перейти к оплате
-            i.material-icons arrow_forward
-        .form-elements__item.grid_gap_10
-          h3.form-elements__subtitle Pagination
+        .form-elements__buttons
+          +button({text: "click me", style: "gradient", size: "s"})
+          +button({text: "click me", style: "gradient", size: "s"})
+          .form-elements__button_border
+            +button({text: "click me", style: "border", size: "s"})
+          .form-elements__button_border
+            +button({text: "click me", style: "border", size: "s"})
+          +button({text: "click me", style: "ghost", size: "s"})
+          +button({text: "click me", style: "simple", size: "s"})
+          .form-elements__button_arrow
+            +button({text: "перейти к оплате", style: "arrow", size: "s"})
+      .form-elements__item
+        h3.form-elements__subtitle Pagination
+        .form-elements__pagination
           +pagination
-          p.form-elements__description 1 – 12 из 100+ вариантов аренды
+        p.form-elements__description 1 – 12 из 100+ вариантов аренды
     .form-elements__section 
       .form-elements__item
         h3.form-elements__subtitle(data-comment="default") dropdown
@@ -141,8 +146,8 @@ block main
         h3.form-elements__subtitle Bullet list
         +bullet-list
     .form-elements__section
-      .form-elements__item
+      .form-elements__item.form-elements__advantages
         +advantages({title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"})
         +advantages({title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"})
-    .form-elements__section.grid_span_2
+    .form-elements__section.form-elements__review
         +review(comment)

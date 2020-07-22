@@ -3,10 +3,10 @@ mixin rate-btn(total, rating)
     - for (let i=0; i<total; i++)
       label.rate-btn__item
         if rating>i
-          i.material-icons star
+          i.rate-btn__icon star
         else
-          i.material-icons star_border
-        input(type="radio" name="star" value=i+1)
+          i.rate-btn__icon star_border
+        input.rate-btn__input(type="radio" name="star" value=i+1)
 
 
 

@@ -1,12 +1,19 @@
 @import '../../scss/fonts';
 @import '../../scss/colors';
 @import '../datepicker/datepicker.scss';
+@import '../field/field.scss';
 
 .filter-date-dropdown {
   position: relative;
   max-width: 265px;
+
+  &__title {
+    @include H3;
+  }
+
+  &__control {
+    margin-top: 5px;
+  }
 }
 
-.filter-date-dropdown__title {
-  @include H3;
-}
+

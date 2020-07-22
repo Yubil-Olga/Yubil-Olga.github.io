@@ -8,7 +8,8 @@
   position: relative;
   cursor: pointer;
 
-  .dropdown__selection {
+  &__selection {
+    @include Body;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,88 +18,86 @@
     padding: 0 12px;
     height: 44px;
     box-sizing: border-box;
-
-    @include Body;
-
     line-height: 18px;
+  }
 
-    .dropdown__title {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
+  &__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
-    .arrow_direction_bottom {
+    &:after {
+      content: 'expand_more';
       font-family: 'Material Icons';
       font-style: normal;
       font-weight: normal;
       text-transform: none;
       font-size: 24px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
       cursor: pointer;
     }
   }
 
-  .dropdown__menu {
+  &__menu {
     display: none;
   }
-}
 
-.dropdown_room {
-  max-width: 266px;
+  &_room {
+    max-width: 266px;
+  }
 }
 
 .show {
   $border: 1px solid $dark-shade-50;
 
-  .dropdown__selection {
-    border: $border;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .dropdown__menu {
-    @include H3;
-
-    display: block;
-    padding: 5px 5px 0 15px;
-    border-radius: 0 0 4px 4px;
-    border: $border;
-    border-top: none;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #fff;
-    z-index: 10;
-    position: absolute;
-
-    .menu__option {
+  .dropdown {
+    &__selection {
+      border: $border;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  
+    &__menu {
+      @include H3;
+  
+      display: block;
+      padding: 5px 5px 0 15px;
+      border-radius: 0 0 4px 4px;
+      border: $border;
+      border-top: none;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #fff;
+      z-index: 10;
+      position: relative;
+    }
+  
+    &__option {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-bottom: 7px;
-
-      .option__title {
+  
+      &__title {
         @include H3;
       }
-
-      .option__counter {
-        display: flex;
-      }
-
-      input {
+    }
+  
+    &__counter {
+      display: flex;
+  
+      &__input {
         @include H3;
-
+  
         width: 30px;
         border: none;
         text-align: center;
       }
-
+  
       @each $counter in increment, decrement {
-        .counter__#{$counter} {
+        &__#{$counter} {
           width: 30px;
           height: 30px;
           border-radius: 50%;
@@ -109,47 +108,38 @@
           box-sizing: border-box;
         }
       }
-
+  
       @each $counter in increment, decrement {
-        .counter__#{$counter}:before {
+        &__#{$counter}:before {
           font: {
             family: montserrat, arial, sans-serif;
             weight: normal;
             size: 18px;
           }
-
+  
           line-height: 22px;
           color: $dark-shade-50;
         }
       }
-
-      .counter__increment::before {
+  
+      &__increment::before {
         content: '+';
       }
-
-      .counter__decrement::before {
+  
+      &__decrement::before {
         content: '-';
       }
     }
-
-    .menu__control {
+  
+    &__control {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 40px;
+    }
 
-      .clean {
-        color: $dark-shade-50;
-        cursor: pointer;
-        visibility: hidden;
-        background: none;
-      }
-
-      .accept {
-        color: $purple;
-        cursor: pointer;
-        background: none;
-      }
+    &__clean-btn {
+      visibility: hidden;
     }
   }
 }

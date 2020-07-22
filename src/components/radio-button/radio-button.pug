@@ -1,17 +1,17 @@
 mixin radio-button
   .radio-button
-    label Мужчина
-      input(
+    label.radio-button__title Мужчина
+      input.radio-button__input(
         type="radio"
         name="gender"
         value="man"
         checked
       )
-      .checkmark
-    label Женщина
-      input(
+      .radio-button__checkmark
+    label.radio-button__title Женщина
+      input.radio-button__input(
         type="radio"
         name="gender"
         value="woman"
       )
-      .checkmark
+      .radio-button__checkmark

@@ -11,6 +11,11 @@
   margin: 0 auto;
   width: 1220px;
 
+  &__item {
+    margin-bottom: 40px;
+    break-inside: avoid;
+  }
+
   @media (max-width: 1300px) {
     width: unset;
     column-count: 2;
@@ -21,11 +26,6 @@
     column-count: unset;
     display: grid;
     justify-items: center;
-
-    .form {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
   }
 
   @media (max-width: 450px) {
@@ -33,7 +33,4 @@
   }
 }
 
-.cards__item {
-  margin-bottom: 40px;
-  break-inside: avoid;
-}
+

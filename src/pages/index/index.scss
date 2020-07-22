@@ -1,7 +1,7 @@
 @import '../../scss/colors', '../../scss/fonts', '../../components/layout_page/layout_page.scss';
 @import '../../components/form-selection/form-selection.scss';
 
-.landing {
+.index-page {
   width: 100%;
   max-width: $max-width;
   height: 830px;
@@ -13,6 +13,27 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  &__item {
+    width: $content-width;
+    margin: 0 auto;
+  
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 1200px) {
+      width: unset;
+      margin: 0;
+    }
+  }
+
+  &__slogan {
+    @include Body;
+    width: 297px;
+    text-align: right;
+  }
 
   @media (max-width: 1200px) {
     padding-right: $space-x;
@@ -29,26 +50,5 @@
   @media (max-width: 450px) {
     padding-right: $space-x/2;
     padding-left: $space-x/2;
-  }
-}
-
-.landing__item {
-  width: $content-width;
-  margin: 0 auto;
-
-  @media (max-width: 1200px) {
-    width: unset;
-    margin: 0;
-  }
-}
-
-.landing__item:last-child {
-  display: flex;
-  justify-content: flex-end;
-
-  .slogan {
-    @include Body;
-    width: 297px;
-    text-align: right;
   }
 }
