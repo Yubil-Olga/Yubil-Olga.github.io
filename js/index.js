@@ -162,7 +162,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./components/advantages/advantages.scss\": \"./components/advantages/advantages.scss\",\n\t\"./components/bullet-list/bullet-list.scss\": \"./components/bullet-list/bullet-list.scss\",\n\t\"./components/button/button.scss\": \"./components/button/button.scss\",\n\t\"./components/card-room/card-room.scss\": \"./components/card-room/card-room.scss\",\n\t\"./components/chart/chart.scss\": \"./components/chart/chart.scss\",\n\t\"./components/checkbox/checkbox.scss\": \"./components/checkbox/checkbox.scss\",\n\t\"./components/date-dropdown/date-dropdown.js\": \"./components/date-dropdown/date-dropdown.js\",\n\t\"./components/date-dropdown/date-dropdown.scss\": \"./components/date-dropdown/date-dropdown.scss\",\n\t\"./components/datepicker/datepicker.js\": \"./components/datepicker/datepicker.js\",\n\t\"./components/datepicker/datepicker.scss\": \"./components/datepicker/datepicker.scss\",\n\t\"./components/dropdown/dropdown.js\": \"./components/dropdown/dropdown.js\",\n\t\"./components/dropdown/dropdown.scss\": \"./components/dropdown/dropdown.scss\",\n\t\"./components/expandable-checkbox/expandable-checkbox.js\": \"./components/expandable-checkbox/expandable-checkbox.js\",\n\t\"./components/expandable-checkbox/expandable-checkbox.scss\": \"./components/expandable-checkbox/expandable-checkbox.scss\",\n\t\"./components/field/field.js\": \"./components/field/field.js\",\n\t\"./components/field/field.scss\": \"./components/field/field.scss\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.js\": \"./components/filter-date-dropdown/filter-date-dropdown.js\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.scss\": \"./components/filter-date-dropdown/filter-date-dropdown.scss\",\n\t\"./components/footer/footer.scss\": \"./components/footer/footer.scss\",\n\t\"./components/form-booking/form-booking.js\": \"./components/form-booking/form-booking.js\",\n\t\"./components/form-booking/form-booking.scss\": \"./components/form-booking/form-booking.scss\",\n\t\"./components/form-login/form-login.scss\": \"./components/form-login/form-login.scss\",\n\t\"./components/form-registration/form-registration.js\": \"./components/form-registration/form-registration.js\",\n\t\"./components/form-registration/form-registration.scss\": \"./components/form-registration/form-registration.scss\",\n\t\"./components/form-selection/form-selection.js\": \"./components/form-selection/form-selection.js\",\n\t\"./components/form-selection/form-selection.scss\": \"./components/form-selection/form-selection.scss\",\n\t\"./components/header/header.scss\": \"./components/header/header.scss\",\n\t\"./components/layout_base/layout_base.scss\": \"./components/layout_base/layout_base.scss\",\n\t\"./components/layout_page/layout_page.scss\": \"./components/layout_page/layout_page.scss\",\n\t\"./components/like-btn/like-btn.js\": \"./components/like-btn/like-btn.js\",\n\t\"./components/like-btn/like-btn.scss\": \"./components/like-btn/like-btn.scss\",\n\t\"./components/logo/logo.scss\": \"./components/logo/logo.scss\",\n\t\"./components/pagination/pagination.scss\": \"./components/pagination/pagination.scss\",\n\t\"./components/radiobutton/radiobutton.scss\": \"./components/radiobutton/radiobutton.scss\",\n\t\"./components/range-slider/range-slider.js\": \"./components/range-slider/range-slider.js\",\n\t\"./components/range-slider/range-slider.scss\": \"./components/range-slider/range-slider.scss\",\n\t\"./components/rate-btn/rate-btn.js\": \"./components/rate-btn/rate-btn.js\",\n\t\"./components/rate-btn/rate-btn.scss\": \"./components/rate-btn/rate-btn.scss\",\n\t\"./components/review/review.js\": \"./components/review/review.js\",\n\t\"./components/review/review.scss\": \"./components/review/review.scss\",\n\t\"./components/subscription-input/subscription-input.scss\": \"./components/subscription-input/subscription-input.scss\",\n\t\"./components/toggle/toggle.scss\": \"./components/toggle/toggle.scss\",\n\t\"./pages/_colors.scss\": \"./pages/_colors.scss\",\n\t\"./pages/_fonts.scss\": \"./pages/_fonts.scss\",\n\t\"./pages/_mixins.scss\": \"./pages/_mixins.scss\",\n\t\"./pages/_sizes.scss\": \"./pages/_sizes.scss\",\n\t\"./pages/cards/cards.scss\": \"./pages/cards/cards.scss\",\n\t\"./pages/form-elements/form-elements.scss\": \"./pages/form-elements/form-elements.scss\",\n\t\"./pages/headers-footers/headers-footers.scss\": \"./pages/headers-footers/headers-footers.scss\",\n\t\"./pages/index/index.js\": \"./pages/index/index.js\",\n\t\"./pages/index/index.scss\": \"./pages/index/index.scss\",\n\t\"./pages/login/login.scss\": \"./pages/login/login.scss\",\n\t\"./pages/registration/registration.scss\": \"./pages/registration/registration.scss\",\n\t\"./pages/room-details/room-details.scss\": \"./pages/room-details/room-details.scss\",\n\t\"./pages/search-room/search-room.scss\": \"./pages/search-room/search-room.scss\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./ sync recursive \\\\.js$|\\\\.scss$\";\n\n//# sourceURL=webpack:///._sync_\\.js$%7C\\.scss$?");
+eval("var map = {\n\t\"./components/advantages/advantages.scss\": \"./components/advantages/advantages.scss\",\n\t\"./components/bullet-list/bullet-list.scss\": \"./components/bullet-list/bullet-list.scss\",\n\t\"./components/button/button.scss\": \"./components/button/button.scss\",\n\t\"./components/card-room/card-room.scss\": \"./components/card-room/card-room.scss\",\n\t\"./components/chart/chart.scss\": \"./components/chart/chart.scss\",\n\t\"./components/checkbox/checkbox.scss\": \"./components/checkbox/checkbox.scss\",\n\t\"./components/date-dropdown/date-dropdown.js\": \"./components/date-dropdown/date-dropdown.js\",\n\t\"./components/date-dropdown/date-dropdown.scss\": \"./components/date-dropdown/date-dropdown.scss\",\n\t\"./components/datepicker/datepicker.js\": \"./components/datepicker/datepicker.js\",\n\t\"./components/datepicker/datepicker.scss\": \"./components/datepicker/datepicker.scss\",\n\t\"./components/dropdown/dropdown.js\": \"./components/dropdown/dropdown.js\",\n\t\"./components/dropdown/dropdown.scss\": \"./components/dropdown/dropdown.scss\",\n\t\"./components/expandable-checkbox/expandable-checkbox.js\": \"./components/expandable-checkbox/expandable-checkbox.js\",\n\t\"./components/expandable-checkbox/expandable-checkbox.scss\": \"./components/expandable-checkbox/expandable-checkbox.scss\",\n\t\"./components/field/field.js\": \"./components/field/field.js\",\n\t\"./components/field/field.scss\": \"./components/field/field.scss\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.js\": \"./components/filter-date-dropdown/filter-date-dropdown.js\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.scss\": \"./components/filter-date-dropdown/filter-date-dropdown.scss\",\n\t\"./components/footer/footer.scss\": \"./components/footer/footer.scss\",\n\t\"./components/form-booking/form-booking.js\": \"./components/form-booking/form-booking.js\",\n\t\"./components/form-booking/form-booking.scss\": \"./components/form-booking/form-booking.scss\",\n\t\"./components/form-login/form-login.scss\": \"./components/form-login/form-login.scss\",\n\t\"./components/form-registration/form-registration.js\": \"./components/form-registration/form-registration.js\",\n\t\"./components/form-registration/form-registration.scss\": \"./components/form-registration/form-registration.scss\",\n\t\"./components/form-selection/form-selection.js\": \"./components/form-selection/form-selection.js\",\n\t\"./components/form-selection/form-selection.scss\": \"./components/form-selection/form-selection.scss\",\n\t\"./components/header/header.scss\": \"./components/header/header.scss\",\n\t\"./components/layout_base/layout_base.scss\": \"./components/layout_base/layout_base.scss\",\n\t\"./components/layout_page/layout_page.scss\": \"./components/layout_page/layout_page.scss\",\n\t\"./components/like-btn/like-btn.js\": \"./components/like-btn/like-btn.js\",\n\t\"./components/like-btn/like-btn.scss\": \"./components/like-btn/like-btn.scss\",\n\t\"./components/logo/logo.scss\": \"./components/logo/logo.scss\",\n\t\"./components/pagination/pagination.scss\": \"./components/pagination/pagination.scss\",\n\t\"./components/radio-button/radio-button.scss\": \"./components/radio-button/radio-button.scss\",\n\t\"./components/range-slider/range-slider.js\": \"./components/range-slider/range-slider.js\",\n\t\"./components/range-slider/range-slider.scss\": \"./components/range-slider/range-slider.scss\",\n\t\"./components/rate-btn/rate-btn.js\": \"./components/rate-btn/rate-btn.js\",\n\t\"./components/rate-btn/rate-btn.scss\": \"./components/rate-btn/rate-btn.scss\",\n\t\"./components/review/review.js\": \"./components/review/review.js\",\n\t\"./components/review/review.scss\": \"./components/review/review.scss\",\n\t\"./components/subscription-input/subscription-input.scss\": \"./components/subscription-input/subscription-input.scss\",\n\t\"./components/toggle/toggle.scss\": \"./components/toggle/toggle.scss\",\n\t\"./pages/cards/cards.scss\": \"./pages/cards/cards.scss\",\n\t\"./pages/colors-type/colors-type.scss\": \"./pages/colors-type/colors-type.scss\",\n\t\"./pages/form-elements/form-elements.scss\": \"./pages/form-elements/form-elements.scss\",\n\t\"./pages/headers-footers/headers-footers.scss\": \"./pages/headers-footers/headers-footers.scss\",\n\t\"./pages/index/index.js\": \"./pages/index/index.js\",\n\t\"./pages/index/index.scss\": \"./pages/index/index.scss\",\n\t\"./pages/login/login.scss\": \"./pages/login/login.scss\",\n\t\"./pages/registration/registration.scss\": \"./pages/registration/registration.scss\",\n\t\"./pages/room-details/room-details.scss\": \"./pages/room-details/room-details.scss\",\n\t\"./pages/search-room/search-room.scss\": \"./pages/search-room/search-room.scss\",\n\t\"./scss/_colors.scss\": \"./scss/_colors.scss\",\n\t\"./scss/_fonts.scss\": \"./scss/_fonts.scss\",\n\t\"./scss/_mixins.scss\": \"./scss/_mixins.scss\",\n\t\"./scss/_sizes.scss\": \"./scss/_sizes.scss\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./ sync recursive \\\\.js$|\\\\.scss$\";\n\n//# sourceURL=webpack:///._sync_\\.js$%7C\\.scss$?");
 
 /***/ }),
 
@@ -240,7 +240,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _datepicker_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../datepicker/datepicker */ \"./components/datepicker/datepicker.js\");\n\r\n\r\n$('.js-date-dropdown .js-datepicker-here').datepicker(\r\n  {\r\n    onSelect(fd, d, picker) {\r\n      const container = picker.$el.closest('.js-date-dropdown');\r\n      container.find('.js-datepicker-start').val(fd.split('-')[0]);\r\n      container.find('.js-datepicker-end').val(fd.split('-')[1]);\r\n    },\r\n  },\r\n);\r\n$('.js-datepicker-end').datepicker(\r\n  {\r\n    position: 'bottom right',\r\n  },\r\n);\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/date-dropdown/date-dropdown.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _datepicker_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../datepicker/datepicker */ \"./components/datepicker/datepicker.js\");\n\r\n\r\n$('.js-datepicker-here').datepicker(\r\n  {\r\n    onSelect(fd, d, picker) {\r\n      $('.js-date-dropdown__arrival .js-datepicker-here').val(fd.split('-')[0]);\r\n      $('.js-date-dropdown__departure .js-datepicker-here').val(fd.split('-')[1]);\r\n\r\n    },\r\n  },\r\n);\r\n$('.js-date-dropdown__departure .js-datepicker-here').datepicker(\r\n  {\r\n    position: 'bottom right',\r\n  },\r\n);\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/date-dropdown/date-dropdown.js?");
 
 /***/ }),
 
@@ -263,7 +263,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ \"../node_modules/air-datepicker/src/js/air-datepicker.js\");\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(air_datepicker__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nfunction applyButton(dp) {\r\n  function hideBtn() {\r\n    dp.hide();\r\n  }\r\n  if (dp.$datepicker.find('.apply--button').html() === undefined) {\r\n    dp.$datepicker.children('.datepicker--buttons').append('<span class=\"apply--button\">Применить</span></div>');\r\n  }\r\n  dp.$datepicker.find('.apply--button').click(hideBtn);\r\n}\r\n\r\n$('.js-datepicker-here').datepicker(\r\n  {\r\n    showButtonPanel: true,\r\n    clearButton: true,\r\n    range: true,\r\n    toggleSelected: false,\r\n    minDate: new Date(),\r\n    multipleDatesSeparator: ' - ',\r\n    navTitles: {\r\n      days: 'MM <i>yyyy</i>',\r\n      months: 'yyyy',\r\n      years: 'yyyy1 - yyyy2',\r\n    },\r\n    prevHtml: '<i class=\"material-icons\">arrow_back</i>',\r\n    nextHtml: '<i class=\"material-icons\">arrow_forward</i>',\r\n    onShow(dp, animationCompleted) {\r\n      if (!animationCompleted) {\r\n        if (dp.$el.parents('.date-dropdown').length > 0) {\r\n          const start = dp.$el.closest('.date-dropdown').find('.datepicker-start').datepicker().data('datepicker').selectedDates;\r\n          const end = dp.$el.closest('.date-dropdown').find('.datepicker-end').datepicker().data('datepicker').selectedDates;\r\n          if (dp.el.classList.contains('datepicker-start')) {\r\n            dp.$el.closest('.date-dropdown').find('.datepicker-end').datepicker().data('datepicker')\r\n              .clear();\r\n            dp.selectDate(end);\r\n          }\r\n          if (dp.el.classList.contains('datepicker-end')) {\r\n            dp.$el.closest('.date-dropdown').find('.datepicker-start').datepicker().data('datepicker')\r\n              .clear();\r\n            dp.selectDate(start);\r\n          }\r\n        }\r\n        applyButton(dp);\r\n      }\r\n    },\r\n  },\r\n);\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/datepicker/datepicker.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ \"../node_modules/air-datepicker/src/js/air-datepicker.js\");\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(air_datepicker__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nfunction applyButton(dp) {\r\n  function hideBtn() {\r\n    dp.hide();\r\n  }\r\n  if (dp.$datepicker.find('.apply--button').html() === undefined) {\r\n    dp.$datepicker.children('.datepicker--buttons').append('<span class=\"apply--button\">Применить</span></div>');\r\n  }\r\n  dp.$datepicker.find('.apply--button').click(hideBtn);\r\n}\r\n\r\n$('.js-datepicker-here').datepicker(\r\n  {\r\n    showButtonPanel: true,\r\n    clearButton: true,\r\n    range: true,\r\n    toggleSelected: false,\r\n    minDate: new Date(),\r\n    multipleDatesSeparator: ' - ',\r\n    navTitles: {\r\n      days: 'MM <i>yyyy</i>',\r\n      months: 'yyyy',\r\n      years: 'yyyy1 - yyyy2',\r\n    },\r\n    prevHtml: '<i class=\"material-icons\">arrow_back</i>',\r\n    nextHtml: '<i class=\"material-icons\">arrow_forward</i>',\r\n    onShow(dp, animationCompleted) {\r\n      if (!animationCompleted) {\r\n        applyButton(dp);\r\n      }\r\n    },\r\n  },\r\n);\r\n\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/datepicker/datepicker.js?");
 
 /***/ }),
 
@@ -285,7 +285,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.querySelectorAll('.js-dropdown').forEach((dropdown) => {\r\n  let totalCounter = 0;\r\n  function showDropdown() {\r\n    dropdown.classList.toggle('show');\r\n  }\r\n  function titleCounter() {\r\n    let word = '';\r\n    let title = '';\r\n    function roomsTitle() {\r\n      if (totalCounter === 0) {\r\n        title = 'Сколько комнат';\r\n      } else {\r\n        const arr = [];\r\n        dropdown.querySelectorAll('.menu__option').forEach((el) => {\r\n          function elementTitle(name, value) {\r\n            let legend = '';\r\n            if (name === 'спальни') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'спальня';\r\n                  break;\r\n                default:\r\n                  legend = 'спальни';\r\n              }\r\n            }\r\n            if (name === 'кровати') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'кровать';\r\n                  break;\r\n                default:\r\n                  legend = 'кровати';\r\n              }\r\n            }\r\n            if (name === 'ванные комнаты') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'ванная комната';\r\n                  break;\r\n                default:\r\n                  legend = 'ванные комнаты';\r\n              }\r\n            }\r\n            return `${value} ${legend}`;\r\n          }\r\n          if (el.querySelector('.counter-item').value > 0) {\r\n            arr.push(elementTitle(el.querySelector('.option__title').textContent, parseInt(el.querySelector('.counter-item').value, 10)));\r\n          }\r\n          title = arr.join(', ');\r\n        });\r\n      }\r\n    }\r\n    function guestsTitle() {\r\n      let baby = 0;\r\n      let babyCount = '';\r\n      dropdown.querySelectorAll('.menu__option').forEach((el) => {\r\n        if (el.querySelector('.option__title').textContent === 'младенцы') {\r\n          baby = el.querySelector('.counter-item').value;\r\n        }\r\n      });\r\n      if (baby === '1') {\r\n        babyCount = `, ${baby} младенец`;\r\n      }\r\n      if (baby > 1) {\r\n        babyCount = `, ${baby} младенца`;\r\n      }\r\n      title = 'Сколько гостей';\r\n      switch (totalCounter) {\r\n        case 0:\r\n          return title;\r\n        case 1:\r\n          word = 'гость';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n          break;\r\n        case 2:\r\n        case 3:\r\n        case 4:\r\n          word = 'гостя';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n          break;\r\n        default:\r\n          word = 'гостей';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n      }\r\n      return title;\r\n    }\r\n    if (dropdown.querySelector('.dropdown__title').classList.contains('room')) {\r\n      roomsTitle();\r\n    } else {\r\n      guestsTitle();\r\n    }\r\n    return title;\r\n  }\r\n  function closeDropdown(event) {\r\n    function toBeClosed() {\r\n      return (event.target.closest('.js-dropdown') !== dropdown && dropdown.classList.contains('show'));\r\n    }\r\n    if (toBeClosed()) {\r\n      dropdown.classList.remove('show');\r\n      window.removeEventListener('click', closeDropdown);\r\n    }\r\n  }\r\n  function changeOptions(event) {\r\n    const item = event.target.closest('.js-menu__option').querySelector('.js-counter-item');\r\n    let counter = Number(item.value);\r\n    if (event.target.className === 'counter__increment' && counter < 4) {\r\n      counter += 1;\r\n      totalCounter += 1;\r\n    }\r\n    if (event.target.className === 'counter__decrement' && counter > 0) {\r\n      counter -= 1;\r\n      totalCounter -= 1;\r\n    }\r\n    if (totalCounter === 0 && dropdown.querySelectorAll('.js-clean').length > 0) {\r\n      dropdown.querySelector('.js-clean').style.visibility = 'hidden';\r\n    }\r\n    if (totalCounter > 0 && dropdown.querySelectorAll('.js-clean').length > 0) {\r\n      dropdown.querySelector('.js-clean').style.visibility = 'visible';\r\n    }\r\n    item.value = counter.toString();\r\n    dropdown.querySelector('.js-dropdown__title').textContent = titleCounter();\r\n  }\r\n  function dropdownClicked(event) {\r\n    window.addEventListener('click', closeDropdown);\r\n    if (event.target.closest('.js-dropdown__selection')) {\r\n      showDropdown();\r\n    }\r\n    if (event.target.className.indexOf('js-accept') >= 0) {\r\n      event.preventDefault();\r\n      showDropdown();\r\n      window.removeEventListener('click', closeDropdown);\r\n    }\r\n    if (event.target.className.indexOf('js-clean') >= 0) {\r\n      event.preventDefault();\r\n      totalCounter = 0;\r\n      dropdown.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, dropdown);\r\n      dropdown.querySelectorAll('.counter-item').forEach((item) => {\r\n        item.value = 0;\r\n      });\r\n    }\r\n    if (event.target.closest('.js-menu__option')) {\r\n      changeOptions(event);\r\n    }\r\n  }\r\n  dropdown.querySelectorAll('.js-counter-item').forEach((el) => {\r\n    totalCounter += Number(el.value);\r\n  });\r\n  dropdown.addEventListener('click', dropdownClicked);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/dropdown/dropdown.js?");
+eval("document.querySelectorAll('.js-dropdown').forEach((dropdown) => {\r\n  let totalCounter = 0;\r\n  function showDropdown() {\r\n    dropdown.classList.toggle('show');\r\n  }\r\n  function titleCounter() {\r\n    let word = '';\r\n    let title = '';\r\n    function roomsTitle() {\r\n      if (totalCounter === 0) {\r\n        title = 'Сколько комнат';\r\n      } else {\r\n        const arr = [];\r\n        dropdown.querySelectorAll('.js-dropdown__option').forEach((el) => {\r\n          function elementTitle(name, value) {\r\n            let legend = '';\r\n            if (name === 'спальни') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'спальня';\r\n                  break;\r\n                default:\r\n                  legend = 'спальни';\r\n              }\r\n            }\r\n            if (name === 'кровати') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'кровать';\r\n                  break;\r\n                default:\r\n                  legend = 'кровати';\r\n              }\r\n            }\r\n            if (name === 'ванные комнаты') {\r\n              switch (value) {\r\n                case 1:\r\n                  legend = 'ванная комната';\r\n                  break;\r\n                default:\r\n                  legend = 'ванные комнаты';\r\n              }\r\n            }\r\n            return `${value} ${legend}`;\r\n          }\r\n          if (el.querySelector('.js-dropdown__counter__input').value > 0) {\r\n            arr.push(elementTitle(el.querySelector('.dropdown__option__title').textContent, parseInt(el.querySelector('.js-dropdown__counter__input').value, 10)));\r\n          }\r\n          title = arr.join(', ');\r\n        });\r\n      }\r\n    }\r\n    function guestsTitle() {\r\n      let baby = 0;\r\n      let babyCount = '';\r\n      dropdown.querySelectorAll('.js-dropdown__option').forEach((el) => {\r\n        if (el.querySelector('.dropdown__option__title').textContent === 'младенцы') {\r\n          baby = el.querySelector('.js-dropdown__counter__input').value;\r\n        }\r\n      });\r\n      if (baby === '1') {\r\n        babyCount = `, ${baby} младенец`;\r\n      }\r\n      if (baby > 1) {\r\n        babyCount = `, ${baby} младенца`;\r\n      }\r\n      title = 'Сколько гостей';\r\n      switch (totalCounter) {\r\n        case 0:\r\n          return title;\r\n        case 1:\r\n          word = 'гость';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n          break;\r\n        case 2:\r\n        case 3:\r\n        case 4:\r\n          word = 'гостя';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n          break;\r\n        default:\r\n          word = 'гостей';\r\n          title = `${totalCounter} ${word} ${babyCount}`;\r\n      }\r\n      return title;\r\n    }\r\n    if (dropdown.querySelector('.dropdown__title').classList.contains('room')) {\r\n      roomsTitle();\r\n    } else {\r\n      guestsTitle();\r\n    }\r\n    return title;\r\n  }\r\n  function closeDropdown(event) {\r\n    function toBeClosed() {\r\n      return (event.target.closest('.js-dropdown') !== dropdown && dropdown.classList.contains('show'));\r\n    }\r\n    if (toBeClosed()) {\r\n      dropdown.classList.remove('show');\r\n      window.removeEventListener('click', closeDropdown);\r\n    }\r\n  }\r\n  function changeOptions(event) {\r\n    const item = event.target.closest('.js-dropdown__option').querySelector('.js-dropdown__counter__input');\r\n    let counter = Number(item.value);\r\n    if (event.target.className === 'dropdown__counter__increment' && counter < 4) {\r\n      counter += 1;\r\n      totalCounter += 1;\r\n    }\r\n    if (event.target.className === 'dropdown__counter__decrement' && counter > 0) {\r\n      counter -= 1;\r\n      totalCounter -= 1;\r\n    }\r\n    if (totalCounter === 0 && dropdown.querySelectorAll('.js-dropdown__clean-btn').length > 0) {\r\n      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'hidden';\r\n    }\r\n    if (totalCounter > 0 && dropdown.querySelectorAll('.js-dropdown__clean-btn').length > 0) {\r\n      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'visible';\r\n    }\r\n    item.value = counter.toString();\r\n    dropdown.querySelector('.js-dropdown__title').textContent = titleCounter();\r\n  }\r\n  function dropdownClicked(event) {\r\n    window.addEventListener('click', closeDropdown);\r\n    if (event.target.closest('.js-dropdown__selection')) {\r\n      showDropdown();\r\n    }\r\n    if (event.target.parentElement.className.indexOf('js-dropdown__accept-btn') >= 0) {\r\n      event.preventDefault();\r\n      showDropdown();\r\n      window.removeEventListener('click', closeDropdown);\r\n    }\r\n    if (event.target.parentElement.className.indexOf('js-dropdown__clean-btn') >= 0) {\r\n      event.preventDefault();\r\n      totalCounter = 0;\r\n      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'hidden';\r\n      dropdown.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, dropdown);\r\n      dropdown.querySelectorAll('.dropdown__counter__input').forEach((item) => {\r\n        item.value = 0;\r\n      });\r\n    }\r\n    if (event.target.closest('.js-dropdown__option')) {\r\n      changeOptions(event);\r\n    }\r\n  }\r\n  dropdown.querySelectorAll('.js-dropdown__counter__input').forEach((el) => {\r\n    totalCounter += Number(el.value);\r\n  });\r\n  dropdown.addEventListener('click', dropdownClicked);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/dropdown/dropdown.js?");
 
 /***/ }),
 
@@ -307,7 +307,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.querySelectorAll('.js-expandable-checkbox__selection').forEach((el) => {\r\n  function expandCheckbox(event) {\r\n    event.target.closest('.js-expandable-checkbox').classList.toggle('show');\r\n  }\r\n  el.addEventListener('click', expandCheckbox);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/expandable-checkbox/expandable-checkbox.js?");
+eval("document.querySelectorAll('.js-expandable-checkbox__selection').forEach((el) => {\r\n  function expandCheckbox(event) {\r\n    event.target.closest('.js-expandable-checkbox').classList.toggle('expandable-checkbox_open');\r\n  }\r\n  el.addEventListener('click', expandCheckbox);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/expandable-checkbox/expandable-checkbox.js?");
 
 /***/ }),
 
@@ -499,7 +499,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.querySelectorAll('.js-like-btn').forEach((el) => {\r\n  function liked(event) {\r\n    let likes = parseInt(event.currentTarget.getAttribute('data-count'), 10);\r\n    if (event.currentTarget.querySelector('input').checked) {\r\n      likes += 1;\r\n      event.currentTarget.querySelector('.material-icons').textContent = 'favorite';\r\n      event.currentTarget.classList.add('like-btn_active');\r\n    } else {\r\n      likes -= 1;\r\n      event.currentTarget.querySelector('.material-icons').textContent = 'favorite_border';\r\n      event.currentTarget.classList.remove('like-btn_active');\r\n    }\r\n    event.currentTarget.setAttribute('data-count', likes);\r\n  }\r\n  el.addEventListener('change', liked);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/like-btn/like-btn.js?");
+eval("document.querySelectorAll('.js-like-btn').forEach((el) => {\r\n  function liked(event) {\r\n    let likes = parseInt(event.currentTarget.getAttribute('data-count'), 10);\r\n    if (event.currentTarget.querySelector('.like-btn__input').checked) {\r\n      likes += 1;\r\n      event.currentTarget.querySelector('.js-like-btn__icon').textContent = 'favorite';\r\n      event.currentTarget.classList.add('like-btn_active');\r\n    } else {\r\n      likes -= 1;\r\n      event.currentTarget.querySelector('.js-like-btn__icon').textContent = 'favorite_border';\r\n      event.currentTarget.classList.remove('like-btn_active');\r\n    }\r\n    event.currentTarget.setAttribute('data-count', likes);\r\n  }\r\n  el.addEventListener('change', liked);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/like-btn/like-btn.js?");
 
 /***/ }),
 
@@ -536,14 +536,14 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
-/***/ "./components/radiobutton/radiobutton.scss":
-/*!*************************************************!*\
-  !*** ./components/radiobutton/radiobutton.scss ***!
-  \*************************************************/
+/***/ "./components/radio-button/radio-button.scss":
+/*!***************************************************!*\
+  !*** ./components/radio-button/radio-button.scss ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/radiobutton/radiobutton.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/radio-button/radio-button.scss?");
 
 /***/ }),
 
@@ -577,7 +577,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.querySelectorAll('.js-rate-btn').forEach((el) => {\r\n  function star(event) {\r\n    event.currentTarget.querySelectorAll('.material-icons').forEach((e) => {\r\n      e.textContent = 'star_border';\r\n    });\r\n    const rating = event.target.value;\r\n    for (let i = 0; i < rating; i += 1) {\r\n      event.currentTarget.querySelectorAll('.rate-btn__item')[i].querySelector('.material-icons').textContent = 'star';\r\n    }\r\n  }\r\n  el.addEventListener('click', star);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/rate-btn/rate-btn.js?");
+eval("document.querySelectorAll('.js-rate-btn').forEach((el) => {\r\n  function star(event) {\r\n    event.currentTarget.querySelectorAll('.rate-btn__icon').forEach((e) => {\r\n      e.textContent = 'star_border';\r\n    });\r\n    const rating = event.target.value;\r\n    for (let i = 0; i < rating; i += 1) {\r\n      event.currentTarget.querySelectorAll('.rate-btn__item')[i].querySelector('.rate-btn__icon').textContent = 'star';\r\n    }\r\n  }\r\n  el.addEventListener('click', star);\r\n});\r\n\n\n//# sourceURL=webpack:///./components/rate-btn/rate-btn.js?");
 
 /***/ }),
 
@@ -637,50 +637,6 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
-/***/ "./pages/_colors.scss":
-/*!****************************!*\
-  !*** ./pages/_colors.scss ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/_colors.scss?");
-
-/***/ }),
-
-/***/ "./pages/_fonts.scss":
-/*!***************************!*\
-  !*** ./pages/_fonts.scss ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/_fonts.scss?");
-
-/***/ }),
-
-/***/ "./pages/_mixins.scss":
-/*!****************************!*\
-  !*** ./pages/_mixins.scss ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/_mixins.scss?");
-
-/***/ }),
-
-/***/ "./pages/_sizes.scss":
-/*!***************************!*\
-  !*** ./pages/_sizes.scss ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/_sizes.scss?");
-
-/***/ }),
-
 /***/ "./pages/cards/cards.scss":
 /*!********************************!*\
   !*** ./pages/cards/cards.scss ***!
@@ -689,6 +645,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./page
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/cards/cards.scss?");
+
+/***/ }),
+
+/***/ "./pages/colors-type/colors-type.scss":
+/*!********************************************!*\
+  !*** ./pages/colors-type/colors-type.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/colors-type/colors-type.scss?");
 
 /***/ }),
 
@@ -777,6 +744,50 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./page
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./pages/search-room/search-room.scss?");
+
+/***/ }),
+
+/***/ "./scss/_colors.scss":
+/*!***************************!*\
+  !*** ./scss/_colors.scss ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./scss/_colors.scss?");
+
+/***/ }),
+
+/***/ "./scss/_fonts.scss":
+/*!**************************!*\
+  !*** ./scss/_fonts.scss ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./scss/_fonts.scss?");
+
+/***/ }),
+
+/***/ "./scss/_mixins.scss":
+/*!***************************!*\
+  !*** ./scss/_mixins.scss ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./scss/_mixins.scss?");
+
+/***/ }),
+
+/***/ "./scss/_sizes.scss":
+/*!**************************!*\
+  !*** ./scss/_sizes.scss ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./scss/_sizes.scss?");
 
 /***/ })
 
