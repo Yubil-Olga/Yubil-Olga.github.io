@@ -21,13 +21,13 @@
 [ion-rangeslider](http://ionden.com/a/plugins/ion.rangeSlider/)
 
 ### Страницы
-* [Landing page](https://yubil-olga.github.io/Education/)
-* [Sign in](https://yubil-olga.github.io/Education/login)
-* [Registration](https://yubil-olga.github.io/Education/registration)
-* [Room details](https://yubil-olga.github.io/Education/room-details)
-* [Preferences](https://yubil-olga.github.io/Education/search-room.html)
+* [Landing page](https://yubil-olga.github.io/Education/dist)
+* [Sign in](https://yubil-olga.github.io/Education/dist/login)
+* [Registration](https://yubil-olga.github.io/Education/dist/registration)
+* [Room details](https://yubil-olga.github.io/Education/dist/room-details)
+* [Preferences](https://yubil-olga.github.io/Education/dist/search-room.html)
 * UI-kit
-  * [Colors-type](https://yubil-olga.github.io/Education/colors-type)
-  * [Form-elements](https://yubil-olga.github.io/Education/form-elements)
-  * [Cards](https://yubil-olga.github.io/Education/cards)
-  * [Headers&Footers](https://yubil-olga.github.io/Education/headers-footers)
+  * [Colors-type](https://yubil-olga.github.io/Education/dist/colors-type)
+  * [Form-elements](https://yubil-olga.github.io/Education/dist/form-elements)
+  * [Cards](https://yubil-olga.github.io/Education/dist/cards)
+  * [Headers&Footers](https://yubil-olga.github.io/Education/dist/headers-footers)
