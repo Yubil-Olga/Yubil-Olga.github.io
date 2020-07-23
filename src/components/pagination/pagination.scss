@@ -1,8 +1,10 @@
-@import '../../scss/colors';
+@import '../../scss/colors', '../../scss/fonts';
 
 .pagination {
-  display: flex;
-  justify-content: center;
+  &__pages {
+    display: flex;
+    justify-content: center;
+  }
 
   &__link {
     font: {
@@ -38,5 +40,11 @@
     font-size: 24px;
     color: #fff;
     background: linear-gradient(#6fcf97 0%, #66d2ea 100%);
+  }
+
+  &__description {
+    @include Body;
+    text-align: center;
+    padding-top: 10px;
   }
 }

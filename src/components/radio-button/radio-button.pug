@@ -1,17 +1,11 @@
-mixin radio-button
+mixin radio-button(items)
   .radio-button
-    label.radio-button__title Мужчина
-      input.radio-button__input(
-        type="radio"
-        name="gender"
-        value="man"
-        checked
-      )
-      .radio-button__checkmark
-    label.radio-button__title Женщина
-      input.radio-button__input(
-        type="radio"
-        name="gender"
-        value="woman"
-      )
-      .radio-button__checkmark
+    each item in items
+      label.radio-button__title= item.text
+        input.radio-button__input(
+          type="radio"
+          name= item.name
+          value= item.value
+          checked= item.checked
+        )
+        .radio-button__checkmark

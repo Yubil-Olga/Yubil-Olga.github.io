@@ -1,17 +1,19 @@
-mixin pagination
-  ul.pagination
-    li
-      a.pagination__link(href="/mock-address/change-me").pagination__link_current 1
-    li
-      a.pagination__link(href="/mock-address/change-me") 2
-    li
-      a.pagination__link(href="/mock-address/change-me") 3
-    li
-      a.pagination__link(href="/mock-address/change-me") ...
-    li
-      a.pagination__link(href="/mock-address/change-me") 15
-    li
-      a.pagination__link(href="/mock-address/change-me")
-        i.pagination__next arrow_forward
+mixin pagination({currentPage, totalPages, elementsOnPage})
+  .pagination
+    ul.pagination__pages
+      li
+        a.pagination__link(href="/mock-address/change-me").pagination__link_current= currentPage
+      li
+        a.pagination__link(href="/mock-address/change-me")= currentPage + 1
+      li
+        a.pagination__link(href="/mock-address/change-me")= currentPage + 2
+      li
+        a.pagination__link(href="/mock-address/change-me") ...
+      li
+        a.pagination__link(href="/mock-address/change-me")= totalPages
+      li
+        a.pagination__link(href="/mock-address/change-me")
+          i.pagination__next arrow_forward
+    p.pagination__description 1 – #{elementsOnPage} из 100+ вариантов аренды
     
     

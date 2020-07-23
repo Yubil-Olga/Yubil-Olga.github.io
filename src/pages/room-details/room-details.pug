@@ -65,7 +65,11 @@ block main
               +review(comment)
         .room-details__info__item.room-details__rules
           h2.room-details__info__subtitle Правила
-          +bullet-list
+          +bullet-list([
+            "Нельзя с питомцами",
+            "Без вечеринок и мероприятий",
+            "Время прибытия — после 13:00, а выезд до 12:00"
+          ])
         .room-details__info__item
           h2.room-details__info__subtitle Отмена
           p.room-details__info__details

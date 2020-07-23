@@ -73,7 +73,20 @@ block main
       .form-elements__item
         h3.form-elements__subtitle Radio buttons
         .form-elements__radio-btn
-          +radio-button
+          +radio-button([
+            {
+              text: "Мужчина",
+              name: "gender",
+              value: "man",
+              checked: true
+            },
+            {
+              text: "Женщина",
+              name: "gender",
+              value: "woman",
+              checked: false
+            }
+          ])
       .form-elements__item
         h3.form-elements__subtitle Toggle
         .form-elements__toggle
@@ -110,8 +123,7 @@ block main
       .form-elements__item
         h3.form-elements__subtitle Pagination
         .form-elements__pagination
-          +pagination
-        p.form-elements__description 1 – 12 из 100+ вариантов аренды
+          +pagination({currentPage: 1, totalPages: 15, elementsOnPage: 12})
     .form-elements__section 
       .form-elements__item
         h3.form-elements__subtitle(data-comment="default") dropdown
@@ -144,7 +156,11 @@ block main
     .form-elements__section
       .form-elements__item
         h3.form-elements__subtitle Bullet list
-        +bullet-list
+        +bullet-list([
+          "Нельзя с питомцами",
+          "Без вечеринок и мероприятий",
+          "Время прибытия — после 13:00, а выезд до 12:00"
+        ])
     .form-elements__section
       .form-elements__item.form-elements__advantages
         +advantages({title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"})
