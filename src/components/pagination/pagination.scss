@@ -1,4 +1,4 @@
-@import '../../scss/colors', '../../scss/fonts';
+@import '../../scss/vars', '../../scss/fonts', '../../scss/mixins';
 
 .pagination {
   &__pages {
@@ -8,7 +8,7 @@
 
   &__link {
     font: {
-      family: montserrat, arial, sans-serif;
+      family: $default-font;
       weight: normal;
       size: 12px;
     }

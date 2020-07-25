@@ -38,5 +38,5 @@ mixin chart(data)
           text(x="50%" y="50%" class="chart__text__label") голосов
     ul.chart__legend
       each item in data
-        li(class="chart__legend__item" style=`--legend-color: linear-gradient(${item.color1} 0%, ${item.color2} 100%)`)=item.name
+        li(class="chart__item" style=`--legend-color: linear-gradient(${item.color1} 0%, ${item.color2} 100%)`)=item.name
             

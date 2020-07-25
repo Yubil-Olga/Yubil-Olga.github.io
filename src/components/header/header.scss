@@ -1,15 +1,16 @@
 @import '../logo/logo.scss';
 @import '../button/button.scss';
-@import '../../scss/sizes';
-@import '../../scss/colors';
+@import '../../scss/vars';
+@import '../../scss/fonts';
 
 .header {
+  $root: &;
   max-width: $max-width;
   background-color: #fff;
   box-shadow: 0 10px 20px $dark-shade-5;
   padding: 14px 0;
   font: {
-    family: montserrat, arial, sans-serif;
+    family: $default-font;
     weight: normal;
     size: 14px;
   }
@@ -21,6 +22,7 @@
     max-width: $content-width;
     box-sizing: border-box;
     margin: 0 auto;
+    position: relative;
 
     @media (max-width: 1200px) {
       padding: 0 $space-x;
@@ -34,95 +36,76 @@
   &__navigation {
     display: flex;
     align-items: center;
+  }
 
-    &__details {
-      margin-right: 20px;
-      cursor: pointer;
+  &__menu {
+    display: flex;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__menu_active {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 10px 10px $dark-shade-50;
+    z-index: 10;
+
+    #{$root}__item {
+      padding: 10px $space-x;
+      border-bottom: 1px solid $dark-shade-50;
     }
 
-    &__summary {
+    #{$root}__link {
+      @include Body;
       display: flex;
-      color: $dark-shade-50;
-      list-style: none;
+      width: 100%;
+    }
+  }
 
-      &::after {
-        content: 'expand_more';
-        font-family: 'Material Icons';
-        font-size: 24px;
-      }
+  &__details {
+    cursor: pointer;
+  }
 
-      &::-webkit-details-marker {
-        display: none;
-      }
+  &__details[open] &__summary::after {
+    content: 'expand_less';
+  }
+
+  &__summary {
+    display: flex;
+    color: $dark-shade-50;
+    list-style: none;
+    outline: none;
+
+    &::after {
+      content: 'expand_more';
+      font-family: 'Material Icons';
+      font-size: 24px;
     }
 
-    &__details[open] &__summary::after {
-      content: 'expand_less';
+    &::-webkit-details-marker {
+      display: none;
     }
+  }
 
-    &__list {
-      display: flex;
-
-      @media (max-width: 900px) {
-        display: none;
-      }
-    }
-
-    &__link {
-      color: $dark-shade-50;
-      margin-right: $space-x;
-    }
-
-    &__toolbar {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-gap: 20px;
-      z-index: 0;
-    }
-
-    &__user {
-      border-left: 1px solid rgba($dark-shade, 0.1);
-      padding-left: 30px;
-    }
+  &__link {
+    color: $dark-shade-50;
+    margin-right: 20px;
   }
 
   &__burger {
     display: none;
     cursor: pointer;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: $dark-shade-75;
 
-    &__toggle {
-      font-family: 'Material Icons';
-      font-size: 24px;
-      color: $dark-shade-75;
-      list-style: none;
-
-      &::-webkit-details-marker {
-        display: none;
-      }
-    }
-
-    &__list {
-      position: absolute;
-      left: 0;
-      top: 60px;
-      width: 100%;
-      background-color: #fff;
-      z-index: 10;
-      box-shadow: 0 10px 10px $dark-shade-50;
-    }
-
-    &__item {
-      padding: 10px $space-x;
-      border-bottom: 1px solid $dark-shade-50;
-    }
-
-    &__link {
-      @include Body;
-      display: flex;
-      width: 100%;
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       display: block;
       order: 3;
       margin-left: 20px;
@@ -131,6 +114,18 @@
     @media (max-width: 440px) {
       margin-left: 0;
     }
+  }
+
+  &__toolbar {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    z-index: 0;
+  }
+
+  &__user {
+    border-left: 1px solid rgba($dark-shade, 0.1);
+    padding-left: 30px;
   }
   
   &__sign-up-btn {

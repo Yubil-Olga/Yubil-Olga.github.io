@@ -1,0 +1,15 @@
+$default-font: montserrat, arial, sans-serif;
+$max-width: 1920px;
+$content-width: 1160px;
+$space-x: 30px;
+$space-y: 70px;
+$border-space: 140px;
+$purple: #bc9cff;
+$green: #6fcf97;
+$dark-shade: #1f2041;
+$dark-shade-5: rgba($dark-shade, 0.05);
+$dark-shade-25: rgba($dark-shade, 0.25);
+$dark-shade-50: rgba($dark-shade, 0.5);
+$dark-shade-75: rgba($dark-shade, 0.75);
+$color: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+$color-ghost: linear-gradient(180deg, transparentize($purple, 0.5) 0%, transparentize(#8ba4f9, 0.5) 100%);

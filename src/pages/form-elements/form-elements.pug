@@ -1,4 +1,4 @@
-extends ../../components/layout_base/layout_base
+extends ../../components/layout-base/layout-base
 include ../../components/like-btn/like-btn
 include ../../components/advantages/advantages
 include ../../components/field/field
@@ -54,7 +54,7 @@ block main
             +field({mask: false, type: "text", text: "This is pretty awesome"})
           .form-elements__item
             h3.form-elements__subtitle(data-comment="default") Dropdown
-            +dropdown({show: false, title: ""}, ["man", "child", "baby"])
+            +dropdown({show: false, title: "Сколько гостей", controlBtn: true}, ["man", "child", "baby"])
           .form-elements__item
             h3.form-elements__subtitle(data-comment="default") masked text field
             +field({mask: true, placeholder: "ДД.ММ.ГГГГ"})
@@ -127,16 +127,16 @@ block main
     .form-elements__section 
       .form-elements__item
         h3.form-elements__subtitle(data-comment="default") dropdown
-        +dropdown({show: false, title: "room"}, ["спальни", "кровати", "ванные комнаты"])
+        +dropdown({show: false, title: "Сколько комнат", type: "room"}, ["спальни", "кровати", "ванные комнаты"])
       .form-elements__item
         h3.form-elements__subtitle(data-comment="expanded") dropdown
-        +dropdown({show: true, title: "room"}, ["спальни", "кровати", "ванные комнаты"])
+        +dropdown({show: true, title: "Сколько комнат", type: "room"}, ["спальни", "кровати", "ванные комнаты"])
     .form-elements__section
       .form-elements__item
-        +dropdown({show: true, title: ""}, ["взрослые", "дети", "младенцы"])
+        +dropdown({show: true, title: "Сколько гостей", controlBtn: true}, ["взрослые", "дети", "младенцы"])
     .form-elements__section
       .form-elements__item
-        +dropdown({show: true, title: ""}, ["взрослые", "дети", "младенцы"])
+        +dropdown({show: true, title: "Сколько гостей", controlBtn: true}, ["взрослые", "дети", "младенцы"])
     .form-elements__section
       .form-elements__item
         +expandable-checkbox("expandable-checkbox-list", [])

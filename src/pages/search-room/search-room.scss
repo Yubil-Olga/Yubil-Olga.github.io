@@ -1,4 +1,4 @@
-@import '../../scss/colors', '../../scss/fonts', '../../components/layout_page/layout_page.scss';
+@import '../../scss/vars', '../../scss/mixins', '../../components/layout-page/layout-page.scss';
 @import '../../components/filter-date-dropdown/filter-date-dropdown.scss';
 @import '../../components/dropdown/dropdown.scss';
 @import '../../components/range-slider/range-slider.scss';
@@ -32,7 +32,7 @@
 
     &__comment {
       font: {
-        family: Montserrat;
+        family: $default-font;
         weight: normal;
         size: 12px;
       }

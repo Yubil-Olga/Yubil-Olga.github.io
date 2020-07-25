@@ -1,7 +1,8 @@
 @import '../../scss/fonts';
-@import '../../scss/colors';
+@import '../../scss/vars';
+@import '../../scss/mixins';
 
-%button {
+.button {
   @include H3;
   border-radius: 22px;
   cursor: pointer;
@@ -14,15 +15,9 @@
   &:focus {
     outline: none;
   }
-}
 
-.button {
-  $color: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
-  $color-ghost: linear-gradient(180deg, transparentize($purple, 0.5) 0%, transparentize(#8ba4f9, 0.5) 100%);
-
-  &__style {
+  &_with {
     &_gradient {
-      @extend %button;
       color: #fff;
       background: $color;
       
@@ -32,7 +27,6 @@
     }
 
     &_border {
-      @extend %button;
       color: $purple;
       background-color: #fff;
       border: 2px solid transparent;
@@ -58,7 +52,6 @@
     }
 
     &_arrow {
-      @extend %button;
       background: $color;
       width: 100%;
       max-width: 320px;
@@ -83,7 +76,6 @@
     }
 
     &_simple {
-      @extend %button;
       color: $purple;
       padding-left: 0;
       padding-right: 0;
@@ -95,7 +87,6 @@
     }
 
     &_ghost {
-      @extend %button;
       color: $dark-shade-50;
       padding-left: 0;
       padding-right: 0;
@@ -103,12 +94,12 @@
     }
   }
   
-  &__size_x {
+  &_size_x {
     padding: 8px 20px;
     height: 100%;
   }
 
-  &__size_m {
+  &_size_m {
     padding: 12px 24px;
     height: 44px;
   }

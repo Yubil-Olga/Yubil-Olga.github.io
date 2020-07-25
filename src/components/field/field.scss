@@ -1,5 +1,6 @@
 @import '../../scss/fonts';
-@import '../../scss/colors';
+@import '../../scss/vars';
+@import '../../scss/mixins';
 
 .field {
   max-width: 320px;
@@ -19,7 +20,7 @@
 
     &::placeholder {
       font: {
-        family: montserrat, arial, sans-serif;
+        family: $default-font;
         weight: normal;
         size: 14px;
       }

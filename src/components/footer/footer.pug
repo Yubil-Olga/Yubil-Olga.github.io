@@ -3,7 +3,7 @@ include ../subscription-input/subscription-input
  
 mixin footer({creative, slogan, formTitle, formDescription, copyright}, items)
   footer.footer(class=creative ? "footer_creative" : "")
-    section.footer__navigation
+    section.footer__main
       section.footer__section
         .footer__logo
           +logo
@@ -12,10 +12,10 @@ mixin footer({creative, slogan, formTitle, formDescription, copyright}, items)
         each item in items
           section.footer__section
             h3.footer__subtitle=item.title
-            ul.footer__navigation__group
+            ul.footer__navigation
               each link in item.list
-                li.footer__navigation__item
-                  a.footer__navigation__link(href="/mock-address/change-me")=link
+                li.footer__navigation-item
+                  a.footer__link(href="/mock-address/change-me")=link
         form.footer__section
           h3.footer__subtitle=formTitle
           p.footer__description=formDescription
@@ -26,6 +26,6 @@ mixin footer({creative, slogan, formTitle, formDescription, copyright}, items)
         unless creative
           p.footer__copyright=copyright
         .footer__social
-          a(href="https://twitter.com/" rel="noopener noreferrer" target="_blank").footer__social__icon.footer__social__icon_twitter
-          a(href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank").footer__social__icon.footer__social__icon_fb
-          a(href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank").footer__social__icon.footer__social__icon_instagram   
+          a(href="https://twitter.com/" rel="noopener noreferrer" target="_blank").footer__social-link.footer__social-link_theme_twitter
+          a(href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank").footer__social-link.footer__social-link_theme_fb
+          a(href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank").footer__social-link.footer__social-link_theme_instagram

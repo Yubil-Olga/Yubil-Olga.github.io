@@ -1,4 +1,5 @@
-@import './sizes';
+@import './vars';
+@import './fonts';
 
 @mixin container {
   width: 100%;
@@ -34,4 +35,50 @@
     padding-right: $space-x/2;
     width: 320px;
   }
+}
+
+@mixin H1 {
+  font: {
+    family: quicksand, arial, sans-serif;
+    weight: bold;
+    size: 24px;
+  }
+
+  line-height: 30px;
+  color: $dark-shade;
+}
+
+@mixin H2 {
+  font: {
+    family: quicksand, arial, sans-serif;
+    weight: bold;
+    size: 19px;
+  }
+
+  line-height: 24px;
+  color: $dark-shade;
+}
+
+@mixin H3 {
+  font: {
+    family: montserrat, arial, sans-serif;
+    weight: bold;
+    size: 12px;
+  }
+
+  line-height: 15px;
+  color: $dark-shade;
+  text-transform: uppercase;
+}
+
+@mixin Body {
+  font: {
+    family: montserrat, arial, sans-serif;
+    weight: normal;
+    size: 14px;
+  }
+
+  line-height: 24px;
+  color: $dark-shade-75;
+  text-transform: none;
 }

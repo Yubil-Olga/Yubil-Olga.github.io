@@ -1,20 +1,22 @@
 @import '../../scss/fonts';
-@import '../../scss/colors';
+@import '../../scss/vars';
 @import '../button/button.scss';
 
 .dropdown {
   width: 100%;
   max-width: 320px;
+  height: 44px;
+  overflow: hidden;
   position: relative;
   cursor: pointer;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
 
   &__selection {
     @include Body;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid $dark-shade-25;
-    border-radius: 4px;
     padding: 0 12px;
     height: 44px;
     box-sizing: border-box;
@@ -40,106 +42,86 @@
     }
   }
 
+  &_active {
+    height: unset;
+    border-color: $dark-shade-50;
+  }
+
   &__menu {
-    display: none;
+    @include H3;
+
+    display: block;
+    padding: 5px 5px 0 15px;
+    border-top: 1px solid $dark-shade-50;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 10;
+    position: relative;
   }
 
-  &_room {
-    max-width: 266px;
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 7px;
   }
-}
 
-.show {
-  $border: 1px solid $dark-shade-50;
+  &__option-name {
+    @include H3;
+  }
 
-  .dropdown {
-    &__selection {
-      border: $border;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  
-    &__menu {
-      @include H3;
-  
-      display: block;
-      padding: 5px 5px 0 15px;
-      border-radius: 0 0 4px 4px;
-      border: $border;
-      border-top: none;
-      width: 100%;
-      box-sizing: border-box;
-      background-color: #fff;
-      z-index: 10;
-      position: relative;
-    }
-  
-    &__option {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 7px;
-  
-      &__title {
-        @include H3;
-      }
-    }
-  
-    &__counter {
-      display: flex;
-  
-      &__input {
-        @include H3;
-  
-        width: 30px;
-        border: none;
-        text-align: center;
-      }
-  
-      @each $counter in increment, decrement {
-        &__#{$counter} {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          border: 1px solid $dark-shade-50;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          box-sizing: border-box;
-        }
-      }
-  
-      @each $counter in increment, decrement {
-        &__#{$counter}:before {
-          font: {
-            family: montserrat, arial, sans-serif;
-            weight: normal;
-            size: 18px;
-          }
-  
-          line-height: 22px;
-          color: $dark-shade-50;
-        }
-      }
-  
-      &__increment::before {
-        content: '+';
-      }
-  
-      &__decrement::before {
-        content: '-';
-      }
-    }
-  
-    &__control {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 40px;
-    }
+  &__counter {
+    display: flex;
+  }
 
-    &__clean-btn {
-      visibility: hidden;
+  &__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $dark-shade-50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    &:before {
+      font: {
+        family: $default-font;
+        weight: normal;
+        size: 18px;
+      }
+
+      line-height: 22px;
+      color: $dark-shade-50;
     }
+  }
+
+  &__btn-plus::before {
+    content: '+';
+  }
+
+  &__btn-minus::before {
+    content: '-';
+  }
+
+  &__input {
+    @include H3;
+
+    width: 30px;
+    border: none;
+    text-align: center;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  }
+
+  &__clean-btn {
+    visibility: hidden;
   }
 }
+

@@ -1,5 +1,5 @@
-@import '../../scss/fonts';
-@import '../../scss/colors';
+@import '../../scss/mixins';
+@import '../../scss/vars';
 
 .radio-button {
   @include Body;

@@ -1,6 +1,5 @@
 @import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
-@import '../../scss/fonts';
-@import '../../scss/colors';
+@import '../../scss/vars', '../../scss/fonts';
 
 .irs--flat {
   width: 266px;
@@ -50,7 +49,7 @@
     line-height: 0;
     top: -10px;
     font: {
-      family: montserrat, arial, sans-serif;
+      family: $default-font;
       weight: normal;
       size: 12px;
     }

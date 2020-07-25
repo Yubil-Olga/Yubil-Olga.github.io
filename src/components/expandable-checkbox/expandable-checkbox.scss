@@ -1,5 +1,5 @@
 @import '../checkbox/checkbox.scss';
-@import '../../scss/fonts';
+@import '../../scss/fonts', '../../scss/mixins';
 
 .expandable-checkbox {
   max-width: 266px;
@@ -29,7 +29,7 @@
     display: none;
   }
 
-  &_open {
+  &_active {
     .expandable-checkbox__button {
       transform: rotate(180deg);
     }

@@ -1,5 +1,6 @@
 @import '../../scss/fonts';
-@import '../../scss/colors';
+@import '../../scss/vars';
+@import '../../scss/mixins';
 
 .subscription-input {
   display: flex;

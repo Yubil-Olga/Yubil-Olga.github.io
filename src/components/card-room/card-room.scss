@@ -1,5 +1,6 @@
-@import '../../scss/colors';
 @import '../../scss/fonts';
+@import '../../scss/vars';
+@import '../../scss/mixins';
 @import '../rate-btn/rate-btn.scss';
 
 .card-room {
@@ -41,7 +42,7 @@
     margin-left: 4px;
     box-sizing: border-box;
 
-    &_fill {
+    &_active {
       background-color: #fff;
     }
   }
@@ -60,17 +61,17 @@
     background:
       linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 15.99%, rgba(255, 255, 255, 0) 16%),
       linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 15.99%, rgba(255, 255, 255, 0) 16%);
+  }
 
-    &__arrow {
-      font-family: 'Material Icons';
-      font-style: normal;
-      font-size: 24px;
-      color: #fff;
-      transform: rotate(-90deg);
+  &__slider-arrow {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-size: 24px;
+    color: #fff;
+    transform: rotate(-90deg);
 
-      &:first-child {
-        transform: rotate(90deg);
-      }
+    &:first-child {
+      transform: rotate(90deg);
     }
   }
 
@@ -104,7 +105,7 @@
 
   &__price {
     font: {
-      family: montserrat, arial, sans-serif;
+      family: $default-font; 
       weight: bold;
       size: 14px;
     }
@@ -127,7 +128,7 @@
 
   &__comments {
     font: {
-      family: montserrat, arial, sans-serif;
+      family: $default-font;
       weight: bold;
       size: 14px;
     }

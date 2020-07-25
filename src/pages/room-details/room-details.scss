@@ -1,9 +1,11 @@
-@import '../../components/layout_page/layout_page.scss';
+@import '../../components/layout-page/layout-page.scss';
 @import '../../components/form-booking/form-booking.scss';
 @import '../../components/advantages/advantages.scss';
 @import '../../components/bullet-list/bullet-list.scss';
 @import '../../components/review/review.scss';
 @import '../../components/chart/chart.scss';
+@import '../../scss/vars';
+@import '../../scss/mixins';
 
 .room-details {
   max-width: $max-width;

@@ -1,4 +1,4 @@
-extends ../../components/layout_page/layout_page
+extends ../../components/layout-page/layout-page
 include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
@@ -44,7 +44,7 @@ block main
         +filter-date-dropdown("даты пребывания в отеле")
       .search-room__filter__item
         h3.search-room__filter__title гости
-        +dropdown({show: false, title: ""}, ["взрослые", "дети", "младенцы"])
+        +dropdown({show: false, title: "Сколько гостей", controlBtn: true}, ["взрослые", "дети", "младенцы"])
       .search-room__filter__item.search-room__filter__indent_top
         h3.search-room__filter__title диапазон цены
         +range-slider
@@ -57,7 +57,7 @@ block main
         +checkbox(true, accessibility)
       .search-room__filter__item
         h3.search-room__filter__title удобства номера
-        +dropdown({show: false, title: "room"}, ["спальни", "кровати", "ванные комнаты"])
+        +dropdown({show: false, title: "Сколько комнат", type: "room"}, ["спальни", "кровати", "ванные комнаты"])
       .search-room__filter__item
         +expandable-checkbox("дополнительные удобства", comfort)    
     .search-room__result

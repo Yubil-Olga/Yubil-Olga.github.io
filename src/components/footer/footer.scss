@@ -1,5 +1,6 @@
-@import '../../scss/sizes';
-@import '../../scss/colors';
+@import '../../scss/vars';
+@import '../../scss/fonts';
+@import '../../scss/mixins';
 @import '../logo/logo.scss';
 @import '../subscription-input/subscription-input.scss';
 
@@ -15,7 +16,7 @@
     }
   }
   
-  &__navigation {
+  &__main {
     max-width: $content-width;
     box-sizing: border-box;
     margin: 0 auto;
@@ -25,23 +26,23 @@
     grid-gap: 40px;
     justify-items: center;
 
-    &__group {
-      @include Body;
-      line-height: 17px;
-    }
-
-    &__item {
-      padding-bottom: 20px;
-    }
-
-    &__link {
-      color: $dark-shade-50;
-    }
-
     @media (max-width: 1300px) {
       grid-template-columns: 1fr;
       padding-bottom: 0;
     }
+  }
+
+  &__navigation {
+    @include Body;
+    line-height: 17px;
+  }
+
+  &__navigation-item {
+    padding-bottom: 20px;
+  }
+
+  &__link {
+    color: $dark-shade-50;
   }
 
   &__section {
@@ -109,22 +110,25 @@
 
   &__social {
     display: flex;
-    &__icon {
-      width: 24px;
-      height: 24px;
+  }
 
-      &:not(:first-child) {
-        margin-left: 20px;
-      }
+  &__social-link {
+    width: 24px;
+    height: 24px;
 
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    &_theme {
       &_twitter {
         background: url(./img/twitter.svg) center no-repeat;
       }
-
+  
       &_fb {
         background: url(./img/fb.svg) center no-repeat;
       }
-
+  
       &_instagram {
         background: url(./img/instagram.svg) center no-repeat;
       }

@@ -1,14 +1,14 @@
 @import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import '../../scss/fonts';
-@import '../../scss/colors';
-@import '../../scss/sizes';
+@import '../../scss/vars';
+@import '../../scss/mixins';
 
 .datepicker {
   width: 320px;
   padding: 20px;
   box-sizing: border-box;
   font: {
-    family: montserrat, arial, sans-serif;
+    family: $default-font;
     weight: normal;
     size: 12px;
   }

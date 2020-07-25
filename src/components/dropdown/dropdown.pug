@@ -1,22 +1,19 @@
 include ../field/field
 include ../button/button
 
-mixin dropdown({show, title}, items)
-  .dropdown.js-dropdown(class=show ? "show": "", class= (title == "room" ? "dropdown_room" : ""))
+mixin dropdown({show, title, type, controlBtn = false}, items)
+  .dropdown.js-dropdown(class=show ? "dropdown_active": "", class= (type == "room" ? "dropdown_type_room" : ""))
     .dropdown__selection.js-dropdown__selection
-      if title == "room"
-        p.dropdown__title.js-dropdown__title.room Сколько комнат
-      else
-        p.dropdown__title.js-dropdown__title Сколько гостей
+      p.dropdown__title.js-dropdown__title= title
     .dropdown__menu
       each item in items
         .dropdown__option.js-dropdown__option
-          h3.dropdown__option__title=item
+          h3.dropdown__option-name=item
           .dropdown__counter
-            .dropdown__counter__decrement
-            input.dropdown__counter__input.js-dropdown__counter__input(value="0" readonly name=item)
-            .dropdown__counter__increment
-      unless title == "room"
+            .dropdown__btn.dropdown__btn-minus
+            input.dropdown__input.js-dropdown__input(value="0" readonly name=item)
+            .dropdown__btn.dropdown__btn-plus
+      if controlBtn
         .dropdown__control
           .dropdown__clean-btn.js-dropdown__clean-btn 
             +button({text: "очистить", style: "ghost"})

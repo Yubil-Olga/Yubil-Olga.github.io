@@ -6,27 +6,18 @@ mixin header({auth, lang}, items)
     .header__wrapper
       +logo
       nav.header__navigation
-        ul.header__navigation__list
+        ul.header__menu
           each item in items
-            li
+            li.header__item
               if item.expanded
-                details.header__navigation__details
-                  summary.header__navigation__summary=item.name
+                details.header__details
+                  summary.header__summary.header__link=item.name
               else 
-                a(href=item.href).header__navigation__link=item.name
-        details.header__burger
-          summary.header__burger__toggle menu
-          ul.header__burger__list
-            each item in items
-              li.header__burger__item
-                if item.expanded
-                  details.header__navigation__details
-                    summary.header__navigation__summary.header__burger__link=item.name
-                else 
-                  a(href=item.href).header__burger__link=item.name
-        .header__navigation__toolbar
+                a(href=item.href).header__link=item.name
+        .header__burger menu
+        .header__toolbar
           if auth
-            .header__navigation__user=user
+            .header__user=user
           else 
             .header__sign-in-btn
               +button({
