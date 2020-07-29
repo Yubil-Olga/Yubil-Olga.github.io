@@ -2,7 +2,7 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 include ../button/button
 
-mixin form-booking({number, price, discount}) 
+mixin form-booking({number, price, discount, serviceCharge, additionalServiceCharge, days}) 
   form.form-booking
     header.form-booking__header
       h2.form-booking__room-number=number
@@ -15,17 +15,17 @@ mixin form-booking({number, price, discount})
       +dropdown({show: false, title: "Сколько гостей", controlBtn: true}, ["взрослые", "дети", "младенцы"])
     .form-booking__order-details
       .form-booking__order-item
-        span.form-booking__item-title #{price} ₽ х 4 суток
-        .form-booking__item-price 39 960
+        span.form-booking__item-title #{price} ₽ х #{days} суток
+        .form-booking__item-price #{price * days} ₽
       .form-booking__order-item
         span.form-booking__item-title.form-booking__item-title_with-info Сбор за услуги: скидка #{discount} ₽
-        .form-booking__item-price 0
+        .form-booking__item-price #{serviceCharge} ₽
       .form-booking__order-item
         span.form-booking__item-title.form-booking__item-title_with-info Сбор за дополнительные услуги
-        .form-booking__item-price 300
+        .form-booking__item-price #{additionalServiceCharge} ₽
       .form-booking__total
         .form-booking__total-name Итого
         .form-booking__total-dots
-        .form-booking__total-price 38 081₽
+        .form-booking__total-price #{(price * days) + serviceCharge + additionalServiceCharge - discount}₽
     .form-booking__book-button
       +button({text: "забронировать", style: "arrow", size: "m"})

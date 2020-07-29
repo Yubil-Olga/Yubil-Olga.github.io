@@ -8,7 +8,7 @@ mixin form-registration
     h1.form-registration__title Регистрация аккаунта
     .form-registration__section
       +field({mask: false, type: "text", placeholder: "Имя"})
-      +field({mask: false, yupe: "text", placeholder: "Фамилия"})
+      +field({mask: false, type: "text", placeholder: "Фамилия"})
       +radio-button([
         {
           text: "Мужчина",

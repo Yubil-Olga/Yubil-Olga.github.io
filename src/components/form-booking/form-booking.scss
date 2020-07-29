@@ -58,10 +58,6 @@
     padding-bottom: 10px;
   }
 
-  &__item-price::after {
-    content: ' ₽';
-  }
-
   &__item-title {
     max-width: 214px;
     position: relative;
