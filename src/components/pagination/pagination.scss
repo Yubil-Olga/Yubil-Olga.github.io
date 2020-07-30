@@ -7,12 +7,7 @@
   }
 
   &__link {
-    font: {
-      family: $default-font;
-      weight: normal;
-      size: 12px;
-    }
-
+    font-size: 12px;
     line-height: 14px;
     color: $dark-shade-50;
     width: 40px;
@@ -29,14 +24,13 @@
   }
 
   &__next {
+    @include Icon;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     text-align: center;
     padding: 13px 0;
     box-sizing: border-box;
-    font-family: 'Material Icons';
-    font-style: normal;
     font-size: 24px;
     color: #fff;
     background: linear-gradient(#6fcf97 0%, #66d2ea 100%);

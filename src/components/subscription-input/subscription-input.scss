@@ -34,15 +34,12 @@
 
     &:after {
       content: 'arrow_forward';
+      @include Icon;
+      font-size: 24px;
       background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
       color: transparent;
+      background-clip: text;
       -webkit-background-clip: text;
-      font: {
-        family: 'Material Icons';
-        weight: normal;
-        size: 24px;
-        style: normal;
-      }
     }
   }
 }

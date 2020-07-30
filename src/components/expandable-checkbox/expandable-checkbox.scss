@@ -1,5 +1,5 @@
 @import '../checkbox/checkbox.scss';
-@import '../../scss/fonts', '../../scss/mixins';
+@import '../../scss/mixins';
 
 .expandable-checkbox {
   max-width: 266px;
@@ -19,8 +19,7 @@
 
   &__button {
     cursor: pointer;
-    font-family: 'Material Icons';
-    font-style: normal;
+    @include Icon;
     font-size: 24px;
     color: $dark-shade-50;
   }

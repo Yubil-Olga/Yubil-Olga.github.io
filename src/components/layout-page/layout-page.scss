@@ -1,4 +1,8 @@
+@import '../../scss/fonts', '../../scss/vars';
+
 .layout_page {
+  font-family: $montserrat;
+  font-size: 14px;
   max-width: 1920px;
   min-width: 320px;
   margin: 0 auto;

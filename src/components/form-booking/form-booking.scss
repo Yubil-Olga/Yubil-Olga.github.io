@@ -36,11 +36,7 @@
   }
 
   &__price {
-    font: {
-      family: $default-font;
-      weight: bold;
-      size: 14px;
-    }
+    font-weight: bold;
     line-height: 18px;
     color: $dark-shade-50;
   

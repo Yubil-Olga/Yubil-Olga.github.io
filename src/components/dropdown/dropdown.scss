@@ -1,4 +1,4 @@
-@import '../../scss/fonts';
+@import '../../scss/mixins';
 @import '../../scss/vars';
 @import '../button/button.scss';
 
@@ -33,10 +33,7 @@
 
     &:after {
       content: 'expand_more';
-      font-family: 'Material Icons';
-      font-style: normal;
-      font-weight: normal;
-      text-transform: none;
+      @include Icon;
       font-size: 24px;
       cursor: pointer;
     }
@@ -87,7 +84,6 @@
 
     &:before {
       font: {
-        family: $default-font;
         weight: normal;
         size: 18px;
       }

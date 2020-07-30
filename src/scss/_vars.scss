@@ -1,4 +1,6 @@
-$default-font: montserrat, arial, sans-serif;
+$montserrat: montserrat, arial, sans-serif;
+$quicksand: quicksand, arial, sans-serif;
+$material-icons: 'Material Icons';
 $max-width: 1920px;
 $content-width: 1160px;
 $space-x: 30px;
@@ -11,5 +13,5 @@ $dark-shade-5: rgba($dark-shade, 0.05);
 $dark-shade-25: rgba($dark-shade, 0.25);
 $dark-shade-50: rgba($dark-shade, 0.5);
 $dark-shade-75: rgba($dark-shade, 0.75);
-$color: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
-$color-ghost: linear-gradient(180deg, transparentize($purple, 0.5) 0%, transparentize(#8ba4f9, 0.5) 100%);
+$purple-gradient: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+$purple-ghost: linear-gradient(180deg, transparentize($purple, 0.5) 0%, transparentize(#8ba4f9, 0.5) 100%);

@@ -1,5 +1,4 @@
 @import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
-@import '../../scss/fonts';
 @import '../../scss/vars';
 @import '../../scss/mixins';
 
@@ -8,7 +7,7 @@
   padding: 20px;
   box-sizing: border-box;
   font: {
-    family: $default-font;
+    family: $montserrat;
     weight: normal;
     size: 12px;
   }
@@ -26,9 +25,8 @@
     }
 
     &-action i.material-icons {
+      @include Icon;
       color: $purple;
-      font-family: 'Material Icons';
-      font-style: normal;
       font-size: 24px;
     }
   }
@@ -97,6 +95,10 @@
     
       color: $purple;
       cursor: pointer;
+
+      &:hover {
+        color: $dark-shade-50;
+      }
     }
 
     @media (max-width: 380px) {

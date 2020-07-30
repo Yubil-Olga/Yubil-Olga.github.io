@@ -1,4 +1,4 @@
-@import '../../scss/vars', '../../scss/fonts';
+@import '../../scss/vars', '../../scss/mixins';
 
 .rate-btn {
   &__item {
@@ -6,8 +6,7 @@
   }
 
   &__icon {
-    font-family: 'Material Icons';
-    font-style: normal;
+    @include Icon;
     font-size: 24px;
     color: $purple;
   }

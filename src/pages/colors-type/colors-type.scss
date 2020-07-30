@@ -1,5 +1,5 @@
 @import '../../components/layout-base/layout-base.scss';
-@import '../../scss/mixins', '../../scss/fonts', '../../scss/vars';
+@import '../../scss/mixins', '../../scss/vars';
 
 .colors-type {
   width: $content-width;
@@ -21,7 +21,7 @@
     }
 
     &__code {
-      font-family: Quicksand;
+      font-family: $quicksand;
       font-size: 19px;
       font-weight: normal;
     }

@@ -31,11 +31,7 @@
     }
 
     &__comment {
-      font: {
-        family: $default-font;
-        weight: normal;
-        size: 12px;
-      }
+      font-size: 12px;
       line-height: 14px;
       color: $dark-shade-50;
       padding-top: 10px;

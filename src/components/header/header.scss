@@ -1,7 +1,7 @@
 @import '../logo/logo.scss';
 @import '../button/button.scss';
 @import '../../scss/vars';
-@import '../../scss/fonts';
+@import '../../scss/mixins';
 
 .header {
   $root: &;
@@ -9,11 +9,6 @@
   background-color: #fff;
   box-shadow: 0 10px 20px $dark-shade-5;
   padding: 14px 0;
-  font: {
-    family: $default-font;
-    weight: normal;
-    size: 14px;
-  }
   line-height: 17px;
 
   &__wrapper {
@@ -84,7 +79,7 @@
 
     &::after {
       content: 'expand_more';
-      font-family: 'Material Icons';
+      @include Icon;
       font-size: 24px;
     }
 
@@ -99,9 +94,9 @@
   }
 
   &__burger {
+    @include Icon;
     display: none;
     cursor: pointer;
-    font-family: 'Material Icons';
     font-size: 24px;
     color: $dark-shade-75;
 

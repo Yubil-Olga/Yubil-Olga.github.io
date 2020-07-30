@@ -16,6 +16,6 @@ mixin dropdown({show, title, type, controlBtn = false}, items)
       if controlBtn
         .dropdown__control
           .dropdown__clean-btn.js-dropdown__clean-btn 
-            +button({text: "очистить", style: "ghost"})
+            +button({text: "очистить", style: "ghost-link"})
           .dropdown__accept-btn.js-dropdown__accept-btn 
-            +button({text: "применить", style: "simple"})
+            +button({text: "применить", style: "link"})

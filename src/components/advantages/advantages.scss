@@ -10,10 +10,7 @@
   border-bottom: 1px solid rgba($dark-shade, 0.1);
 
   &__icon {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: normal;
-    text-transform: none;
+    @include Icon;
     font-size: 48px;
     line-height: 41px;
     background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
