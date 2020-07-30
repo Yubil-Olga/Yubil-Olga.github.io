@@ -48,33 +48,33 @@ block main
   main.room-details
     .room-details__gallery
       each photo in gallery
-        figure.room-details__gallery__item
+        figure.room-details__gallery-item
           img(src=photo.src, alt=photo.alt).room-details__image
     .room-details__description
       .room-details__info
-        .room-details__info__item
-          h2.room-details__info__subtitle Сведения о номере
+        .room-details__item
+          h2.room-details__subtitle Сведения о номере
           .room-details__advantages
             each advantage in advantages
               +advantages(advantage)
-        .room-details__info__item.room-details__chart
-          h2.room-details__info__subtitle Впечатления от номера
+        .room-details__item.room-details__chart
+          h2.room-details__subtitle Впечатления от номера
           +chart(voices)
-        .room-details__info__item.room-details__reviews
-          h2.room-details__info__subtitle Отзывы посетителей номера
-          .room-details__reviews__wrapper
+        .room-details__item.room-details__reviews
+          h2.room-details__subtitle Отзывы посетителей номера
+          .room-details__reviews-wrapper
             each comment in reviews
               +review(comment)
-        .room-details__info__item.room-details__rules
-          h2.room-details__info__subtitle Правила
+        .room-details__item.room-details__rules
+          h2.room-details__subtitle Правила
           +bullet-list([
             "Нельзя с питомцами",
             "Без вечеринок и мероприятий",
             "Время прибытия — после 13:00, а выезд до 12:00"
           ])
-        .room-details__info__item
-          h2.room-details__info__subtitle Отмена
-          p.room-details__info__details
+        .room-details__item
+          h2.room-details__subtitle Отмена
+          p.room-details__details
             | Бесплатная отмена в течение 48 ч. 
             |После этого при отмене не позднее чем за 5 дн. до прибытия 
             |вы получите полный возврат за вычетом сбора за услуги.

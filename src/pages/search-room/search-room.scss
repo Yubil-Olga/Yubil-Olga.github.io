@@ -1,10 +1,6 @@
 @import '../../scss/vars', '../../scss/mixins', '../../components/layout-page/layout-page.scss';
-@import '../../components/filter-date-dropdown/filter-date-dropdown.scss';
-@import '../../components/dropdown/dropdown.scss';
-@import '../../components/range-slider/range-slider.scss';
+@import '../../components/search-filter/search-filter.scss';
 @import '../../components/card-room/card-room.scss';
-@import '../../components/checkbox/checkbox.scss';
-@import '../../components/expandable-checkbox/expandable-checkbox.scss';
 @import '../../components/pagination/pagination.scss';
 
 .search-room {
@@ -15,38 +11,6 @@
   display: grid;
   grid-template-columns: 266px auto;
   grid-gap: 60px;
-
-  &__filter {
-    &__item:not(:last-child) {
-      margin-bottom: 20px;
-    }
-
-    &__indent_top {
-      padding-top: 10px;
-    }
-
-    &__title {
-      @include H3;
-      padding-bottom: 5px;
-    }
-
-    &__comment {
-      font-size: 12px;
-      line-height: 14px;
-      color: $dark-shade-50;
-      padding-top: 10px;
-    }
-
-    @media (max-width: 940px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: $space-x;
-    }
-
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr;
-    }
-  }
 
   &__result {
     margin-top: 4px;

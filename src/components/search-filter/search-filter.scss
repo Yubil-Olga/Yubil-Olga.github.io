@@ -1,0 +1,29 @@
+@import '../filter-date-dropdown/filter-date-dropdown.scss';
+@import '../dropdown/dropdown.scss';
+@import '../range-slider/range-slider.scss';
+@import '../checkbox/checkbox.scss';
+@import '../expandable-checkbox/expandable-checkbox.scss';
+
+.search-filter {
+  display: grid;
+  align-content: start;
+  grid-row-gap: 20px;
+
+  &__subtitle {
+    @include H3;
+    padding-bottom: 5px;
+  }
+
+  &__comment {
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark-shade-50;
+    padding-top: 10px;
+  }
+
+  &_indent {
+    &_top {
+      padding-top: 10px;
+    }
+  }
+}

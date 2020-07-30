@@ -20,13 +20,6 @@ include ../../components/button/button
 block variables
   - var pageTitle = 'Form elements'
   - 
-    var orders = 
-    [
-      {description: "Можно курить"}, 
-      {description: "Можно с питомцами"}, 
-      {description: "Можно пригласить гостей (до 10 человек)"}
-    ]
-  - 
     var comment = 
     {
       name: "Мурад Сарафанов", 
@@ -37,11 +30,6 @@ block variables
       comment: 
       "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
     }
-  - 
-    var accessibility = [
-      {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
-      {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
-    ]
       
 block main
   section.form-elements
@@ -70,7 +58,15 @@ block main
     .form-elements__section 
       .form-elements__item
         h3.form-elements__subtitle Checkbox buttons
-        +checkbox(false, orders)
+        +checkbox({
+          rich: false, 
+          items: 
+            [
+              {description: "Можно курить"}, 
+              {description: "Можно с питомцами"}, 
+              {description: "Можно пригласить гостей (до 10 человек)"}
+            ]
+        })
       .form-elements__item
         h3.form-elements__subtitle Radio buttons
         .form-elements__radio-btn
@@ -140,20 +136,31 @@ block main
         +dropdown({show: true, title: "Сколько гостей", controlBtn: true}, ["взрослые", "дети", "младенцы"])
     .form-elements__section
       .form-elements__item
-        +expandable-checkbox("expandable-checkbox-list", [])
+        +expandable-checkbox({title: "expandable-checkbox-list", items: []})
       .form-elements__item
-        +expandable-checkbox("expandable-checkbox-list", [
-          {description: "Завтрак"}, 
-          {description: "Письменный стол", check: true}, 
-          {description: "Стул для кормления", check: true}, 
-          {description: "Кроватка", check: true}, 
-          {description: "Телевизор"}, 
-          {description: "Шампунь"}
-        ])
+        +expandable-checkbox({
+          title: "expandable-checkbox-list", 
+          items: 
+            [
+              {description: "Завтрак"}, 
+              {description: "Письменный стол", check: true}, 
+              {description: "Стул для кормления", check: true}, 
+              {description: "Кроватка", check: true}, 
+              {description: "Телевизор"}, 
+              {description: "Шампунь"}
+            ]
+        })
     .form-elements__section
       .form-elements__item
         h3.form-elements__subtitle Rich checkbox buttons
-        +checkbox(true, accessibility)
+        +checkbox({
+          rich: true, 
+          items: 
+            [
+              {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
+              {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
+            ]
+        })
     .form-elements__section
       .form-elements__item
         h3.form-elements__subtitle Bullet list

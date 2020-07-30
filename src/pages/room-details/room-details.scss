@@ -19,14 +19,22 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
 
-    &__item:first-child {
-      grid-row: 1/3;
-    }
-
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
   
       &__item:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+
+  &__gallery-item {
+    &:first-child {
+      grid-row: 1/3;
+    }
+
+    @media (max-width: 600px) {
+      &:not(:first-child) {
         display: none;
       }
     }
@@ -64,19 +72,6 @@
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
 
-    &__item {
-      padding-right: 15px;
-    }
-  
-    &__subtitle {
-      @include H2;
-      margin: 0 0 18px;
-    }
-  
-    &__details {
-      @include Body;
-    }
-
     @media (max-width: 1200px) {
       padding: 0 $space-y;
     }
@@ -88,6 +83,19 @@
     @media (max-width: 450px) {
       padding: $space-x/2;
     }
+  }
+
+  &__item {
+    padding-right: 15px;
+  }
+
+  &__subtitle {
+    @include H2;
+    margin: 0 0 18px;
+  }
+
+  &__details {
+    @include Body;
   }
 
   &__advantages {
@@ -103,17 +111,17 @@
   &__reviews {
     grid-column: 1/3;
 
-    &__wrapper {
-      display: grid;
-      grid-row-gap: 25px;
-    }
-
     @media (max-width: 670px) {
       grid-column: 1/2;
     }
   }
 
-  &__rules &__info__subtitle{
+  &__reviews-wrapper {
+    display: grid;
+    grid-row-gap: 25px;
+  }
+
+  &__rules &__subtitle{
     padding-left: 22px;
   }
 
