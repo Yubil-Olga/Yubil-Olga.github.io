@@ -25,13 +25,13 @@ block main
     .colors-type__section
       for color in colors
         .colors-type__palette
-          .colors-type__palette__box(class="colors-type__color_"+color.group)
-          .colors-type__palette__description
-            h2.colors-type__palette__name=color.name
-            p.colors-type__palette__code=color.code
+          .colors-type__palette-box(class="colors-type__color_"+color.group)
+          .colors-type__palette-description
+            h2.colors-type__palette-name=color.name
+            p.colors-type__palette-code=color.code
     .colors-type__section
       for font in fonts
         .colors-type__font(class="colors-type__font_"+font.tag)
-          .colors-type__font__tag=font.tag
-          .colors-type__font__description=font.description
+          .colors-type__font-tag=font.tag
+          .colors-type__font-description=font.description
   
