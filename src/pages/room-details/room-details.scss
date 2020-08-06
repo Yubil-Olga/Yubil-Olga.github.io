@@ -124,10 +124,4 @@
   &__rules &__subtitle{
     padding-left: 22px;
   }
-
-  &__chart{
-    @media (max-width: 670px) {
-      grid-column: 1/2;
-    }
-  }
 }

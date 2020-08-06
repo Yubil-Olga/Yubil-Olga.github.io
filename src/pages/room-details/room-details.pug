@@ -57,21 +57,23 @@ block main
           .room-details__advantages
             each advantage in advantages
               +advantages(advantage)
-        .room-details__item.room-details__chart
+        .room-details__item
           h2.room-details__subtitle Впечатления от номера
           +chart(voices)
-        .room-details__item.room-details__reviews
-          h2.room-details__subtitle Отзывы посетителей номера
-          .room-details__reviews-wrapper
-            each comment in reviews
-              +review(comment)
-        .room-details__item.room-details__rules
-          h2.room-details__subtitle Правила
-          +bullet-list([
-            "Нельзя с питомцами",
-            "Без вечеринок и мероприятий",
-            "Время прибытия — после 13:00, а выезд до 12:00"
-          ])
+        .room-details__reviews
+          .room-details__item
+            h2.room-details__subtitle Отзывы посетителей номера
+            .room-details__reviews-wrapper
+              each comment in reviews
+                +review(comment)
+        .room-details__rules
+          .room-details__item
+            h2.room-details__subtitle Правила
+            +bullet-list([
+              "Нельзя с питомцами",
+              "Без вечеринок и мероприятий",
+              "Время прибытия — после 13:00, а выезд до 12:00"
+            ])
         .room-details__item
           h2.room-details__subtitle Отмена
           p.room-details__details

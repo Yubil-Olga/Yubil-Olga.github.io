@@ -170,8 +170,10 @@ block main
           "Время прибытия — после 13:00, а выезд до 12:00"
         ])
     .form-elements__section
-      .form-elements__item.form-elements__advantages
-        +advantages({title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"})
-        +advantages({title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"})
-    .form-elements__section.form-elements__review
+      .form-elements__item
+        .form-elements__advantages
+          +advantages({title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"})
+          +advantages({title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"})
+    .form-elements__section
+      .form-elements__review
         +review(comment)

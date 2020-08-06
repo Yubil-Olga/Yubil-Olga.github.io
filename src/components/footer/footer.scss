@@ -119,20 +119,6 @@
     &:not(:first-child) {
       margin-left: 20px;
     }
-
-    &_brand {
-      &_twitter {
-        background: url(./img/twitter.svg) center no-repeat;
-      }
-  
-      &_fb {
-        background: url(./img/fb.svg) center no-repeat;
-      }
-  
-      &_instagram {
-        background: url(./img/instagram.svg) center no-repeat;
-      }
-    }
   }
 
   &_creative {

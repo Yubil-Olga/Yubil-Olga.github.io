@@ -10,9 +10,9 @@ mixin dropdown({show, title, type, controlBtn = false}, items)
         .dropdown__option.js-dropdown__option
           h3.dropdown__option-name=item
           .dropdown__counter
-            .dropdown__btn.dropdown__btn-minus
+            .dropdown__btn -
             input.dropdown__input.js-dropdown__input(value="0" readonly name=item)
-            .dropdown__btn.dropdown__btn-plus
+            .dropdown__btn +
       if controlBtn
         .dropdown__control
           .dropdown__clean-btn.js-dropdown__clean-btn 

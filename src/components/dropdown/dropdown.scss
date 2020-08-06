@@ -80,24 +80,13 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
-    &:before {
-      font: {
-        weight: normal;
-        size: 18px;
-      }
-
-      line-height: 22px;
-      color: $dark-shade-50;
+    font: {
+      weight: normal;
+      size: 18px;
     }
-  }
 
-  &__btn-plus::before {
-    content: '+';
-  }
-
-  &__btn-minus::before {
-    content: '-';
+    line-height: 22px;
+    color: $dark-shade-50;
   }
 
   &__input {

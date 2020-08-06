@@ -103,11 +103,11 @@ document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
   function changeOptions(event) {
     const item = event.target.closest('.js-dropdown__option').querySelector('.js-dropdown__input');
     let counter = Number(item.value);
-    if (event.target.classList.contains('dropdown__btn-plus') && counter < 4) {
+    if (event.target.textContent === '+' && counter < 4) {
       counter += 1;
       totalCounter += 1;
     }
-    if (event.target.classList.contains('dropdown__btn-minus') && counter > 0) {
+    if (event.target.textContent === '-' && counter > 0) {
       counter -= 1;
       totalCounter -= 1;
     }

@@ -10,8 +10,9 @@ mixin header({auth, lang}, items)
           each item in items
             li.header__item
               if item.expanded
-                details.header__details
-                  summary.header__summary.header__link=item.name
+                .header__link
+                  details.header__details
+                    summary.header__summary=item.name
               else 
                 a(href=item.href).header__link=item.name
         .header__burger menu
