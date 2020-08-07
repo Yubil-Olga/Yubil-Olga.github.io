@@ -7,7 +7,7 @@ include ../expandable-checkbox/expandable-checkbox
 mixin search-filter
   aside.search-filter
     .search-filter__item
-      +filter-date-dropdown("даты пребывания в отеле")
+      +filter-date-dropdown({ title: "даты пребывания в отеле"})
     .search-filter__item
       h3.search-filter__subtitle гости
       +dropdown({show: false, title: "Сколько гостей", controlBtn: true}, ["взрослые", "дети", "младенцы"])

@@ -1,7 +1,7 @@
 include ../logo/logo
 include ../subscription-input/subscription-input
  
-mixin footer({creative, slogan, formTitle, formDescription, copyright}, items)
+mixin footer({creative, slogan, formTitle, formDescription, copyright}, items = [])
   footer.footer(class=creative ? "footer_creative" : "")
     section.footer__main
       section.footer__section

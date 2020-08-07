@@ -25,7 +25,7 @@ block variables
       name: "Мурад Сарафанов", 
       src: "images/reviews/review2.png", 
       voiceCounter: 11,
-      liked: true,
+      isLiked: true,
       date: "5 дней назад",
       comment: 
       "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
@@ -48,7 +48,10 @@ block main
             h3.form-elements__subtitle(data-comment="default") masked text field
             +field({mask: true, placeholder: "ДД.ММ.ГГГГ"})
       .form-elements__item
-        +date-dropdown("date dropdown", "date dropdown")
+        +date-dropdown({
+          title1: "date dropdown", 
+          title2: "date dropdown"
+        })
       .form-elements__item
         h3.form-elements__subtitle filter date dropdown
         +filter-date-dropdown
@@ -75,21 +78,21 @@ block main
               text: "Мужчина",
               name: "gender",
               value: "man",
-              checked: true
+              isChecked: true
             },
             {
               text: "Женщина",
               name: "gender",
               value: "woman",
-              checked: false
+              isChecked: false
             }
           ])
       .form-elements__item
         h3.form-elements__subtitle Toggle
         .form-elements__toggle
-          +toggle("Получать спецпредложения", true)
+          +toggle({title: "Получать спецпредложения", isChecked: true})
         .form-elements__toggle
-          +toggle("Получать спецпредложения", false)
+          +toggle({title: "Получать спецпредложения", isChecked: false})
       .form-elements__item
         h3.form-elements__subtitle Like button
         .form-elements__like-btn
@@ -98,8 +101,8 @@ block main
       .form-elements__item
         h3.form-elements__subtitle Rate button
         .form-elements__rate-btn
-          +rate-btn(5, 4)
-          +rate-btn(5, 5)
+          +rate-btn({total: 5, rating: 4})
+          +rate-btn({total: 5, rating: 5})
     .form-elements__section 
       .form-elements__item
         h3.form-elements__subtitle Range slider
@@ -165,15 +168,15 @@ block main
       .form-elements__item
         h3.form-elements__subtitle Bullet list
         +bullet-list([
-          "Нельзя с питомцами",
-          "Без вечеринок и мероприятий",
-          "Время прибытия — после 13:00, а выезд до 12:00"
+          {text: "Нельзя с питомцами"},
+          {text: "Без вечеринок и мероприятий"},
+          {text: "Время прибытия — после 13:00, а выезд до 12:00"}
         ])
     .form-elements__section
       .form-elements__item
         .form-elements__advantages
           +advantages({title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"})
           +advantages({title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"})
-    .form-elements__section
-      .form-elements__review
+    .form-elements__review
+      .form-elements__section
         +review(comment)

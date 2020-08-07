@@ -14,13 +14,13 @@ mixin form-registration
           text: "Мужчина",
           name: "gender",
           value: "man",
-          checked: true
+          isChecked: true
         },
         {
           text: "Женщина",
           name: "gender",
           value: "woman",
-          checked: false
+          isChecked: false
         }
       ])
     .form-registration__section
@@ -30,7 +30,7 @@ mixin form-registration
       h3.form-registration__sub-title данные для входа в сервис
       +field({mask: false, type: "email", placeholder: "Email"})
       +field({mask: false, type: "password", placeholder: "Пароль"})
-      +toggle("Получать спецпредложения", false)
+      +toggle({title: "Получать спецпредложения", isCheched: false})
     .form-registration__section
       +button({text: "перейти к оплате", style: "arrow", size: "m"})
     .form-registration__footer

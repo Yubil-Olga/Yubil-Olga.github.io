@@ -1,4 +1,4 @@
-mixin radio-button(items)
+mixin radio-button(items = [{text, name, value, isChecked}])
   .radio-button
     each item in items
       label.radio-button__title= item.text
@@ -6,6 +6,6 @@ mixin radio-button(items)
           type="radio"
           name= item.name
           value= item.value
-          checked= item.checked
+          checked= item.isChecked
         )
         .radio-button__checkmark
