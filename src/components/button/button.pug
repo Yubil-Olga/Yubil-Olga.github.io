@@ -1,14 +1,38 @@
-mixin button({href, text, style, size}={})
+mixin button({ href = "/mock-address/change-me", text = "click me", style, size }={})
+  - let sizeModifier
+  - let styleModifier
+  
+  case style
+    when "arrow"
+      - styleModifier = "button_with_arrow"
+    when "border"
+      - styleModifier = "button_with_border"
+    when "gradient"
+      - styleModifier = "button_with_gradient"
+    when "ghost-link"
+      - styleModifier = "button_with_ghost-link"
+    when "link"
+      - styleModifier = "button_with_link"
+    
+
+  case size
+    when "s"
+      - sizeModifier = "button_size_s"
+    when "m"
+      - sizeModifier = "button_size_m"
+    default
+      - sizeModifier = ""
+  
   if href
-    a(
+    a.button(
       href=href 
       aria-label=text 
-      class=`button button_with_${style}`
-      class= size ?  `button_size_${size}` : ""
+      class=styleModifier
+      class=sizeModifier
     )=text
   else
-    button(
+    button.button(
       type="submit" 
-      class=`button button_with_${style}`
-      class= size ?  `button_size_${size}` : ""
+      class=styleModifier
+      class=sizeModifier
     )=text

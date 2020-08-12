@@ -1,6 +1,6 @@
 include ../like-btn/like-btn
 
-mixin review({name, src, voiceCounter, isLiked, date, comment} = {})
+mixin review({name = "Имя пользователя", src = "images/reviews/review1.png", voiceCounter = 11, isLiked = false, date = "Дата", comment = "Отзыв"} = {})
   .review
     .review__icon
       img(src=src, alt=name)

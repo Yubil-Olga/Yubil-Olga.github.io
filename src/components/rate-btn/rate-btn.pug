@@ -1,4 +1,6 @@
-mixin rate-btn({total, rating} = {})
+mixin rate-btn({total = 5, rating = 5} = {})
+  if rating > total
+    - rating = total
   form.rate-btn.js-rate-btn
     - for (let i=0; i<total; i++)
       label.rate-btn__item

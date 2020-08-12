@@ -1,5 +1,5 @@
-mixin advantages({icon, title, description}={})
-  .advantages
+mixin advantages({icon = "insert_emoticon", title = "Название", description = "Описание", isUnderlined = true}={})
+  .advantages(class = isUnderlined ? "advantages_underlined" : "")
     i.advantages__icon= icon
     .advantages__description
       h4.advantages__title= title

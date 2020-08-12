@@ -110,16 +110,16 @@ block main
       .form-elements__item
         h3.form-elements__subtitle Buttons
         .form-elements__buttons
-          +button({text: "click me", style: "gradient", size: "s"})
-          +button({text: "click me", style: "gradient", size: "s"})
+          +button({text: "click me", style: "gradient"})
+          +button({text: "click me", style: "gradient"})
           .form-elements__button_border
-            +button({text: "click me", style: "border", size: "s"})
+            +button({text: "click me", style: "border"})
           .form-elements__button_border
-            +button({text: "click me", style: "border", size: "s"})
-          +button({text: "click me", style: "ghost-link", size: "s"})
-          +button({text: "click me", style: "link", size: "s"})
+            +button({text: "click me", style: "border"})
+          +button({text: "click me", style: "ghost-link"})
+          +button({text: "click me", style: "link"})
           .form-elements__button_arrow
-            +button({text: "перейти к оплате", style: "arrow", size: "s"})
+            +button({text: "перейти к оплате", style: "arrow"})
       .form-elements__item
         h3.form-elements__subtitle Pagination
         .form-elements__pagination
@@ -146,9 +146,9 @@ block main
           items: 
             [
               {description: "Завтрак"}, 
-              {description: "Письменный стол", check: true}, 
-              {description: "Стул для кормления", check: true}, 
-              {description: "Кроватка", check: true}, 
+              {description: "Письменный стол", isChecked: true}, 
+              {description: "Стул для кормления", isChecked: true}, 
+              {description: "Кроватка", isChecked: true}, 
               {description: "Телевизор"}, 
               {description: "Шампунь"}
             ]

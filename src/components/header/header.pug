@@ -1,7 +1,15 @@
 include ../logo/logo
 include ../button/button
 
-mixin header({auth, lang}, items = [])
+mixin header({ auth = false, lang }, items = [{ name: "click me", expanded: false, href: "/mock-address/change-me" }])
+  case lang
+    when "ru"
+      - lang = ru
+    when "en"
+      - lang = en
+    default
+      - lang = en
+
   header.header
     .header__wrapper
       +logo
@@ -25,12 +33,12 @@ mixin header({auth, lang}, items = [])
                 href:"login.html", 
                 style: "border", 
                 text: (lang == "ru") ? "войти" : "Login", 
-                size: "x"
+                size: "s"
               })
             .header__sign-up-btn
               +button({
                 href:"registration.html", 
                 style: "gradient", 
                 text: (lang == "ru") ? "зарегистрироваться" : "Register", 
-                size: "x"
+                size: "s"
               })

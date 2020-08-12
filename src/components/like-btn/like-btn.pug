@@ -1,5 +1,7 @@
-mixin like-btn({count, isChecked} = {})
-  label.like-btn.js-like-btn(data-count=checked ? count+1 : count class= isChecked ? "like-btn_active" : "")
+mixin like-btn({count = 0, isChecked = false} = {})
+  if count < 0
+    - count = 0
+  label.like-btn.js-like-btn(data-count=isChecked ? count+1 : count class= isChecked ? "like-btn_active" : "")
     if isChecked
       i.like-btn__icon.js-like-btn__icon favorite
     else

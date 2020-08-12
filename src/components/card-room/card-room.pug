@@ -1,6 +1,6 @@
 include ../rate-btn/rate-btn
 
-mixin card-room({link, url, number, lux, price, stars, comments} = {}) 
+mixin card-room({link, url, number = 888, lux = true, price = 9990, stars = 5, reviews = 145} = {}) 
   a(href=link).card-room
     .card-room__gallery
       img(src=url).card-room__image
@@ -20,7 +20,7 @@ mixin card-room({link, url, number, lux, price, stars, comments} = {})
         .card-room__price #{price}₽
       .card-room__room-rating
         +rate-btn({total: 5, rating: stars})
-        .card-room__comments=comments
+        .card-room__comments=reviews
 
 
 

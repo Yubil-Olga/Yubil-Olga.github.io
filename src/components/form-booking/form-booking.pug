@@ -2,7 +2,7 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 include ../button/button
 
-mixin form-booking({number, price, discount, serviceCharge, additionalServiceCharge, days}) 
+mixin form-booking({number, price, discount, serviceCharge, additionalServiceCharge, days} = {}) 
   form.form-booking
     header.form-booking__header
       h2.form-booking__room-number=number
