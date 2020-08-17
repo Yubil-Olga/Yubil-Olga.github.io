@@ -12,6 +12,15 @@ mixin form-selection
       })
     .form-selection__dropdown-wrapper
       h3.form-selection__sub-title гости
-      +dropdown({show: false, title: "Сколько гостей", controlBtn: true}, ["взрослые", "дети", "младенцы"])
+      +dropdown({
+        show: false, 
+        title: "Сколько гостей", 
+        controlBtn: true,
+        items: [
+          {name: "взрослые", group: "гости"}, 
+          {name: "дети", group: "гости"}, 
+          {name: "младенцы"}
+        ]
+      })
     .form-selection__footer
       +button({href:"search-room.html", text: "подобрать номер", style: "arrow", size: "m"})

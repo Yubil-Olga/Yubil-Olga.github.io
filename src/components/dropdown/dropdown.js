@@ -1,150 +1,129 @@
-document.querySelectorAll('.js-dropdown').forEach((dropdown) => {
-  let totalCounter = 0;
-  function showDropdown() {
-    dropdown.classList.toggle('dropdown_active');
+import DropdownOption from '../dropdown-option/dropdown-option'
+
+export default class Dropdown {
+  constructor(htmlElement, optionCases) {
+    this.dropdown = htmlElement
+    this.activeStatus = 'dropdown_active'
+    this.question = htmlElement.querySelector('.js-dropdown__title').textContent
+    this.title = htmlElement.querySelector('.js-dropdown__title')
+    this.titleCases = optionCases
+    this.toggle = htmlElement.querySelector('.js-dropdown__selection')
+    this.options = htmlElement.querySelectorAll('.js-dropdown__option')
+    this.acceptBtn = htmlElement.querySelector('.js-dropdown__accept-btn') ? htmlElement.querySelector('.js-dropdown__accept-btn') : null
+    this.cleanBtn = htmlElement.querySelector('.js-dropdown__clean-btn') ? htmlElement.querySelector('.js-dropdown__clean-btn') : null
+    
+    this.setOptions()
+    this.bindEventListeners()
+    
   }
-  function titleCounter() {
-    let word = '';
-    let title = '';
-    function roomsTitle() {
-      if (totalCounter === 0) {
-        title = 'Сколько комнат';
-      } else {
-        const arr = [];
-        dropdown.querySelectorAll('.js-dropdown__option').forEach((el) => {
-          function elementTitle(name, value) {
-            let legend = '';
-            if (name === 'спальни') {
-              switch (value) {
-                case 1:
-                  legend = 'спальня';
-                  break;
-                default:
-                  legend = 'спальни';
-              }
-            }
-            if (name === 'кровати') {
-              switch (value) {
-                case 1:
-                  legend = 'кровать';
-                  break;
-                default:
-                  legend = 'кровати';
-              }
-            }
-            if (name === 'ванные комнаты') {
-              switch (value) {
-                case 1:
-                  legend = 'ванная комната';
-                  break;
-                default:
-                  legend = 'ванные комнаты';
-              }
-            }
-            return `${value} ${legend}`;
-          }
-          if (el.querySelector('.js-dropdown__input').value > 0) {
-            arr.push(elementTitle(el.querySelector('.dropdown__option-name').textContent, parseInt(el.querySelector('.js-dropdown__input').value, 10)));
-          }
-          title = arr.join(', ');
-        });
-      }
+
+  setOptions() {
+    this.values = Array.from(this.options).map((el) => new DropdownOption(el))
+  }
+
+  bindEventListeners() {
+    this.toggle.addEventListener('click', this.toggleDropdown.bind(this))
+    this.options.forEach((el) => {
+      el.addEventListener('click', this.changeOptions.bind(this))
+    })
+    if (this.acceptBtn) {
+      this.acceptBtn.addEventListener('click', this.acceptChanges.bind(this))
     }
-    function guestsTitle() {
-      let baby = 0;
-      let babyCount = '';
-      dropdown.querySelectorAll('.js-dropdown__option').forEach((el) => {
-        if (el.querySelector('.dropdown__option-name').textContent === 'младенцы') {
-          baby = el.querySelector('.js-dropdown__input').value;
+    if (this.cleanBtn) {
+      this.cleanBtn.addEventListener('click', this.cleanChanges.bind(this))
+    }
+    this.documentClick = this.closeDropdown.bind(this)
+    document.addEventListener('click', this.documentClick)
+  }
+
+  toggleDropdown() {
+    this.dropdown.classList.toggle(this.activeStatus)
+  }
+
+  closeDropdown() {
+    if (this.toBeClosed()) {
+      this.dropdown.classList.remove(this.activeStatus)
+    }
+  }
+
+  toBeClosed() {
+    return (event.target.closest('.js-dropdown') !== this.dropdown && this.dropdown.classList.contains(this.activeStatus))
+  }
+
+  acceptChanges() {
+    event.preventDefault();
+    this.toggleDropdown()
+  }
+
+  cleanChanges() {
+    event.preventDefault();
+    for (let i=0; i< this.values.length; i++) {
+      this.values[i].input.value = 0
+      this.values[i].value = 0
+    }
+    this.cleanBtnVisibility()
+    this.title.textContent = this.question
+  }
+
+  changeOptions() {
+    if (this.cleanBtn) {
+      this.cleanBtnVisibility()
+    }
+    this.selected = []
+    this.values.forEach((el) => {
+      const group = {
+        name: el.container.getAttribute('data-group'),
+        value: el.value
+      }
+      group.collection = this.titleCases[group.name] ? this.titleCases[group.name] : null
+      
+      const index = this.selected.findIndex(el => el.name === group.name)
+      if ( index >= 0 ) {
+        this.selected[index].value += el.value
+      }
+      else {
+        this.selected.push(group)
+      }
+      
+    })
+    
+    this.updateTitle()
+  }
+
+  cleanBtnVisibility() {
+    const selection = this.values.filter(option => option.value > 0)
+    const visibilityStyle = 'dropdown__clean-btn_visible'
+    if (selection.length > 0 && !this.cleanBtn.classList.contains(visibilityStyle)) {
+      this.cleanBtn.classList.add(visibilityStyle)
+    } 
+    if (selection.length < 1 && this.cleanBtn.classList.contains(visibilityStyle)) {
+      this.cleanBtn.classList.remove(visibilityStyle)
+    }
+  }
+
+  updateTitle() {
+    const selected = this.selected.filter(el => el.value > 0)
+    if (selected.length > 0) {
+      selected.forEach(el => {
+        if(el.collection) {
+          switch(el.value.toString()) {
+            case '1':
+              el.name = el.collection[0];
+              break;
+            case '2':
+            case '3':
+            case '4':
+              el.name = el.collection[1];
+              break;
+            default:
+              el.name = el.collection[2];
+          }
         }
-      });
-      if (baby === '1') {
-        babyCount = `, ${baby} младенец`;
-      }
-      if (baby > 1) {
-        babyCount = `, ${baby} младенца`;
-      }
-      title = 'Сколько гостей';
-      switch (totalCounter) {
-        case 0:
-          return title;
-        case 1:
-          word = 'гость';
-          title = `${totalCounter} ${word} ${babyCount}`;
-          break;
-        case 2:
-        case 3:
-        case 4:
-          word = 'гостя';
-          title = `${totalCounter} ${word} ${babyCount}`;
-          break;
-        default:
-          word = 'гостей';
-          title = `${totalCounter} ${word} ${babyCount}`;
-      }
-      return title;
-    }
-    if (dropdown.classList.contains('dropdown_type_room')) {
-      roomsTitle();
+      })
+      
+      this.title.textContent = selected.map(el => `${el.value} ${el.name}`).join(', ')
     } else {
-      guestsTitle();
-    }
-    return title;
-  }
-  function closeDropdown(event) {
-    function toBeClosed() {
-      return (event.target.closest('.js-dropdown') !== dropdown && dropdown.classList.contains('dropdown_active'));
-    }
-    if (toBeClosed()) {
-      dropdown.classList.remove('dropdown_active');
-      window.removeEventListener('click', closeDropdown);
+      this.title.textContent = this.question
     }
   }
-  function changeOptions(event) {
-    const item = event.target.closest('.js-dropdown__option').querySelector('.js-dropdown__input');
-    let counter = Number(item.value);
-    if (event.target.textContent === '+' && counter < 4) {
-      counter += 1;
-      totalCounter += 1;
-    }
-    if (event.target.textContent === '-' && counter > 0) {
-      counter -= 1;
-      totalCounter -= 1;
-    }
-    if (totalCounter === 0 && dropdown.querySelectorAll('.js-dropdown__clean-btn').length > 0) {
-      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'hidden';
-    }
-    if (totalCounter > 0 && dropdown.querySelectorAll('.js-dropdown__clean-btn').length > 0) {
-      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'visible';
-    }
-    item.value = counter.toString();
-    dropdown.querySelector('.js-dropdown__title').textContent = titleCounter();
-  }
-  function dropdownClicked(event) {
-    window.addEventListener('click', closeDropdown);
-    if (event.target.closest('.js-dropdown__selection')) {
-      showDropdown();
-    }
-    if (event.target.parentElement.className.indexOf('js-dropdown__accept-btn') >= 0) {
-      event.preventDefault();
-      showDropdown();
-      window.removeEventListener('click', closeDropdown);
-    }
-    if (event.target.parentElement.className.indexOf('js-dropdown__clean-btn') >= 0) {
-      event.preventDefault();
-      totalCounter = 0;
-      dropdown.querySelector('.js-dropdown__clean-btn').style.visibility = 'hidden';
-      dropdown.querySelector('.dropdown__title').textContent = titleCounter(totalCounter, dropdown);
-      dropdown.querySelectorAll('.dropdown__input').forEach((item) => {
-        item.value = 0;
-      });
-    }
-    if (event.target.closest('.js-dropdown__option')) {
-      changeOptions(event);
-    }
-  }
-  dropdown.querySelectorAll('.js-dropdown__input').forEach((el) => {
-    totalCounter += Number(el.value);
-  });
-  dropdown.addEventListener('click', dropdownClicked);
-});
+}

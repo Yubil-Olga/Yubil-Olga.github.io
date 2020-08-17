@@ -1,12 +1,23 @@
-document.querySelectorAll('.js-rate-btn').forEach((el) => {
-  function star(event) {
-    event.currentTarget.querySelectorAll('.rate-btn__icon').forEach((e) => {
-      e.textContent = 'star_border';
-    });
+export default class Ratebtn {
+  constructor(htmlElement) {
+    this.rateButton = htmlElement
+    this.stars = htmlElement.querySelectorAll('.rate-btn__icon')
+    this.inputs = htmlElement.querySelectorAll('.rate-btn__input')
+    this.init()
+  }
+  init() {   
+    this.rateButton.addEventListener('click', this.star.bind(this))
+  }
+  star(event) {
     const rating = event.target.value;
+    this.clearStars()
     for (let i = 0; i < rating; i += 1) {
-      event.currentTarget.querySelectorAll('.rate-btn__item')[i].querySelector('.rate-btn__icon').textContent = 'star';
+      this.stars[i].textContent = 'star'
     }
   }
-  el.addEventListener('click', star);
-});
+  clearStars() {
+    this.stars.forEach(el => {
+      el.textContent = 'star_border'
+    })
+  }
+}

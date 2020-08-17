@@ -22,21 +22,23 @@ block variables
   
 block main
   section.headers-footers
-    +header({auth: false, lang: "en"}, navigation)
-    +header({auth: true, lang: "en"}, navigation)
+    +header({auth: false, lang: "en", items: navigation})
+    +header({auth: true, lang: "en", items: navigation})
     +footer({
       creative: false,
       slogan: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
       formTitle: "Subscribe to our newsletter",
       formDescription: "Receive our latest news and promotions in your inbox!",
-      copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."
-    }, footerNavigation)
+      copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
+      items: footerNavigation
+    })
     +footer({
       creative: true,
       slogan: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
       formTitle: "Subscribe to our newsletter",
       formDescription: "Receive our latest news and promotions in your inbox!",
-      copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."
-    }, footerNavigation)
+      copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
+      items: footerNavigation
+    })
 
     

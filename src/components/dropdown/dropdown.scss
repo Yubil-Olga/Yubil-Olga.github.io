@@ -20,15 +20,6 @@
     height: 44px;
     box-sizing: border-box;
     line-height: 18px;
-  }
-
-  &__title {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
 
     &:after {
       content: 'expand_more';
@@ -36,6 +27,14 @@
       font-size: 24px;
       cursor: pointer;
     }
+  }
+
+  &__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    display: inline-block;
   }
 
   &_active {
@@ -56,47 +55,6 @@
     position: relative;
   }
 
-  &__option {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 7px;
-  }
-
-  &__option-name {
-    @include H3;
-  }
-
-  &__counter {
-    display: flex;
-  }
-
-  &__btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid $dark-shade-50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    font: {
-      weight: normal;
-      size: 18px;
-    }
-
-    line-height: 22px;
-    color: $dark-shade-50;
-  }
-
-  &__input {
-    @include H3;
-
-    width: 30px;
-    border: none;
-    text-align: center;
-  }
-
   &__control {
     display: flex;
     justify-content: space-between;
@@ -106,6 +64,9 @@
 
   &__clean-btn {
     visibility: hidden;
+    &_visible {
+      visibility: visible;
+    }
   }
 }
 

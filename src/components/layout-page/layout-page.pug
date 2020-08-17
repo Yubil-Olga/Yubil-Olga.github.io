@@ -29,7 +29,7 @@ html
     - ]
   
     block header
-      +header({auth: false, lang: "ru"}, headerNavigation)
+      +header({auth: false, lang: "ru", items: headerNavigation})
     block main
     block footer
       +footer({
@@ -37,6 +37,7 @@ html
         slogan: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
         formTitle: "Подписка",
         formDescription: "Получайте специальные предложения и новости сервиса",
-        copyright: "Copyright © 2018 Toxin отель. Все права зачищены."
-      }, footerNavigation)
+        copyright: "Copyright © 2018 Toxin отель. Все права зачищены.",
+        items: footerNavigation
+      })
           

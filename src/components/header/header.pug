@@ -1,7 +1,7 @@
 include ../logo/logo
 include ../button/button
 
-mixin header({ auth = false, lang }, items = [{ name: "click me", expanded: false, href: "/mock-address/change-me" }])
+mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false, href: "/mock-address/change-me" }] })
   case lang
     when "ru"
       - lang = ru

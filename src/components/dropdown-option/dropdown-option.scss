@@ -1,0 +1,43 @@
+@import '../../scss/mixins';
+@import '../../scss/vars';
+
+.dropdown-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 7px;
+
+  &__name {
+    @include H3;
+  }
+
+  &__counter {
+    display: flex;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $dark-shade-50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font: {
+      weight: normal;
+      size: 18px;
+    }
+
+    line-height: 22px;
+    color: $dark-shade-50;
+  }
+
+  &__input {
+    @include H3;
+
+    width: 30px;
+    border: none;
+    text-align: center;
+  }
+}

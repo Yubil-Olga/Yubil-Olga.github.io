@@ -1,18 +1,15 @@
 include ../field/field
 include ../button/button
+include ../dropdown-option/dropdown-option
 
-mixin dropdown({show, title, type, controlBtn = false}, items)
-  .dropdown.js-dropdown(class=show ? "dropdown_active": "", class= (type == "room" ? "dropdown_type_room" : ""))
+mixin dropdown({show, title, type, controlBtn = false, items = [{name, group}]})
+  .dropdown.js-dropdown(class=show ? "dropdown_active": "")
     .dropdown__selection.js-dropdown__selection
       p.dropdown__title.js-dropdown__title= title
     .dropdown__menu
       each item in items
         .dropdown__option.js-dropdown__option
-          h3.dropdown__option-name=item
-          .dropdown__counter
-            .dropdown__btn -
-            input.dropdown__input.js-dropdown__input(value="0" readonly name=item)
-            .dropdown__btn +
+          +dropdown-option({ name: item.name, group: item.group})
       if controlBtn
         .dropdown__control
           .dropdown__clean-btn.js-dropdown__clean-btn 

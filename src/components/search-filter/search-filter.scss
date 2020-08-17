@@ -9,6 +9,10 @@
   align-content: start;
   grid-row-gap: 20px;
 
+  &__item {
+    max-width: 266px;
+  }
+
   &__subtitle {
     @include H3;
     padding-bottom: 5px;

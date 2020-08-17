@@ -10,7 +10,16 @@ mixin search-filter
       +filter-date-dropdown({ title: "даты пребывания в отеле"})
     .search-filter__item
       h3.search-filter__subtitle гости
-      +dropdown({show: false, title: "Сколько гостей", controlBtn: true}, ["взрослые", "дети", "младенцы"])
+      +dropdown({
+        show: false, 
+        title: "Сколько гостей", 
+        controlBtn: true,
+        items: [
+          {name: "взрослые", group: "гости"}, 
+          {name: "дети", group: "гости"}, 
+          {name: "младенцы"}
+        ]
+      })
     .search-filter__item_high
       h3.search-filter__subtitle диапазон цены
       +range-slider
@@ -38,7 +47,15 @@ mixin search-filter
       })
     .search-filter__item
       h3.search-filter__subtitle удобства номера
-      +dropdown({show: false, title: "Сколько комнат", type: "room"}, ["спальни", "кровати", "ванные комнаты"])
+      +dropdown({
+        show: false, 
+        title: "Сколько комнат",
+        items: [
+          {name: "спальни"}, 
+          {name: "кровати"}, 
+          {name: "ванные комнаты"}
+        ]
+      })
     .search-filter__item
       +expandable-checkbox({
         title: "дополнительные удобства",  
