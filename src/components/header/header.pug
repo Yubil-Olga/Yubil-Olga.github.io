@@ -4,11 +4,11 @@ include ../button/button
 mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false, href: "/mock-address/change-me" }] })
   case lang
     when "ru"
-      - lang = ru
+      - lang = "ru"
     when "en"
-      - lang = en
+      - lang = "en"
     default
-      - lang = en
+      - lang = "en"
 
   header.header
     .header__wrapper
@@ -32,13 +32,13 @@ mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false,
               +button({
                 href:"login.html", 
                 style: "border", 
-                text: (lang == "ru") ? "войти" : "Login", 
+                text: (lang === "ru") ? "войти" : "Login", 
                 size: "s"
               })
             .header__sign-up-btn
               +button({
                 href:"registration.html", 
                 style: "gradient", 
-                text: (lang == "ru") ? "зарегистрироваться" : "Register", 
+                text: (lang === "ru") ? "зарегистрироваться" : "Register", 
                 size: "s"
               })
