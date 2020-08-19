@@ -21,18 +21,12 @@
 
     &__number {
       text-anchor: middle;
-      -moz-transform: translateY(-0.25em);
-      -ms-transform: translateY(-0.25em);
-      -webkit-transform: translateY(-0.25em);
       transform: translateY(-0.25em);
     }
 
     &__label {
       font-size: 4px;
       text-anchor: middle;
-      -moz-transform: translateY(0.7em);
-      -ms-transform: translateY(0.7em);
-      -webkit-transform: translateY(0.7em);
       transform: translateY(0.7em);
     }
   }
