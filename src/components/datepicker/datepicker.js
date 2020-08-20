@@ -32,4 +32,3 @@ $('.js-datepicker-here').datepicker(
     },
   },
 );
-

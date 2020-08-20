@@ -2,7 +2,7 @@ import '../datepicker/datepicker';
 
 $('.js-datepicker-here').datepicker(
   {
-    onSelect(fd, d, picker) {
+    onSelect(fd) {
       $('.date-dropdown__control .js-datepicker-here').first().val(fd.split('-')[0]);
       $('.date-dropdown__control .js-datepicker-here').last().val(fd.split('-')[1]);
     },
