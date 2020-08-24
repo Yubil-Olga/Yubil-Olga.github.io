@@ -11,10 +11,11 @@ export default class Ratebtn {
   }
 
   init() {
-    this.rateButton.addEventListener('click', this.star.bind(this));
+    this.handleRateButtonClick = this.handleRateButtonClick.bind(this);
+    this.rateButton.addEventListener('click', this.handleRateButtonClick);
   }
 
-  star(event) {
+  handleRateButtonClick(event) {
     const rating = event.target.value;
     this.clearStars();
     for (let i = 0; i < rating; i += 1) {

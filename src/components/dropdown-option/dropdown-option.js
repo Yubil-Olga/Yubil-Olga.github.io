@@ -4,6 +4,7 @@ export default class DropdownOption {
     this.value = 0;
     this.getHTMLElements();
     this.bindEventListeners();
+    this.init();
   }
 
   getHTMLElements() {
@@ -25,18 +26,23 @@ export default class DropdownOption {
   }
 
   bindEventListeners() {
-    this.incrementButton.addEventListener('click', this.increaseCounter.bind(this));
-    this.decrementButton.addEventListener('click', this.decreaseCounter.bind(this));
+    this.handlePlusButtonClick = this.handlePlusButtonClick.bind(this);
+    this.handleMinusButtonClick = this.handleMinusButtonClick.bind(this);
   }
 
-  increaseCounter() {
+  init() {
+    this.incrementButton.addEventListener('click', this.handlePlusButtonClick);
+    this.decrementButton.addEventListener('click', this.handleMinusButtonClick);
+  }
+
+  handlePlusButtonClick() {
     if (this.value < 4) {
       this.value += 1;
     }
     this.displayResult();
   }
 
-  decreaseCounter() {
+  handleMinusButtonClick() {
     if (this.value > 0) {
       this.value -= 1;
     }

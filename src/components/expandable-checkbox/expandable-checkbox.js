@@ -11,10 +11,11 @@ export default class ExpandableCheckbox {
   }
 
   bindEventListeners() {
-    this.toggle.addEventListener('click', this.toggleCheckbox.bind(this));
+    this.handleSelectionClick = this.handleSelectionClick.bind(this);
+    this.toggle.addEventListener('click', this.handleSelectionClick);
   }
 
-  toggleCheckbox() {
+  handleSelectionClick() {
     this.expandCheckbox.classList.toggle(this.activeStatus);
   }
 }

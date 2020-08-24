@@ -8,6 +8,7 @@ export default class Dropdown {
     this.findHTMLElements();
     this.setOptions();
     this.bindEventListeners();
+    this.init();
   }
 
   findHTMLElements() {
@@ -24,21 +25,22 @@ export default class Dropdown {
   }
 
   bindEventListeners() {
-    this.toggle.addEventListener('click', this.toggleDropdown.bind(this));
-    this.options.forEach((el) => {
-      el.addEventListener('click', this.changeOptions.bind(this));
-    });
-    if (this.acceptBtn) {
-      this.acceptBtn.addEventListener('click', this.acceptChanges.bind(this));
-    }
-    if (this.cleanBtn) {
-      this.cleanBtn.addEventListener('click', this.cleanChanges.bind(this));
-    }
-    this.documentClick = this.closeDropdown.bind(this);
-    document.addEventListener('click', this.documentClick);
+    this.handleSelectionClick = this.handleSelectionClick.bind(this);
+    this.handleOptionClick = this.handleOptionClick.bind(this);
+    this.handleAcceptBtnClick = this.handleAcceptBtnClick.bind(this);
+    this.handleCleanBtnClick = this.handleCleanBtnClick.bind(this);
+    this.handleDocumentClick = this.closeDropdown.bind(this);
   }
 
-  toggleDropdown() {
+  init() {
+    this.toggle.addEventListener('click', this.handleSelectionClick);
+    this.options.forEach((el) => el.addEventListener('click', this.handleOptionClick));
+    if (this.acceptBtn) this.acceptBtn.addEventListener('click', this.handleAcceptBtnClick);
+    if (this.cleanBtn) this.cleanBtn.addEventListener('click', this.handleCleanBtnClick);
+    document.addEventListener('click', this.handleDocumentClick);
+  }
+
+  handleSelectionClick() {
     this.dropdown.classList.toggle(this.activeStatus);
   }
 
@@ -52,12 +54,12 @@ export default class Dropdown {
     return (event.target.closest('.js-dropdown') !== this.dropdown && this.dropdown.classList.contains(this.activeStatus));
   }
 
-  acceptChanges(event) {
+  handleAcceptBtnClick(event) {
     event.preventDefault();
-    this.toggleDropdown();
+    this.dropdown.classList.remove(this.activeStatus);
   }
 
-  cleanChanges(event) {
+  handleCleanBtnClick(event) {
     event.preventDefault();
     this.values.forEach((el) => {
       el.input.value = 0;
@@ -67,7 +69,7 @@ export default class Dropdown {
     this.title.textContent = this.question;
   }
 
-  changeOptions() {
+  handleOptionClick() {
     if (this.cleanBtn) {
       this.cleanBtnVisibility();
     }

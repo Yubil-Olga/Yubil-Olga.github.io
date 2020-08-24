@@ -13,10 +13,11 @@ export default class LikeBtn {
   }
 
   bindEventListener() {
-    this.input.addEventListener('click', this.toggleLikeBtn.bind(this));
+    this.handleLikeBtnClick = this.handleLikeBtnClick.bind(this);
+    this.input.addEventListener('click', this.handleLikeBtnClick);
   }
 
-  toggleLikeBtn() {
+  handleLikeBtnClick() {
     if (this.button.classList.contains(this.activeStatus)) {
       this.setUnactive();
     } else {
