@@ -1,15 +1,27 @@
-import '../datepicker/datepicker';
+import '../date-field/date-field';
 
-$('.js-datepicker-here').datepicker(
-  {
-    onSelect(fd) {
-      $('.date-dropdown__control .js-datepicker-here').first().val(fd.split('-')[0]);
-      $('.date-dropdown__control .js-datepicker-here').last().val(fd.split('-')[1]);
-    },
-  },
-);
-$('.js-date-dropdown__departure .js-datepicker-here').datepicker(
-  {
-    position: 'bottom right',
-  },
-);
+export default class DateDropdown {
+  constructor(htmlElement) {
+    this.dateDropdown = htmlElement;
+    this.init();
+  }
+
+  init() {
+    this.inputs = this.dateDropdown.querySelectorAll('input');
+    const startInput = $(this.inputs).first();
+    const secondInput = $(this.inputs).last();
+    $(this.inputs).datepicker({
+      onSelect(fd) {
+        const inputValues = fd.split('-');
+        const [startValue, secondValue] = inputValues;
+        startInput.val(startValue);
+        secondInput.val(secondValue);
+      }
+    })
+    secondInput.datepicker({
+      position: 'bottom right',
+    })
+  }
+}
+
+

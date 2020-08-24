@@ -1,0 +1,7 @@
+include ../field/field
+
+mixin date-field({ name })
+  label.date-field=name
+    .date-field__input.js-date-field__input
+      +field({type: "text", placeholder: "ДД.ММ.ГГГГ"})
+      i.date-field__icon expand_more

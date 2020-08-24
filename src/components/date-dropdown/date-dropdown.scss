@@ -5,32 +5,10 @@
 @import '../field/field.scss';
 
 .date-dropdown {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;;
+  grid-column-gap: 20px;
+  justify-content: space-between;
   position: relative;
   max-width: 320px;
-
-  &__title {
-    @include H3;
-    width: 100%;
-  
-    &:first-child {
-      margin-right: 20px;
-  
-      @media (max-width: 380px) {
-        margin-right: 10px;
-      }
-    }
-  }
-
-  &__control {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 150px;
-    margin-top: 5px;
-    
-    @media (max-width: 380px) {
-      width: unset;
-    }
-  }
 }

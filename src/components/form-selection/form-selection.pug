@@ -7,8 +7,10 @@ mixin form-selection
     h1.form-selection__title Найдём номера под ваши пожелания
     .form-selection__date-picker-wrapper
       +date-dropdown({
-        title1: "прибытие", 
-        title2: "выезд"
+        titles: [
+          {name: "прибытие"}, 
+          {name: "выезд"}
+        ]
       })
     .form-selection__dropdown-wrapper
       h3.form-selection__sub-title гости

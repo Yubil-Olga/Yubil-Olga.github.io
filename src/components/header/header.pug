@@ -10,11 +10,11 @@ mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false,
     default
       - lang = "en"
 
-  header.header
+  header.header.js-header
     .header__wrapper
       +logo
       nav.header__navigation
-        ul.header__menu
+        ul.header__menu.js-header__menu
           each item in items
             li.header__item
               if item.expanded
@@ -23,7 +23,7 @@ mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false,
                     summary.header__summary=item.name
               else 
                 a(href=item.href).header__link=item.name
-        .header__burger menu
+        .header__burger.js-header__burger menu
         .header__toolbar
           if auth
             .header__user=user

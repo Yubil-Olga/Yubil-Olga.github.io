@@ -1,4 +1,4 @@
-include ../filter-date-dropdown/filter-date-dropdown
+include ../date-field/date-field
 include ../dropdown/dropdown
 include ../range-slider/range-slider
 include ../checkbox/checkbox
@@ -7,7 +7,7 @@ include ../expandable-checkbox/expandable-checkbox
 mixin search-filter
   aside.search-filter
     .search-filter__item
-      +filter-date-dropdown({ title: "даты пребывания в отеле"})
+      +date-field({ name: "даты пребывания в отеле"})
     .search-filter__item
       h3.search-filter__subtitle гости
       +dropdown({
