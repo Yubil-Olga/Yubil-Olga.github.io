@@ -1,5 +1,5 @@
 import Header from './header';
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-header').forEach((el) => new Header(el));
+$(() => {
+  $('.js-header').each((i, val) => new Header(val));
 });

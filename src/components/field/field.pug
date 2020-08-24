@@ -1,6 +1,6 @@
-mixin field({mask, type, placeholder, text, datepicker, readonly = false} = {})
-  input.field(
-    class= mask ? "mask js-mask" : ""
+mixin field({isMasked = false, type, placeholder, text, readonly = false} = {})
+  input.field.js-field(
+    class= isMasked ? "field_masked" : ""
     type=type
     placeholder= placeholder
     value=text

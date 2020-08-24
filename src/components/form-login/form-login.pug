@@ -5,8 +5,8 @@ mixin form-login
   form.form-login
     h1.form-login__title Войти
     .form-login__section
-      +field({mask: false, type: "email", placeholder: "Email"})
-      +field({mask: false, type: "password", placeholder: "Пароль"})
+      +field({type: "email", placeholder: "Email"})
+      +field({type: "password", placeholder: "Пароль"})
     .form-login__section
       +button({text: "войти", style: "arrow", size: "m"})
     .form-login__footer

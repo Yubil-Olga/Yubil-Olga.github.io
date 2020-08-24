@@ -32,8 +32,8 @@ export default class Datepicker {
     this.$buttonsContainer = this.$calendar.find('.datepicker--buttons');
     this.applyButtonText = 'Применить';
     this.$applyButton = $('<span>', {
-      text: this.applyButtonText, 
-      class: 'apply--button'
+      text: this.applyButtonText,
+      class: 'apply--button',
     }).appendTo(this.$buttonsContainer);
   }
 

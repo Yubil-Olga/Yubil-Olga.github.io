@@ -7,8 +7,8 @@ mixin form-registration
   form.form-registration
     h1.form-registration__title Регистрация аккаунта
     .form-registration__section
-      +field({mask: false, type: "text", placeholder: "Имя"})
-      +field({mask: false, type: "text", placeholder: "Фамилия"})
+      +field({type: "text", placeholder: "Имя"})
+      +field({type: "text", placeholder: "Фамилия"})
       +radio-button([
         {
           text: "Мужчина",
@@ -25,11 +25,11 @@ mixin form-registration
       ])
     .form-registration__section
       h3.form-registration__sub-title дата рождения
-      +field({mask: true, type: "date", placeholder: "ДД.ММ.ГГГГ"})
+      +field({isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ"})
     .form-registration__section
       h3.form-registration__sub-title данные для входа в сервис
-      +field({mask: false, type: "email", placeholder: "Email"})
-      +field({mask: false, type: "password", placeholder: "Пароль"})
+      +field({type: "email", placeholder: "Email"})
+      +field({type: "password", placeholder: "Пароль"})
       +toggle({title: "Получать спецпредложения", isCheched: false})
     .form-registration__section
       +button({text: "перейти к оплате", style: "arrow", size: "m"})

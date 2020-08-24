@@ -16,12 +16,10 @@ export default class DateDropdown {
         const [startValue, secondValue] = inputValues;
         startInput.val(startValue);
         secondInput.val(secondValue);
-      }
-    })
+      },
+    });
     secondInput.datepicker({
       position: 'bottom right',
-    })
+    });
   }
 }
-
-

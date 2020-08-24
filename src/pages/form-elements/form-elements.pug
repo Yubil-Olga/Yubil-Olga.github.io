@@ -32,15 +32,15 @@ block variables
     }
       
 block main
-  section.form-elements
+  section.form-elements.js-form-elements
     .form-elements__section
       .form-elements__block
           .form-elements__item
             h3.form-elements__subtitle(data-comment="default") Text Field       
-            +field({mask: false, type: "email", placeholder: "Email"})
+            +field({type: "email", placeholder: "Email"})
           .form-elements__item
             h3.form-elements__subtitle(data-comment="hover/focus") Text Field 
-            +field({mask: false, type: "text", text: "This is pretty awesome"})
+            +field({type: "text", text: "This is pretty awesome"})
           .form-elements__item
             h3.form-elements__subtitle(data-comment="default") Dropdown
             +dropdown({
@@ -55,7 +55,7 @@ block main
             })
           .form-elements__item
             h3.form-elements__subtitle(data-comment="default") masked text field
-            +field({mask: true, placeholder: "ДД.ММ.ГГГГ"})
+            +field({isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ"})
       .form-elements__item
         +date-dropdown({
           titles: [
