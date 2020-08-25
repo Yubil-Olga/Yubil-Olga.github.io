@@ -31,7 +31,7 @@ export default class LikeBtn {
 
   setActive() {
     this.likes += 1;
-    this.icon.setTextContent('favorite')
+    this.icon.setTextContent('favorite');
     this.button.classList.add(this.activeStatus);
     this.input.setAttribute('checked', true);
   }
