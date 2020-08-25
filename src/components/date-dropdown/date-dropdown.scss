@@ -1,9 +1,3 @@
-@import '../../scss/fonts';
-@import '../../scss/vars';
-@import '../../scss/mixins';
-@import '../datepicker/datepicker.scss';
-@import '../field/field.scss';
-
 .date-dropdown {
   display: grid;
   grid-template-columns: 1fr 1fr;;

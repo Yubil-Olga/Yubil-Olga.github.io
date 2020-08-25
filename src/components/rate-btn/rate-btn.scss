@@ -1,14 +1,10 @@
 @import '../../scss/vars', '../../scss/mixins';
 
 .rate-btn {
+  display: flex;
+
   &__item {
     position: relative;
-  }
-
-  &__icon {
-    @include Icon;
-    font-size: 24px;
-    color: $purple;
   }
 
   &__input {

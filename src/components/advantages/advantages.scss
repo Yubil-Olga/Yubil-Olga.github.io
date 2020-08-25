@@ -1,5 +1,4 @@
 @import '../../scss/vars';
-@import '../../scss/fonts';
 @import '../../scss/mixins';
 
 .advantages {
@@ -11,15 +10,6 @@
   &_underlined {
     border-bottom: 1px solid rgba($dark-shade, 0.1);
     padding-bottom: 20px;
-  }
-
-  &__icon {
-    @include Icon;
-    font-size: 48px;
-    line-height: 41px;
-    background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
-    background-clip: text;
-    color: transparent;
   }
 
   &__description {

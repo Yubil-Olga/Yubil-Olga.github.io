@@ -1,6 +1,5 @@
 @import '../../scss/mixins';
 @import '../../scss/vars';
-@import '../button/button.scss';
 
 .dropdown {
   width: 100%;
@@ -20,13 +19,6 @@
     height: 44px;
     box-sizing: border-box;
     line-height: 18px;
-
-    &:after {
-      content: 'expand_more';
-      @include Icon;
-      font-size: 24px;
-      cursor: pointer;
-    }
   }
 
   &__title {

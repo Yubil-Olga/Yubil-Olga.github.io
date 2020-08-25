@@ -1,0 +1,39 @@
+@import '../../scss/mixins', '../../scss/vars';
+
+.material-icon {
+  @include Icon;
+
+  &_color {
+    &_white {
+      color: #fff;
+    }
+
+    &_purple {
+      color: $purple
+    }
+    
+    &_purple-gradient {
+      background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+      background-clip: text;
+      color: transparent;
+    }
+
+    &_dark-shade-75 {
+      color: $dark-shade-75;
+    }
+  }
+
+  &_size {
+    &_small {
+      font-size: 10px;
+    }
+
+    &_medium {
+      font-size: 24px;
+    }
+
+    &_large {
+      font-size: 48px;
+    }
+  }
+}

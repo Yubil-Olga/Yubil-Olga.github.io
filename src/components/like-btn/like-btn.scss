@@ -13,11 +13,6 @@
   align-items: center;
   cursor: pointer;
 
-  &__icon {
-    @include Icon;
-    font-size: 10px;
-  }
-
   &::after {
     content: attr(data-count);
     position: absolute;

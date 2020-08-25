@@ -1,6 +1,5 @@
 @import '../../scss/vars';
 @import '../../scss/mixins';
-@import '../rate-btn/rate-btn.scss';
 
 .card-room {
   display: inline-block;
@@ -62,9 +61,6 @@
   }
 
   &__slider-arrow {
-    @include Icon;
-    font-size: 24px;
-    color: #fff;
     transform: rotate(-90deg);
 
     &:first-child {

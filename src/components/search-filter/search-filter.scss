@@ -1,8 +1,4 @@
-@import '../date-field/date-field.scss';
-@import '../dropdown/dropdown.scss';
-@import '../range-slider/range-slider.scss';
-@import '../checkbox/checkbox.scss';
-@import '../expandable-checkbox/expandable-checkbox.scss';
+@import '../../scss/vars', '../../scss/mixins';
 
 .search-filter {
   display: grid;

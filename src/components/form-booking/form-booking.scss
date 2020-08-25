@@ -1,9 +1,6 @@
 @import '../../scss/mixins';
 @import '../../scss/fonts';
 @import '../../scss/vars';
-@import '../date-dropdown/date-dropdown.scss';
-@import '../dropdown/dropdown.scss';
-@import '../button/button.scss';
 
 .form-booking {
   @include form;

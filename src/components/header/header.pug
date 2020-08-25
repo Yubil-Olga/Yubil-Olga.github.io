@@ -1,5 +1,6 @@
 include ../logo/logo
 include ../button/button
+include ../material-icon/material-icon
 
 mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false, href: "/mock-address/change-me" }] })
   case lang
@@ -23,7 +24,8 @@ mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false,
                     summary.header__summary=item.name
               else 
                 a(href=item.href).header__link=item.name
-        .header__burger.js-header__burger menu
+        .header__burger.js-header__burger
+          +material-icon({name: "menu", size: "m", color: "dark-shade-75"})
         .header__toolbar
           if auth
             .header__user=user

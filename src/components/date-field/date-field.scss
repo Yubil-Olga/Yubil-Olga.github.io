@@ -1,4 +1,4 @@
-@import '../field/field.scss';
+@import '../../scss/mixins';
 
 .date-field {
   @include H3;
@@ -12,10 +12,9 @@
   }
   
   &__icon {
-    @include Icon;
     position: absolute;
     right: 11px;
-    font-size: 24px;
     cursor: pointer;
+    display: flex;
   }
 }

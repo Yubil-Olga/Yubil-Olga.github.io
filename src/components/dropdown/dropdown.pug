@@ -1,11 +1,13 @@
 include ../field/field
 include ../button/button
 include ../dropdown-option/dropdown-option
+include ../material-icon/material-icon
 
 mixin dropdown({show, title, controlBtn = false, items = [{name, group}]})
   .dropdown.js-dropdown(class=show ? "dropdown_active": "")
     .dropdown__selection.js-dropdown__selection
       p.dropdown__title.js-dropdown__title= title
+      +material-icon({name: "expand_more", size: "m"})
     .dropdown__menu
       each item in items
         .dropdown__option.js-dropdown__option

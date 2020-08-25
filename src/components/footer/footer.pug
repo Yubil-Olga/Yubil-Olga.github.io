@@ -1,5 +1,6 @@
 include ../logo/logo
 include ../subscription-input/subscription-input
+include ../social-icons/social-icons
  
 mixin footer({ creative = true, slogan, formTitle, formDescription, copyright, items = [{ title, list: [{name:"click me"}] }] })
   footer.footer(class=creative ? "footer_creative" : "")
@@ -26,9 +27,4 @@ mixin footer({ creative = true, slogan, formTitle, formDescription, copyright, i
         unless creative
           p.footer__copyright=copyright
         .footer__social
-          a(href="https://twitter.com/" rel="noopener noreferrer" target="_blank").footer__social-link
-            img(src=require('../../components/footer/img/twitter.svg').default, alt="twitter")
-          a(href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank").footer__social-link
-            img(src=require("../../components/footer/img/fb.svg").default, alt="facebook")
-          a(href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank").footer__social-link
-            img(src=require("../../components/footer/img/instagram.svg").default, alt="instagram")
+          +social-icons

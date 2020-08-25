@@ -1,8 +1,6 @@
 @import '../../scss/vars';
 @import '../../scss/fonts';
 @import '../../scss/mixins';
-@import '../logo/logo.scss';
-@import '../subscription-input/subscription-input.scss';
 
 .footer {
   $root: &;
@@ -105,19 +103,6 @@
 
     @media (max-width: 1300px) {
       display: none;
-    }
-  }
-
-  &__social {
-    display: flex;
-  }
-
-  &__social-link {
-    width: 24px;
-    height: 24px;
-
-    &:not(:first-child) {
-      margin-left: 20px;
     }
   }
 

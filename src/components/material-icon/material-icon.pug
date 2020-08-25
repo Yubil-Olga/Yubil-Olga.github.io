@@ -1,0 +1,23 @@
+mixin material-icon({ name="Enter symbol name", color, size }={})
+  - let colorModifier = ""
+  - let sizeModifier = ""
+
+  case color
+    when "white"
+      - colorModifier = "material-icon_color_white"
+    when "purple"
+      - colorModifier = "material-icon_color_purple"
+    when "purple-gradient"
+      - colorModifier = "material-icon_color_purple-gradient"
+    when "dark-shade-75"
+      - colorModifier = "material-icon_color_dark-shade-75"
+  
+  case size
+    when "s"
+      - sizeModifier = "material-icon_size_small"
+    when "m"
+      - sizeModifier = "material-icon_size_medium"
+    when "l"
+      - sizeModifier = "material-icon_size_large"
+
+  i.material-icon(class=`${colorModifier} ${sizeModifier}`)=name

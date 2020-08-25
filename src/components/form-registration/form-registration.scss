@@ -1,8 +1,4 @@
 @import '../../scss/mixins';
-@import '../field/field.scss';
-@import '../radio-button/radio-button.scss';
-@import '../toggle/toggle.scss';
-@import '../button//button.scss';
 
 .form-registration {
   @include form;

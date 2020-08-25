@@ -1,13 +1,19 @@
+include ../material-icon/material-icon
+
 mixin rate-btn({total = 5, rating = 5} = {})
   if rating > total
     - rating = total
+
+  - let text = "star_border"
+
   form.rate-btn.js-rate-btn
     - for (let i=0; i<total; i++)
       label.rate-btn__item
-        if rating>i
-          i.rate-btn__icon star
-        else
-          i.rate-btn__icon star_border
+        if (rating > i)
+        - text = "star"
+
+        .rate-btn__icon
+          +material-icon({name: text, size: "m", color: "purple"})
         input.rate-btn__input(type="radio" name="star" value=i+1)
 
 

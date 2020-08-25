@@ -1,3 +1,5 @@
+import MaterialIcon from '../material-icon/material-icon';
+
 export default class Ratebtn {
   constructor(htmlElement) {
     this.rateButton = htmlElement;
@@ -6,7 +8,8 @@ export default class Ratebtn {
   }
 
   findDOMElements() {
-    this.stars = this.rateButton.querySelectorAll('.rate-btn__icon');
+    this.starsContainer = this.rateButton.querySelectorAll('.rate-btn__icon');
+    this.stars = Array.from(this.starsContainer).map((el) => new MaterialIcon(el));
     this.inputs = this.rateButton.querySelectorAll('.rate-btn__input');
   }
 
@@ -19,13 +22,13 @@ export default class Ratebtn {
     const rating = event.target.value;
     this.clearStars();
     for (let i = 0; i < rating; i += 1) {
-      this.stars[i].textContent = 'star';
+      this.stars[i].setTextContent('star');
     }
   }
 
   clearStars() {
     this.stars.forEach((el) => {
-      el.textContent = 'star_border';
+      el.setTextContent('star_border');
     });
   }
 }

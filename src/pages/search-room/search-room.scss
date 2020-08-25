@@ -1,7 +1,4 @@
-@import '../../scss/vars', '../../scss/mixins', '../../components/layout-page/layout-page.scss';
-@import '../../components/search-filter/search-filter.scss';
-@import '../../components/card-room/card-room.scss';
-@import '../../components/pagination/pagination.scss';
+@import '../../scss/vars', '../../scss/mixins';
 
 .search-room {
   width: $content-width;
