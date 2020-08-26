@@ -162,7 +162,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./components/advantages/advantages.scss\": \"./components/advantages/advantages.scss\",\n\t\"./components/bullet-list/bullet-list.scss\": \"./components/bullet-list/bullet-list.scss\",\n\t\"./components/button/button.scss\": \"./components/button/button.scss\",\n\t\"./components/card-room/card-room.scss\": \"./components/card-room/card-room.scss\",\n\t\"./components/chart/chart.scss\": \"./components/chart/chart.scss\",\n\t\"./components/checkbox/checkbox.scss\": \"./components/checkbox/checkbox.scss\",\n\t\"./components/date-dropdown/date-dropdown.js\": \"./components/date-dropdown/date-dropdown.js\",\n\t\"./components/date-dropdown/date-dropdown.scss\": \"./components/date-dropdown/date-dropdown.scss\",\n\t\"./components/datepicker/datepicker.js\": \"./components/datepicker/datepicker.js\",\n\t\"./components/datepicker/datepicker.scss\": \"./components/datepicker/datepicker.scss\",\n\t\"./components/dropdown-option/dropdown-option.js\": \"./components/dropdown-option/dropdown-option.js\",\n\t\"./components/dropdown-option/dropdown-option.scss\": \"./components/dropdown-option/dropdown-option.scss\",\n\t\"./components/dropdown/dropdown.js\": \"./components/dropdown/dropdown.js\",\n\t\"./components/dropdown/dropdown.scss\": \"./components/dropdown/dropdown.scss\",\n\t\"./components/dropdown/init.js\": \"./components/dropdown/init.js\",\n\t\"./components/expandable-checkbox/expandable-checkbox.js\": \"./components/expandable-checkbox/expandable-checkbox.js\",\n\t\"./components/expandable-checkbox/expandable-checkbox.scss\": \"./components/expandable-checkbox/expandable-checkbox.scss\",\n\t\"./components/expandable-checkbox/init.js\": \"./components/expandable-checkbox/init.js\",\n\t\"./components/field/field.js\": \"./components/field/field.js\",\n\t\"./components/field/field.scss\": \"./components/field/field.scss\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.js\": \"./components/filter-date-dropdown/filter-date-dropdown.js\",\n\t\"./components/filter-date-dropdown/filter-date-dropdown.scss\": \"./components/filter-date-dropdown/filter-date-dropdown.scss\",\n\t\"./components/footer/footer.scss\": \"./components/footer/footer.scss\",\n\t\"./components/form-booking/form-booking.js\": \"./components/form-booking/form-booking.js\",\n\t\"./components/form-booking/form-booking.scss\": \"./components/form-booking/form-booking.scss\",\n\t\"./components/form-login/form-login.scss\": \"./components/form-login/form-login.scss\",\n\t\"./components/form-registration/form-registration.js\": \"./components/form-registration/form-registration.js\",\n\t\"./components/form-registration/form-registration.scss\": \"./components/form-registration/form-registration.scss\",\n\t\"./components/form-selection/form-selection.js\": \"./components/form-selection/form-selection.js\",\n\t\"./components/form-selection/form-selection.scss\": \"./components/form-selection/form-selection.scss\",\n\t\"./components/header/header.js\": \"./components/header/header.js\",\n\t\"./components/header/header.scss\": \"./components/header/header.scss\",\n\t\"./components/layout-base/layout-base.scss\": \"./components/layout-base/layout-base.scss\",\n\t\"./components/layout-page/layout-page.scss\": \"./components/layout-page/layout-page.scss\",\n\t\"./components/like-btn/init.js\": \"./components/like-btn/init.js\",\n\t\"./components/like-btn/like-btn.js\": \"./components/like-btn/like-btn.js\",\n\t\"./components/like-btn/like-btn.scss\": \"./components/like-btn/like-btn.scss\",\n\t\"./components/logo/logo.scss\": \"./components/logo/logo.scss\",\n\t\"./components/pagination/pagination.scss\": \"./components/pagination/pagination.scss\",\n\t\"./components/radio-button/radio-button.scss\": \"./components/radio-button/radio-button.scss\",\n\t\"./components/range-slider/range-slider.js\": \"./components/range-slider/range-slider.js\",\n\t\"./components/range-slider/range-slider.scss\": \"./components/range-slider/range-slider.scss\",\n\t\"./components/rate-btn/rate-btn.js\": \"./components/rate-btn/rate-btn.js\",\n\t\"./components/rate-btn/rate-btn.scss\": \"./components/rate-btn/rate-btn.scss\",\n\t\"./components/review/review.js\": \"./components/review/review.js\",\n\t\"./components/review/review.scss\": \"./components/review/review.scss\",\n\t\"./components/search-filter/search-filter.scss\": \"./components/search-filter/search-filter.scss\",\n\t\"./components/subscription-input/subscription-input.scss\": \"./components/subscription-input/subscription-input.scss\",\n\t\"./components/toggle/toggle.scss\": \"./components/toggle/toggle.scss\",\n\t\"./pages/cards/cards.scss\": \"./pages/cards/cards.scss\",\n\t\"./pages/colors-type/colors-type.scss\": \"./pages/colors-type/colors-type.scss\",\n\t\"./pages/form-elements/form-elements.js\": \"./pages/form-elements/form-elements.js\",\n\t\"./pages/form-elements/form-elements.scss\": \"./pages/form-elements/form-elements.scss\",\n\t\"./pages/headers-footers/headers-footers.scss\": \"./pages/headers-footers/headers-footers.scss\",\n\t\"./pages/index/index.js\": \"./pages/index/index.js\",\n\t\"./pages/index/index.scss\": \"./pages/index/index.scss\",\n\t\"./pages/login/login.scss\": \"./pages/login/login.scss\",\n\t\"./pages/registration/registration.scss\": \"./pages/registration/registration.scss\",\n\t\"./pages/room-details/room-details.scss\": \"./pages/room-details/room-details.scss\",\n\t\"./pages/search-room/search-room.scss\": \"./pages/search-room/search-room.scss\",\n\t\"./scss/_fonts.scss\": \"./scss/_fonts.scss\",\n\t\"./scss/_mixins.scss\": \"./scss/_mixins.scss\",\n\t\"./scss/_vars.scss\": \"./scss/_vars.scss\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./ sync recursive \\\\.js$|\\\\.scss$\";\n\n//# sourceURL=webpack:///._sync_\\.js$%7C\\.scss$?");
+eval("var map = {\n\t\"./components/advantages/advantages.scss\": \"./components/advantages/advantages.scss\",\n\t\"./components/bullet-list/bullet-list.scss\": \"./components/bullet-list/bullet-list.scss\",\n\t\"./components/button/button.scss\": \"./components/button/button.scss\",\n\t\"./components/card-room/card-room.scss\": \"./components/card-room/card-room.scss\",\n\t\"./components/chart/chart.scss\": \"./components/chart/chart.scss\",\n\t\"./components/checkbox/checkbox.scss\": \"./components/checkbox/checkbox.scss\",\n\t\"./components/date-dropdown/date-dropdown.js\": \"./components/date-dropdown/date-dropdown.js\",\n\t\"./components/date-dropdown/date-dropdown.scss\": \"./components/date-dropdown/date-dropdown.scss\",\n\t\"./components/date-dropdown/init.js\": \"./components/date-dropdown/init.js\",\n\t\"./components/date-field/date-field.js\": \"./components/date-field/date-field.js\",\n\t\"./components/date-field/date-field.scss\": \"./components/date-field/date-field.scss\",\n\t\"./components/datepicker/datepicker.js\": \"./components/datepicker/datepicker.js\",\n\t\"./components/datepicker/datepicker.scss\": \"./components/datepicker/datepicker.scss\",\n\t\"./components/dropdown-option/dropdown-option.js\": \"./components/dropdown-option/dropdown-option.js\",\n\t\"./components/dropdown-option/dropdown-option.scss\": \"./components/dropdown-option/dropdown-option.scss\",\n\t\"./components/dropdown/dropdown.js\": \"./components/dropdown/dropdown.js\",\n\t\"./components/dropdown/dropdown.scss\": \"./components/dropdown/dropdown.scss\",\n\t\"./components/dropdown/init.js\": \"./components/dropdown/init.js\",\n\t\"./components/expandable-checkbox/expandable-checkbox.js\": \"./components/expandable-checkbox/expandable-checkbox.js\",\n\t\"./components/expandable-checkbox/expandable-checkbox.scss\": \"./components/expandable-checkbox/expandable-checkbox.scss\",\n\t\"./components/expandable-checkbox/init.js\": \"./components/expandable-checkbox/init.js\",\n\t\"./components/field/field.js\": \"./components/field/field.js\",\n\t\"./components/field/field.scss\": \"./components/field/field.scss\",\n\t\"./components/field/init.js\": \"./components/field/init.js\",\n\t\"./components/footer/footer.scss\": \"./components/footer/footer.scss\",\n\t\"./components/form-booking/form-booking.scss\": \"./components/form-booking/form-booking.scss\",\n\t\"./components/form-login/form-login.scss\": \"./components/form-login/form-login.scss\",\n\t\"./components/form-registration/form-registration.scss\": \"./components/form-registration/form-registration.scss\",\n\t\"./components/form-selection/form-selection.scss\": \"./components/form-selection/form-selection.scss\",\n\t\"./components/header/header.js\": \"./components/header/header.js\",\n\t\"./components/header/header.scss\": \"./components/header/header.scss\",\n\t\"./components/header/init.js\": \"./components/header/init.js\",\n\t\"./components/layout-base/layout-base.scss\": \"./components/layout-base/layout-base.scss\",\n\t\"./components/layout-page/layout-page.scss\": \"./components/layout-page/layout-page.scss\",\n\t\"./components/like-btn/init.js\": \"./components/like-btn/init.js\",\n\t\"./components/like-btn/like-btn.js\": \"./components/like-btn/like-btn.js\",\n\t\"./components/like-btn/like-btn.scss\": \"./components/like-btn/like-btn.scss\",\n\t\"./components/logo/logo.scss\": \"./components/logo/logo.scss\",\n\t\"./components/material-icon/material-icon.js\": \"./components/material-icon/material-icon.js\",\n\t\"./components/material-icon/material-icon.scss\": \"./components/material-icon/material-icon.scss\",\n\t\"./components/pagination/pagination.scss\": \"./components/pagination/pagination.scss\",\n\t\"./components/radio-button/radio-button.scss\": \"./components/radio-button/radio-button.scss\",\n\t\"./components/range-slider/init.js\": \"./components/range-slider/init.js\",\n\t\"./components/range-slider/range-slider.js\": \"./components/range-slider/range-slider.js\",\n\t\"./components/range-slider/range-slider.scss\": \"./components/range-slider/range-slider.scss\",\n\t\"./components/rate-btn/rate-btn.js\": \"./components/rate-btn/rate-btn.js\",\n\t\"./components/rate-btn/rate-btn.scss\": \"./components/rate-btn/rate-btn.scss\",\n\t\"./components/review/review.scss\": \"./components/review/review.scss\",\n\t\"./components/search-filter/search-filter.scss\": \"./components/search-filter/search-filter.scss\",\n\t\"./components/social-icons/social-icons.scss\": \"./components/social-icons/social-icons.scss\",\n\t\"./components/subscription-input/subscription-input.scss\": \"./components/subscription-input/subscription-input.scss\",\n\t\"./components/toggle/toggle.scss\": \"./components/toggle/toggle.scss\",\n\t\"./pages/cards/cards.scss\": \"./pages/cards/cards.scss\",\n\t\"./pages/colors-type/colors-type.scss\": \"./pages/colors-type/colors-type.scss\",\n\t\"./pages/form-elements/form-elements.js\": \"./pages/form-elements/form-elements.js\",\n\t\"./pages/form-elements/form-elements.scss\": \"./pages/form-elements/form-elements.scss\",\n\t\"./pages/headers-footers/headers-footers.scss\": \"./pages/headers-footers/headers-footers.scss\",\n\t\"./pages/index/index.js\": \"./pages/index/index.js\",\n\t\"./pages/index/index.scss\": \"./pages/index/index.scss\",\n\t\"./pages/login/login.scss\": \"./pages/login/login.scss\",\n\t\"./pages/registration/registration.scss\": \"./pages/registration/registration.scss\",\n\t\"./pages/room-details/room-details.scss\": \"./pages/room-details/room-details.scss\",\n\t\"./pages/search-room/search-room.scss\": \"./pages/search-room/search-room.scss\",\n\t\"./scss/_fonts.scss\": \"./scss/_fonts.scss\",\n\t\"./scss/_mixins.scss\": \"./scss/_mixins.scss\",\n\t\"./scss/_vars.scss\": \"./scss/_vars.scss\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./ sync recursive \\\\.js$|\\\\.scss$\";\n\n//# sourceURL=webpack:///._sync_\\.js$%7C\\.scss$?");
 
 /***/ }),
 
@@ -236,11 +236,11 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /*!***************************************************!*\
   !*** ./components/date-dropdown/date-dropdown.js ***!
   \***************************************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _datepicker_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../datepicker/datepicker */ \"./components/datepicker/datepicker.js\");\n\r\n\r\n$('.js-datepicker-here').datepicker(\r\n  {\r\n    onSelect(fd, d, picker) {\r\n      $('.date-dropdown__control .js-datepicker-here').first().val(fd.split('-')[0]);\r\n      $('.date-dropdown__control .js-datepicker-here').last().val(fd.split('-')[1]);\r\n    },\r\n  },\r\n);\r\n$('.js-date-dropdown__departure .js-datepicker-here').datepicker(\r\n  {\r\n    position: 'bottom right',\r\n  },\r\n);\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/date-dropdown/date-dropdown.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return DateDropdown; });\n/* harmony import */ var _date_field_date_field__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../date-field/date-field */ \"./components/date-field/date-field.js\");\n\r\n\r\nclass DateDropdown {\r\n  constructor(htmlElement) {\r\n    this.dateDropdown = htmlElement;\r\n    this.init();\r\n  }\r\n\r\n  init() {\r\n    this.inputs = this.dateDropdown.querySelectorAll('input');\r\n    const startInput = $(this.inputs).first();\r\n    const secondInput = $(this.inputs).last();\r\n    $(this.inputs).datepicker({\r\n      onSelect(fd) {\r\n        const inputValues = fd.split('-');\r\n        const [startValue, secondValue] = inputValues;\r\n        startInput.val(startValue);\r\n        secondInput.val(secondValue);\r\n      },\r\n    });\r\n    secondInput.datepicker({\r\n      position: 'bottom right',\r\n    });\r\n  }\r\n}\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/date-dropdown/date-dropdown.js?");
 
 /***/ }),
 
@@ -255,15 +255,50 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
-/***/ "./components/datepicker/datepicker.js":
+/***/ "./components/date-dropdown/init.js":
+/*!******************************************!*\
+  !*** ./components/date-dropdown/init.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _date_dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date-dropdown */ \"./components/date-dropdown/date-dropdown.js\");\n\r\n\r\n$(() => {\r\n  $('.js-date-dropdown').each((i, val) => new _date_dropdown__WEBPACK_IMPORTED_MODULE_0__[\"default\"](val));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/date-dropdown/init.js?");
+
+/***/ }),
+
+/***/ "./components/date-field/date-field.js":
 /*!*********************************************!*\
-  !*** ./components/datepicker/datepicker.js ***!
+  !*** ./components/date-field/date-field.js ***!
   \*********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ \"../node_modules/air-datepicker/src/js/air-datepicker.js\");\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(air_datepicker__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nfunction applyButton(dp) {\r\n  function hideBtn() {\r\n    dp.hide();\r\n  }\r\n  if (dp.$datepicker.find('.apply--button').html() === undefined) {\r\n    dp.$datepicker.children('.datepicker--buttons').append('<span class=\"apply--button\">Применить</span></div>');\r\n  }\r\n  dp.$datepicker.find('.apply--button').click(hideBtn);\r\n}\r\n\r\n$('.js-datepicker-here').datepicker(\r\n  {\r\n    showButtonPanel: true,\r\n    clearButton: true,\r\n    range: true,\r\n    toggleSelected: false,\r\n    minDate: new Date(),\r\n    multipleDatesSeparator: ' - ',\r\n    navTitles: {\r\n      days: 'MM <i>yyyy</i>',\r\n      months: 'yyyy',\r\n      years: 'yyyy1 - yyyy2',\r\n    },\r\n    prevHtml: '<i class=\"material-icons\">arrow_back</i>',\r\n    nextHtml: '<i class=\"material-icons\">arrow_forward</i>',\r\n    onShow(dp, animationCompleted) {\r\n      if (!animationCompleted) {\r\n        applyButton(dp);\r\n      }\r\n    },\r\n  },\r\n);\r\n\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/datepicker/datepicker.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _datepicker_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../datepicker/datepicker */ \"./components/datepicker/datepicker.js\");\n\r\n\r\n$(() => {\r\n  $('.js-date-field__input input').each((i, el) => new _datepicker_datepicker__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/date-field/date-field.js?");
+
+/***/ }),
+
+/***/ "./components/date-field/date-field.scss":
+/*!***********************************************!*\
+  !*** ./components/date-field/date-field.scss ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/date-field/date-field.scss?");
+
+/***/ }),
+
+/***/ "./components/datepicker/datepicker.js":
+/*!*********************************************!*\
+  !*** ./components/datepicker/datepicker.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Datepicker; });\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ \"../node_modules/air-datepicker/src/js/air-datepicker.js\");\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(air_datepicker__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nclass Datepicker {\r\n  constructor(htmlElement) {\r\n    this.$anchor = $(htmlElement);\r\n    this.init();\r\n    this.createApplyButton();\r\n    this.bindEventListeners();\r\n  }\r\n\r\n  init() {\r\n    this.$anchor.datepicker({\r\n      showButtonPanel: true,\r\n      clearButton: true,\r\n      range: true,\r\n      toggleSelected: false,\r\n      minDate: new Date(),\r\n      multipleDatesSeparator: ' - ',\r\n      navTitles: {\r\n        days: 'MM <i>yyyy</i>',\r\n        months: 'yyyy',\r\n        years: 'yyyy1 - yyyy2',\r\n      },\r\n      prevHtml: '<i class=\"datepicker--arrow\">arrow_back</i>',\r\n      nextHtml: '<i class=\"datepicker--arrow\">arrow_forward</i>',\r\n    });\r\n    this.$calendar = this.$anchor.data('datepicker').$datepicker;\r\n    this.$calendarInput = this.$anchor.data('datepicker').$el;\r\n  }\r\n\r\n  createApplyButton() {\r\n    this.$buttonsContainer = this.$calendar.find('.datepicker--buttons');\r\n    this.applyButtonText = 'Применить';\r\n    this.$applyButton = $('<span>', {\r\n      text: this.applyButtonText,\r\n      class: 'apply--button',\r\n    }).appendTo(this.$buttonsContainer);\r\n  }\r\n\r\n  bindEventListeners() {\r\n    this.handleApplyButtonClick = this.handleApplyButtonClick.bind(this);\r\n    this.$applyButton.on('click', this.handleApplyButtonClick);\r\n    this.handleCalendarInputClick = this.handleCalendarInputClick.bind(this);\r\n    this.$calendarInput.on('click', this.handleCalendarInputClick.bind(this));\r\n  }\r\n\r\n  handleApplyButtonClick() {\r\n    this.$calendar.hide();\r\n  }\r\n\r\n  handleCalendarInputClick() {\r\n    this.$calendar.show();\r\n  }\r\n}\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/datepicker/datepicker.js?");
 
 /***/ }),
 
@@ -286,7 +321,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return DropdownOption; });\nclass DropdownOption {\r\n  constructor(htmlElement) {\r\n    this.container = htmlElement.querySelector('.js-dropdown-option')\r\n    this.name = htmlElement.querySelector('.js-dropdown-option__name').textContent\r\n    this.input = htmlElement.querySelector('.js-dropdown-option__input')\r\n    this.value = 0\r\n    this.getHTMLElements();\r\n    this.bindEventListeners()\r\n  }\r\n\r\n  getHTMLElements() {\r\n    const signs = {\r\n      increment: '+',\r\n      decrement: '-',\r\n    }\r\n    this.container.querySelectorAll('.js-dropdown-option__btn').forEach((el) => {\r\n      if (el.textContent === signs.increment) {\r\n        this.incrementButton = el\r\n      }\r\n      if (el.textContent === signs.decrement) {\r\n        this.decrementButton = el\r\n      }\r\n    })\r\n  }\r\n\r\n  bindEventListeners() {\r\n    this.incrementButton.addEventListener('click', this.increaseCounter.bind(this))\r\n    this.decrementButton.addEventListener('click', this.decreaseCounter.bind(this))\r\n  }\r\n\r\n  increaseCounter() {\r\n    if (this.value < 4) {\r\n      this.value +=1\r\n    }\r\n    this.displayResult()\r\n  }\r\n\r\n  decreaseCounter() {\r\n    if (this.value > 0) {\r\n      this.value -=1\r\n    }\r\n    this.displayResult()\r\n  }\r\n\r\n  displayResult() {\r\n    this.input.setAttribute('value', this.value)\r\n    this.input.value = this.value \r\n    this.result = `${this.value} ${this.name} `\r\n  }\r\n}\n\n//# sourceURL=webpack:///./components/dropdown-option/dropdown-option.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return DropdownOption; });\nclass DropdownOption {\r\n  constructor(htmlElement) {\r\n    this.container = htmlElement;\r\n    this.value = 0;\r\n    this.getHTMLElements();\r\n    this.bindEventListeners();\r\n    this.init();\r\n  }\r\n\r\n  getHTMLElements() {\r\n    this.option = this.container.querySelector('.js-dropdown-option');\r\n    this.name = this.container.querySelector('.js-dropdown-option__name').textContent;\r\n    this.input = this.container.querySelector('.js-dropdown-option__input');\r\n    const signs = {\r\n      increment: '+',\r\n      decrement: '-',\r\n    };\r\n    this.container.querySelectorAll('.js-dropdown-option__btn').forEach((el) => {\r\n      if (el.textContent === signs.increment) {\r\n        this.incrementButton = el;\r\n      }\r\n      if (el.textContent === signs.decrement) {\r\n        this.decrementButton = el;\r\n      }\r\n    });\r\n  }\r\n\r\n  bindEventListeners() {\r\n    this.handlePlusButtonClick = this.handlePlusButtonClick.bind(this);\r\n    this.handleMinusButtonClick = this.handleMinusButtonClick.bind(this);\r\n  }\r\n\r\n  init() {\r\n    this.incrementButton.addEventListener('click', this.handlePlusButtonClick);\r\n    this.decrementButton.addEventListener('click', this.handleMinusButtonClick);\r\n  }\r\n\r\n  handlePlusButtonClick() {\r\n    if (this.value < 4) {\r\n      this.value += 1;\r\n    }\r\n    this.displayResult();\r\n  }\r\n\r\n  handleMinusButtonClick() {\r\n    if (this.value > 0) {\r\n      this.value -= 1;\r\n    }\r\n    this.displayResult();\r\n  }\r\n\r\n  displayResult() {\r\n    this.input.setAttribute('value', this.value);\r\n    this.input.value = this.value;\r\n    this.result = `${this.value} ${this.name} `;\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/dropdown-option/dropdown-option.js?");
 
 /***/ }),
 
@@ -309,7 +344,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Dropdown; });\n/* harmony import */ var _dropdown_option_dropdown_option__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../dropdown-option/dropdown-option */ \"./components/dropdown-option/dropdown-option.js\");\n\r\n\r\nclass Dropdown {\r\n  constructor(htmlElement, optionCases) {\r\n    this.dropdown = htmlElement\r\n    this.activeStatus = 'dropdown_active'\r\n    this.question = htmlElement.querySelector('.js-dropdown__title').textContent\r\n    this.title = htmlElement.querySelector('.js-dropdown__title')\r\n    this.titleCases = optionCases\r\n    this.toggle = htmlElement.querySelector('.js-dropdown__selection')\r\n    this.options = htmlElement.querySelectorAll('.js-dropdown__option')\r\n    this.acceptBtn = htmlElement.querySelector('.js-dropdown__accept-btn') ? htmlElement.querySelector('.js-dropdown__accept-btn') : null\r\n    this.cleanBtn = htmlElement.querySelector('.js-dropdown__clean-btn') ? htmlElement.querySelector('.js-dropdown__clean-btn') : null\r\n    \r\n    this.setOptions()\r\n    this.bindEventListeners()\r\n    \r\n  }\r\n\r\n  setOptions() {\r\n    this.values = Array.from(this.options).map((el) => new _dropdown_option_dropdown_option__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el))\r\n  }\r\n\r\n  bindEventListeners() {\r\n    this.toggle.addEventListener('click', this.toggleDropdown.bind(this))\r\n    this.options.forEach((el) => {\r\n      el.addEventListener('click', this.changeOptions.bind(this))\r\n    })\r\n    if (this.acceptBtn) {\r\n      this.acceptBtn.addEventListener('click', this.acceptChanges.bind(this))\r\n    }\r\n    if (this.cleanBtn) {\r\n      this.cleanBtn.addEventListener('click', this.cleanChanges.bind(this))\r\n    }\r\n    this.documentClick = this.closeDropdown.bind(this)\r\n    document.addEventListener('click', this.documentClick)\r\n  }\r\n\r\n  toggleDropdown() {\r\n    this.dropdown.classList.toggle(this.activeStatus)\r\n  }\r\n\r\n  closeDropdown() {\r\n    if (this.toBeClosed()) {\r\n      this.dropdown.classList.remove(this.activeStatus)\r\n    }\r\n  }\r\n\r\n  toBeClosed() {\r\n    return (event.target.closest('.js-dropdown') !== this.dropdown && this.dropdown.classList.contains(this.activeStatus))\r\n  }\r\n\r\n  acceptChanges() {\r\n    event.preventDefault();\r\n    this.toggleDropdown()\r\n  }\r\n\r\n  cleanChanges() {\r\n    event.preventDefault();\r\n    for (let i=0; i< this.values.length; i++) {\r\n      this.values[i].input.value = 0\r\n      this.values[i].value = 0\r\n    }\r\n    this.cleanBtnVisibility()\r\n    this.title.textContent = this.question\r\n  }\r\n\r\n  changeOptions() {\r\n    if (this.cleanBtn) {\r\n      this.cleanBtnVisibility()\r\n    }\r\n    this.selected = []\r\n    this.values.forEach((el) => {\r\n      const group = {\r\n        name: el.container.getAttribute('data-group'),\r\n        value: el.value\r\n      }\r\n      group.collection = this.titleCases[group.name] ? this.titleCases[group.name] : null\r\n      \r\n      const index = this.selected.findIndex(el => el.name === group.name)\r\n      if ( index >= 0 ) {\r\n        this.selected[index].value += el.value\r\n      }\r\n      else {\r\n        this.selected.push(group)\r\n      }\r\n      \r\n    })\r\n    \r\n    this.updateTitle()\r\n  }\r\n\r\n  cleanBtnVisibility() {\r\n    const selection = this.values.filter(option => option.value > 0)\r\n    const visibilityStyle = 'dropdown__clean-btn_visible'\r\n    if (selection.length > 0 && !this.cleanBtn.classList.contains(visibilityStyle)) {\r\n      this.cleanBtn.classList.add(visibilityStyle)\r\n    } \r\n    if (selection.length < 1 && this.cleanBtn.classList.contains(visibilityStyle)) {\r\n      this.cleanBtn.classList.remove(visibilityStyle)\r\n    }\r\n  }\r\n\r\n  updateTitle() {\r\n    const selected = this.selected.filter(el => el.value > 0)\r\n    if (selected.length > 0) {\r\n      selected.forEach(el => {\r\n        if(el.collection) {\r\n          switch(el.value.toString()) {\r\n            case '1':\r\n              el.name = el.collection[0];\r\n              break;\r\n            case '2':\r\n            case '3':\r\n            case '4':\r\n              el.name = el.collection[1];\r\n              break;\r\n            default:\r\n              el.name = el.collection[2];\r\n          }\r\n        }\r\n      })\r\n      \r\n      this.title.textContent = selected.map(el => `${el.value} ${el.name}`).join(', ')\r\n    } else {\r\n      this.title.textContent = this.question\r\n    }\r\n  }\r\n}\n\n//# sourceURL=webpack:///./components/dropdown/dropdown.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Dropdown; });\n/* harmony import */ var _dropdown_option_dropdown_option__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../dropdown-option/dropdown-option */ \"./components/dropdown-option/dropdown-option.js\");\n\r\n\r\nclass Dropdown {\r\n  constructor(htmlElement, optionCases) {\r\n    this.dropdown = htmlElement;\r\n    this.titleCases = optionCases;\r\n    this.activeStatus = 'dropdown_active';\r\n    this.findHTMLElements();\r\n    this.setOptions();\r\n    this.bindEventListeners();\r\n    this.init();\r\n  }\r\n\r\n  findHTMLElements() {\r\n    this.toggle = this.dropdown.querySelector('.js-dropdown__selection');\r\n    this.question = this.dropdown.querySelector('.js-dropdown__title').textContent;\r\n    this.title = this.dropdown.querySelector('.js-dropdown__title');\r\n    this.options = this.dropdown.querySelectorAll('.js-dropdown__option');\r\n    this.acceptBtn = this.dropdown.querySelector('.js-dropdown__accept-btn') ? this.dropdown.querySelector('.js-dropdown__accept-btn') : null;\r\n    this.cleanBtn = this.dropdown.querySelector('.js-dropdown__clean-btn') ? this.dropdown.querySelector('.js-dropdown__clean-btn') : null;\r\n  }\r\n\r\n  setOptions() {\r\n    this.values = Array.from(this.options).map((el) => new _dropdown_option_dropdown_option__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el));\r\n  }\r\n\r\n  bindEventListeners() {\r\n    this.handleSelectionClick = this.handleSelectionClick.bind(this);\r\n    this.handleOptionClick = this.handleOptionClick.bind(this);\r\n    this.handleAcceptBtnClick = this.handleAcceptBtnClick.bind(this);\r\n    this.handleCleanBtnClick = this.handleCleanBtnClick.bind(this);\r\n    this.handleDocumentClick = this.closeDropdown.bind(this);\r\n  }\r\n\r\n  init() {\r\n    this.toggle.addEventListener('click', this.handleSelectionClick);\r\n    this.options.forEach((el) => el.addEventListener('click', this.handleOptionClick));\r\n    if (this.acceptBtn) this.acceptBtn.addEventListener('click', this.handleAcceptBtnClick);\r\n    if (this.cleanBtn) this.cleanBtn.addEventListener('click', this.handleCleanBtnClick);\r\n    document.addEventListener('click', this.handleDocumentClick);\r\n  }\r\n\r\n  handleSelectionClick() {\r\n    this.dropdown.classList.toggle(this.activeStatus);\r\n  }\r\n\r\n  closeDropdown(event) {\r\n    if (this.toBeClosed(event)) {\r\n      this.dropdown.classList.remove(this.activeStatus);\r\n    }\r\n  }\r\n\r\n  toBeClosed(event) {\r\n    return (event.target.closest('.js-dropdown') !== this.dropdown && this.dropdown.classList.contains(this.activeStatus));\r\n  }\r\n\r\n  handleAcceptBtnClick(event) {\r\n    event.preventDefault();\r\n    this.dropdown.classList.remove(this.activeStatus);\r\n  }\r\n\r\n  handleCleanBtnClick(event) {\r\n    event.preventDefault();\r\n    this.values.forEach((el) => {\r\n      el.input.value = 0;\r\n      el.value = 0;\r\n    });\r\n    this.cleanBtnVisibility();\r\n    this.title.textContent = this.question;\r\n  }\r\n\r\n  handleOptionClick() {\r\n    if (this.cleanBtn) {\r\n      this.cleanBtnVisibility();\r\n    }\r\n    this.selected = [];\r\n    this.values.forEach((el) => {\r\n      const group = {\r\n        name: el.option.getAttribute('data-group'),\r\n        value: el.value,\r\n      };\r\n      group.collection = this.titleCases[group.name] ? this.titleCases[group.name] : null;\r\n\r\n      const index = this.selected.findIndex((elem) => elem.name === group.name);\r\n      if (index >= 0) {\r\n        this.selected[index].value += el.value;\r\n      } else {\r\n        this.selected.push(group);\r\n      }\r\n    });\r\n\r\n    this.updateTitle();\r\n  }\r\n\r\n  cleanBtnVisibility() {\r\n    const selection = this.values.filter((option) => option.value > 0);\r\n    const visibilityStyle = 'dropdown__clean-btn_visible';\r\n    if (selection.length > 0 && !this.cleanBtn.classList.contains(visibilityStyle)) {\r\n      this.cleanBtn.classList.add(visibilityStyle);\r\n    }\r\n    if (selection.length < 1 && this.cleanBtn.classList.contains(visibilityStyle)) {\r\n      this.cleanBtn.classList.remove(visibilityStyle);\r\n    }\r\n  }\r\n\r\n  updateTitle() {\r\n    const selected = this.selected.filter((el) => el.value > 0);\r\n    if (selected.length > 0) {\r\n      selected.forEach((el) => {\r\n        if (el.collection) {\r\n          let index = 0;\r\n          switch (el.value.toString()) {\r\n            case '1':\r\n              index = 0;\r\n              break;\r\n            case '2':\r\n            case '3':\r\n            case '4':\r\n              index = 1;\r\n              break;\r\n            default:\r\n              index = 2;\r\n          }\r\n          el.word = el.collection[index];\r\n        } else {\r\n          el.word = el.name;\r\n        }\r\n      });\r\n\r\n      this.title.textContent = selected.map((el) => `${el.value} ${el.word}`).join(', ');\r\n    } else {\r\n      this.title.textContent = this.question;\r\n    }\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/dropdown/dropdown.js?");
 
 /***/ }),
 
@@ -332,7 +367,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dropdown */ \"./components/dropdown/dropdown.js\");\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  const optionCases = {\r\n    гости: ['гость', 'гостя', 'гостей'],\r\n    младенцы: ['младенец', 'младенца', 'младенцев'],\r\n    спальни: ['спальня', 'спальни', 'спален'],\r\n    кровати: ['кровать', 'кровати', 'кроватей'],\r\n    'ванные комнаты': ['ванная комната', 'ванные комнаты', 'ванных комнат'],\r\n  }\r\n  document.querySelectorAll('.js-dropdown').forEach((el) => new _dropdown__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el, optionCases))\r\n});\n\n//# sourceURL=webpack:///./components/dropdown/init.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dropdown */ \"./components/dropdown/dropdown.js\");\n\r\n\r\n$(() => {\r\n  const optionCases = {\r\n    гости: ['гость', 'гостя', 'гостей'],\r\n    младенцы: ['младенец', 'младенца', 'младенцев'],\r\n    спальни: ['спальня', 'спальни', 'спален'],\r\n    кровати: ['кровать', 'кровати', 'кроватей'],\r\n    'ванные комнаты': ['ванная комната', 'ванные комнаты', 'ванных комнат'],\r\n  };\r\n  $('.js-dropdown').each((i, val) => new _dropdown__WEBPACK_IMPORTED_MODULE_0__[\"default\"](val, optionCases));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/dropdown/init.js?");
 
 /***/ }),
 
@@ -344,7 +379,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dro
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ExpandableCheckbox; });\nclass ExpandableCheckbox {\r\n  constructor(htmlElement) {\r\n    this.expandCheckbox = htmlElement\r\n    this.activeStatus = 'expandable-checkbox_active'\r\n    this.toggle = htmlElement.querySelector('.js-expandable-checkbox__selection')\r\n\r\n    this.bindEventListeners()\r\n  }\r\n\r\n  bindEventListeners() {\r\n    this.toggle.addEventListener('click', this.toggleCheckbox.bind(this))\r\n  }\r\n\r\n  toggleCheckbox() {\r\n    this.expandCheckbox.classList.toggle(this.activeStatus)\r\n  }\r\n}\n\n//# sourceURL=webpack:///./components/expandable-checkbox/expandable-checkbox.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ExpandableCheckbox; });\nclass ExpandableCheckbox {\r\n  constructor(htmlElement) {\r\n    this.expandCheckbox = htmlElement;\r\n    this.findHTMLElements();\r\n    this.bindEventListeners();\r\n  }\r\n\r\n  findHTMLElements() {\r\n    this.activeStatus = 'expandable-checkbox_active';\r\n    this.toggle = this.expandCheckbox.querySelector('.js-expandable-checkbox__selection');\r\n  }\r\n\r\n  bindEventListeners() {\r\n    this.handleSelectionClick = this.handleSelectionClick.bind(this);\r\n    this.toggle.addEventListener('click', this.handleSelectionClick);\r\n  }\r\n\r\n  handleSelectionClick() {\r\n    this.expandCheckbox.classList.toggle(this.activeStatus);\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/expandable-checkbox/expandable-checkbox.js?");
 
 /***/ }),
 
@@ -367,7 +402,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _expandable_checkbox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./expandable-checkbox */ \"./components/expandable-checkbox/expandable-checkbox.js\");\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  document.querySelectorAll('.js-expandable-checkbox').forEach((el) => new _expandable_checkbox__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el))\r\n});\n\n//# sourceURL=webpack:///./components/expandable-checkbox/init.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _expandable_checkbox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./expandable-checkbox */ \"./components/expandable-checkbox/expandable-checkbox.js\");\n\r\n\r\n$(() => {\r\n  $('.js-expandable-checkbox').each((i, val) => new _expandable_checkbox__WEBPACK_IMPORTED_MODULE_0__[\"default\"](val));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/expandable-checkbox/init.js?");
 
 /***/ }),
 
@@ -375,11 +410,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _exp
 /*!***********************************!*\
   !*** ./components/field/field.js ***!
   \***********************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inputmask */ \"../node_modules/inputmask/index.js\");\n/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n$(document).ready(() => {\r\n  const field = document.getElementsByClassName('js-mask');\r\n  const im = new inputmask__WEBPACK_IMPORTED_MODULE_0___default.a('datetime', {\r\n    inputFormat: 'dd.mm.yyyy',\r\n    placeholder: 'ДД.ММ.ГГГГ',\r\n    min: '01.01.1900',\r\n    max: '01.01.2020',\r\n  });\r\n  im.mask(field);\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/field/field.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Field; });\n/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inputmask */ \"../node_modules/inputmask/index.js\");\n/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nclass Field {\r\n  constructor(htmlElement) {\r\n    this.field = htmlElement;\r\n    this.maskedStatus = 'field_masked';\r\n    this.init();\r\n  }\r\n\r\n  init() {\r\n    if (this.field.classList.contains(this.maskedStatus)) {\r\n      const im = new inputmask__WEBPACK_IMPORTED_MODULE_0___default.a('datetime', {\r\n        inputFormat: 'dd.mm.yyyy',\r\n        placeholder: 'ДД.ММ.ГГГГ',\r\n        min: '01.01.1900',\r\n        max: '01.01.2020',\r\n      });\r\n      im.mask(this.field);\r\n    }\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/field/field.js?");
 
 /***/ }),
 
@@ -394,26 +429,15 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
-/***/ "./components/filter-date-dropdown/filter-date-dropdown.js":
-/*!*****************************************************************!*\
-  !*** ./components/filter-date-dropdown/filter-date-dropdown.js ***!
-  \*****************************************************************/
+/***/ "./components/field/init.js":
+/*!**********************************!*\
+  !*** ./components/field/init.js ***!
+  \**********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _datepicker_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../datepicker/datepicker */ \"./components/datepicker/datepicker.js\");\n\r\n\n\n//# sourceURL=webpack:///./components/filter-date-dropdown/filter-date-dropdown.js?");
-
-/***/ }),
-
-/***/ "./components/filter-date-dropdown/filter-date-dropdown.scss":
-/*!*******************************************************************!*\
-  !*** ./components/filter-date-dropdown/filter-date-dropdown.scss ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/filter-date-dropdown/filter-date-dropdown.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _field__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./field */ \"./components/field/field.js\");\n\r\n\r\n$(() => {\r\n  $('.js-field').each((i, val) => new _field__WEBPACK_IMPORTED_MODULE_0__[\"default\"](val));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/field/init.js?");
 
 /***/ }),
 
@@ -425,18 +449,6 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/footer/footer.scss?");
-
-/***/ }),
-
-/***/ "./components/form-booking/form-booking.js":
-/*!*************************************************!*\
-  !*** ./components/form-booking/form-booking.js ***!
-  \*************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../date-dropdown/date-dropdown */ \"./components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n\r\n\r\n\n\n//# sourceURL=webpack:///./components/form-booking/form-booking.js?");
 
 /***/ }),
 
@@ -462,18 +474,6 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
-/***/ "./components/form-registration/form-registration.js":
-/*!***********************************************************!*\
-  !*** ./components/form-registration/form-registration.js ***!
-  \***********************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _field_field__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../field/field */ \"./components/field/field.js\");\n\r\n\n\n//# sourceURL=webpack:///./components/form-registration/form-registration.js?");
-
-/***/ }),
-
 /***/ "./components/form-registration/form-registration.scss":
 /*!*************************************************************!*\
   !*** ./components/form-registration/form-registration.scss ***!
@@ -482,18 +482,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fie
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/form-registration/form-registration.scss?");
-
-/***/ }),
-
-/***/ "./components/form-selection/form-selection.js":
-/*!*****************************************************!*\
-  !*** ./components/form-selection/form-selection.js ***!
-  \*****************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../date-dropdown/date-dropdown */ \"./components/date-dropdown/date-dropdown.js\");\n/* harmony import */ var _dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n\r\n\r\n\n\n//# sourceURL=webpack:///./components/form-selection/form-selection.js?");
 
 /***/ }),
 
@@ -512,10 +500,11 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /*!*************************************!*\
   !*** ./components/header/header.js ***!
   \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("document.querySelectorAll('.header__burger').forEach((el) => {\r\n  const menu = el.parentElement.querySelector('.header__menu');\r\n  function checkWidth(event) {\r\n    if (event.target.innerWidth > 1000 && menu.classList.contains('header__menu_active')) {\r\n      menu.classList.remove('header__menu_active');\r\n      window.removeEventListener('resize', checkWidth)\r\n    }\r\n  }\r\n  function showMenu() {\r\n    menu.classList.toggle('header__menu_active');\r\n    window.addEventListener('resize', checkWidth)\r\n  }\r\n  el.addEventListener('click', showMenu)\r\n})\n\n//# sourceURL=webpack:///./components/header/header.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Header; });\nclass Header {\r\n  constructor(htmlElement) {\r\n    this.header = htmlElement;\r\n    this.activeStatus = 'header__menu_active';\r\n    this.findHTMLElements();\r\n    this.bindEventListeners();\r\n  }\r\n\r\n  findHTMLElements() {\r\n    this.burger = this.header.querySelector('.js-header__burger');\r\n    this.menu = this.header.querySelector('.js-header__menu');\r\n  }\r\n\r\n  bindEventListeners() {\r\n    this.handleBurgerClick = this.handleBurgerClick.bind(this);\r\n    this.burger.addEventListener('click', this.handleBurgerClick);\r\n  }\r\n\r\n  handleBurgerClick() {\r\n    this.menu.classList.toggle(this.activeStatus);\r\n    this.handleWindowResize = this.handleWindowResize.bind(this);\r\n    window.addEventListener('resize', this.handleWindowResize);\r\n  }\r\n\r\n  handleWindowResize(event) {\r\n    if (event.target.innerWidth > 1000 && this.menu.classList.contains(this.activeStatus)) {\r\n      this.menu.classList.remove(this.activeStatus);\r\n      window.removeEventListener('resize', this.handleWindowResize);\r\n    }\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/header/header.js?");
 
 /***/ }),
 
@@ -527,6 +516,18 @@ eval("document.querySelectorAll('.header__burger').forEach((el) => {\r\n  const 
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/header/header.scss?");
+
+/***/ }),
+
+/***/ "./components/header/init.js":
+/*!***********************************!*\
+  !*** ./components/header/init.js ***!
+  \***********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./components/header/header.js\");\n\r\n\r\n$(() => {\r\n  $('.js-header').each((i, val) => new _header__WEBPACK_IMPORTED_MODULE_0__[\"default\"](val));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/header/init.js?");
 
 /***/ }),
 
@@ -560,7 +561,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _like_btn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./like-btn */ \"./components/like-btn/like-btn.js\");\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  document.querySelectorAll('.js-like-btn').forEach((el) => new _like_btn__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el))\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./components/like-btn/init.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _like_btn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./like-btn */ \"./components/like-btn/like-btn.js\");\n\r\n\r\n$(() => {\r\n  $('.js-like-btn').each((i, val) => new _like_btn__WEBPACK_IMPORTED_MODULE_0__[\"default\"](val));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/like-btn/init.js?");
 
 /***/ }),
 
@@ -572,7 +573,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lik
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return LikeBtn; });\nclass LikeBtn {\r\n  constructor(htmlElement) {\r\n    this.button = htmlElement;\r\n    this.icon = htmlElement.querySelector('.js-like-btn__icon')\r\n    this.input = htmlElement.querySelector('.js-like-btn__input')\r\n    this.likes = parseInt(this.button.getAttribute('data-count'), 10);\r\n    this.activeStatus = 'like-btn_active'\r\n    this.bindEventListener()\r\n  }\r\n\r\n  bindEventListener() {\r\n    this.input.addEventListener('click', this.toggleLikeBtn.bind(this))\r\n  }\r\n  toggleLikeBtn() {\r\n    if (this.button.classList.contains(this.activeStatus)) {\r\n      this.setUnactive()\r\n    } else {\r\n      this.setActive()\r\n    }\r\n    this.button.setAttribute('data-count', this.likes);\r\n  }\r\n  setActive() {\r\n    this.likes += 1\r\n    this.icon.textContent = 'favorite'\r\n    this.button.classList.add(this.activeStatus)\r\n    this.input.setAttribute('checked', true)\r\n  }\r\n  setUnactive() {\r\n    this.likes -= 1\r\n    this.icon.textContent = 'favorite_border'\r\n    this.button.classList.remove(this.activeStatus)\r\n    this.input.removeAttribute('checked')\r\n  }\r\n}\n\n//# sourceURL=webpack:///./components/like-btn/like-btn.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return LikeBtn; });\n/* harmony import */ var _material_icon_material_icon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../material-icon/material-icon */ \"./components/material-icon/material-icon.js\");\n\r\n\r\nclass LikeBtn {\r\n  constructor(htmlElement) {\r\n    this.button = htmlElement;\r\n    this.findDOMElements();\r\n    this.bindEventListener();\r\n  }\r\n\r\n  findDOMElements() {\r\n    this.likes = parseInt(this.button.getAttribute('data-count'), 10);\r\n    this.activeStatus = 'like-btn_active';\r\n    this.iconContainer = this.button.querySelector('.js-like-btn__icon');\r\n    this.icon = new _material_icon_material_icon__WEBPACK_IMPORTED_MODULE_0__[\"default\"](this.iconContainer);\r\n    this.input = this.button.querySelector('.js-like-btn__input');\r\n  }\r\n\r\n  bindEventListener() {\r\n    this.handleLikeBtnClick = this.handleLikeBtnClick.bind(this);\r\n    this.input.addEventListener('click', this.handleLikeBtnClick);\r\n  }\r\n\r\n  handleLikeBtnClick() {\r\n    if (this.button.classList.contains(this.activeStatus)) {\r\n      this.setUnactive();\r\n    } else {\r\n      this.setActive();\r\n    }\r\n    this.button.setAttribute('data-count', this.likes);\r\n  }\r\n\r\n  setActive() {\r\n    this.likes += 1;\r\n    this.icon.setTextContent('favorite')\r\n    this.button.classList.add(this.activeStatus);\r\n    this.input.setAttribute('checked', true);\r\n  }\r\n\r\n  setUnactive() {\r\n    this.likes -= 1;\r\n    this.icon.setTextContent('favorite_border');\r\n    this.button.classList.remove(this.activeStatus);\r\n    this.input.removeAttribute('checked');\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/like-btn/like-btn.js?");
 
 /***/ }),
 
@@ -598,6 +599,29 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
+/***/ "./components/material-icon/material-icon.js":
+/*!***************************************************!*\
+  !*** ./components/material-icon/material-icon.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return MaterialIcon; });\nclass MaterialIcon {\r\n  constructor(htmlElement) {\r\n    this.container = htmlElement;\r\n    this.findHTMLElements();\r\n  }\r\n\r\n  findHTMLElements() {\r\n    this.icon = this.container.querySelector('.material-icon');\r\n  }\r\n\r\n  setTextContent(text) {\r\n    this.icon.textContent = text;\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/material-icon/material-icon.js?");
+
+/***/ }),
+
+/***/ "./components/material-icon/material-icon.scss":
+/*!*****************************************************!*\
+  !*** ./components/material-icon/material-icon.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/material-icon/material-icon.scss?");
+
+/***/ }),
+
 /***/ "./components/pagination/pagination.scss":
 /*!***********************************************!*\
   !*** ./components/pagination/pagination.scss ***!
@@ -620,15 +644,27 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 
 /***/ }),
 
-/***/ "./components/range-slider/range-slider.js":
-/*!*************************************************!*\
-  !*** ./components/range-slider/range-slider.js ***!
-  \*************************************************/
+/***/ "./components/range-slider/init.js":
+/*!*****************************************!*\
+  !*** ./components/range-slider/init.js ***!
+  \*****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ion-rangeslider */ \"../node_modules/ion-rangeslider/js/ion.rangeSlider.js\");\n/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(ion_rangeslider__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n$('.js-range-slider').ionRangeSlider({\r\n  type: 'double',\r\n  min: 0,\r\n  max: 15000,\r\n  hide_min_max: true,\r\n  from: 5000,\r\n  to: 10000,\r\n  postfix: ' ₽',\r\n  values_separator: '-',\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/range-slider/range-slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _range_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./range-slider */ \"./components/range-slider/range-slider.js\");\n\r\n\r\n$(() => {\r\n  $('.js-range-slider').each((i, val) => new _range_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"](val));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/range-slider/init.js?");
+
+/***/ }),
+
+/***/ "./components/range-slider/range-slider.js":
+/*!*************************************************!*\
+  !*** ./components/range-slider/range-slider.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return RangeSlider; });\n/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ion-rangeslider */ \"../node_modules/ion-rangeslider/js/ion.rangeSlider.js\");\n/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(ion_rangeslider__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nclass RangeSlider {\r\n  constructor(htmlElement) {\r\n    this.$rangeSlider = $(htmlElement);\r\n    this.init();\r\n  }\r\n\r\n  init() {\r\n    this.$rangeSlider.ionRangeSlider({\r\n      type: 'double',\r\n      min: 0,\r\n      max: 15000,\r\n      hide_min_max: true,\r\n      from: 5000,\r\n      to: 10000,\r\n      postfix: ' ₽',\r\n      values_separator: '-',\r\n    });\r\n  }\r\n}\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./components/range-slider/range-slider.js?");
 
 /***/ }),
 
@@ -651,7 +687,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Ratebtn; });\nclass Ratebtn {\r\n  constructor(htmlElement) {\r\n    this.rateButton = htmlElement\r\n    this.stars = htmlElement.querySelectorAll('.rate-btn__icon')\r\n    this.inputs = htmlElement.querySelectorAll('.rate-btn__input')\r\n    this.init()\r\n  }\r\n  init() {   \r\n    this.rateButton.addEventListener('click', this.star.bind(this))\r\n  }\r\n  star(event) {\r\n    const rating = event.target.value;\r\n    this.clearStars()\r\n    for (let i = 0; i < rating; i += 1) {\r\n      this.stars[i].textContent = 'star'\r\n    }\r\n  }\r\n  clearStars() {\r\n    this.stars.forEach(el => {\r\n      el.textContent = 'star_border'\r\n    })\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/rate-btn/rate-btn.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Ratebtn; });\n/* harmony import */ var _material_icon_material_icon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../material-icon/material-icon */ \"./components/material-icon/material-icon.js\");\n\r\n\r\nclass Ratebtn {\r\n  constructor(htmlElement) {\r\n    this.rateButton = htmlElement;\r\n    this.findDOMElements();\r\n    this.init();\r\n  }\r\n\r\n  findDOMElements() {\r\n    this.starsContainer = this.rateButton.querySelectorAll('.rate-btn__icon');\r\n    this.stars = Array.from(this.starsContainer).map((el) => new _material_icon_material_icon__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el));\r\n    this.inputs = this.rateButton.querySelectorAll('.rate-btn__input');\r\n  }\r\n\r\n  init() {\r\n    this.handleRateButtonClick = this.handleRateButtonClick.bind(this);\r\n    this.rateButton.addEventListener('click', this.handleRateButtonClick);\r\n  }\r\n\r\n  handleRateButtonClick(event) {\r\n    const rating = event.target.value;\r\n    this.clearStars();\r\n    for (let i = 0; i < rating; i += 1) {\r\n      this.stars[i].setTextContent('star');\r\n    }\r\n  }\r\n\r\n  clearStars() {\r\n    this.stars.forEach((el) => {\r\n      el.setTextContent('star_border');\r\n    });\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./components/rate-btn/rate-btn.js?");
 
 /***/ }),
 
@@ -663,18 +699,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/rate-btn/rate-btn.scss?");
-
-/***/ }),
-
-/***/ "./components/review/review.js":
-/*!*************************************!*\
-  !*** ./components/review/review.js ***!
-  \*************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _like_btn_like_btn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../like-btn/like-btn */ \"./components/like-btn/like-btn.js\");\n\r\n\n\n//# sourceURL=webpack:///./components/review/review.js?");
 
 /***/ }),
 
@@ -697,6 +721,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./comp
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/search-filter/search-filter.scss?");
+
+/***/ }),
+
+/***/ "./components/social-icons/social-icons.scss":
+/*!***************************************************!*\
+  !*** ./components/social-icons/social-icons.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./components/social-icons/social-icons.scss?");
 
 /***/ }),
 
@@ -752,7 +787,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./page
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_rate_btn_rate_btn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/rate-btn/rate-btn */ \"./components/rate-btn/rate-btn.js\");\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  document.querySelectorAll('.form-elements .js-rate-btn').forEach((el) => new _components_rate_btn_rate_btn__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el))\r\n});\n\n//# sourceURL=webpack:///./pages/form-elements/form-elements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _components_rate_btn_rate_btn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/rate-btn/rate-btn */ \"./components/rate-btn/rate-btn.js\");\n\r\n\r\n$(() => {\r\n  $('.js-form-elements .js-rate-btn').each((i, val) => new _components_rate_btn_rate_btn__WEBPACK_IMPORTED_MODULE_0__[\"default\"](val));\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./pages/form-elements/form-elements.js?");
 
 /***/ }),
 
