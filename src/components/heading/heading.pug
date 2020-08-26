@@ -1,0 +1,12 @@
+mixin heading({ text="Heading", tag }={})
+  - let typeModifier
+
+  case tag
+    when "h1"
+      - typeModifier = "heading_type_h1"
+    when "h2"
+      - typeModifier = "heading_type_h2"
+    when "h3"
+      - typeModifier = "heading_type_h3"
+
+  #{tag}.heading(class=typeModifier)= text

@@ -1,6 +1,7 @@
 include ../logo/logo
 include ../subscription-input/subscription-input
 include ../social-icons/social-icons
+include ../heading/heading
  
 mixin footer({ creative = true, slogan, formTitle, formDescription, copyright, items = [{ title, list: [{name:"click me"}] }] })
   footer.footer(class=creative ? "footer_creative" : "")
@@ -12,13 +13,15 @@ mixin footer({ creative = true, slogan, formTitle, formDescription, copyright, i
       unless creative
         each item in items
           section.footer__section
-            h3.footer__subtitle=item.title
+            .footer__subtitle
+              +heading({ text: item.title, tag: "h3"})
             ul.footer__navigation
               each link in item.list
                 li.footer__navigation-item
                   a.footer__link(href="/mock-address/change-me")=link.name
         form.footer__section
-          h3.footer__subtitle=formTitle
+          .footer__subtitle
+            +heading({ text: formTitle, tag: "h3"})
           p.footer__description=formDescription
           .footer__control
             +subscription-input

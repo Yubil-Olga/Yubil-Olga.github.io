@@ -1,9 +1,10 @@
 include ../field/field
 include ../button/button
+include ../heading/heading
 
 mixin form-login
   form.form-login
-    h1.form-login__title Войти
+    +heading({ text: "Войти", tag: "h1"})
     .form-login__section
       +field({type: "email", placeholder: "Email"})
       +field({type: "password", placeholder: "Пароль"})

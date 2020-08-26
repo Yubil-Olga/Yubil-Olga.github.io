@@ -1,10 +1,11 @@
 include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown 
 include ../button/button 
+include ../heading/heading
 
 mixin form-selection
   form.form-selection
-    h1.form-selection__title Найдём номера под ваши пожелания
+    +heading({text: "Найдём номера под ваши пожелания", tag: "h1"})
     .form-selection__date-picker-wrapper
       +date-dropdown({
         titles: [
@@ -13,7 +14,8 @@ mixin form-selection
         ]
       })
     .form-selection__dropdown-wrapper
-      h3.form-selection__sub-title гости
+      .form-selection__subtitle
+        +heading({ text: "гости", tag: "h3"})
       +dropdown({
         show: false, 
         title: "Сколько гостей", 

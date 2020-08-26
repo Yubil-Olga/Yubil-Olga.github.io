@@ -84,8 +84,7 @@
   }
 
   &__subtitle {
-    @include H2;
-    margin: 0 0 18px;
+    margin-bottom: 18px;
   }
 
   &__details {

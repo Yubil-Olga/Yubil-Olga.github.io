@@ -2,10 +2,11 @@ include ../field/field
 include ../radio-button/radio-button
 include ../toggle/toggle
 include ../button/button
+include ../heading/heading
 
 mixin form-registration
   form.form-registration
-    h1.form-registration__title Регистрация аккаунта
+    +heading({ text: "Регистрация аккаунта", tag: "h1"})
     .form-registration__section
       +field({type: "text", placeholder: "Имя"})
       +field({type: "text", placeholder: "Фамилия"})
@@ -24,10 +25,10 @@ mixin form-registration
         }
       ])
     .form-registration__section
-      h3.form-registration__sub-title дата рождения
+      +heading({ text: "дата рождения", tag: "h3"})
       +field({isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ"})
     .form-registration__section
-      h3.form-registration__sub-title данные для входа в сервис
+      +heading({ text: "данные для входа в сервис", tag: "h3"})
       +field({type: "email", placeholder: "Email"})
       +field({type: "password", placeholder: "Пароль"})
       +toggle({title: "Получать спецпредложения", isCheched: false})

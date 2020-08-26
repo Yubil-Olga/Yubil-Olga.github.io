@@ -2,6 +2,7 @@ extends ../../components/layout-page/layout-page
 include ../../components/search-filter/search-filter
 include ../../components/card-room/card-room
 include ../../components/pagination/pagination
+include ../../components/heading/heading
 
 block variables
   - var pageTitle = 'Search room page'
@@ -24,7 +25,8 @@ block main
   main.search-room
     +search-filter
     .search-room__result
-      h1.search-room__title Номера, которые мы для вас подобрали
+      .search-room__title
+        +heading({ text: "Номера, которые мы для вас подобрали", tag: "h1"})
       .search-room__rooms
         each room in rooms
           +card-room(room)

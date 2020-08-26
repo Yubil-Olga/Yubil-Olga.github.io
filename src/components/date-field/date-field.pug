@@ -1,8 +1,10 @@
 include ../field/field
 include ../material-icon/material-icon
+include ../heading/heading
 
 mixin date-field({ name })
-  label.date-field=name
+  .date-field
+    +heading({ text: name, tag: "h3"})
     .date-field__input.js-date-field__input
       +field({type: "text", placeholder: "ДД.ММ.ГГГГ"})
       .date-field__icon

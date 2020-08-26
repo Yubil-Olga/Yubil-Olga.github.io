@@ -16,6 +16,7 @@ include ../../components/review/review
 include ../../components/bullet-list/bullet-list
 include ../../components/subscription-input/subscription-input
 include ../../components/button/button
+include ../../components/heading/heading
 
 block variables
   - var pageTitle = 'Form elements'
@@ -36,13 +37,16 @@ block main
     .form-elements__section
       .form-elements__block
           .form-elements__item
-            h3.form-elements__subtitle(data-comment="default") Text Field       
+            .form-elements__subtitle(data-comment="default")
+              +heading({ text: "Text Field", tag: "h3"})       
             +field({type: "email", placeholder: "Email"})
           .form-elements__item
-            h3.form-elements__subtitle(data-comment="hover/focus") Text Field 
+            .form-elements__subtitle(data-comment="hover/focus")
+              +heading({ text: "Text Field", tag: "h3"})
             +field({type: "text", text: "This is pretty awesome"})
           .form-elements__item
-            h3.form-elements__subtitle(data-comment="default") Dropdown
+            .form-elements__subtitle(data-comment="default")
+              +heading({ text: "Dropdown", tag: "h3"})
             +dropdown({
               show: false, 
               title: "Сколько гостей", 
@@ -54,7 +58,8 @@ block main
               ]
             })
           .form-elements__item
-            h3.form-elements__subtitle(data-comment="default") masked text field
+            .form-elements__subtitle(data-comment="default")
+              +heading({ text: "masked text field", tag: "h3"})
             +field({isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ"})
       .form-elements__item
         +date-dropdown({
@@ -66,11 +71,13 @@ block main
       .form-elements__item
         +date-field({ name: "filter date dropdown"})
       .form-elements__item
-        h3.form-elements__subtitle subscription text field
+        .form-elements__subtitle
+          +heading({ text: "subscription text field", tag: "h3"})
         +subscription-input
     .form-elements__section 
       .form-elements__item
-        h3.form-elements__subtitle Checkbox buttons
+        .form-elements__subtitle
+          +heading({ text: "Checkbox buttons", tag: "h3"})
         +checkbox({
           rich: false, 
           items: 
@@ -81,7 +88,8 @@ block main
             ]
         })
       .form-elements__item
-        h3.form-elements__subtitle Radio buttons
+        .form-elements__subtitle
+          +heading({ text: "Radio buttons", tag: "h3"})
         .form-elements__radio-btn
           +radio-button([
             {
@@ -98,27 +106,32 @@ block main
             }
           ])
       .form-elements__item
-        h3.form-elements__subtitle Toggle
+        .form-elements__subtitle
+          +heading({ text: "Toggle", tag: "h3"})
         .form-elements__toggle
           +toggle({title: "Получать спецпредложения", isChecked: true})
         .form-elements__toggle
           +toggle({title: "Получать спецпредложения", isChecked: false})
       .form-elements__item
-        h3.form-elements__subtitle Like button
+        .form-elements__subtitle
+          +heading({ text: "Like button", tag: "h3"})
         .form-elements__like-btn
           +like-btn({count: 2, isChecked: false})
           +like-btn({count: 11, isChecked: true})
       .form-elements__item
-        h3.form-elements__subtitle Rate button
+        .form-elements__subtitle
+          +heading({ text: "Rate button", tag: "h3"})
         .form-elements__rate-btn
           +rate-btn({total: 5, rating: 4})
           +rate-btn({total: 5, rating: 5})
     .form-elements__section 
       .form-elements__item
-        h3.form-elements__subtitle Range slider
+        .form-elements__subtitle
+          +heading({ text: "Range slider", tag: "h3"})
         +range-slider
       .form-elements__item
-        h3.form-elements__subtitle Buttons
+        .form-elements__subtitle
+          +heading({ text: "Buttons", tag: "h3"})
         .form-elements__buttons
           +button({text: "click me", style: "gradient"})
           +button({text: "click me", style: "gradient"})
@@ -131,12 +144,14 @@ block main
           .form-elements__button_arrow
             +button({text: "перейти к оплате", style: "arrow"})
       .form-elements__item
-        h3.form-elements__subtitle Pagination
+        .form-elements__subtitle
+          +heading({ text: "Pagination", tag: "h3"})
         .form-elements__pagination
           +pagination({currentPage: 1, totalPages: 15, elementsOnPage: 12})
     .form-elements__section 
       .form-elements__item
-        h3.form-elements__subtitle(data-comment="default") dropdown
+        .form-elements__subtitle(data-comment="default")
+          +heading({ text: "dropdown", tag: "h3"})
         +dropdown({
           show: false, 
           title: "Сколько комнат",
@@ -147,7 +162,8 @@ block main
           ]
         })
       .form-elements__item
-        h3.form-elements__subtitle(data-comment="expanded") dropdown
+        .form-elements__subtitle(data-comment="expanded")
+          +heading({ text: "dropdown", tag: "h3"})
         +dropdown({
           show: true, 
           title: "Сколько комнат",
@@ -199,7 +215,8 @@ block main
         })
     .form-elements__section
       .form-elements__item
-        h3.form-elements__subtitle Rich checkbox buttons
+        .form-elements__subtitle
+          +heading({ text: "Rich checkbox buttons", tag: "h3"})
         +checkbox({
           rich: true, 
           items: 
@@ -210,7 +227,8 @@ block main
         })
     .form-elements__section
       .form-elements__item
-        h3.form-elements__subtitle Bullet list
+        .form-elements__subtitle
+          +heading({ text: "Bullet list", tag: "h3"})
         +bullet-list([
           {text: "Нельзя с питомцами"},
           {text: "Без вечеринок и мероприятий"},

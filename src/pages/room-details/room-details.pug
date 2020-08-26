@@ -4,6 +4,7 @@ include ../../components/advantages/advantages
 include ../../components/bullet-list/bullet-list
 include ../../components/review/review
 include ../../components/chart/chart
+include ../../components/heading/heading
 
 block variables
   - var pageTitle = 'Room details page'
@@ -53,29 +54,34 @@ block main
     .room-details__description
       .room-details__info
         .room-details__item
-          h2.room-details__subtitle Сведения о номере
+          .room-details__subtitle
+            +heading({ text: "Сведения о номере", tag: "h2"})
           .room-details__advantages
             each advantage in advantages
               +advantages(advantage)
         .room-details__item
-          h2.room-details__subtitle Впечатления от номера
+          .room-details__subtitle
+            +heading({ text: "Впечатления от номера", tag: "h2"})
           +chart(voices)
         .room-details__reviews
           .room-details__item
-            h2.room-details__subtitle Отзывы посетителей номера
+            .room-details__subtitle
+              +heading({ text: "Отзывы посетителей номера", tag: "h2"})
             .room-details__reviews-wrapper
               each comment in reviews
                 +review(comment)
         .room-details__rules
           .room-details__item
-            h2.room-details__subtitle Правила
+            .room-details__subtitle
+              +heading({ text: "Правила", tag: "h2"})
             +bullet-list([
               {text: "Нельзя с питомцами"},
               {text: "Без вечеринок и мероприятий"},
               {text: "Время прибытия — после 13:00, а выезд до 12:00"}
             ])
         .room-details__item
-          h2.room-details__subtitle Отмена
+          .room-details__subtitle
+            +heading({ text: "Отмена", tag: "h2"})
           p.room-details__details
             | Бесплатная отмена в течение 48 ч. 
             |После этого при отмене не позднее чем за 5 дн. до прибытия 

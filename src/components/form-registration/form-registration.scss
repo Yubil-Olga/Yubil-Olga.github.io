@@ -3,14 +3,6 @@
 .form-registration {
   @include form;
 
-  &__title {
-    @include H1;
-  }
-
-  &__sub-title {
-    @include H3;
-  }
-
   &__section {
     display: grid;
     grid-row-gap: 8px;

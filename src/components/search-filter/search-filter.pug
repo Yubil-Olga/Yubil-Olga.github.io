@@ -3,13 +3,15 @@ include ../dropdown/dropdown
 include ../range-slider/range-slider
 include ../checkbox/checkbox
 include ../expandable-checkbox/expandable-checkbox
+include ../heading/heading
 
 mixin search-filter
   aside.search-filter
     .search-filter__item
       +date-field({ name: "даты пребывания в отеле"})
     .search-filter__item
-      h3.search-filter__subtitle гости
+      .search-filter__subtitle
+        +heading({ text: "гости", tag: "h3"})
       +dropdown({
         show: false, 
         title: "Сколько гостей", 
@@ -21,11 +23,12 @@ mixin search-filter
         ]
       })
     .search-filter__item_high
-      h3.search-filter__subtitle диапазон цены
+      +heading({ text: "диапазон цены", tag: "h3"})
       +range-slider
       p.search-filter__comment Стоимость за сутки пребывания в номере
     .search-filter__item_high
-      h3.search-filter__subtitle Checkbox Buttons
+      .search-filter__subtitle
+        +heading({ text: "Checkbox Buttons", tag: "h3"})
       +checkbox({
         rich: false, 
         items:
@@ -36,7 +39,8 @@ mixin search-filter
           ]
       })
     .search-filter__item
-      h3.search-filter__subtitle доступность
+      .search-filter__subtitle
+        +heading({ text: "доступность", tag: "h3"})
       +checkbox({
         rich: true, 
         items:  
@@ -46,7 +50,8 @@ mixin search-filter
           ]
       })
     .search-filter__item
-      h3.search-filter__subtitle удобства номера
+      .search-filter__subtitle
+        +heading({ text: "удобства номера", tag: "h3"})
       +dropdown({
         show: false, 
         title: "Сколько комнат",

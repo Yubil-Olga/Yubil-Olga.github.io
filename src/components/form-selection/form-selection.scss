@@ -3,15 +3,10 @@
 .form-selection {
   @include form;
 
-  &__title {
-    @include H1;
+  &__subtitle {
+    margin-bottom: 5px;
   }
-
-  &__sub-title {
-    @include H3;
-    padding-bottom: 5px;
-  }
-
+  
   &__footer {
     margin-top: 10px;
   }

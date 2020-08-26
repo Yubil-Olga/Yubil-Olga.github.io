@@ -1,0 +1,20 @@
+@import '../../scss/mixins';
+
+.heading {
+
+  &_type {
+
+    &_h1 {
+      @include H1;
+    }
+
+    &_h2 {
+      @include H2;
+    }
+
+    &_h3 {
+      @include H3;
+    }
+  }
+  
+}

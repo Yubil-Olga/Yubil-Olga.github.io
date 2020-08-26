@@ -26,14 +26,15 @@
   }
 
   &__subtitle {
-    @include H3;
     padding-bottom: 5px;
     position: relative;
   
     &::after {
       content: attr(data-comment);
+      @include H3;
       position: absolute;
       right: 0;
+      top: 0;
       color: $dark-shade-50;
       font-weight: normal;
     }
