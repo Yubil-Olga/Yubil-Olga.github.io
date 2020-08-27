@@ -7,25 +7,25 @@ include ../../components/chart/chart
 include ../../components/heading/heading
 
 block variables
-  - var pageTitle = 'Room details page'
-  - var gallery = [
+  - const pageTitle = 'Room details page'
+  - const gallery = [
   - {src: "images/room888-1.jpg", alt: "room #888"},
   - {src: "images/room888-2.jpg", alt: "room #888"},
   - {src: "images/room888-3.jpg", alt: "room #888"}
   - ]
-  - var voices = [
+  - const voices = [
   - {name: "Великолепно", quantity: 130, color1: "#FFE39C", color2: "#FFBA9C"},
   - {name: "Хорошо", quantity: 65, color1: "#BC9CFF", color2: "#8BA4F9"},
   - {name: "Удовлетворительно", quantity: 65, color1: "#6FCF97", color2: "#66D2EA"},
   - {name: "Разочарован", quantity: 0, color1: "#909090", color2: "#3D4975"}
   - ]
-  - var advantages = [
+  - const advantages = [
   - {title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"},
   - {title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"},
   - {title: "Уют", description: "Номер оснащён камином", icon: "whatshot", isUnderlined: false}
   - ]
   -
-    var reviews = [
+    const reviews = [
       {
         name: "Мурад Сарафанов", 
         src: "images/reviews/review2.png", 

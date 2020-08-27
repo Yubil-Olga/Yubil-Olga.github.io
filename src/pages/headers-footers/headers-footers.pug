@@ -3,10 +3,10 @@ include ../../components/header/header
 include ../../components/footer/footer
 
 block variables
-  - var pageTitle = 'Headers & Footers'
-  - var bglogo = true
-  - var user = "Cosmin Negoita"
-  - var navigation = [
+  - const pageTitle = 'Headers & Footers'
+  - const bglogo = true
+  - const user = "Cosmin Negoita"
+  - const navigation = [
   - {name: "Home", href: "#", expanded: false},
   - {name: "About Us", href: "#", expanded: false},
   - {name: "Services", href: "#", expanded: true},
@@ -14,7 +14,7 @@ block variables
   - {name: "News", href: "#", expanded: false},
   - {name: "Documentation", href: "#", expanded: false}
   - ]
-  - var footerNavigation = [
+  - const footerNavigation = [
   - {title: "Navigation", list: [{name: "About Us"}, {name: "News"}, {name: "Support"}, {name: "Products"}]},
   - {title: "About Us", list: [{name: "Who we are"}, {name: "Our team"}, {name: "Careers"}, {name: "Investors"}]},
   - {title: "Support", list: [{name: "Documentation"}, {name: "Community"}, {name: "Get in Touch"}]}

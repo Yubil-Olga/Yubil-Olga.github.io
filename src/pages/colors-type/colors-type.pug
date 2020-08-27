@@ -1,9 +1,9 @@
 extends ../../components/layout-base/layout-base
 
 block variables
-  - var pageTitle = 'Form elements'
+  - const pageTitle = 'Form elements'
   -
-    var colors = [
+    const colors = [
       {name: "Dark Shade 100%", code: "#1F2041", group:"dark-shade"},
       {name: "Dark Shade 75%", code: "#1F2041", group:"dark-shade-75"},
       {name: "Dark Shade 50%", code: "#1F2041", group: "dark-shade-50"},
@@ -13,7 +13,7 @@ block variables
       {name: "Green", code: "#6FCF97", group:"green"}
     ]
   -
-    var fonts = [
+    const fonts = [
       {tag: "H1", description: "This one is the sub-section or widget title"},
       {tag: "H2", description: "Next one is the item title inside widgets"},
       {tag: "H3", description: "This is a label or CTA text"},
