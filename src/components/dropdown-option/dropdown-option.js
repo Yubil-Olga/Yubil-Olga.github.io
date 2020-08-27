@@ -4,7 +4,6 @@ export default class DropdownOption {
     this.value = 0;
     this.getHTMLElements();
     this.bindEventListeners();
-    this.init();
   }
 
   getHTMLElements() {
@@ -27,11 +26,8 @@ export default class DropdownOption {
 
   bindEventListeners() {
     this.handlePlusButtonClick = this.handlePlusButtonClick.bind(this);
-    this.handleMinusButtonClick = this.handleMinusButtonClick.bind(this);
-  }
-
-  init() {
     this.incrementButton.addEventListener('click', this.handlePlusButtonClick);
+    this.handleMinusButtonClick = this.handleMinusButtonClick.bind(this);
     this.decrementButton.addEventListener('click', this.handleMinusButtonClick);
   }
 

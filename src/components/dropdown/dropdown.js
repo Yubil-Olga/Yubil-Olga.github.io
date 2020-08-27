@@ -8,7 +8,6 @@ export default class Dropdown {
     this.findHTMLElements();
     this.setOptions();
     this.bindEventListeners();
-    this.init();
   }
 
   findHTMLElements() {
@@ -30,9 +29,6 @@ export default class Dropdown {
     this.handleAcceptBtnClick = this.handleAcceptBtnClick.bind(this);
     this.handleCleanBtnClick = this.handleCleanBtnClick.bind(this);
     this.handleDocumentClick = this.closeDropdown.bind(this);
-  }
-
-  init() {
     this.toggle.addEventListener('click', this.handleSelectionClick);
     this.options.forEach((el) => el.addEventListener('click', this.handleOptionClick));
     if (this.acceptBtn) this.acceptBtn.addEventListener('click', this.handleAcceptBtnClick);

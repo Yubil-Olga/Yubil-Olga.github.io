@@ -41,7 +41,7 @@ export default class Datepicker {
     this.handleApplyButtonClick = this.handleApplyButtonClick.bind(this);
     this.$applyButton.on('click', this.handleApplyButtonClick);
     this.handleCalendarInputClick = this.handleCalendarInputClick.bind(this);
-    this.$calendarInput.on('click', this.handleCalendarInputClick.bind(this));
+    this.$calendarInput.on('click', this.handleCalendarInputClick);
   }
 
   handleApplyButtonClick() {
