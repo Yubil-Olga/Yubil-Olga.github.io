@@ -3,13 +3,14 @@ include ../button/button
 include ../material-icon/material-icon
 
 mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false, href: "/mock-address/change-me" }] })
+  - let language
   case lang
     when "ru"
-      - lang = "ru"
+      - language = "ru"
     when "en"
-      - lang = "en"
+      - language = "en"
     default
-      - lang = "en"
+      - language = "en"
 
   header.header.js-header
     .header__wrapper
@@ -35,7 +36,7 @@ mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false,
                 href: "login.html", 
                 buttonType: "link",
                 style: "border", 
-                text: (lang === "ru") ? "войти" : "Login", 
+                text: (language === "ru") ? "войти" : "Login", 
                 size: "s"
               })
             .header__sign-up-btn
@@ -43,6 +44,6 @@ mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false,
                 href: "registration.html", 
                 buttonType: "link",
                 style: "gradient", 
-                text: (lang === "ru") ? "зарегистрироваться" : "Register", 
+                text: (language === "ru") ? "зарегистрироваться" : "Register", 
                 size: "s"
               })

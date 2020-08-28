@@ -1,16 +1,14 @@
 include ../material-icon/material-icon
 
 mixin rate-btn({total = 5, rating = 5} = {})
-  if rating > total
-    - rating = total
-
-  - let text = "star_border"
+  - const stars = total > 0 ? total : 1
+  - const activeStars = rating > stars ? stars : rating
 
   form.rate-btn.js-rate-btn
-    - for (let i=0; i<total; i++)
+    - for (let i=0; i<stars; i++)
       label.rate-btn__item
-        if (rating > i)
-        - text = "star"
+        if (activeStars > i)
+        - const text = activeStars > i ? "star" : "star_border"
 
         .rate-btn__icon
           +material-icon({name: text, size: "m", color: "purple"})
