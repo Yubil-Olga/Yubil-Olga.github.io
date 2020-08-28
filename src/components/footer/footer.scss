@@ -1,9 +1,10 @@
-@import '../../scss/vars';
-@import '../../scss/fonts';
 @import '../../scss/mixins';
 
 .footer {
   $root: &;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $max-width;
   box-shadow: 0 1px 0 rgba($dark-shade, 0.1);
   background-color: #fff;
   border-top: 2px solid rgba($dark-shade, 0.1);
@@ -33,14 +34,18 @@
   &__navigation {
     @include Body;
     line-height: 17px;
+    padding: 0;
+    margin: 0;
   }
 
   &__navigation-item {
     padding-bottom: 20px;
+    list-style: none;
   }
 
   &__link {
     color: $dark-shade-50;
+    text-decoration: none;
   }
 
   &__section {

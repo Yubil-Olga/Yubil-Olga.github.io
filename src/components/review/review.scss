@@ -18,8 +18,13 @@
     align-self: center;
   }
   
+  &__name, &__date {
+    margin: 0;
+  }
+
   &__text {
     @include Body;
+    margin: 0;
   }
 }
 

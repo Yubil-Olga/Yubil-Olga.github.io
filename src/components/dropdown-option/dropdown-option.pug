@@ -1,8 +1,11 @@
+include ../heading/heading
+
 mixin dropdown-option({name, group})
   if group === undefined
     - group = name
   .dropdown-option.js-dropdown-option(data-group=group)
-    h3.dropdown-option__name.js-dropdown-option__name=name
+    .dropdown-option__name.js-dropdown-option__name
+      +heading({ text: name, tag: "h3"})
     .dropdown-option__counter
       .dropdown-option__btn.js-dropdown-option__btn -
       input.dropdown-option__input.js-dropdown-option__input(value="0" readonly name=name)

@@ -3,4 +3,10 @@
 .headers-footers {
   display: grid;
   grid-row-gap: 40px;
+  background: url(../../components/logo/img/logo2.svg) 30px 30px no-repeat #e5e5e5;
+  padding: $border-space $space-y;
+
+  @media (max-width: 450px) {
+    padding: $border-space 0;
+  }
 }

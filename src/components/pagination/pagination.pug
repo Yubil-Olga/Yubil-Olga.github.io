@@ -1,17 +1,17 @@
 mixin pagination({currentPage = 1, totalPages = 15, elementsOnPage = 12} = {})
   .pagination
     ul.pagination__pages
-      li
+      li.pagination__item
         a.pagination__link(href="/mock-address/change-me").pagination__link_current= currentPage
-      li
+      li.pagination__item
         a.pagination__link(href="/mock-address/change-me")= currentPage + 1
-      li
+      li.pagination__item
         a.pagination__link(href="/mock-address/change-me")= currentPage + 2
-      li
+      li.pagination__item
         a.pagination__link(href="/mock-address/change-me") ...
-      li
+      li.pagination__item
         a.pagination__link(href="/mock-address/change-me")= totalPages
-      li
+      li.pagination__item
         a.pagination__link(href="/mock-address/change-me")
           i.pagination__next arrow_forward
     p.pagination__description 1 – #{elementsOnPage} из 100+ вариантов аренды

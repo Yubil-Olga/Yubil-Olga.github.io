@@ -3,18 +3,19 @@
 .cards {
   column-count: 3;
   column-gap: 40px;
-  margin: 0 auto;
-  width: 1220px;
+  background: url(../../components/logo/img/logo2.svg) 30px 30px no-repeat #e5e5e5;
+  padding: $border-space;
 
   &__item {
     margin-bottom: 40px;
     break-inside: avoid;
+    display: flex;
+    justify-content: center;
   }
 
   @media (max-width: 1300px) {
-    width: unset;
     column-count: 2;
-    padding: 0 $space-x;
+    padding: $border-space $space-x;
   }
 
   @media (max-width: 850px) {
@@ -24,7 +25,7 @@
   }
 
   @media (max-width: 450px) {
-    padding: 0;
+    padding: $border-space 0;
   }
 }
 

@@ -1,5 +1,3 @@
-include ../header/header
-include ../footer/footer
 block variables
 
 doctype html
@@ -14,22 +12,29 @@ html
     meta(name="description", content="Toxin - бронирование номеров в отеле")
     meta(name="keywords", content="Toxin, бронирование номеров, отель")
     title= pageTitle
-  body.layout_page
-    - var headerNavigation = [
+  body
+    include ../components/header/header
+    include ../components/footer/footer
+
+    - const headerNavigation = [
     - {name: "О нас", href: "/mock-address/change-me", expanded: false},
     - {name: "Услуги", href: "/mock-address/change-me", expanded: true},
     - {name: "Вакансии", href: "/mock-address/change-me", expanded: false},
     - {name: "Новости", href: "/mock-address/change-me", expanded: false},
     - {name: "Соглашения", href: "/mock-address/change-me", expanded: true}
     - ]
-    - var footerNavigation = [
+    - const footerNavigation = [
     - {title: "навигация", list: [{name: "О нас"}, {name: "Новости"}, {name: "Служба поддержки"}, {name: "Услуги"}]},
     - {title: "о нас", list: [{name: "О сервисе"}, {name: "Наша команда"}, {name: "Вакансии"}, {name: "Инвесторы"}]},
     - {title: "Служба поддержки", list: [{name: "Соглашения"}, {name: "Сообщества"}, {name: "Связь с нами"}]}
     - ]
   
     block header
-      +header({auth: false, lang: "ru", items: headerNavigation})
+      +header({
+        auth: false, 
+        lang: "ru", 
+        items: headerNavigation
+      })
     block main
     block footer
       +footer({
@@ -40,4 +45,3 @@ html
         copyright: "Copyright © 2018 Toxin отель. Все права зачищены.",
         items: footerNavigation
       })
-          

@@ -1,4 +1,4 @@
-@import '../../scss/vars', '../../scss/fonts', '../../scss/mixins';
+@import '../../scss/mixins';
 
 .pagination {
   &__pages {
@@ -6,6 +6,10 @@
     justify-content: center;
   }
 
+  &__item {
+    list-style: none;
+  }
+  
   &__link {
     font-size: 12px;
     line-height: 14px;
@@ -16,6 +20,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    text-decoration: none;
 
     &_current {
       background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);

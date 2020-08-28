@@ -1,10 +1,9 @@
-@import '../../scss/mixins', '../../scss/vars';
+@import '../../scss/mixins';
 
 .form-elements {
-  background-color: #fff;
-  width: $content-width;
+  background: url(../../components/logo/img/logo2.svg) 30px 20px no-repeat #fff;
   margin: 0 auto;
-  padding: $space-y 0;
+  padding: $space-y $border-space;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 130px;
