@@ -33,7 +33,7 @@ mixin form-registration
       +field({type: "password", placeholder: "Пароль"})
       +toggle({title: "Получать спецпредложения", isCheched: false})
     .form-registration__section
-      +button({text: "перейти к оплате", style: "arrow", size: "m"})
+      +button({text: "перейти к оплате", buttonType: "link", style: "arrow", size: "m"})
     .form-registration__footer
       p.form-registration__question Уже есть аккаунт на Toxin
-      +button({href: "login.html", text: "войти", style: "border", size: "m"})
+      +button({href: "login.html", buttonType: "submit", text: "войти", style: "border", size: "m"})

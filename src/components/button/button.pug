@@ -1,6 +1,8 @@
-mixin button({ href = "/mock-address/change-me", text = "click me", style, size }={})
+mixin button({ href="/mock-address/change-me", buttonType, text = "click me", style, size }={})
   - let sizeModifier
   - let styleModifier
+  - let tagModifier
+  - let typeModifier
   
   case style
     when "arrow"
@@ -23,16 +25,15 @@ mixin button({ href = "/mock-address/change-me", text = "click me", style, size 
     default
       - sizeModifier = ""
   
-  if href
-    a.button(
-      href=href 
-      aria-label=text 
-      class=styleModifier
-      class=sizeModifier
-    )=text
-  else
-    button.button(
-      type="submit" 
-      class=styleModifier
-      class=sizeModifier
-    )=text
+  case buttonType
+    when "submit"
+      - tagModifier = "button"
+      - typeModifier = "submit"
+      - href = null
+    when "link"
+      - tagModifier = "a"
+    default
+      - tagModifier = "button"
+      - href = null
+
+  #{tagModifier}(class=`button ${styleModifier} ${sizeModifier}` href=href type=typeModifier aria-label=text)=text

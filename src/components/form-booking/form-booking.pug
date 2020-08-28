@@ -45,4 +45,4 @@ mixin form-booking({number, price, discount, serviceCharge, additionalServiceCha
         .form-booking__total-dots
         .form-booking__total-price #{(price * days) + serviceCharge + additionalServiceCharge - discount}₽
     .form-booking__book-button
-      +button({text: "забронировать", style: "arrow", size: "m"})
+      +button({text: "забронировать", style: "arrow", size: "m", buttonType: "submit"})

@@ -9,8 +9,8 @@ mixin form-login
       +field({type: "email", placeholder: "Email"})
       +field({type: "password", placeholder: "Пароль"})
     .form-login__section
-      +button({text: "войти", style: "arrow", size: "m"})
+      +button({text: "войти", buttonType: "submit", style: "arrow", size: "m"})
     .form-login__footer
       p.form-login__question Нет аккаунта на Toxin?
-      +button({href: "registration.html", text: "создать", style: "border", size: "m"})
+      +button({href: "registration.html", buttonType: "link", text: "создать", style: "border", size: "m"})
 

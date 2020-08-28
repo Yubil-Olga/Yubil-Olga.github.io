@@ -32,14 +32,16 @@ mixin header({ auth = false, lang, items = [{ name: "click me", expanded: false,
           else 
             .header__sign-in-btn
               +button({
-                href:"login.html", 
+                href: "login.html", 
+                buttonType: "link",
                 style: "border", 
                 text: (lang === "ru") ? "войти" : "Login", 
                 size: "s"
               })
             .header__sign-up-btn
               +button({
-                href:"registration.html", 
+                href: "registration.html", 
+                buttonType: "link",
                 style: "gradient", 
                 text: (lang === "ru") ? "зарегистрироваться" : "Register", 
                 size: "s"
