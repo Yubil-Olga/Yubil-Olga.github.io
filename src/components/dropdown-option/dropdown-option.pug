@@ -1,7 +1,7 @@
 include ../heading/heading
 
 mixin dropdown-option({name, group})
-  .dropdown-option.js-dropdown-option(data-group=group ? group : name)
+  .dropdown-option.js-dropdown-option(data-group=group || name)
     .dropdown-option__name.js-dropdown-option__name
       +heading({ text: name, tag: "h3"})
     .dropdown-option__counter
