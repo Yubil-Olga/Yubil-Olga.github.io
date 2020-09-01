@@ -13,6 +13,9 @@
     margin-right: 26px;
   }
 
+  &__donut {
+    overflow: visible;
+  }
   &__text {
     @include H1;
     font-size: 6px;
