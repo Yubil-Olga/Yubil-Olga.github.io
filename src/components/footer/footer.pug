@@ -3,14 +3,14 @@ include ../subscription-input/subscription-input
 include ../social-icons/social-icons
 include ../heading/heading
  
-mixin footer({ creative = true, slogan, formTitle, formDescription, copyright, items = [{ title, list: [{name:"click me"}] }] })
-  footer.footer(class=creative ? "footer_creative" : "")
+mixin footer({ isCreative = true, slogan, formTitle, formDescription, copyright, items = [{ title, list: [{name:"click me"}] }] })
+  footer.footer(class=isCreative ? "footer_creative" : "")
     section.footer__main
       section.footer__section
         .footer__logo
           +logo
         p.footer__description=slogan
-      unless creative
+      unless isCreative
         each item in items
           section.footer__section
             .footer__subtitle
@@ -27,7 +27,7 @@ mixin footer({ creative = true, slogan, formTitle, formDescription, copyright, i
             +subscription-input
     .footer__wrapper
       .footer__copyright-bar
-        unless creative
+        unless isCreative
           p.footer__copyright=copyright
         .footer__social
           +social-icons

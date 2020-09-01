@@ -2,7 +2,7 @@ include ../logo/logo
 include ../button/button
 include ../material-icon/material-icon
 
-mixin header({ auth = false, language = "en", items = [{ name: "click me", expanded: false, href: "/mock-address/change-me" }] })
+mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", isExpanded: false, href: "/mock-address/change-me" }] })
   - let loginButtonText
   - let registerButtonText
   
@@ -21,7 +21,7 @@ mixin header({ auth = false, language = "en", items = [{ name: "click me", expan
         ul.header__menu.js-header__menu
           each item in items
             li.header__item
-              if item.expanded
+              if item.isExpanded
                 .header__link
                   details.header__details
                     summary.header__summary=item.name
@@ -30,7 +30,7 @@ mixin header({ auth = false, language = "en", items = [{ name: "click me", expan
         .header__burger.js-header__burger
           +material-icon({name: "menu", size: "m", color: "dark-shade-75"})
         .header__toolbar
-          if auth
+          if isAuthed
             .header__user=user
           else 
             .header__sign-in-btn

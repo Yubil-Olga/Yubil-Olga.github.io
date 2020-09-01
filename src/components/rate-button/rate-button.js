@@ -1,6 +1,6 @@
 import MaterialIcon from '../material-icon/material-icon';
 
-export default class Ratebtn {
+export default class RateButton {
   constructor(htmlElement) {
     this.rateButton = htmlElement;
     this.findDOMElements();
@@ -8,9 +8,9 @@ export default class Ratebtn {
   }
 
   findDOMElements() {
-    this.starsContainer = this.rateButton.querySelectorAll('.rate-btn__icon');
+    this.starsContainer = this.rateButton.querySelectorAll('.rate-button__icon');
     this.stars = Array.from(this.starsContainer).map((el) => new MaterialIcon(el));
-    this.inputs = this.rateButton.querySelectorAll('.rate-btn__input');
+    this.inputs = this.rateButton.querySelectorAll('.rate-button__input');
   }
 
   init() {

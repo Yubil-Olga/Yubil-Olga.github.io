@@ -1,7 +1,7 @@
-include ../rate-btn/rate-btn
+include ../rate-button/rate-button
 include ../material-icon/material-icon
 
-mixin card-room({link, url, number = 888, lux = true, price = 9990, stars = 5, reviews = 145} = {}) 
+mixin card-room({link, url, number = 888, isLux = true, price = 9990, stars = 5, reviews = 145} = {}) 
   a(href=link).card-room
     .card-room__gallery
       img(src=url).card-room__image
@@ -18,11 +18,11 @@ mixin card-room({link, url, number = 888, lux = true, price = 9990, stars = 5, r
     footer.card-room__footer
       .card-room__room-details
         h2.card-room__room-number=number
-          if lux
+          if isLux
             span.card-room__luxury люкс
         .card-room__price #{price}₽
       .card-room__room-rating
-        +rate-btn({total: 5, rating: stars})
+        +rate-button({total: 5, rating: stars})
         .card-room__comments=reviews
 
 

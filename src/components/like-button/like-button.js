@@ -1,6 +1,6 @@
 import MaterialIcon from '../material-icon/material-icon';
 
-export default class LikeBtn {
+export default class LikeButton {
   constructor(htmlElement) {
     this.button = htmlElement;
     this.findDOMElements();
@@ -9,10 +9,10 @@ export default class LikeBtn {
 
   findDOMElements() {
     this.likes = parseInt(this.button.getAttribute('data-count'), 10);
-    this.activeStatus = 'like-btn_active';
-    this.iconContainer = this.button.querySelector('.js-like-btn__icon');
+    this.activeStatus = 'like-button_active';
+    this.iconContainer = this.button.querySelector('.js-like-button__icon');
     this.icon = new MaterialIcon(this.iconContainer);
-    this.input = this.button.querySelector('.js-like-btn__input');
+    this.input = this.button.querySelector('.js-like-button__input');
   }
 
   bindEventListener() {

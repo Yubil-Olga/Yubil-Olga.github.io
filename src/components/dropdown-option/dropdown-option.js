@@ -14,7 +14,7 @@ export default class DropdownOption {
       increment: '+',
       decrement: '-',
     };
-    this.container.querySelectorAll('.js-dropdown-option__btn').forEach((el) => {
+    this.container.querySelectorAll('.js-dropdown-option__button').forEach((el) => {
       if (el.textContent === signs.increment) {
         this.incrementButton = el;
       }

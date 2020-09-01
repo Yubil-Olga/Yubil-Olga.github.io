@@ -17,9 +17,9 @@ mixin form-selection
       .form-selection__subtitle
         +heading({ text: "гости", tag: "h3"})
       +dropdown({
-        show: false, 
+        isShown: false, 
         title: "Сколько гостей", 
-        controlBtn: true,
+        hasControlButtons: true,
         items: [
           {name: "взрослые", group: "гости"}, 
           {name: "дети", group: "гости"}, 

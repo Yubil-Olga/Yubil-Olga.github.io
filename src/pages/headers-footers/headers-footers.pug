@@ -7,12 +7,12 @@ block variables
   - const bglogo = true
   - const user = "Cosmin Negoita"
   - const navigation = [
-  - {name: "Home", href: "#", expanded: false},
-  - {name: "About Us", href: "#", expanded: false},
-  - {name: "Services", href: "#", expanded: true},
-  - {name: "Careers", href: "#", expanded: false},
-  - {name: "News", href: "#", expanded: false},
-  - {name: "Documentation", href: "#", expanded: false}
+  - {name: "Home", href: "#", isExpanded: false},
+  - {name: "About Us", href: "#", isExpanded: false},
+  - {name: "Services", href: "#", isExpanded: true},
+  - {name: "Careers", href: "#", isExpanded: false},
+  - {name: "News", href: "#", isExpanded: false},
+  - {name: "Documentation", href: "#", isExpanded: false}
   - ]
   - const footerNavigation = [
   - {title: "Navigation", list: [{name: "About Us"}, {name: "News"}, {name: "Support"}, {name: "Products"}]},
@@ -22,10 +22,10 @@ block variables
   
 block main
   section.headers-footers
-    +header({auth: false, language: "en", items: navigation})
-    +header({auth: true, language: "en", items: navigation})
+    +header({isAuthed: false, language: "en", items: navigation})
+    +header({isAuthed: true, language: "en", items: navigation})
     +footer({
-      creative: false,
+      isCreative: false,
       slogan: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
       formTitle: "Subscribe to our newsletter",
       formDescription: "Receive our latest news and promotions in your inbox!",
@@ -33,7 +33,7 @@ block main
       items: footerNavigation
     })
     +footer({
-      creative: true,
+      isCreative: true,
       slogan: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
       formTitle: "Subscribe to our newsletter",
       formDescription: "Receive our latest news and promotions in your inbox!",

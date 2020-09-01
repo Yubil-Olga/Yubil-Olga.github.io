@@ -21,9 +21,9 @@ mixin form-booking({number, price, discount, serviceCharge, additionalServiceCha
         +heading({ text: "гости", tag: "h3"})
       +dropdown({
         heading: "гости",
-        show: false, 
+        isShown: false, 
         title: "Сколько гостей", 
-        controlBtn: true,
+        hasControlButtons: true,
         items: [
           {name: "взрослые", group: "гости"},
           {name: "дети", group: "гости"},

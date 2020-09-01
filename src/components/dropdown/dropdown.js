@@ -15,8 +15,8 @@ export default class Dropdown {
     this.question = this.dropdown.querySelector('.js-dropdown__title').textContent;
     this.title = this.dropdown.querySelector('.js-dropdown__title');
     this.options = this.dropdown.querySelectorAll('.js-dropdown__option');
-    this.acceptBtn = this.dropdown.querySelector('.js-dropdown__accept-btn') ? this.dropdown.querySelector('.js-dropdown__accept-btn') : null;
-    this.cleanBtn = this.dropdown.querySelector('.js-dropdown__clean-btn') ? this.dropdown.querySelector('.js-dropdown__clean-btn') : null;
+    this.acceptBtn = this.dropdown.querySelector('.js-dropdown__accept-button') || null;
+    this.cleanBtn = this.dropdown.querySelector('.js-dropdown__clean-button') || null;
   }
 
   setOptions() {
@@ -90,7 +90,7 @@ export default class Dropdown {
 
   cleanBtnVisibility() {
     const selection = this.values.filter((option) => option.value > 0);
-    const visibilityStyle = 'dropdown__clean-btn_visible';
+    const visibilityStyle = 'dropdown__clean-button_visible';
     if (selection.length > 0 && !this.cleanBtn.classList.contains(visibilityStyle)) {
       this.cleanBtn.classList.add(visibilityStyle);
     }

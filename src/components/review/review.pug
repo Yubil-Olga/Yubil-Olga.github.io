@@ -1,4 +1,4 @@
-include ../like-btn/like-btn
+include ../like-button/like-button
 
 mixin review({name = "Имя пользователя", src = "images/reviews/review1.png", voiceCounter = 11, isLiked = false, date = "Дата", comment = "Отзыв"} = {})
   .review
@@ -7,5 +7,5 @@ mixin review({name = "Имя пользователя", src = "images/reviews/re
     .review__title
       h4.review__name=name
       p.review__date= date
-    +like-btn({count: voiceCounter, isChecked: isLiked})
+    +like-button({count: voiceCounter, isChecked: isLiked})
     p.review__text=comment

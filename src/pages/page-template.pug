@@ -17,11 +17,11 @@ html
     include ../components/footer/footer
 
     - const headerNavigation = [
-    - {name: "О нас", href: "/mock-address/change-me", expanded: false},
-    - {name: "Услуги", href: "/mock-address/change-me", expanded: true},
-    - {name: "Вакансии", href: "/mock-address/change-me", expanded: false},
-    - {name: "Новости", href: "/mock-address/change-me", expanded: false},
-    - {name: "Соглашения", href: "/mock-address/change-me", expanded: true}
+    - {name: "О нас", href: "/mock-address/change-me", isExpanded: false},
+    - {name: "Услуги", href: "/mock-address/change-me", isExpanded: true},
+    - {name: "Вакансии", href: "/mock-address/change-me", isExpanded: false},
+    - {name: "Новости", href: "/mock-address/change-me", isExpanded: false},
+    - {name: "Соглашения", href: "/mock-address/change-me", isExpanded: true}
     - ]
     - const footerNavigation = [
     - {title: "навигация", list: [{name: "О нас"}, {name: "Новости"}, {name: "Служба поддержки"}, {name: "Услуги"}]},
@@ -31,14 +31,14 @@ html
   
     block header
       +header({
-        auth: false, 
+        isAuthed: false, 
         language: "ru", 
         items: headerNavigation
       })
     block main
     block footer
       +footer({
-        creative: false,
+        isCreative: false,
         slogan: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
         formTitle: "Подписка",
         formDescription: "Получайте специальные предложения и новости сервиса",
