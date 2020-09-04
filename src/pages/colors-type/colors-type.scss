@@ -1,6 +1,8 @@
 @import '../../scss/mixins';
 
 .colors-type {
+  background: url(../../components/logo/img/logo2.svg) 30px 20px no-repeat #fff;
+  padding: $space-y $border-space;
   width: $content-width;
   margin: 0 auto;
   display: grid;

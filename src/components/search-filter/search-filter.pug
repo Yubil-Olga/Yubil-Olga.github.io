@@ -31,23 +31,21 @@ mixin search-filter
         +heading({ text: "Checkbox Buttons", tag: "h3"})
       +checkbox({
         isRich: false, 
-        items:
-          [
-            {description: "Можно курить"}, 
-            {description: "Можно с питомцами", isChecked: true}, 
-            {description: "Можно пригласить гостей (до 10 человек)", isChecked: true}
-          ]
+        items: [
+          {description: "Можно курить"}, 
+          {description: "Можно с питомцами", isChecked: true}, 
+          {description: "Можно пригласить гостей (до 10 человек)", isChecked: true}
+        ]
       })
     .search-filter__item
       .search-filter__subtitle
         +heading({ text: "доступность", tag: "h3"})
       +checkbox({
         isRich: true, 
-        items:  
-          [
-            {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
-            {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
-          ]
+        items: [
+          {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
+          {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
+        ]
       })
     .search-filter__item
       .search-filter__subtitle
@@ -65,13 +63,12 @@ mixin search-filter
     .search-filter__item
       +expandable-checkbox({
         title: "дополнительные удобства",  
-        items: 
-          [
-            {description: "Завтрак"}, 
-            {description: "Письменный стол", isChecked: true}, 
-            {description: "Стул для кормления", isChecked: true}, 
-            {description: "Кроватка", isChecked: true}, 
-            {description: "Телевизор"}, 
-            {description: "Шампунь"}   
-          ]
+        items: [
+          {description: "Завтрак"}, 
+          {description: "Письменный стол", isChecked: true}, 
+          {description: "Стул для кормления", isChecked: true}, 
+          {description: "Кроватка", isChecked: true}, 
+          {description: "Телевизор"}, 
+          {description: "Шампунь"}   
+        ]
       })    

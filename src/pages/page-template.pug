@@ -16,18 +16,29 @@ html
     include ../components/header/header
     include ../components/footer/footer
 
-    - const headerNavigation = [
-    - {name: "О нас", href: "/mock-address/change-me", isExpanded: false},
-    - {name: "Услуги", href: "/mock-address/change-me", isExpanded: true},
-    - {name: "Вакансии", href: "/mock-address/change-me", isExpanded: false},
-    - {name: "Новости", href: "/mock-address/change-me", isExpanded: false},
-    - {name: "Соглашения", href: "/mock-address/change-me", isExpanded: true}
-    - ]
-    - const footerNavigation = [
-    - {title: "навигация", list: [{name: "О нас"}, {name: "Новости"}, {name: "Служба поддержки"}, {name: "Услуги"}]},
-    - {title: "о нас", list: [{name: "О сервисе"}, {name: "Наша команда"}, {name: "Вакансии"}, {name: "Инвесторы"}]},
-    - {title: "Служба поддержки", list: [{name: "Соглашения"}, {name: "Сообщества"}, {name: "Связь с нами"}]}
-    - ]
+    -
+      const headerNavigation = [
+        {name: "О нас", href: "/mock-address/change-me", isExpanded: false},
+        {name: "Услуги", href: "/mock-address/change-me", isExpanded: true},
+        {name: "Вакансии", href: "/mock-address/change-me", isExpanded: false},
+        {name: "Новости", href: "/mock-address/change-me", isExpanded: false},
+        {name: "Соглашения", href: "/mock-address/change-me", isExpanded: true}
+      ]
+
+      const footerNavigation = [
+        {
+          title: "навигация", 
+          list: [{name: "О нас"}, {name: "Новости"}, {name: "Служба поддержки"}, {name: "Услуги"}]
+        },
+        {
+          title: "о нас", 
+          list: [{name: "О сервисе"}, {name: "Наша команда"}, {name: "Вакансии"}, {name: "Инвесторы"}]
+        },
+        {
+          title: "Служба поддержки", 
+          list: [{name: "Соглашения"}, {name: "Сообщества"}, {name: "Связь с нами"}]
+        }
+      ]
   
     block header
       +header({

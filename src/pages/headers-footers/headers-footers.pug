@@ -3,22 +3,32 @@ include ../../components/header/header
 include ../../components/footer/footer
 
 block variables
-  - const pageTitle = 'Headers & Footers'
-  - const bglogo = true
-  - const user = "Cosmin Negoita"
-  - const navigation = [
-  - {name: "Home", href: "#", isExpanded: false},
-  - {name: "About Us", href: "#", isExpanded: false},
-  - {name: "Services", href: "#", isExpanded: true},
-  - {name: "Careers", href: "#", isExpanded: false},
-  - {name: "News", href: "#", isExpanded: false},
-  - {name: "Documentation", href: "#", isExpanded: false}
-  - ]
-  - const footerNavigation = [
-  - {title: "Navigation", list: [{name: "About Us"}, {name: "News"}, {name: "Support"}, {name: "Products"}]},
-  - {title: "About Us", list: [{name: "Who we are"}, {name: "Our team"}, {name: "Careers"}, {name: "Investors"}]},
-  - {title: "Support", list: [{name: "Documentation"}, {name: "Community"}, {name: "Get in Touch"}]}
-  - ]
+  -
+    const pageTitle = 'Headers & Footers'
+    const bglogo = true
+    const user = "Cosmin Negoita"
+    const navigation = [
+      {name: "Home", href: "#", isExpanded: false},
+      {name: "About Us", href: "#", isExpanded: false},
+      {name: "Services", href: "#", isExpanded: true},
+      {name: "Careers", href: "#", isExpanded: false},
+      {name: "News", href: "#", isExpanded: false},
+      {name: "Documentation", href: "#", isExpanded: false}
+    ]
+    const footerNavigation = [
+      {
+        title: "Navigation", 
+        list: [{name: "About Us"}, {name: "News"}, {name: "Support"}, {name: "Products"}]
+      },
+      {
+        title: "About Us", 
+        list: [{name: "Who we are"}, {name: "Our team"}, {name: "Careers"}, {name: "Investors"}]
+      },
+      {
+        title: "Support", 
+        list: [{name: "Documentation"}, {name: "Community"}, {name: "Get in Touch"}]
+      }
+    ]
   
 block main
   section.headers-footers
