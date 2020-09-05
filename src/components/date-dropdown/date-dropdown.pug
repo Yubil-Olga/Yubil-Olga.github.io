@@ -1,7 +1,14 @@
 include ../field/field
 include ../date-field/date-field
 
-mixin date-dropdown({ titles=[{name}] } = {})
+mixin date-dropdown({ type, firstTitle="firstTitle", secondTitle="secondTitle" } = {})
   .date-dropdown.js-date-dropdown
-    each title in titles
-      +date-field({ name: title.name})
+    case type
+      when "single"
+        .date-dropdown__input.js-date-dropdown__input
+          +date-field({ name: firstTitle, width: "large"})
+      default
+        .date-dropdown__input.js-date-dropdown__input
+          +date-field({ name: firstTitle})
+        .date-dropdown__input.js-date-dropdown__input
+          +date-field({ name: secondTitle})

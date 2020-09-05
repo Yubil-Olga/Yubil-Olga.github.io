@@ -1,8 +1,9 @@
 import 'air-datepicker';
 
-export default class Datepicker {
-  constructor(htmlElement) {
+export default class Calendar {
+  constructor(htmlElement, parentContainer) {
     this.$anchor = $(htmlElement);
+    this.$parentContainer = $(parentContainer);
     this.init();
     this.createApplyButton();
     this.bindEventListeners();
@@ -26,6 +27,12 @@ export default class Datepicker {
     });
     this.$calendar = this.$anchor.data('datepicker').$datepicker;
     this.$calendarInput = this.$anchor.data('datepicker').$el;
+    this.replaceCalendar();
+  }
+
+  replaceCalendar() {
+    this.$calendarContainer = this.$parentContainer.find('.js-calendar');
+    this.$calendarContainer.append(this.$calendar);
   }
 
   createApplyButton() {
@@ -33,7 +40,7 @@ export default class Datepicker {
     this.applyButtonText = 'Применить';
     this.$applyButton = $('<span>', {
       text: this.applyButtonText,
-      class: 'apply--button',
+      class: 'calendar__apply-button',
     }).appendTo(this.$buttonsContainer);
   }
 

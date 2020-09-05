@@ -1,0 +1,156 @@
+@import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+@import '../../scss/mixins';
+
+.calendar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &_open {
+    position: relative;
+  }
+
+  &__apply-button {
+    @include H3;
+  
+    color: $purple;
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-shade-50;
+    }
+  }
+
+  .datepicker {
+    width: 320px;
+    padding: 20px;
+    box-sizing: border-box;
+    font: {
+      family: $montserrat;
+      weight: normal;
+      size: 12px;
+    }
+  
+    line-height: 15px;
+    color: $dark-shade-50;
+  
+    &--arrow {
+      @include Icon;
+      color: $purple;
+      font-size: 24px;
+    }
+  
+    &--nav {
+      border-bottom: none;
+      padding: 0 0 20px 0;
+  
+      &-title,
+      &-title i {
+        @include H2;
+        margin-left: 5px;
+      }
+    }
+  
+    &--content {
+      width: 280px;
+    }
+  
+    &--day-name {
+      color: $purple;
+      font-weight: bold;
+    }
+  
+    &--cell {
+      &-day {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #fff;
+      }
+  
+      &.-in-range- {
+        background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
+        border-radius: 0;
+      }
+  
+      &.-selected- {
+        color: #fff;
+        font-weight: bold;
+        position: relative;
+        border: 1px solid $purple;
+    
+        &::before {
+          content: '';
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+          position: absolute;
+          z-index: -1;
+        }
+  
+        &.-range-from- {
+          border: none;
+          background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
+          border-radius: 50% 0 0 50%;
+        }
+    
+        &.-range-to- {
+          background: linear-gradient(180deg, transparentize($purple, 0.75) 0%, transparentize(#8ba4f9, 0.75) 100%);
+          border-radius: 0 50% 50% 0;
+          border: none;
+        }
+      }
+    }
+  
+    &--buttons {
+      border-top: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+  
+      @media (max-width: 380px) {
+        padding-left: $space-x/2;
+        padding-right: $space-x/2;
+      }
+    }
+  
+    &--button {
+      @include H3;
+      color: $dark-shade-50;
+      display: inline-block;
+      height: initial;
+    
+      &:hover {
+        background: none;
+      }
+    }
+  
+    &--pointer {
+      display: none;
+    }
+  
+    .-current- {
+      color: #fff;
+      font-weight: bold;
+      position: relative;
+  
+      &::before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  
+    @media (max-width: 380px) {
+      width: 290px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

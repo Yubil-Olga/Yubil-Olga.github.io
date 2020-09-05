@@ -4,7 +4,6 @@ include ../../components/advantages/advantages
 include ../../components/field/field
 include ../../components/dropdown/dropdown
 include ../../components/date-dropdown/date-dropdown
-include ../../components/date-field/date-field
 include ../../components/rate-button/rate-button
 include ../../components/expandable-checkbox/expandable-checkbox
 include ../../components/toggle/toggle
@@ -61,14 +60,9 @@ block main
               +heading({ text: "masked text field", tag: "h3"})
             +field({isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ"})
       .form-elements__item
-        +date-dropdown({
-          titles: [
-            {name: "date dropdown"}, 
-            {name: "date dropdown"}
-          ]
-        })
+        +date-dropdown({ firstTitle: "date dropdown", secondTitle: "date dropdown"})
       .form-elements__item
-        +date-field({ name: "filter date dropdown"})
+        +date-dropdown({ type: "single", firstTitle: "filter date dropdown"})
       .form-elements__item
         .form-elements__subtitle
           +heading({ text: "subscription text field", tag: "h3"})

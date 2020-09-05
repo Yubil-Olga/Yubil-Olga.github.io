@@ -4,6 +4,7 @@ include ../../components/form-registration/form-registration
 include ../../components/form-login/form-login
 include ../../components/form-booking/form-booking
 include ../../components/card-room/card-room
+include ../../components/calendar/calendar
 
 block variables
   - 
@@ -24,6 +25,8 @@ block main
       +form-booking({number: 888, price: 9990, discount: 2179, serviceCharge: 0, additionalServiceCharge: 300, days: 4})
     .cards__item
       +form-login
+    .cards__item
+      +calendar({ isOpen: true})
     for room in rooms
       .cards__item
         +card-room(room)

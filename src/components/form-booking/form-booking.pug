@@ -10,12 +10,7 @@ mixin form-booking({number, price, discount, serviceCharge, additionalServiceCha
         span.form-booking__luxury  люкс
       .form-booking__price #{price}₽
     .form-booking__date-picker-wrapper
-      +date-dropdown({
-        titles: [
-          {name: "прибытие"}, 
-          {name: "выезд"}
-        ]
-      })
+      +date-dropdown({ firstTitle: "прибытие", secondTitle: "выезд"})
     .form-booking__dropdown-wrapper
       .form-booking__sub-title
         +heading({ text: "гости", tag: "h3"})

@@ -1,11 +1,19 @@
 include ../field/field
 include ../material-icon/material-icon
 include ../heading/heading
+include ../calendar/calendar
 
-mixin date-field({ name })
-  .date-field
+mixin date-field({ name, width })
+  - let widthModifier
+
+  case width
+    when "large"
+      - widthModifier= "date-field_width_large"
+
+  .date-field.js-date-field(class=widthModifier)
     +heading({ text: name, tag: "h3"})
     .date-field__input.js-date-field__input
       +field({type: "text", placeholder: "ДД.ММ.ГГГГ"})
       .date-field__icon
         +material-icon({name: "expand_more", size: "m"})
+    +calendar

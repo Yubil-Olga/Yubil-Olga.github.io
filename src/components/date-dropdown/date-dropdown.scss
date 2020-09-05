@@ -1,8 +1,9 @@
 .date-dropdown {
-  display: grid;
-  grid-template-columns: 1fr 1fr;;
-  grid-column-gap: 20px;
+  display: flex;
   justify-content: space-between;
-  position: relative;
   max-width: 320px;
+
+  &__input {
+    width: 100%;
+  }
 }
