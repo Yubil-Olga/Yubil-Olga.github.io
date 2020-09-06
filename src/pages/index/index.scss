@@ -3,7 +3,7 @@
 .index-page {
   width: 100%;
   max-width: $max-width;
-  height: 830px;
+  min-height: 830px;
   margin: 0 auto;
   background: url('./bg-index.jpg') center/cover no-repeat;
   padding: 70px 0 20px 0;

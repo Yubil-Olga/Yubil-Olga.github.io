@@ -7,7 +7,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   background: center/cover no-repeat;
-  height: 680px;
+  min-height: 680px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,8 @@
 }
 
 @mixin form {
-  width: 380px;
+  max-width: 380px;
+  min-width: 320px;
   background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -33,7 +34,6 @@
   @media (max-width: 380px) {
     padding-left: $space-x/2;
     padding-right: $space-x/2;
-    width: 320px;
   }
 }
 
