@@ -5,5 +5,9 @@
 
   &__input {
     width: 100%;
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
   }
 }

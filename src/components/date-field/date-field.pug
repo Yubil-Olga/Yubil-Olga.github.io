@@ -13,7 +13,7 @@ mixin date-field({ name, width })
   .date-field.js-date-field(class=widthModifier)
     +heading({ text: name, tag: "h3"})
     .date-field__input.js-date-field__input
-      +field({type: "text", placeholder: "ДД.ММ.ГГГГ"})
+      +field({type: "text", placeholder: "ДД.ММ.ГГГГ", readonly: true})
       .date-field__icon
         +material-icon({name: "expand_more", size: "m"})
     +calendar

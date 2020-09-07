@@ -16,6 +16,8 @@
   @media (max-width: 400px) {
     align-items: flex-start;
     padding-top: $space-y;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -32,7 +34,6 @@
   border: none;
 
   @media (max-width: 380px) {
-    min-width: 320px;
     padding-left: $space-x/2;
     padding-right: $space-x/2;
   }

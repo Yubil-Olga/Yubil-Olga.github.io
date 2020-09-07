@@ -97,7 +97,7 @@
       opacity: 0;
 
       &::before {
-        font-family: 'Material Icons';
+        @include Icon;
         font-size: 24px;
         color: #fff;
       }
