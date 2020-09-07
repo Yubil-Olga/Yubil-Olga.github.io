@@ -20,6 +20,8 @@
 
 [ion-rangeslider](http://ionden.com/a/plugins/ion.rangeSlider/)
 
+[slick-carousel](https://kenwheeler.github.io/slick/)
+
 ### Страницы
 * [Landing page](https://yubil-olga.github.io/Education/dist)
 * [Sign in](https://yubil-olga.github.io/Education/dist/login)

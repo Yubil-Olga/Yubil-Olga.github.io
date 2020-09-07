@@ -1,21 +1,13 @@
 include ../rate-button/rate-button
-include ../material-icon/material-icon
 
-mixin card-room({link, url, number = 888, isLux = true, price = 9990, stars = 5, reviews = 145} = {}) 
-  a(href=link).card-room
-    .card-room__gallery
-      img(src=url).card-room__image
-      .card-room__slider
-        .card-room__slider-arrow
-          +material-icon({name: "expand_more", size: "m", color: "white"})
-        .card-room__slider-arrow
-          +material-icon({name: "expand_more", size: "m", color: "white"})
-      .card-room__circles
-        .card-room__circle.card-room__circle_active
-        .card-room__circle
-        .card-room__circle
-        .card-room__circle
-    footer.card-room__footer
+mixin card-room({link, images=[], number = 888, isLux = true, price = 9990, stars = 5, reviews = 145} = {}) 
+  section.card-room.js-card-room
+    .card-room__slider
+      .card-room__gallery.js-card-room__gallery
+        each image in images
+          img(src=image alt=`room ${number}`).card-room__image
+      .card-room__decoration
+    a(href=link).card-room__description
       .card-room__room-details
         h2.card-room__room-number=number
           if isLux

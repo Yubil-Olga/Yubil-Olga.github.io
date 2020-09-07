@@ -20,8 +20,8 @@
 }
 
 @mixin form {
+  width: 100%;
   max-width: 380px;
-  min-width: 320px;
   background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -32,6 +32,7 @@
   border: none;
 
   @media (max-width: 380px) {
+    min-width: 320px;
     padding-left: $space-x/2;
     padding-right: $space-x/2;
   }
