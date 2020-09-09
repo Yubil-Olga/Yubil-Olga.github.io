@@ -1,5 +1,6 @@
 include ../field/field
 include ../date-field/date-field
+include ../calendar/calendar
 
 mixin date-dropdown({ type, firstTitle="firstTitle", secondTitle="secondTitle" } = {})
   .date-dropdown.js-date-dropdown
@@ -12,3 +13,4 @@ mixin date-dropdown({ type, firstTitle="firstTitle", secondTitle="secondTitle" }
           +date-field({ name: firstTitle})
         .date-dropdown__input.js-date-dropdown__input
           +date-field({ name: secondTitle})
+    +calendar

@@ -1,7 +1,6 @@
 include ../field/field
 include ../material-icon/material-icon
 include ../heading/heading
-include ../calendar/calendar
 
 mixin date-field({ name, width })
   - let widthModifier
@@ -16,4 +15,3 @@ mixin date-field({ name, width })
       +field({type: "text", placeholder: "ДД.ММ.ГГГГ", readonly: true})
       .date-field__icon
         +material-icon({name: "expand_more", size: "m"})
-    +calendar

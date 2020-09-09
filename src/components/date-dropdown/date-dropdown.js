@@ -1,4 +1,5 @@
 import DateField from '../date-field/date-field';
+import Calendar from '../calendar/calendar';
 
 export default class DateDropdown {
   constructor(htmlElement) {
@@ -9,10 +10,14 @@ export default class DateDropdown {
   init() {
     this.$inputContainer = this.$dateDropdown.find('.js-date-dropdown__input');
     this.$inputs = this.$inputContainer.map((i, val) => new DateField(val).getElement()[0]);
-    if (this.$inputs.length > 1) {
-      const startInput = this.$inputs.first();
-      const secondInput = this.$inputs.last();
-      this.$inputs.datepicker({
+    this.isRange = !!(this.$inputs.length > 1);
+    this.$startInput = this.$inputs.first();
+    this.$endInput = this.isRange ? this.$inputs.last() : null;
+    this.calendar = new Calendar(this.$startInput, this.$dateDropdown);
+    if (this.isRange) {
+      const startInput = this.$startInput;
+      const secondInput = this.$endInput;
+      this.$startInput.datepicker({
         onSelect(fd) {
           const inputValues = fd.split('-');
           const [startValue, secondValue] = inputValues;
@@ -20,9 +25,16 @@ export default class DateDropdown {
           secondInput.val(secondValue);
         },
       });
-      secondInput.datepicker({
-        position: 'bottom right',
-      });
+      this.initEndInput();
     }
+  }
+
+  initEndInput() {
+    this.handleEndInputClick = this.handleEndInputClick.bind(this);
+    this.$endInput.on('click', this.handleEndInputClick);
+  }
+
+  handleEndInputClick() {
+    this.calendar.calendarPluginInstance.show();
   }
 }

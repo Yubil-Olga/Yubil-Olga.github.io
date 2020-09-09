@@ -26,6 +26,7 @@ export default class Calendar {
       nextHtml: '<i class="datepicker--arrow">arrow_forward</i>',
     });
     this.$calendar = this.$anchor.data('datepicker').$datepicker;
+    this.calendarPluginInstance = this.$anchor.datepicker().data('datepicker');
     this.$calendarInput = this.$anchor.data('datepicker').$el;
     this.replaceCalendar();
   }
@@ -52,10 +53,10 @@ export default class Calendar {
   }
 
   handleApplyButtonClick() {
-    this.$calendar.hide();
+    this.calendarPluginInstance.hide();
   }
 
   handleCalendarInputClick() {
-    this.$calendar.show();
+    this.calendarPluginInstance.show();
   }
 }
