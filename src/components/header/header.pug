@@ -2,7 +2,7 @@ include ../logo/logo
 include ../button/button
 include ../material-icon/material-icon
 
-mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", isExpanded: false, href: "/mock-address/change-me" }] })
+mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", isExpanded: false, href: "/mock-address/change-me", }], } = {})
   - let loginButtonText
   - let registerButtonText
   
@@ -16,7 +16,7 @@ mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", i
 
   header.header.js-header
     .header__wrapper
-      +logo
+      +logo()
       nav.header__navigation
         ul.header__menu.js-header__menu
           each item in items
@@ -28,7 +28,7 @@ mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", i
               else 
                 a(href=item.href).header__link=item.name
         .header__burger.js-header__burger
-          +material-icon({name: "menu", size: "m", color: "dark-shade-75"})
+          +material-icon({ name: "menu", size: "m", color: "dark-shade-75", })
         .header__toolbar
           if isAuthed
             .header__user=user
@@ -39,7 +39,7 @@ mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", i
                 buttonType: "link",
                 style: "border", 
                 text: loginButtonText,
-                size: "s"
+                size: "s",
               })
             .header__sign-up-btn
               +button({
@@ -47,5 +47,5 @@ mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", i
                 buttonType: "link",
                 style: "gradient", 
                 text: registerButtonText, 
-                size: "s"
+                size: "s",
               })

@@ -11,32 +11,32 @@ html
     link(rel="shortcut icon", type="image/png", sizes="48x48", href="favicons/favicon-48.png")
     meta(name="description", content="Toxin - бронирование номеров в отеле")
     meta(name="keywords", content="Toxin, бронирование номеров, отель")
-    title= pageTitle
+    title=pageTitle
   body
     include ../components/header/header
     include ../components/footer/footer
 
     -
       const headerNavigation = [
-        {name: "О нас", href: "/mock-address/change-me", isExpanded: false},
-        {name: "Услуги", href: "/mock-address/change-me", isExpanded: true},
-        {name: "Вакансии", href: "/mock-address/change-me", isExpanded: false},
-        {name: "Новости", href: "/mock-address/change-me", isExpanded: false},
-        {name: "Соглашения", href: "/mock-address/change-me", isExpanded: true}
+        { name: "О нас", href: "/mock-address/change-me", isExpanded: false, },
+        { name: "Услуги", href: "/mock-address/change-me", isExpanded: true, },
+        { name: "Вакансии", href: "/mock-address/change-me", isExpanded: false, },
+        { name: "Новости", href: "/mock-address/change-me", isExpanded: false, },
+        { name: "Соглашения", href: "/mock-address/change-me", isExpanded: true, },
       ]
 
       const footerNavigation = [
         {
           title: "навигация", 
-          list: [{name: "О нас"}, {name: "Новости"}, {name: "Служба поддержки"}, {name: "Услуги"}]
+          list: [{ name: "О нас", }, { name: "Новости", }, { name: "Служба поддержки", }, { name: "Услуги", }],
         },
         {
           title: "о нас", 
-          list: [{name: "О сервисе"}, {name: "Наша команда"}, {name: "Вакансии"}, {name: "Инвесторы"}]
+          list: [{ name: "О сервисе", }, { name: "Наша команда", }, { name: "Вакансии", }, { name: "Инвесторы", }],
         },
         {
           title: "Служба поддержки", 
-          list: [{name: "Соглашения"}, {name: "Сообщества"}, {name: "Связь с нами"}]
+          list: [{ name: "Соглашения", }, { name: "Сообщества", }, { name: "Связь с нами", }],
         }
       ]
   
@@ -44,7 +44,7 @@ html
       +header({
         isAuthed: false, 
         language: "ru", 
-        items: headerNavigation
+        items: headerNavigation,
       })
     block main
     block footer
@@ -54,5 +54,5 @@ html
         formTitle: "Подписка",
         formDescription: "Получайте специальные предложения и новости сервиса",
         copyright: "Copyright © 2018 Toxin отель. Все права зачищены.",
-        items: footerNavigation
+        items: footerNavigation,
       })

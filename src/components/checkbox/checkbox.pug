@@ -1,4 +1,4 @@
-mixin checkbox ({isRich = false, items=[{title, description, isChecked}]})
+mixin checkbox ({ isRich = false, items = [{ title, description, isChecked, }], } = {})
   .checkbox(class = rich ? "checkbox__theme_rich" : "")
     each item in items
       label.checkbox__label

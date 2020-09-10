@@ -1,9 +1,9 @@
-mixin field({isMasked = false, type, placeholder, text, readonly = false} = {})
+mixin field({ isMasked = false, type, placeholder, text, readonly = false, } = {})
   input.field.js-field(
     class= isMasked ? "field_masked" : ""
     type=type
     placeholder= placeholder
     value=text
-    readonly= readonly
+    readonly=readonly
   )
     

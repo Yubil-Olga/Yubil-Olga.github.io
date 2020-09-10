@@ -1,4 +1,4 @@
-mixin heading({ text="Heading", tag }={})
+mixin heading({ text="Heading", tag, } = {})
   - let typeModifier
 
   case tag
@@ -9,4 +9,4 @@ mixin heading({ text="Heading", tag }={})
     when "h3"
       - typeModifier = "heading_type_h3"
 
-  #{tag}.heading(class=typeModifier)= text
+  #{tag}.heading(class=typeModifier)=text

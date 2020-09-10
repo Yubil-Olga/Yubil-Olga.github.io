@@ -4,36 +4,38 @@ include ../toggle/toggle
 include ../button/button
 include ../heading/heading
 
-mixin form-registration
+mixin form-registration()
   form.form-registration
-    +heading({ text: "Регистрация аккаунта", tag: "h1"})
+    +heading({ text: "Регистрация аккаунта", tag: "h1", })
     .form-registration__section
-      +field({type: "text", placeholder: "Имя"})
-      +field({type: "text", placeholder: "Фамилия"})
-      +radio-button([
-        {
-          text: "Мужчина",
-          name: "gender",
-          value: "man",
-          isChecked: true
-        },
-        {
-          text: "Женщина",
-          name: "gender",
-          value: "woman",
-          isChecked: false
-        }
-      ])
+      +field({ type: "text", placeholder: "Имя", })
+      +field({ type: "text", placeholder: "Фамилия", })
+      +radio-button({
+        items: [
+          {
+            text: "Мужчина",
+            name: "gender",
+            value: "man",
+            isChecked: true,
+          },
+          {
+            text: "Женщина",
+            name: "gender",
+            value: "woman",
+            isChecked: false,
+          },
+        ],
+      })
     .form-registration__section
-      +heading({ text: "дата рождения", tag: "h3"})
-      +field({isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ"})
+      +heading({ text: "дата рождения", tag: "h3", })
+      +field({ isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ", })
     .form-registration__section
-      +heading({ text: "данные для входа в сервис", tag: "h3"})
-      +field({type: "email", placeholder: "Email"})
-      +field({type: "password", placeholder: "Пароль"})
-      +toggle({title: "Получать спецпредложения", isCheched: false})
+      +heading({ text: "данные для входа в сервис", tag: "h3", })
+      +field({ type: "email", placeholder: "Email", })
+      +field({ type: "password", placeholder: "Пароль", })
+      +toggle({ title: "Получать спецпредложения", isCheched: false, })
     .form-registration__section
-      +button({text: "перейти к оплате", buttonType: "link", style: "arrow", size: "m"})
+      +button({ text: "перейти к оплате", buttonType: "link", style: "arrow", size: "m", })
     .form-registration__footer
       p.form-registration__question Уже есть аккаунт на Toxin
-      +button({href: "login.html", buttonType: "submit", text: "войти", style: "border", size: "m"})
+      +button({ href: "login.html", buttonType: "submit", text: "войти", style: "border", size: "m", })

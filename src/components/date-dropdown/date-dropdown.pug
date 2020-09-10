@@ -2,15 +2,15 @@ include ../field/field
 include ../date-field/date-field
 include ../calendar/calendar
 
-mixin date-dropdown({ type, firstTitle="firstTitle", secondTitle="secondTitle" } = {})
+mixin date-dropdown({ type, firstTitle = "firstTitle", secondTitle = "secondTitle", } = {})
   .date-dropdown.js-date-dropdown
     case type
       when "single"
         .date-dropdown__input.js-date-dropdown__input
-          +date-field({ name: firstTitle, width: "large"})
+          +date-field({ name: firstTitle, width: "large", })
       default
         .date-dropdown__input.js-date-dropdown__input
-          +date-field({ name: firstTitle})
+          +date-field({ name: firstTitle, })
         .date-dropdown__input.js-date-dropdown__input
-          +date-field({ name: secondTitle})
-    +calendar
+          +date-field({ name: secondTitle, })
+    +calendar()

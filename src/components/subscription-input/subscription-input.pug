@@ -1,7 +1,7 @@
 include ../material-icon/material-icon
 
-mixin subscription-input
+mixin subscription-input()
   .subscription-input
     input.subscription-input__input(type="text" name="Subscribe" placeholder="Email")
     button.subscription-input__button(type="submit")
-      +material-icon({name: "arrow_forward", size: "m", color: "purple-gradient"})
+      +material-icon({ name: "arrow_forward", size: "m", color: "purple-gradient", })

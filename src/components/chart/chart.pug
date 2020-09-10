@@ -1,18 +1,19 @@
-mixin chart({ data = [{name, quantity, color1, color2}], } = {})
+mixin chart({ data = [{ name, quantity, color1, color2, }], } = {})
   figure.chart
     .chart__content
       svg(width="125px" height="125px" viewBox="0 0 34 34" class="chart__donut")
-        - let total=0
+        - let total =0
         - let dashoffset = -24
         each item in data
-          - total+=item.quantity
+          - total += item.quantity
         each item, index in data
           defs
             linearGradient(id=`Gradient${index}` x1="0" x2="0" y1="0" y2="1")
               stop(offset="0%" stop-color=item.color1)
               stop(offset="100%" stop-color=item.color2)
           - const percent = Math.round((item.quantity/total)*100)
-          circle(class="chart__segment" 
+          circle(
+            class="chart__segment" 
             data-test=percent 
             cx="17" 
             cy="17" 
@@ -21,9 +22,11 @@ mixin chart({ data = [{name, quantity, color1, color2}], } = {})
             stroke-width="1" 
             stroke=`url(#Gradient${index})`
             stroke-dasharray=`${percent} ${100-percent}`
-            stroke-dashoffset=dashoffset)
+            stroke-dashoffset=dashoffset
+          )
             title=`${item.name} ${item.quantity}`
-          circle(class="chart__split" 
+          circle(
+            class="chart__split" 
             cx="17" 
             cy="17" 
             r="15.91549430918954" 
@@ -31,7 +34,8 @@ mixin chart({ data = [{name, quantity, color1, color2}], } = {})
             stroke="#fff" 
             stroke-width="2"
             stroke-dasharray="1 99"
-            stroke-dashoffset=dashoffset)
+            stroke-dashoffset=dashoffset
+          )
           - dashoffset -= percent
         g.chart__text
           text(x="50%" y="50%" class="chart__text__number")=total

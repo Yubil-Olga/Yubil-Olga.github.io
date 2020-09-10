@@ -1,4 +1,4 @@
-mixin material-icon({ name="Enter symbol name", color, size }={})
+mixin material-icon({ name="Enter symbol name", color, size, } = {})
   - let colorModifier 
   - let sizeModifier
 
@@ -11,6 +11,8 @@ mixin material-icon({ name="Enter symbol name", color, size }={})
       - colorModifier = "material-icon_color_purple-gradient"
     when "dark-shade-75"
       - colorModifier = "material-icon_color_dark-shade-75"
+    when "dark-shade-50"
+      - colorModifier = "material-icon_color_dark-shade-50"
   
   case size
     when "s"

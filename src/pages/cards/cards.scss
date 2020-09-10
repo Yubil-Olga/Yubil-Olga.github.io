@@ -9,8 +9,10 @@
   &__item {
     margin-bottom: 40px;
     break-inside: avoid;
-    display: flex;
-    justify-content: center;
+
+    &_small {
+      max-width: 270px;
+    }
   }
 
   @media (max-width: 1300px) {
@@ -28,5 +30,3 @@
     padding: $border-space 0;
   }
 }
-
-

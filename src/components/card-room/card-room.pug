@@ -1,6 +1,6 @@
 include ../rate-button/rate-button
 
-mixin card-room({link, images=[], number = 888, isLux = true, price = 9990, stars = 5, reviews = 145} = {}) 
+mixin card-room({ link, images = [], number = 888, isLux = true, price = 9990, stars = 5, reviews = 145, } = {}) 
   section.card-room.js-card-room
     .card-room__slider
       .card-room__gallery.js-card-room__gallery
@@ -14,7 +14,7 @@ mixin card-room({link, images=[], number = 888, isLux = true, price = 9990, star
             span.card-room__luxury люкс
         .card-room__price #{price}₽
       .card-room__room-rating
-        +rate-button({total: 5, rating: stars})
+        +rate-button({ total: 5, rating: stars, })
         .card-room__comments=reviews
 
 

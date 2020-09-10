@@ -8,39 +8,39 @@ block variables
     const bglogo = true
     const user = "Cosmin Negoita"
     const navigation = [
-      {name: "Home", href: "#", isExpanded: false},
-      {name: "About Us", href: "#", isExpanded: false},
-      {name: "Services", href: "#", isExpanded: true},
-      {name: "Careers", href: "#", isExpanded: false},
-      {name: "News", href: "#", isExpanded: false},
-      {name: "Documentation", href: "#", isExpanded: false}
+      { name: "Home", href: "#", isExpanded: false, },
+      { name: "About Us", href: "#", isExpanded: false, },
+      { name: "Services", href: "#", isExpanded: true, },
+      { name: "Careers", href: "#", isExpanded: false, },
+      { name: "News", href: "#", isExpanded: false, },
+      { name: "Documentation", href: "#", isExpanded: false, },
     ]
     const footerNavigation = [
       {
         title: "Navigation", 
-        list: [{name: "About Us"}, {name: "News"}, {name: "Support"}, {name: "Products"}]
+        list: [{ name: "About Us", }, { name: "News", }, { name: "Support", }, { name: "Products", }],
       },
       {
         title: "About Us", 
-        list: [{name: "Who we are"}, {name: "Our team"}, {name: "Careers"}, {name: "Investors"}]
+        list: [{ name: "Who we are", }, { name: "Our team", }, { name: "Careers", }, { name: "Investors", }],
       },
       {
         title: "Support", 
-        list: [{name: "Documentation"}, {name: "Community"}, {name: "Get in Touch"}]
-      }
+        list: [{ name: "Documentation", }, { name: "Community", }, { name: "Get in Touch", }],
+      },
     ]
   
 block main
   section.headers-footers
-    +header({isAuthed: false, language: "en", items: navigation})
-    +header({isAuthed: true, language: "en", items: navigation})
+    +header({ isAuthed: false, language: "en", items: navigation, })
+    +header({ isAuthed: true, language: "en", items: navigation, })
     +footer({
       isCreative: false,
       slogan: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
       formTitle: "Subscribe to our newsletter",
       formDescription: "Receive our latest news and promotions in your inbox!",
       copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
-      items: footerNavigation
+      items: footerNavigation,
     })
     +footer({
       isCreative: true,
@@ -48,7 +48,7 @@ block main
       formTitle: "Subscribe to our newsletter",
       formDescription: "Receive our latest news and promotions in your inbox!",
       copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
-      items: footerNavigation
+      items: footerNavigation,
     })
 
     

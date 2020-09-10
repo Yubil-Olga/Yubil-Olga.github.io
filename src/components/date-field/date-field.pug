@@ -2,16 +2,16 @@ include ../field/field
 include ../material-icon/material-icon
 include ../heading/heading
 
-mixin date-field({ name, width })
+mixin date-field({ name, width, } = {})
   - let widthModifier
 
   case width
     when "large"
-      - widthModifier= "date-field_width_large"
+      - widthModifier = "date-field_width_large"
 
   .date-field.js-date-field(class=widthModifier)
-    +heading({ text: name, tag: "h3"})
+    +heading({ text: name, tag: "h3", })
     .date-field__input.js-date-field__input
-      +field({type: "text", placeholder: "ДД.ММ.ГГГГ", readonly: true})
+      +field({ type: "text", placeholder: "ДД.ММ.ГГГГ", readonly: true, })
       .date-field__icon
-        +material-icon({name: "expand_more", size: "m"})
+        +material-icon({ name: "expand_more", size: "m", })

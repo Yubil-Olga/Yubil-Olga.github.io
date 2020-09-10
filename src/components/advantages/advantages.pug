@@ -1,10 +1,10 @@
 include ../material-icon/material-icon
 
-mixin advantages({icon = "insert_emoticon", title = "Название", description = "Описание", isUnderlined = true}={})
+mixin advantages({ icon = "insert_emoticon", title = "Название", description = "Описание", isUnderlined = true, } = {})
   .advantages(class = isUnderlined ? "advantages_underlined" : "")
     .advantages__icon
-      +material-icon({name: icon, color: "purple-gradient", size: "l"})
+      +material-icon({ name: icon, color: "purple-gradient", size: "l", })
     .advantages__description
-      h4.advantages__title= title
-      p.advantages__text= description 
+      h4.advantages__title=title
+      p.advantages__text=description 
                 

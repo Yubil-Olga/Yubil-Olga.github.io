@@ -2,24 +2,13 @@
 
 .expandable-checkbox {
   box-sizing: border-box;
+  cursor: pointer;
 
   &__selection {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 12px;
-  }
-
-  &__title {
-    @include H3;
-    cursor: pointer;
-  }
-
-  &__button {
-    cursor: pointer;
-    @include Icon;
-    font-size: 24px;
-    color: $dark-shade-50;
   }
 
   &__list {
@@ -36,5 +25,3 @@
     }
   }
 }
-
-

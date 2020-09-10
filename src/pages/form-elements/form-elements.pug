@@ -18,17 +18,7 @@ include ../../components/button/button
 include ../../components/heading/heading
 
 block variables
-  - 
-    const pageTitle = 'Form elements'
-    const comment = {
-      name: "Мурад Сарафанов", 
-      src: "images/reviews/review2.png", 
-      voiceCounter: 12,
-      isLiked: true,
-      date: "5 дней назад",
-      comment: 
-      "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
-    }
+  - const pageTitle = 'Form elements'
       
 block main
   section.form-elements.js-form-elements
@@ -36,148 +26,137 @@ block main
       .form-elements__block
           .form-elements__item
             .form-elements__subtitle(data-comment="default")
-              +heading({ text: "Text Field", tag: "h3"})       
-            +field({type: "email", placeholder: "Email"})
+              +heading({ text: "Text Field", tag: "h3", })       
+            +field({ type: "email", placeholder: "Email", })
           .form-elements__item
             .form-elements__subtitle(data-comment="hover/focus")
-              +heading({ text: "Text Field", tag: "h3"})
-            +field({type: "text", text: "This is pretty awesome"})
+              +heading({ text: "Text Field", tag: "h3", })
+            +field({ type: "text", text: "This is pretty awesome", })
           .form-elements__item
             .form-elements__subtitle(data-comment="default")
-              +heading({ text: "Dropdown", tag: "h3"})
+              +heading({ text: "Dropdown", tag: "h3", })
             +dropdown({
               isShown: false, 
               title: "Сколько гостей", 
               hasControlButtons: true,
               items: [
-                {name: "взрослые", group: "гости"}, 
-                {name: "дети", group: "гости"}, 
-                {name: "младенцы"}
-              ]
+                { name: "взрослые", group: "гости", }, 
+                { name: "дети", group: "гости", }, 
+                { name: "младенцы", },
+              ],
             })
           .form-elements__item
             .form-elements__subtitle(data-comment="default")
-              +heading({ text: "masked text field", tag: "h3"})
-            +field({isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ"})
+              +heading({ text: "masked text field", tag: "h3", })
+            +field({ isMasked: true, type: "text", placeholder: "ДД.ММ.ГГГГ", })
       .form-elements__item
-        +date-dropdown({ firstTitle: "date dropdown", secondTitle: "date dropdown"})
+        +date-dropdown({ firstTitle: "date dropdown", secondTitle: "date dropdown", })
       .form-elements__item
-        +date-dropdown({ type: "single", firstTitle: "filter date dropdown"})
+        +date-dropdown({ type: "single", firstTitle: "filter date dropdown", })
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "subscription text field", tag: "h3"})
-        +subscription-input
+          +heading({ text: "subscription text field", tag: "h3", })
+        +subscription-input()
     .form-elements__section 
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Checkbox buttons", tag: "h3"})
+          +heading({ text: "Checkbox buttons", tag: "h3", })
         +checkbox({
           isRich: false, 
-          items: 
-            [
-              {description: "Можно курить"}, 
-              {description: "Можно с питомцами"}, 
-              {description: "Можно пригласить гостей (до 10 человек)"}
-            ]
+          items: [
+            { description: "Можно курить", }, 
+            { description: "Можно с питомцами", }, 
+            { description: "Можно пригласить гостей (до 10 человек)", },
+          ],
         })
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Radio buttons", tag: "h3"})
+          +heading({ text: "Radio buttons", tag: "h3", })
         .form-elements__radio-btn
-          +radio-button([
-            {
-              text: "Мужчина",
-              name: "gender",
-              value: "man",
-              isChecked: true
-            },
-            {
-              text: "Женщина",
-              name: "gender",
-              value: "woman",
-              isChecked: false
-            }
-          ])
+          +radio-button({
+            items: [
+              {
+                text: "Мужчина",
+                name: "gender",
+                value: "man",
+                isChecked: true,
+              },
+              {
+                text: "Женщина",
+                name: "gender",
+                value: "woman",
+                isChecked: false,
+              },
+            ],
+          })
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Toggle", tag: "h3"})
+          +heading({ text: "Toggle", tag: "h3", })
         .form-elements__toggle
-          +toggle({title: "Получать спецпредложения", isChecked: true})
+          +toggle({ title: "Получать спецпредложения", isChecked: true, })
         .form-elements__toggle
-          +toggle({title: "Получать спецпредложения", isChecked: false})
+          +toggle({ title: "Получать спецпредложения", isChecked: false, })
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Like button", tag: "h3"})
+          +heading({ text: "Like button", tag: "h3", })
         .form-elements__like-btn
-          +like-button({count: 2, isChecked: false})
-          +like-button({count: 12, isChecked: true})
+          +like-button({ count: 2, isChecked: false, })
+          +like-button({ count: 12, isChecked: true, })
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Rate button", tag: "h3"})
+          +heading({ text: "Rate button", tag: "h3", })
         .form-elements__rate-btn
-          +rate-button({total: 5, rating: 4})
-          +rate-button({total: 5, rating: 5})
+          +rate-button({ total: 5, rating: 4, })
+          +rate-button({ total: 5, rating: 5, })
     .form-elements__section 
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Range slider", tag: "h3"})
-        +range-slider
+          +heading({ text: "Range slider", tag: "h3", })
+        +range-slider()
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Buttons", tag: "h3"})
+          +heading({ text: "Buttons", tag: "h3", })
         .form-elements__buttons
-          +button({text: "click me", style: "gradient"})
-          +button({text: "click me", style: "gradient"})
+          +button({ text: "click me", style: "gradient", })
+          +button({ text: "click me", style: "gradient", })
           .form-elements__button_border
-            +button({text: "click me", style: "border"})
+            +button({ text: "click me", style: "border", })
           .form-elements__button_border
-            +button({text: "click me", style: "border"})
-          +button({text: "click me", style: "ghost-link"})
-          +button({text: "click me", style: "link"})
+            +button({ text: "click me", style: "border", })
+          +button({ text: "click me", style: "ghost-link", })
+          +button({ text: "click me", style: "link", })
           .form-elements__button_arrow
-            +button({text: "перейти к оплате", style: "arrow"})
+            +button({ text: "перейти к оплате", style: "arrow", })
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Pagination", tag: "h3"})
+          +heading({ text: "Pagination", tag: "h3", })
         .form-elements__pagination
-          +pagination({currentPage: 1, totalPages: 15, elementsOnPage: 12})
+          +pagination({ currentPage: 1, totalPages: 15, elementsOnPage: 12, })
     .form-elements__section 
       .form-elements__item
         .form-elements__subtitle(data-comment="default")
-          +heading({ text: "dropdown", tag: "h3"})
+          +heading({ text: "dropdown", tag: "h3", })
         +dropdown({
           isShown: false, 
           title: "Сколько комнат",
           hasControlButtons: false,
           items: [
-            {name: "спальни"}, 
-            {name: "кровати"}, 
-            {name: "ванные комнаты"}
-          ]
+            { name: "спальни", }, 
+            { name: "кровати", }, 
+            { name: "ванные комнаты", },
+          ],
         })
       .form-elements__item
         .form-elements__subtitle(data-comment="expanded")
-          +heading({ text: "dropdown", tag: "h3"})
+          +heading({ text: "dropdown", tag: "h3", })
         +dropdown({
           isShown: true, 
           title: "Сколько комнат",
           items: [
-            {name: "спальни"}, 
-            {name: "кровати"}, 
-            {name: "ванные комнаты"}
-          ]
-        })
-    .form-elements__section
-      .form-elements__item
-        +dropdown({
-            isShown: true, 
-            title: "Сколько гостей", 
-            hasControlButtons: true,
-            items: [
-              {name: "взрослые", group: "гости"}, 
-              {name: "дети", group: "гости"}, 
-              {name: "младенцы"}
-            ]
+            { name: "спальни", }, 
+            { name: "кровати", }, 
+            { name: "ванные комнаты", },
+          ],
         })
     .form-elements__section
       .form-elements__item
@@ -186,55 +165,73 @@ block main
           title: "Сколько гостей", 
           hasControlButtons: true,
           items: [
-            {name: "взрослые", group: "гости"}, 
-            {name: "дети", group: "гости"}, 
-            {name: "младенцы"}
-          ]
+            { name: "взрослые", group: "гости", }, 
+            { name: "дети", group: "гости", }, 
+            { name: "младенцы", },
+          ],
         })
     .form-elements__section
       .form-elements__item
-        +expandable-checkbox({title: "expandable-checkbox-list", items: []})
+        +dropdown({
+          isShown: true, 
+          title: "Сколько гостей", 
+          hasControlButtons: true,
+          items: [
+            { name: "взрослые", group: "гости", }, 
+            { name: "дети", group: "гости", }, 
+            { name: "младенцы", },
+          ],
+        })
+    .form-elements__section
+      .form-elements__item
+        +expandable-checkbox({ title: "expandable-checkbox-list", items: [], })
       .form-elements__item
         +expandable-checkbox({
           title: "expandable-checkbox-list", 
-          items: 
-            [
-              {description: "Завтрак"}, 
-              {description: "Письменный стол", isChecked: true}, 
-              {description: "Стул для кормления", isChecked: true}, 
-              {description: "Кроватка", isChecked: true}, 
-              {description: "Телевизор"}, 
-              {description: "Шампунь"}
-            ]
+          items: [
+            { description: "Завтрак", }, 
+            { description: "Письменный стол", isChecked: true, }, 
+            { description: "Стул для кормления", isChecked: true, }, 
+            { description: "Кроватка", isChecked: true, }, 
+            { description: "Телевизор", }, 
+            { description: "Шампунь", },
+          ],
         })
     .form-elements__section
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Rich checkbox buttons", tag: "h3"})
+          +heading({ text: "Rich checkbox buttons", tag: "h3", })
         +checkbox({
           isRich: true, 
-          items: 
-            [
-              {title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."},
-              {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}
-            ]
+          items: [
+            { title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.", },
+            { title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.", },
+          ],
         })
     .form-elements__section
       .form-elements__item
         .form-elements__subtitle
-          +heading({ text: "Bullet list", tag: "h3"})
+          +heading({ text: "Bullet list", tag: "h3", })
         +bullet-list({
           rules: [
-            {text: "Нельзя с питомцами"},
-            {text: "Без вечеринок и мероприятий"},
-            {text: "Время прибытия — после 13:00, а выезд до 12:00"}
+            { text: "Нельзя с питомцами", },
+            { text: "Без вечеринок и мероприятий", },
+            { text: "Время прибытия — после 13:00, а выезд до 12:00", },
           ],
         })
     .form-elements__section
       .form-elements__item
         .form-elements__advantages
-          +advantages({title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"})
-          +advantages({title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"})
+          +advantages({ title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon", })
+          +advantages({ title: "Удобство", description: "Окно в каждой из спален", icon: "location_city", })
     .form-elements__review
       .form-elements__section
-        +review(comment)
+        +review({
+          name: "Мурад Сарафанов", 
+          src: "images/reviews/review2.png", 
+          voiceCounter: 12,
+          isLiked: true,
+          date: "5 дней назад",
+          comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+        })
+      

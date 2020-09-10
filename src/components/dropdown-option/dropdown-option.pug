@@ -1,9 +1,9 @@
 include ../heading/heading
 
-mixin dropdown-option({name, group})
+mixin dropdown-option({ name, group, } = {})
   .dropdown-option.js-dropdown-option(data-group=group || name)
     .dropdown-option__name.js-dropdown-option__name
-      +heading({ text: name, tag: "h3"})
+      +heading({ text: name, tag: "h3", })
     .dropdown-option__counter
       .dropdown-option__button.js-dropdown-option__button -
       input.dropdown-option__input.js-dropdown-option__input(value="0" readonly name=name)

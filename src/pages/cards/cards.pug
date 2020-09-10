@@ -14,36 +14,37 @@ block variables
       {
         number: "888", 
         price: "9990", 
-        images: ["images/room1.png", "images/room1.png", "images/room1.png", "images/room1.png"], 
+        images: [ "images/room1.png", "images/room1.png", "images/room1.png", "images/room1.png", ], 
         isLux: true, 
         stars: "5", 
-        reviews: "145"
+        reviews: "145",
       },
       {
         number: "840", 
         price: "9900", 
-        images: ["images/room2.png", "images/room2.png", "images/room2.png", "images/room2.png"], 
+        images: [ "images/room2.png", "images/room2.png", "images/room2.png", "images/room2.png", ], 
         isLux: false, 
         stars: "4", 
-        reviews: "65"
-      }
+        reviews: "65",
+      },
     ]
 
 block main
   .cards
     .cards__item
-      +form-selection
+      +form-selection()
     .cards__item
-      +form-registration
+      +form-registration()
     .cards__item
-      +form-booking({number: 888, price: 9990, discount: 2179, serviceCharge: 0, additionalServiceCharge: 300, days: 4})
+      +form-booking({ number: 888, price: 9990, discount: 2179, serviceCharge: 0, additionalServiceCharge: 300, days: 4, })
     .cards__item
-      +form-login
+      +form-login()
     .cards__item
-      +calendar({ isOpen: true})
+      +calendar({ isOpen: true, })
     for room in rooms
       .cards__item
-        +card-room(room)
+        .cards__item_small
+          +card-room(room)
         
     
     
