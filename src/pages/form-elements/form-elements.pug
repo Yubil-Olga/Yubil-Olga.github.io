@@ -223,11 +223,13 @@ block main
       .form-elements__item
         .form-elements__subtitle
           +heading({ text: "Bullet list", tag: "h3"})
-        +bullet-list([
-          {text: "Нельзя с питомцами"},
-          {text: "Без вечеринок и мероприятий"},
-          {text: "Время прибытия — после 13:00, а выезд до 12:00"}
-        ])
+        +bullet-list({
+          rules: [
+            {text: "Нельзя с питомцами"},
+            {text: "Без вечеринок и мероприятий"},
+            {text: "Время прибытия — после 13:00, а выезд до 12:00"}
+          ],
+        })
     .form-elements__section
       .form-elements__item
         .form-elements__advantages

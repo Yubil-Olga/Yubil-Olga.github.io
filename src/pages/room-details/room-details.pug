@@ -14,12 +14,6 @@ block variables
       {src: "images/room888-2.jpg", alt: "room #888"},
       {src: "images/room888-3.jpg", alt: "room #888"}
     ]
-    const voices = [
-      {name: "Великолепно", quantity: 130, color1: "#FFE39C", color2: "#FFBA9C"},
-      {name: "Хорошо", quantity: 65, color1: "#BC9CFF", color2: "#8BA4F9"},
-      {name: "Удовлетворительно", quantity: 65, color1: "#6FCF97", color2: "#66D2EA"},
-      {name: "Разочарован", quantity: 0, color1: "#909090", color2: "#3D4975"}
-    ]
     const advantages = [
       {title: "Комфорт", description: "Шумопоглощающие стены", icon: "insert_emoticon"},
       {title: "Удобство", description: "Окно в каждой из спален", icon: "location_city"},
@@ -61,7 +55,14 @@ block main
         .room-details__item
           .room-details__subtitle
             +heading({ text: "Впечатления от номера", tag: "h2"})
-          +chart(voices)
+          +chart({ 
+            data: [
+              {name: "Великолепно", quantity: 130, color1: "#FFE39C", color2: "#FFBA9C"},
+              {name: "Хорошо", quantity: 65, color1: "#BC9CFF", color2: "#8BA4F9"},
+              {name: "Удовлетворительно", quantity: 65, color1: "#6FCF97", color2: "#66D2EA"},
+              {name: "Разочарован", quantity: 0, color1: "#909090", color2: "#3D4975"},
+            ],
+          })
         .room-details__reviews
           .room-details__item
             .room-details__subtitle
@@ -73,11 +74,13 @@ block main
           .room-details__item
             .room-details__subtitle
               +heading({ text: "Правила", tag: "h2"})
-            +bullet-list([
-              {text: "Нельзя с питомцами"},
-              {text: "Без вечеринок и мероприятий"},
-              {text: "Время прибытия — после 13:00, а выезд до 12:00"}
-            ])
+            +bullet-list({
+              rules: [
+                {text: "Нельзя с питомцами"},
+                {text: "Без вечеринок и мероприятий"},
+                {text: "Время прибытия — после 13:00, а выезд до 12:00"}
+              ],
+            })
         .room-details__item
           .room-details__subtitle
             +heading({ text: "Отмена", tag: "h2"})
