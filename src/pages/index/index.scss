@@ -14,7 +14,7 @@
   align-items: center;
 
   &__item {
-    width: $content-width;
+    min-width: $content-width;
     margin: 0 auto;
   
     &:last-child {
@@ -23,14 +23,14 @@
     }
 
     @media (max-width: 1200px) {
-      width: unset;
+      min-width: unset;
       margin: 0;
     }
   }
 
   &__slogan {
     @include Body;
-    width: 297px;
+    max-width: 297px;
     text-align: right;
   }
 

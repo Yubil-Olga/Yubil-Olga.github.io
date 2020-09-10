@@ -6,7 +6,7 @@
   padding: $space-y $border-space;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 130px;
+  grid-gap: 100px;
 
   &__section {
     display: grid;
@@ -19,9 +19,7 @@
   }
 
   &__item {
-    @media (max-width: 1240px) {
-      width: 266px;
-    }
+    max-width: 320px;
   }
 
   &__subtitle {
@@ -76,6 +74,10 @@
     grid-column: 1/3;
     display: grid;
     min-width: 320px;
+
+    @media (max-width: 800px) {
+      min-width: unset;
+    }
   }
 
   &__pagination {
@@ -96,7 +98,6 @@
   }
 
   @media (max-width: 1240px) {
-    width: unset;
     padding-right: $space-x;
     padding-left: $space-x;
     grid-template-columns: repeat(2, 1fr);

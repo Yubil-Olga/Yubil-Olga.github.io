@@ -42,7 +42,7 @@
   }
 
   &__description {
-    width: $content-width;
+    max-width: $content-width;
     margin: 0 auto;
     box-sizing: border-box;
     display: grid;
@@ -51,7 +51,7 @@
     padding: $space-y 0;
   
     @media (max-width: 1200px) {
-      width: unset;
+      max-width: unset;
       grid-template-columns: 1fr;
       justify-items: center;
     }

@@ -3,7 +3,7 @@
 .colors-type {
   background: url(../../components/logo/img/logo2.svg) 30px 20px no-repeat #fff;
   padding: $space-y $border-space;
-  width: $content-width;
+  min-width: $content-width;
   margin: 0 auto;
   display: grid;
   grid-template-columns: auto 465px;
@@ -102,7 +102,7 @@
   }
 
   @media (max-width: 1240px) {
-    width: unset;
+    min-width: unset;
     padding-right: $space-x;
     padding-left: $space-x;
   }

@@ -1,7 +1,7 @@
 @import '../../scss/mixins';
 
 .search-room {
-  width: $content-width;
+  max-width: $content-width;
   margin: 28px auto 70px auto;
   box-sizing: border-box;
   background-color: #fff;
@@ -39,7 +39,7 @@
   }
 
   @media (max-width: 1200px) {
-    width: unset;
+    max-width: unset;
     padding: 0 $space-x;
   }
 

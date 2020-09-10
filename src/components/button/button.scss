@@ -8,7 +8,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 320px;
   text-decoration: none;
   border: none;
 
@@ -54,7 +53,6 @@
     &_arrow {
       background: $purple-gradient;
       width: 100%;
-      max-width: 320px;
       color: #fff;
       text-align: center;
       position: relative;
