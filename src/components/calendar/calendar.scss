@@ -22,9 +22,12 @@
   }
 
   .datepicker {
-    min-width: 320px;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font: {
       family: $montserrat;
       weight: normal;
@@ -42,7 +45,7 @@
   
     &--nav {
       border-bottom: none;
-      padding: 0 0 20px 0;
+      padding: 0 0 16px;
   
       &-title,
       &-title i {
@@ -51,15 +54,17 @@
       }
     }
   
-    &--content {
-      min-width: 280px;
-    }
-  
     &--day-name {
+      max-width: 40px;
       color: $purple;
       font-weight: bold;
     }
   
+    &--cells-days {
+      display: grid;
+      grid-template-columns: repeat(7, auto); 
+    }
+
     &--cell {
       &-day {
         width: 40px;
@@ -109,6 +114,8 @@
       align-items: center;
       justify-content: space-between;
       padding-top: 20px;
+      width: 100%;
+      box-sizing: border-box;
   
       @media (max-width: 380px) {
         padding-left: $space-x/2;
@@ -147,10 +154,22 @@
       }
     }
   
-    @media (max-width: 340px) {
-      min-width: 290px;
+    @media (max-width: 380px) {
       padding-left: 0;
       padding-right: 0;
+    }
+
+    &_size_small {
+      .datepicker--day-name {
+        max-width: 37px;
+      }
+
+      .datepicker--cell-day,
+      .datepicker--cell-day.-current-::before,
+      .datepicker--cell-day.-selected-::before {
+        width: 37px;
+        height: 37px;
+      }
     }
   }
 }

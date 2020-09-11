@@ -34,6 +34,12 @@ export default class Calendar {
   replaceCalendar() {
     this.$calendarContainer = this.$parentContainer.find('.js-calendar');
     this.$calendarContainer.append(this.$calendar);
+    this.handleWindowResize();
+  }
+
+  handleWindowResize() {
+    const containerWidth = this.$parentContainer.width();
+    this.$calendar.css('width', containerWidth);
   }
 
   createApplyButton() {
@@ -50,6 +56,8 @@ export default class Calendar {
     this.$applyButton.on('click', this.handleApplyButtonClick);
     this.handleCalendarInputClick = this.handleCalendarInputClick.bind(this);
     this.$calendarInput.on('click', this.handleCalendarInputClick);
+    this.handleWindowResize = this.handleWindowResize.bind(this);
+    $(window).on('resize', this.handleWindowResize);
   }
 
   handleApplyButtonClick() {

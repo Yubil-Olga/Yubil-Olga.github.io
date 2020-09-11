@@ -3,6 +3,10 @@
 .form-login {
   @include form;
 
+  &__wrapper {
+    @include form-wrapper;
+  }
+
   &__section {
     display: grid;
     grid-row-gap: 10px;

@@ -11,16 +11,18 @@
   z-index: 1;
   background: transparent;
   cursor: pointer;
+  color: $dark-shade-25;
 
   &::placeholder {
     line-height: 18px;
-    color: $dark-shade-25;
+    color: inherit;
   }
 
   &:hover,
   &:active,
   &:focus {
     border-color: $dark-shade-50;
+    color: $dark-shade-75;
     box-shadow: 0 0 0 0.5px $dark-shade-50;
     outline: none;
   }

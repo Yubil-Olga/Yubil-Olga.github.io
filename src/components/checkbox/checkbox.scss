@@ -2,21 +2,21 @@
 
 .checkbox {
   padding-top: 10px;
-  max-width: 290px;
-  line-height: 22px;
+  max-width: 234px;
   color: $dark-shade-50;
 
   &__label {
     display: block;
     position: relative;
     padding-left: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     cursor: pointer;
   }
 
   &__title {
-    color: $dark-shade-75;
+    color: $dark-shade-50;
     margin: 0;
+    line-height: 20px;
   }
 
   &__input {
@@ -40,9 +40,10 @@
   }
 
   &__description {
+    display: inline-block;
     font-size: 12px;
     line-height: 16px;
-    margin: 0;
+    margin-top: 5px;
   }
 
   &__checkmark {
@@ -65,8 +66,15 @@
   }
 
   &__theme_rich {
+    max-width: 266px;
+    
     .checkbox__label {
       padding-bottom: 8px;
+    }
+
+    .checkbox__title {
+      font-weight: bold;
+      color: $dark-shade-75;
     }
   }
 }

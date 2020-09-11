@@ -95,6 +95,7 @@
       padding: 0;
       outline: none;
       opacity: 0;
+      cursor: pointer;
 
       &::before {
         @include Icon;
@@ -130,6 +131,9 @@
       justify-content: flex-end;
       margin: 0;
       z-index: 10;
+      cursor: pointer;
+      padding: 0;
+      width: max-content;
       
       li {
         width: 7.5px;

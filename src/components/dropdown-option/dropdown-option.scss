@@ -23,13 +23,18 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    cursor: pointer;
+    line-height: 22px;
+    color: $dark-shade-50;
     font: {
       weight: normal;
       size: 18px;
     }
-
-    line-height: 22px;
-    color: $dark-shade-50;
+    
+    &_inactive {
+      opacity: 0.5;
+      cursor: unset;
+    }
   }
 
   &__input {

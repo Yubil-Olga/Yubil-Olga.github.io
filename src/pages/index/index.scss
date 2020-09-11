@@ -26,6 +26,10 @@
       min-width: unset;
       margin: 0;
     }
+
+    @media (max-width: 380px) {
+      width: 100%;
+    }
   }
 
   &__slogan {
@@ -43,10 +47,10 @@
   @media (max-width: 600px) {
     padding-right: $space-x;
     padding-left: $space-x;
-    align-items: center;
   }
 
   @media (max-width: 450px) {
+    align-items: center;
     padding-right: 0;
     padding-left: 0;
   }

@@ -3,6 +3,10 @@
 .form-registration {
   @include form;
 
+  &__wrapper {
+    @include form-wrapper;
+  }
+
   &__section {
     display: grid;
     grid-row-gap: 8px;

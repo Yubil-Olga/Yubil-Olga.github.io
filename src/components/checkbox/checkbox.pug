@@ -1,9 +1,8 @@
 mixin checkbox ({ isRich = false, items = [{ title, description, isChecked, }], } = {})
-  .checkbox(class = rich ? "checkbox__theme_rich" : "")
+  .checkbox(class = isRich ? "checkbox__theme_rich" : "")
     each item in items
       label.checkbox__label
-        if isRich
-          h4.checkbox__title=item.title
-        p.checkbox__description=item.description
+        span.checkbox__title=item.title
+        span.checkbox__description=item.description
         input.checkbox__input(type="checkbox" checked=item.isChecked)
         .checkbox__checkmark 

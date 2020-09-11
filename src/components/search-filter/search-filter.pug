@@ -33,9 +33,9 @@ mixin search-filter()
       +checkbox({
         isRich: false, 
         items: [
-          { description: "Можно курить", }, 
-          { description: "Можно с питомцами", isChecked: true, }, 
-          { description: "Можно пригласить гостей (до 10 человек)", isChecked: true, },
+          { title: "Можно курить", }, 
+          { title: "Можно с питомцами", isChecked: true, }, 
+          { title: "Можно пригласить гостей (до 10 человек)", isChecked: true, },
         ],
       })
     .search-filter__item
@@ -65,11 +65,11 @@ mixin search-filter()
       +expandable-checkbox({
         title: "дополнительные удобства",  
         items: [
-          { description: "Завтрак", }, 
-          { description: "Письменный стол", isChecked: true, }, 
-          { description: "Стул для кормления", isChecked: true, }, 
-          { description: "Кроватка", isChecked: true, }, 
-          { description: "Телевизор", }, 
-          { description: "Шампунь", },  
+          { title: "Завтрак", }, 
+          { title: "Письменный стол", isChecked: true, }, 
+          { title: "Стул для кормления", isChecked: true, }, 
+          { title: "Кроватка", isChecked: true, }, 
+          { title: "Телевизор", }, 
+          { title: "Шампунь", },  
         ],
       })    

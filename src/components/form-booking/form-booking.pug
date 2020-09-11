@@ -5,39 +5,40 @@ include ../heading/heading
 
 mixin form-booking({ number, price, discount, serviceCharge, additionalServiceCharge, days, } = {}) 
   form.form-booking
-    header.form-booking__header
-      h2.form-booking__room-number=number
-        span.form-booking__luxury  люкс
-      .form-booking__price #{price}₽
-    .form-booking__date-picker-wrapper
-      +date-dropdown({ firstTitle: "прибытие", secondTitle: "выезд", })
-    .form-booking__dropdown-wrapper
-      .form-booking__sub-title
-        +heading({ text: "гости", tag: "h3", })
-      +dropdown({
-        heading: "гости",
-        isShown: false, 
-        title: "Сколько гостей", 
-        hasControlButtons: true,
-        items: [
-          { name: "взрослые", group: "гости", },
-          { name: "дети", group: "гости", },
-          { name: "младенцы", group: "младенцы", },
-        ]
-      })
-    .form-booking__order-details
-      .form-booking__order-item
-        span.form-booking__item-title #{price} ₽ х #{days} суток
-        .form-booking__item-price #{price * days} ₽
-      .form-booking__order-item
-        span.form-booking__item-title.form-booking__item-title_with-info Сбор за услуги: скидка #{discount} ₽
-        .form-booking__item-price #{serviceCharge} ₽
-      .form-booking__order-item
-        span.form-booking__item-title.form-booking__item-title_with-info Сбор за дополнительные услуги
-        .form-booking__item-price #{additionalServiceCharge} ₽
-      .form-booking__total
-        .form-booking__total-name Итого
-        .form-booking__total-dots
-        .form-booking__total-price #{(price * days) + serviceCharge + additionalServiceCharge - discount}₽
-    .form-booking__book-button
-      +button({ text: "забронировать", style: "arrow", size: "m", buttonType: "submit", })
+    .form-booking__wrapper
+      header.form-booking__header
+        h2.form-booking__room-number=number
+          span.form-booking__luxury  люкс
+        .form-booking__price #{price}₽
+      .form-booking__date-picker-wrapper
+        +date-dropdown({ firstTitle: "прибытие", secondTitle: "выезд", })
+      .form-booking__dropdown-wrapper
+        .form-booking__sub-title
+          +heading({ text: "гости", tag: "h3", })
+        +dropdown({
+          heading: "гости",
+          isShown: false, 
+          title: "Сколько гостей", 
+          hasControlButtons: true,
+          items: [
+            { name: "взрослые", group: "гости", },
+            { name: "дети", group: "гости", },
+            { name: "младенцы", group: "младенцы", },
+          ]
+        })
+      .form-booking__order-details
+        .form-booking__order-item
+          span.form-booking__item-title #{price} ₽ х #{days} суток
+          .form-booking__item-price #{price * days} ₽
+        .form-booking__order-item
+          span.form-booking__item-title.form-booking__item-title_with-info Сбор за услуги: скидка #{discount} ₽
+          .form-booking__item-price #{serviceCharge} ₽
+        .form-booking__order-item
+          span.form-booking__item-title.form-booking__item-title_with-info Сбор за дополнительные услуги
+          .form-booking__item-price #{additionalServiceCharge} ₽
+        .form-booking__total
+          .form-booking__total-name Итого
+          .form-booking__total-dots
+          .form-booking__total-price #{(price * days) + serviceCharge + additionalServiceCharge - discount}₽
+      .form-booking__book-button
+        +button({ text: "забронировать", style: "arrow", size: "m", buttonType: "submit", })

@@ -105,13 +105,14 @@ export default class Dropdown {
       selected.forEach((el) => {
         if (el.collection) {
           let index = 0;
-          switch (el.value.toString()) {
-            case '1':
+          const value = el.value > 20 ? el.value % 10 : el.value;
+          switch (value) {
+            case 1:
               index = 0;
               break;
-            case '2':
-            case '3':
-            case '4':
+            case 2:
+            case 3:
+            case 4:
               index = 1;
               break;
             default:

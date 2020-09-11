@@ -3,6 +3,10 @@
 .form-booking {
   @include form;
 
+  &__wrapper {
+    @include form-wrapper;
+  }
+  
   &__header {
     display: flex;
     align-items: baseline;
