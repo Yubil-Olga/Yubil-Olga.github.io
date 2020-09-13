@@ -41,13 +41,10 @@ export default class Dropdown {
   }
 
   closeDropdown(event) {
-    if (this.isClosed(event)) {
+    const isDropdownClosed = (event.target.closest('.js-dropdown') !== this.dropdown) && (this.dropdown.classList.contains(this.dropdownActiveClassName));
+    if (isDropdownClosed) {
       this.dropdown.classList.remove(this.dropdownActiveClassName);
     }
-  }
-
-  isClosed(event) {
-    return (event.target.closest('.js-dropdown') !== this.dropdown && this.dropdown.classList.contains(this.dropdownActiveClassName));
   }
 
   handleAcceptButtonClick(event) {
@@ -91,10 +88,12 @@ export default class Dropdown {
   cleanButtonVisibility() {
     const selection = this.values.filter((option) => option.value > 0);
     const visibilityStyle = 'dropdown__clean-button_visible';
-    if (selection.length > 0 && !this.cleanButton.classList.contains(visibilityStyle)) {
+    const isCleanButtonVisible = (selection.length > 0) && (!this.cleanButton.classList.contains(visibilityStyle));
+    const isCleanButtonHidden = (selection.length < 1) && (this.cleanButton.classList.contains(visibilityStyle));
+    if (isCleanButtonVisible) {
       this.cleanButton.classList.add(visibilityStyle);
-    }
-    if (selection.length < 1 && this.cleanButton.classList.contains(visibilityStyle)) {
+    } 
+    if (isCleanButtonHidden) {
       this.cleanButton.classList.remove(visibilityStyle);
     }
   }

@@ -1,7 +1,7 @@
 export default class Header {
   constructor(htmlElement) {
     this.header = htmlElement;
-    this.activeStatus = 'header__menu_active';
+    this.menuActiveClassName = 'header__menu_active';
     this.findHTMLElements();
     this.bindEventListeners();
   }
@@ -17,14 +17,15 @@ export default class Header {
   }
 
   handleBurgerClick() {
-    this.menu.classList.toggle(this.activeStatus);
+    this.menu.classList.toggle(this.menuActiveClassName);
     this.handleWindowResize = this.handleWindowResize.bind(this);
     window.addEventListener('resize', this.handleWindowResize);
   }
 
   handleWindowResize(event) {
-    if (event.target.innerWidth > 1000 && this.menu.classList.contains(this.activeStatus)) {
-      this.menu.classList.remove(this.activeStatus);
+    const isMenuClosed = (event.target.innerWidth > 1000) && (this.menu.classList.contains(this.menuActiveClassName));
+    if (isMenuClosed) {
+      this.menu.classList.remove(this.menuActiveClassName);
       window.removeEventListener('resize', this.handleWindowResize);
     }
   }

@@ -6,7 +6,6 @@ export default class ExpandableCheckbox {
   }
 
   findHTMLElements() {
-    this.activeStatus = 'expandable-checkbox_active';
     this.toggle = this.expandCheckbox.querySelector('.js-expandable-checkbox__selection');
   }
 
@@ -16,6 +15,6 @@ export default class ExpandableCheckbox {
   }
 
   handleSelectionClick() {
-    this.expandCheckbox.classList.toggle(this.activeStatus);
+    this.expandCheckbox.classList.toggle('expandable-checkbox_active');
   }
 }

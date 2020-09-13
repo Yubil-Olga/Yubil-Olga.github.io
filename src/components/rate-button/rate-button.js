@@ -4,7 +4,7 @@ export default class RateButton {
   constructor(htmlElement) {
     this.rateButton = htmlElement;
     this.findDOMElements();
-    this.init();
+    this.bindEventListener();
   }
 
   findDOMElements() {
@@ -13,7 +13,7 @@ export default class RateButton {
     this.inputs = this.rateButton.querySelectorAll('.rate-button__input');
   }
 
-  init() {
+  bindEventListener() {
     this.handleRateButtonClick = this.handleRateButtonClick.bind(this);
     this.rateButton.addEventListener('click', this.handleRateButtonClick);
   }

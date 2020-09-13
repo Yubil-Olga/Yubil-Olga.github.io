@@ -16,13 +16,13 @@ export default class DateDropdown {
     this.calendar = new Calendar(this.$startInput, this.$dateDropdown);
     if (this.isRange) {
       const startInput = this.$startInput;
-      const secondInput = this.$endInput;
+      const endInput = this.$endInput;
       this.$startInput.datepicker({
         onSelect(fd) {
           const inputValues = fd.split('-');
-          const [startValue, secondValue] = inputValues;
+          const [startValue, endValue] = inputValues;
           startInput.val(startValue);
-          secondInput.val(secondValue);
+          endInput.val(endValue);
         },
       });
       this.initEndInput();
