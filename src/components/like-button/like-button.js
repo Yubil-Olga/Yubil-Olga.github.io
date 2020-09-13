@@ -3,13 +3,13 @@ import MaterialIcon from '../material-icon/material-icon';
 export default class LikeButton {
   constructor(htmlElement) {
     this.button = htmlElement;
+    this.LikeButtonActiveClassName = 'like-button_active';
     this.findDOMElements();
     this.bindEventListener();
   }
 
   findDOMElements() {
     this.likes = parseInt(this.button.getAttribute('data-count'), 10);
-    this.activeStatus = 'like-button_active';
     this.iconContainer = this.button.querySelector('.js-like-button__icon');
     this.icon = new MaterialIcon(this.iconContainer);
     this.input = this.button.querySelector('.js-like-button__input');
@@ -21,8 +21,8 @@ export default class LikeButton {
   }
 
   handleLikeBtnClick() {
-    if (this.button.classList.contains(this.activeStatus)) {
-      this.setUnactive();
+    if (this.button.classList.contains(this.LikeButtonActiveClassName)) {
+      this.setInactive();
     } else {
       this.setActive();
     }
@@ -32,14 +32,14 @@ export default class LikeButton {
   setActive() {
     this.likes += 1;
     this.icon.setTextContent('favorite');
-    this.button.classList.add(this.activeStatus);
+    this.button.classList.add(this.LikeButtonActiveClassName);
     this.input.setAttribute('checked', true);
   }
 
-  setUnactive() {
+  setInactive() {
     this.likes -= 1;
     this.icon.setTextContent('favorite_border');
-    this.button.classList.remove(this.activeStatus);
+    this.button.classList.remove(this.LikeButtonActiveClassName);
     this.input.removeAttribute('checked');
   }
 }
