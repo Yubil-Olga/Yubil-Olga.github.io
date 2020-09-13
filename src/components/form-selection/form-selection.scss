@@ -3,10 +3,6 @@
 .form-selection {
   @include form;
 
-  &__wrapper {
-    @include form-wrapper;
-  }
-
   &__subtitle {
     margin-bottom: 5px;
   }

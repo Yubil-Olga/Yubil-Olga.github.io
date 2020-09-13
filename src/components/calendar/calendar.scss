@@ -8,6 +8,7 @@
 
   &_open {
     position: relative;
+    max-width: 320px;
   }
 
   &__apply-button {
@@ -86,8 +87,8 @@
     
         &::before {
           content: '';
-          width: 40px;
-          height: 40px;
+          width: inherit;
+          height: inherit;
           border-radius: 50%;
           background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
           position: absolute;
@@ -145,28 +146,17 @@
   
       &::before {
         content: '';
-        width: 40px;
-        height: 40px;
+        width: inherit;
+        height: inherit;
         border-radius: 50%;
         background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
         position: absolute;
         z-index: -1;
       }
     }
-  
-    @media (max-width: 380px) {
-      padding-left: 0;
-      padding-right: 0;
-    }
 
-    &_size_small {
-      .datepicker--day-name {
-        max-width: 37px;
-      }
-
-      .datepicker--cell-day,
-      .datepicker--cell-day.-current-::before,
-      .datepicker--cell-day.-selected-::before {
+    &_small {
+      .datepicker--cell-day {
         width: 37px;
         height: 37px;
       }

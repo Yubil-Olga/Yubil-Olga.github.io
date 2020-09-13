@@ -24,25 +24,33 @@
 @mixin form {
   width: 100%;
   max-width: 380px;
+  display: grid;
+  grid-row-gap: 20px;
   background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   box-sizing: border-box;
   border: none;
-}
-
-@mixin form-wrapper {
   padding: 40px 30px 30px 30px;
-  margin: 0 auto;
-  display: grid;
-  grid-row-gap: 20px;
 
   @media (max-width: 380px) {
-    max-width: 290px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
+
+// @mixin form-wrapper {
+//   padding: 40px 30px 30px 30px;
+//   margin: 0 auto;
+//   display: grid;
+//   grid-row-gap: 20px;
+
+//   @media (max-width: 380px) {
+//     max-width: 290px;
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }
 
 @mixin H1 {
   font: {

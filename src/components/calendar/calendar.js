@@ -40,6 +40,11 @@ export default class Calendar {
   handleWindowResize() {
     const containerWidth = this.$parentContainer.width();
     this.$calendar.css('width', containerWidth);
+    if (containerWidth < 280) {
+      this.$calendar.addClass('datepicker_small');
+    } else {
+      this.$calendar.removeClass('datepicker_small');
+    }
   }
 
   createApplyButton() {

@@ -26,8 +26,6 @@ export default class DateDropdown {
         },
       });
       this.initEndInput();
-    } else {
-      this.setAdditionalClass();
     }
   }
 
@@ -38,9 +36,5 @@ export default class DateDropdown {
 
   handleEndInputClick() {
     this.calendar.calendarPluginInstance.show();
-  }
-
-  setAdditionalClass() {
-    this.calendar.$calendar.addClass('datepicker_size_small');
   }
 }
