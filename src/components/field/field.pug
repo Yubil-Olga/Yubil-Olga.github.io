@@ -1,6 +1,14 @@
-mixin field({ isMasked = false, type, placeholder, text, readonly = false, } = {})
+mixin field({ isMasked = false, type, theme, placeholder, text, readonly = false, } = {})
+  - let themeModifier = ""
+  - const maskedModifier = isMasked? "field_masked" : ""
+
+  case theme
+    when "dark"
+      - themeModifier = "field_theme_dark"
+
   input.field.js-field(
-    class= isMasked ? "field_masked" : ""
+    class=`${maskedModifier}`
+    class=`${themeModifier}`
     type=type
     placeholder= placeholder
     value=text

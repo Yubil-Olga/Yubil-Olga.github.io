@@ -28,7 +28,7 @@ mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", i
               else 
                 a(href=item.href).header__link=item.name
         .header__burger.js-header__burger
-          +material-icon({ name: "menu", size: "m", color: "dark-shade-75", })
+          +material-icon({ name: "menu", size: "m", color: "dark-gray", })
         .header__toolbar
           if isAuthed
             .header__user=user

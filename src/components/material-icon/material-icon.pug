@@ -1,6 +1,6 @@
 mixin material-icon({ name="Enter symbol name", color, size, } = {})
-  - let colorModifier 
-  - let sizeModifier
+  - let colorModifier = ""
+  - let sizeModifier = ""
 
   case color
     when "white"
@@ -9,10 +9,10 @@ mixin material-icon({ name="Enter symbol name", color, size, } = {})
       - colorModifier = "material-icon_color_purple"
     when "purple-gradient"
       - colorModifier = "material-icon_color_purple-gradient"
-    when "dark-shade-75"
-      - colorModifier = "material-icon_color_dark-shade-75"
-    when "dark-shade-50"
-      - colorModifier = "material-icon_color_dark-shade-50"
+    when "dark-gray"
+      - colorModifier = "material-icon_color_dark-gray"
+    when "light-gray"
+      - colorModifier = "material-icon_color_light-gray"
   
   case size
     when "s"

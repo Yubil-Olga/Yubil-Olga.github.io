@@ -10,6 +10,7 @@
   justify-content: center;
   text-decoration: none;
   border: none;
+  user-select: none;
 
   &:focus {
     outline: none;

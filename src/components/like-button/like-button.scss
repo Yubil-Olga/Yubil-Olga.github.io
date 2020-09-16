@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 
   &::after {
     content: attr(data-count);
@@ -34,6 +35,7 @@
     position: absolute;
     width: 100%;
     left: 0;
+    cursor: pointer;
   }
   
   &_active {

@@ -23,10 +23,14 @@ export default class Header {
   }
 
   handleWindowResize(event) {
-    const isMenuClosed = (event.target.innerWidth > 1000) && (this.menu.classList.contains(this.menuActiveClassName));
-    if (isMenuClosed) {
+    if (this.isMenuClosed(event)) {
       this.menu.classList.remove(this.menuActiveClassName);
       window.removeEventListener('resize', this.handleWindowResize);
     }
+  }
+
+  isMenuClosed(event) {
+    return (event.target.innerWidth > 1000)
+      && (this.menu.classList.contains(this.menuActiveClassName));
   }
 }

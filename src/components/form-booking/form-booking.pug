@@ -4,13 +4,17 @@ include ../button/button
 include ../heading/heading
 
 mixin form-booking({ number, roomStatus = "", price, currency = "₽", discount, serviceCharge, additionalServiceCharge, days, } = {}) 
-  - const daysTextDisplay = (days === 1) ? "сутки" : "суток"
+  - 
+    const daysTextDisplay = (days === 1) ? "сутки" : "суток"
+    function format(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
   
   form.form-booking
     header.form-booking__header
       h2.form-booking__room-number=number
         span.form-booking__luxury=roomStatus
-      .form-booking__price #{price}#{currency}
+      .form-booking__price #{format(price)}#{currency}
     .form-booking__date-picker-wrapper
       +date-dropdown({ firstTitle: "прибытие", secondTitle: "выезд", })
     .form-booking__dropdown-wrapper
@@ -30,16 +34,16 @@ mixin form-booking({ number, roomStatus = "", price, currency = "₽", discount,
     .form-booking__order-details
       .form-booking__order-item
         span.form-booking__item-title #{price} #{currency} х #{days} #{daysTextDisplay}
-        .form-booking__item-price #{price * days} #{currency}
+        .form-booking__item-price #{format(price * days)} #{currency}
       .form-booking__order-item
-        span.form-booking__item-title.form-booking__item-title_with-info Сбор за услуги: скидка #{discount}#{currency}
-        .form-booking__item-price #{serviceCharge} #{currency}
+        span.form-booking__item-title.form-booking__item-title_with-info Сбор за услуги: скидка #{format(discount)}#{currency}
+        .form-booking__item-price #{format(serviceCharge)} #{currency}
       .form-booking__order-item
         span.form-booking__item-title.form-booking__item-title_with-info Сбор за дополнительные услуги
-        .form-booking__item-price #{additionalServiceCharge} #{currency}
+        .form-booking__item-price #{format(additionalServiceCharge)} #{currency}
       .form-booking__total
         .form-booking__total-name Итого
         .form-booking__total-dots
-        .form-booking__total-price #{(price * days) + serviceCharge + additionalServiceCharge - discount}#{currency}
+        .form-booking__total-price #{format((price * days) + serviceCharge + additionalServiceCharge - discount)}#{currency}
     .form-booking__book-button
       +button({ text: "забронировать", style: "arrow", size: "m", buttonType: "submit", })

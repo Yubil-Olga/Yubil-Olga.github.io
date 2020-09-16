@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 7px;
+  user-select: none;
 
   &__name {
     @include H3;
@@ -43,5 +44,6 @@
     width: 30px;
     border: none;
     text-align: center;
+    outline: none;
   }
 }

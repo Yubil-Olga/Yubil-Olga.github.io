@@ -57,6 +57,7 @@ export default class Dropdown {
     this.values.forEach((el) => {
       el.input.value = 0;
       el.value = 0;
+      el.checkValue();
     });
     this.cleanButtonVisibility();
     this.title.textContent = this.question;
@@ -88,11 +89,13 @@ export default class Dropdown {
   cleanButtonVisibility() {
     const selection = this.values.filter((option) => option.value > 0);
     const visibilityStyle = 'dropdown__clean-button_visible';
-    const isCleanButtonVisible = (selection.length > 0) && (!this.cleanButton.classList.contains(visibilityStyle));
-    const isCleanButtonHidden = (selection.length < 1) && (this.cleanButton.classList.contains(visibilityStyle));
+    const isCleanButtonVisible = (selection.length > 0)
+      && (!this.cleanButton.classList.contains(visibilityStyle));
+    const isCleanButtonHidden = (selection.length < 1)
+      && (this.cleanButton.classList.contains(visibilityStyle));
     if (isCleanButtonVisible) {
       this.cleanButton.classList.add(visibilityStyle);
-    } 
+    }
     if (isCleanButtonHidden) {
       this.cleanButton.classList.remove(visibilityStyle);
     }
