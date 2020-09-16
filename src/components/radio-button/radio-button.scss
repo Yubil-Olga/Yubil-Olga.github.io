@@ -19,15 +19,15 @@
 
     &:checked ~ .radio-button__checkmark {
       border-color: $purple;
-    }
 
-    &:checked ~ .radio-button__checkmark::after {
-      display: block;
-      content: '';
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: $purple;
+      &::after {
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $purple;
+      }
     }
   }
 

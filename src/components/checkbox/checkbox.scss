@@ -27,15 +27,15 @@
 
     &:checked ~ .checkbox__checkmark {
       border-color: $purple;
-    }
 
-    &:checked ~ .checkbox__checkmark::after {
-      display: block;
-      width: 5px;
-      height: 7px;
-      border: solid $purple;
-      border-width: 0 2px 2px 0;
-      transform: translateY(3px) rotate(45deg);
+      &::after {
+        display: block;
+        width: 5px;
+        height: 7px;
+        border: solid $purple;
+        border-width: 0 2px 2px 0;
+        transform: translateY(3px) rotate(45deg);
+      }
     }
   }
 
