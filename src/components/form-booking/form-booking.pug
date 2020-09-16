@@ -32,7 +32,7 @@ mixin form-booking({ number, roomStatus = "", price, currency = "₽", discount,
         span.form-booking__item-title #{price} #{currency} х #{days} #{daysTextDisplay}
         .form-booking__item-price #{price * days} #{currency}
       .form-booking__order-item
-        span.form-booking__item-title.form-booking__item-title_with-info Сбор за услуги: скидка #{discount} ₽
+        span.form-booking__item-title.form-booking__item-title_with-info Сбор за услуги: скидка #{discount}#{currency}
         .form-booking__item-price #{serviceCharge} #{currency}
       .form-booking__order-item
         span.form-booking__item-title.form-booking__item-title_with-info Сбор за дополнительные услуги
