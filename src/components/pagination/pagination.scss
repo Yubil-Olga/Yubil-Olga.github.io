@@ -23,24 +23,16 @@
     border-radius: 50%;
     text-decoration: none;
     user-select: none;
+    cursor: pointer;
 
     &_current {
       background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
       color: #fff;
     }
-  }
 
-  &__next {
-    @include Icon;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    padding: 13px 0;
-    box-sizing: border-box;
-    font-size: 24px;
-    color: #fff;
-    background: linear-gradient(#6fcf97 0%, #66d2ea 100%);
+    &_next {
+      background: linear-gradient(#6fcf97 0%, #66d2ea 100%);
+    }
   }
 
   &__description {

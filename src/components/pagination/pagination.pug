@@ -1,19 +1,21 @@
-mixin pagination({ currentPage = 1, totalPages = 15, elementsOnPage = 12, } = {})
+include ../material-icon/material-icon
+
+mixin pagination({ startNumber = 1, totalPages = 15, elementsOnPage = 12, allElements = "100+", descriptionText = "вариантов аренды", links = [] } = {})
   .pagination
     ul.pagination__pages
+      each link, index in links
+        - const { number, href, isCurrent = false, } = link
+        if index === links.length - 1
+          li.pagination__item
+            .pagination__link ...
+        li.pagination__item
+          a.pagination__link(
+            href=link.href 
+            class= link.isCurrent ? "pagination__link_current": null
+          )=link.number
       li.pagination__item
-        a.pagination__link(href="/mock-address/change-me").pagination__link_current=currentPage
-      li.pagination__item
-        a.pagination__link(href="/mock-address/change-me")=currentPage + 1
-      li.pagination__item
-        a.pagination__link(href="/mock-address/change-me")=currentPage + 2
-      li.pagination__item
-        a.pagination__link(href="/mock-address/change-me") ...
-      li.pagination__item
-        a.pagination__link(href="/mock-address/change-me")=totalPages
-      li.pagination__item
-        a.pagination__link(href="/mock-address/change-me")
-          i.pagination__next arrow_forward
-    p.pagination__description 1 – #{elementsOnPage} из 100+ вариантов аренды
+        a.pagination__link.pagination__link_next(href="/mock-address/change-me")
+          +material-icon({ name: "arrow_forward", color: "white", size: "m", })
+    p.pagination__description #{startNumber} – #{elementsOnPage} из #{allElements} #{descriptionText}
     
     

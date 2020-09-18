@@ -116,6 +116,13 @@ block main
         each room in rooms
           +card-room(room)
       .search-room__pagination
-        +pagination({ currentPage: 1, totalPages: 15, elementsOnPage: 12, })
+        +pagination({ 
+          links: [
+            { number: 1, href: "/mock-address/change-me", isCurrent: true},
+            { number: 2, href: "/mock-address/change-me", },
+            { number: 3, href: "/mock-address/change-me", },
+            { number: 15, href: "/mock-address/change-me", },
+          ]
+        })
 
     

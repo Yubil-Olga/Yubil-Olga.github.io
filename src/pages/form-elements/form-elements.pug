@@ -131,7 +131,14 @@ block main
         .form-elements__subtitle
           +heading({ text: "Pagination", tag: "h3", })
         .form-elements__pagination
-          +pagination({ currentPage: 1, totalPages: 15, elementsOnPage: 12, })
+          +pagination({ 
+            links: [
+              { number: 1, href: "/mock-address/change-me", isCurrent: true},
+              { number: 2, href: "/mock-address/change-me", },
+              { number: 3, href: "/mock-address/change-me", },
+              { number: 15, href: "/mock-address/change-me", },
+            ] 
+          })
     .form-elements__section 
       .form-elements__item
         .form-elements__subtitle(data-comment="default")
