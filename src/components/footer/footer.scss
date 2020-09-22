@@ -7,7 +7,6 @@
   max-width: $max-width;
   box-shadow: 0 1px 0 rgba($dark-shade, 0.1);
   background-color: #fff;
-  border-top: 2px solid rgba($dark-shade, 0.1);
 
   &__logo {
     @media (max-width: 1300px) {
@@ -71,6 +70,7 @@
 
   &__description {
     @include Body;
+    margin: 0;
   }
 
   &__subtitle {
@@ -91,7 +91,7 @@
     max-width: $content-width;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 24px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,12 +104,19 @@
 
   &__copyright {
     line-height: 17px;
+    margin: 0;
 
     @media (max-width: 1300px) {
       display: none;
     }
   }
 
+  &_with {
+    &_border {
+      border-top: 2px solid rgba($dark-shade, 0.1);
+    }
+  }
+  
   &_creative {
     box-shadow: none;
     padding-bottom: 0;

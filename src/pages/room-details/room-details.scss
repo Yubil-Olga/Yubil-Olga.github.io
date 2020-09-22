@@ -8,24 +8,16 @@
   &__gallery {
     max-width: $max-width;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr;
-  
-      &__item:not(:first-child) {
-        display: none;
-      }
-    }
+    display: flex;
+    width: 100%;
+    height: auto;
   }
 
   &__gallery-item {
     margin: 0;
-    &:first-child {
-      grid-row: 1/3;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media (max-width: 600px) {
       &:not(:first-child) {
@@ -36,9 +28,8 @@
 
   &__image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    height: auto;
+    pointer-events: none;
   }
 
   &__description {
@@ -48,7 +39,7 @@
     display: grid;
     grid-template-columns: 2fr min(380px);
     grid-gap: 60px;
-    padding: $space-y 0;
+    padding: 70px 0 50px;
   
     @media (max-width: 1200px) {
       max-width: unset;
@@ -64,7 +55,7 @@
   &__info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 30px;
+    grid-row-gap: 28px;
 
     @media (max-width: 1200px) {
       padding: 0 $space-y;
@@ -79,21 +70,26 @@
     }
   }
 
-  &__item {
-    padding-right: 15px;
-  }
-
   &__subtitle {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__details {
     @include Body;
+    font-size: 12px;
   }
 
   &__advantages {
     display: grid;
-    grid-row-gap: 20px;
+    grid-row-gap: 15px;
   }
 
   &__reviews {
@@ -107,9 +103,15 @@
   &__reviews-wrapper {
     display: grid;
     grid-row-gap: 25px;
+    padding: 5px 0;
+  }
+
+  &__reviews-number {
+    color: $dark-shade-50;
+    padding-right: 10px;
   }
 
   &__rules &__subtitle{
-    padding-left: 22px;
+    padding-left: 18px;
   }
 }

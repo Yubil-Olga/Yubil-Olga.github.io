@@ -8,4 +8,4 @@ mixin review({ name = "Имя пользователя", src = "images/reviews/r
       h4.review__name=name
       p.review__date= date
     +like-button({ count: voiceCounter, isChecked: isLiked, })
-    p.review__text=comment
+    .review__text=comment

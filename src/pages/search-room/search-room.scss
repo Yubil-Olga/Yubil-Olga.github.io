@@ -2,7 +2,7 @@
 
 .search-room {
   max-width: $content-width;
-  margin: 28px auto 70px auto;
+  margin: 30px auto 70px auto;
   box-sizing: border-box;
   background-color: #fff;
   display: grid;
@@ -10,7 +10,7 @@
   grid-gap: 60px;
 
   &__result {
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
   &__title {
@@ -21,7 +21,7 @@
   &__rooms {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 18px 12px;
+    grid-gap: 20px 12px;
 
     @media (max-width: 1200px) {
       grid-template-columns: 1fr 1fr;
@@ -34,7 +34,7 @@
   }
 
   &__pagination {
-    margin-top: 40px;
+    margin-top: 42px;
     padding-right: 12px;
   }
 

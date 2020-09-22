@@ -15,7 +15,6 @@ export default class Calendar {
       clearButton: true,
       range: true,
       toggleSelected: false,
-      minDate: new Date(),
       multipleDatesSeparator: ' - ',
       navTitles: {
         days: 'MM <i>yyyy</i>',
@@ -24,6 +23,7 @@ export default class Calendar {
       },
       prevHtml: '<i class="datepicker--arrow">arrow_back</i>',
       nextHtml: '<i class="datepicker--arrow">arrow_forward</i>',
+      offset: 5,
     });
     this.$calendar = this.$anchor.data('datepicker').$datepicker;
     this.calendarPluginInstance = this.$anchor.datepicker().data('datepicker');

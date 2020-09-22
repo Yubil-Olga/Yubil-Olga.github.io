@@ -6,8 +6,8 @@
   max-width: $max-width;
   box-sizing: border-box;
   margin: 0 auto;
-  background: center/cover no-repeat;
-  min-height: 680px;
+  background: 0 -70px/cover no-repeat;
+  min-height: 685px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,7 @@
   width: 100%;
   max-width: 380px;
   display: grid;
-  grid-row-gap: 20px;
+  grid-row-gap: 21px;
   background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -38,19 +38,6 @@
     padding-right: 15px;
   }
 }
-
-// @mixin form-wrapper {
-//   padding: 40px 30px 30px 30px;
-//   margin: 0 auto;
-//   display: grid;
-//   grid-row-gap: 20px;
-
-//   @media (max-width: 380px) {
-//     max-width: 290px;
-//     padding-left: 0;
-//     padding-right: 0;
-//   }
-// }
 
 @mixin H1 {
   font: {

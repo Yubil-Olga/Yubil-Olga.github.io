@@ -7,6 +7,10 @@
 
   &__item {
     max-width: 266px;
+
+    &_high {
+      padding-top: 13px;
+    }
   }
 
   &__subtitle {
@@ -19,9 +23,5 @@
     color: $dark-shade-50;
     padding-top: 10px;
     margin: 0;
-  }
-
-  &__item_high {
-    padding-top: 10px;
   }
 }

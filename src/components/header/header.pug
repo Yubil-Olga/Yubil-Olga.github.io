@@ -2,9 +2,10 @@ include ../logo/logo
 include ../button/button
 include ../material-icon/material-icon
 
-mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", isExpanded: false, href: "/mock-address/change-me", }], } = {})
+mixin header({ isAuthed = false, language = "en", indentBetweenElements, items = [{ name: "click me", isExpanded: false, href: "/mock-address/change-me", isActive: false, }], } = {})
   - let loginButtonText
   - let registerButtonText
+  - let indentModifier
   
   case language
     when "ru"
@@ -14,13 +15,19 @@ mixin header({ isAuthed = false, language = "en", items = [{ name: "click me", i
       - loginButtonText = "Login"
       - registerButtonText = "Register"
 
+  case indentBetweenElements
+    when "large"
+      - indentModifier = "header__menu_indent_large"
+    default
+      - indentModifier = ""
+
   header.header.js-header
     .header__wrapper
       +logo()
       nav.header__navigation
-        ul.header__menu.js-header__menu
+        ul.header__menu.js-header__menu(class=indentModifier)
           each item in items
-            li.header__item
+            li.header__item(class= item.isActive ? "header__item_active" : "")
               if item.isExpanded
                 .header__link
                   details.header__details

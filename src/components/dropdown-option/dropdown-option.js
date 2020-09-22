@@ -1,7 +1,6 @@
 export default class DropdownOption {
   constructor(htmlElement) {
     this.container = htmlElement;
-    this.value = 0;
     this.getHTMLElements();
     this.checkValue();
     this.bindEventListeners();
@@ -11,6 +10,7 @@ export default class DropdownOption {
     this.option = this.container.querySelector('.js-dropdown-option');
     this.name = this.container.querySelector('.js-dropdown-option__name').textContent;
     this.input = this.container.querySelector('.js-dropdown-option__input');
+    this.value = Number(this.input.value);
     const signs = {
       increment: '+',
       decrement: '-',

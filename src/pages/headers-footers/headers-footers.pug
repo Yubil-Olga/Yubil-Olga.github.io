@@ -8,7 +8,7 @@ block variables
     const bglogo = true
     const user = "Cosmin Negoita"
     const navigation = [
-      { name: "Home", href: "#", isExpanded: false, },
+      { name: "Home", href: "#", isExpanded: false, isActive: true, },
       { name: "About Us", href: "#", isExpanded: false, },
       { name: "Services", href: "#", isExpanded: true, },
       { name: "Careers", href: "#", isExpanded: false, },
@@ -32,8 +32,8 @@ block variables
   
 block main
   section.headers-footers
-    +header({ isAuthed: false, language: "en", items: navigation, })
-    +header({ isAuthed: true, language: "en", items: navigation, })
+    +header({ isAuthed: false, language: "en", indentBetweenElements: "large", items: navigation, })
+    +header({ isAuthed: true, language: "en", indentBetweenElements: "large", items: navigation, })
     +footer({
       isCreative: false,
       slogan: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",

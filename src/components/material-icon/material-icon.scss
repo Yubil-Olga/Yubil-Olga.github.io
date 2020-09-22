@@ -2,6 +2,7 @@
 
 .material-icon {
   @include Icon;
+  user-select: none;
 
   &_color {
     &_white {

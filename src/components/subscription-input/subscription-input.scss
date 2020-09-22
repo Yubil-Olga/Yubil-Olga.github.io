@@ -15,10 +15,12 @@
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
+    outline: none;
 
     &::placeholder {
       @include Body;
 
+      line-height: 14px;
       color: $dark-shade-25;
     }
   }

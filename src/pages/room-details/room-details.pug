@@ -9,6 +9,7 @@ include ../../components/heading/heading
 block variables
   -
     const pageTitle = 'Room details page'
+    const footerWithBorder = true
     const gallery = [
       { src: "images/room888-1.jpg", alt: "room #888", },
       { src: "images/room888-2.jpg", alt: "room #888", },
@@ -41,9 +42,11 @@ block variables
 block main
   main.room-details
     .room-details__gallery
-      each photo in gallery
-        figure.room-details__gallery-item
-          img(src=photo.src, alt=photo.alt).room-details__image
+      .room-details__gallery-item
+        img(src="images/room888-1.jpg", alt="room #888").room-details__image
+      .room-details__gallery-item
+        img(src="images/room888-2.jpg", alt="room #888").room-details__image
+        img(src="images/room888-3.jpg", alt="room #888").room-details__image
     .room-details__description
       .room-details__info
         .room-details__item
@@ -67,6 +70,19 @@ block main
           .room-details__item
             .room-details__subtitle
               +heading({ text: "Отзывы посетителей номера", tag: "h2", })
+
+              - let reviewsNumberText
+              case true
+                when reviews.length === 0
+                  - reviewsNumberText = "отзывов"
+                when reviews.length === 1
+                  - reviewsNumberText = "отзыв"
+                when reviews.length > 4 
+                  - reviewsNumberText = "отзывов"
+                default
+                  - reviewsNumberText = "отзыва"
+
+              span.room-details__reviews-number=`${reviews.length} ${reviewsNumberText}`
             .room-details__reviews-wrapper
               each comment in reviews
                 +review(comment)

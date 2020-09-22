@@ -116,17 +116,14 @@ block main
       .form-elements__item
         .form-elements__subtitle
           +heading({ text: "Buttons", tag: "h3", })
-        .form-elements__buttons
-          +button({ text: "click me", style: "gradient", })
-          +button({ text: "click me", style: "gradient", })
-          .form-elements__button_border
-            +button({ text: "click me", style: "border", })
-          .form-elements__button_border
-            +button({ text: "click me", style: "border", })
-          +button({ text: "click me", style: "ghost-link", })
-          +button({ text: "click me", style: "link", })
-          .form-elements__button_arrow
-            +button({ text: "перейти к оплате", style: "arrow", })
+        .form-elements__button
+          +button({ text: "click me", style: "gradient", size: "m", })
+        .form-elements__button
+          +button({ text: "click me", style: "border", size: "m", })
+        .form-elements__button
+          +button({ text: "click me", style: "link", size: "m", })
+        .form-elements__button_arrow
+          +button({ text: "перейти к оплате", style: "arrow", size: "m", })
       .form-elements__item
         .form-elements__subtitle
           +heading({ text: "Pagination", tag: "h3", })
@@ -139,59 +136,29 @@ block main
               { number: 15, href: "/mock-address/change-me", },
             ] 
           })
-    .form-elements__section 
-      .form-elements__item
-        .form-elements__subtitle(data-comment="default")
-          +heading({ text: "dropdown", tag: "h3", })
-        +dropdown({
-          isShown: false, 
-          title: "Сколько комнат",
-          hasControlButtons: false,
-          items: [
-            { name: "спальни", }, 
-            { name: "кровати", }, 
-            { name: "ванные комнаты", },
-          ],
-        })
-      .form-elements__item
-        .form-elements__subtitle(data-comment="expanded")
-          +heading({ text: "dropdown", tag: "h3", })
-        +dropdown({
-          isShown: true, 
-          title: "Сколько комнат",
-          items: [
-            { name: "спальни", }, 
-            { name: "кровати", }, 
-            { name: "ванные комнаты", },
-          ],
-        })
     .form-elements__section
+      .form-elements__item
+        .form-elements__subtitle
+          +heading({ text: "dropdown", tag: "h3", })
+        +dropdown({
+          title: "Сколько комнат",
+          items: [
+            { name: "спальни", number: 2, }, 
+            { name: "кровати", number: 2, }, 
+            { name: "ванные комнаты", },
+          ],
+        })
       .form-elements__item
         +dropdown({
           isShown: true, 
           title: "Сколько гостей", 
           hasControlButtons: true,
           items: [
-            { name: "взрослые", group: "гости", }, 
-            { name: "дети", group: "гости", }, 
+            { name: "взрослые", group: "гости", number: 2, }, 
+            { name: "дети", group: "гости", number: 1, }, 
             { name: "младенцы", },
           ],
         })
-    .form-elements__section
-      .form-elements__item
-        +dropdown({
-          isShown: true, 
-          title: "Сколько гостей", 
-          hasControlButtons: true,
-          items: [
-            { name: "взрослые", group: "гости", }, 
-            { name: "дети", group: "гости", }, 
-            { name: "младенцы", },
-          ],
-        })
-    .form-elements__section
-      .form-elements__item
-        +expandable-checkbox({ title: "expandable-checkbox-list", items: [], })
       .form-elements__item
         +expandable-checkbox({
           title: "expandable-checkbox-list", 

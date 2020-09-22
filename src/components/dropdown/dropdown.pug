@@ -3,15 +3,15 @@ include ../button/button
 include ../dropdown-option/dropdown-option
 include ../material-icon/material-icon
 
-mixin dropdown({ isShown = false, title, hasControlButtons = false, items = [{ name, group, }], } = {})
-  .dropdown.js-dropdown(class=isShown ? "dropdown_active": "")
+mixin dropdown({ title, hasControlButtons = false, items = [{ name, group, number, }], } = {})
+  .dropdown.js-dropdown
     .dropdown__selection.js-dropdown__selection
       p.dropdown__title.js-dropdown__title=title
       +material-icon({ name: "expand_more", size: "m", })
-    .dropdown__menu
+    .dropdown__menu.js-dropdown__menu
       each item in items
         .dropdown__option.js-dropdown__option
-          +dropdown-option({ name: item.name, group: item.group, })
+          +dropdown-option({ name: item.name, group: item.group, number: item.number, })
       if hasControlButtons
         .dropdown__control
           .dropdown__clean-button.js-dropdown__clean-button 
