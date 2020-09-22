@@ -75,6 +75,7 @@
 
   &__item {
     list-style: none;
+    color: $dark-shade-50;
 
     &_active {
       font-weight: bold;
@@ -108,7 +109,8 @@
   }
 
   &__link {
-    color: $dark-shade-50;
+    color: inherit;
+    font-weight: inherit;
     margin-right: 20px;
     text-decoration: none;
   }
