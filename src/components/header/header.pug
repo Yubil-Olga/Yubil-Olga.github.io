@@ -40,7 +40,7 @@ mixin header({ isAuthed = false, language = "en", indentBetweenElements, items =
           if isAuthed
             .header__user=user
           else 
-            .header__sign-in-btn
+            .header__sign-in-button
               +button({
                 href: "login.html", 
                 buttonType: "link",
@@ -48,7 +48,7 @@ mixin header({ isAuthed = false, language = "en", indentBetweenElements, items =
                 text: loginButtonText,
                 size: "s",
               })
-            .header__sign-up-btn
+            .header__sign-up-button
               +button({
                 href: "registration.html", 
                 buttonType: "link",

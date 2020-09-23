@@ -3,7 +3,7 @@ import MaterialIcon from '../material-icon/material-icon';
 export default class LikeButton {
   constructor(htmlElement) {
     this.button = htmlElement;
-    this.LikeButtonActiveClassName = 'like-button_active';
+    this.likeButtonActiveClassName = 'like-button_active';
     this.findDOMElements();
     this.bindEventListener();
   }
@@ -21,7 +21,7 @@ export default class LikeButton {
   }
 
   handleLikeBtnClick() {
-    if (this.button.classList.contains(this.LikeButtonActiveClassName)) {
+    if (this.button.classList.contains(this.likeButtonActiveClassName)) {
       this.setInactive();
     } else {
       this.setActive();
@@ -32,14 +32,14 @@ export default class LikeButton {
   setActive() {
     this.likes += 1;
     this.icon.setTextContent('favorite');
-    this.button.classList.add(this.LikeButtonActiveClassName);
+    this.button.classList.add(this.likeButtonActiveClassName);
     this.input.setAttribute('checked', true);
   }
 
   setInactive() {
     this.likes -= 1;
     this.icon.setTextContent('favorite_border');
-    this.button.classList.remove(this.LikeButtonActiveClassName);
+    this.button.classList.remove(this.likeButtonActiveClassName);
     this.input.removeAttribute('checked');
   }
 }
