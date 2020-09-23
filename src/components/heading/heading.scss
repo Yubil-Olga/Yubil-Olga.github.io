@@ -17,4 +17,10 @@
       @include H3;
     }
   }
+
+  &_color {
+    &_light-shade {
+      color: $dark-shade-25;
+    }
+  }
 }

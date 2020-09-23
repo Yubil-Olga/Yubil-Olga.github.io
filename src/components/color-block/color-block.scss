@@ -1,0 +1,57 @@
+@import '../../scss/mixins';
+
+.color-block {
+  display: flex;
+  padding-bottom: 20px;
+  align-items: center;
+
+  &__box {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+  }
+
+  &__name {
+    @include H2;
+    line-height: 31px;
+    word-spacing: -2px;
+  }
+
+  &__description {
+    font-family: $quicksand;
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  &_color {
+    &_darkest-shade {
+      background-color: $dark-shade;
+    }
+
+    &_dark-shade {
+      background-color: $dark-shade-75;
+    }
+
+    &_shade {
+      background-color: $dark-shade-50;
+    }
+
+    &_light-shade {
+      background-color: $dark-shade-25;
+    }
+
+    &_lightest-shade {
+      background-color: $dark-shade-5;
+    }
+
+    &_purple {
+      background-color: $purple;
+    }
+
+    &_green {
+      background-color: $green;
+    }
+  }
+}

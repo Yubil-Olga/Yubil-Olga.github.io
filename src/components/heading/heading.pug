@@ -1,6 +1,7 @@
-mixin heading({ text="Heading", tag, } = {})
+mixin heading({ text="Heading", tag, color } = {})
   - let typeModifier
   - let tagModifier
+  - let colorModifier
 
   case tag
     when "h1"
@@ -13,4 +14,13 @@ mixin heading({ text="Heading", tag, } = {})
       - typeModifier = "heading_type_h3"
       - tagModifier = "h3"
 
-  #{tagModifier}.heading(class=typeModifier)=text
+  case color
+    when "light shade"
+      - colorModifier = "heading_color_light-shade"
+    default
+     - colorModifier = ""
+
+  #{tagModifier}.heading(
+    class=typeModifier
+    class=colorModifier
+  )=text

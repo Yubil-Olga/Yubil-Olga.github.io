@@ -9,33 +9,6 @@
   grid-template-columns: auto 465px;
   grid-gap: 20px;
 
-  &__palette {
-    display: flex;
-    padding-bottom: 20px;
-    align-items: center;
-
-  }
-
-  &__palette-name {
-    @include H2;
-
-    line-height: 31px;
-    word-spacing: -2px;
-  }
-
-  &__palette-code {
-    font-family: $quicksand;
-    font-size: 19px;
-    font-weight: normal;
-  }
-
-  &__palette-box {
-    width: 70px;
-    height: 70px;
-    border-radius: 6px;
-    margin-right: 40px;
-  }
-
   &__font {
     display: grid;
     grid-template-columns: 70px auto;
@@ -43,62 +16,17 @@
     max-width: 420px;
   }
 
-  &__font-tag {
+  &__tag {
     padding-right: 20px;
-    color: $dark-shade-25;
     text-align: center;
   }
 
-  &__font-description {
-    word-spacing: -2px;
+  &__tag-body {
+    color: $dark-shade-25;
   }
 
-  &__color {
-    &_dark-shade {
-      background-color: $dark-shade;
-    }
-
-    &_dark-shade-75 {
-      background-color: $dark-shade-75;
-    }
-
-    &_dark-shade-50 {
-      background-color: $dark-shade-50;
-    }
-
-    &_dark-shade-25 {
-      background-color: $dark-shade-25;
-    }
-
-    &_dark-shade-5 {
-      background-color: $dark-shade-5;
-    }
-
-    &_purple {
-      background-color: $purple;
-    }
-
-    &_green {
-      background-color: $green;
-    }
-  }
-
-  &__font {
-    &_H1 {
-      @include H1;
-    }
-  
-    &_H2 {
-      @include H2;
-    }
-  
-    &_H3 {
-      @include H3;
-    }
-  
-    &_Body {
-      @include Body;
-    }
+  &__sample-body {
+    color: $dark-shade-75;
   }
 
   @media (max-width: 1240px) {
