@@ -7,8 +7,8 @@ mixin field({ isMasked = false, type, theme, placeholder, text, readonly = false
       - themeModifier = "field_theme_dark"
 
   input.field.js-field(
-    class=`${maskedModifier}`
-    class=`${themeModifier}`
+    class=maskedModifier
+    class=themeModifier
     type=type
     placeholder= placeholder
     value=text
