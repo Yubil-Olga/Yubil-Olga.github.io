@@ -48,7 +48,7 @@
     }
   
     @media (max-width: 450px) {
-      padding: $space-y/2 0;
+      padding: $space-y/2 10px;
     }
   }
 
@@ -66,7 +66,7 @@
     }
 
     @media (max-width: 450px) {
-      padding: $space-x/2;
+      padding: 0;
     }
   }
 
