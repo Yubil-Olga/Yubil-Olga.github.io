@@ -5,11 +5,11 @@
   grid-template-columns: auto auto;
   grid-gap: 10px;
 
-  &__icon {
+  &__icon, 
+  &__image {
     width: 47px;
     height: 47px;
     border-radius: 50%;
-    overflow: hidden;
   }
   
   &__title {

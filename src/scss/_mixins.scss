@@ -25,7 +25,7 @@
   width: 100%;
   max-width: 380px;
   display: grid;
-  grid-row-gap: 21px;
+  grid-row-gap: 20px;
   background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -69,7 +69,6 @@
     size: 12px;
   }
 
-  line-height: 15px;
   color: $dark-shade;
   text-transform: uppercase;
 }

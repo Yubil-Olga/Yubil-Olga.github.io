@@ -3,7 +3,7 @@ include ../like-button/like-button
 mixin review({ name = "Имя пользователя", src = "images/reviews/review1.png", voiceCounter = 11, isLiked = false, date = "Дата", comment = "Отзыв", } = {})
   .review
     .review__icon
-      img(src=src, alt=name)
+      img.review__image(src=src, alt=name)
     .review__title
       h4.review__name=name
       p.review__date= date
