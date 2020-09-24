@@ -2,6 +2,7 @@
 
 .registration-page {
   @include container;
+  background-position: bottom;
   background-image: url('./bg-registration.jpg');
   min-height: 705px;
 }
