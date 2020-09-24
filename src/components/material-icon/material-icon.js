@@ -5,7 +5,7 @@ export default class MaterialIcon {
   }
 
   findHTMLElements() {
-    this.icon = this.container.querySelector('.material-icon');
+    this.icon = this.container.querySelector('.js-material-icon');
   }
 
   setTextContent(text) {

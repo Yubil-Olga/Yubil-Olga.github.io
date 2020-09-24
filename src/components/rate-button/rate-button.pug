@@ -5,13 +5,13 @@ mixin rate-button({ total = 5, rating = 5, isClickable = false, } = {})
   - const activeStars = rating > stars ? stars : rating
   - const tagModifier = isClickable ? "label" : "div"
 
-  form.rate-button(class= isClickable ? "js-rate-button" : "")
+  .rate-button(class= isClickable ? "js-rate-button rate-button_clickable" : "")
     - for (let i=0; i<stars; i++)
       #{tagModifier}.rate-button__item
         if (activeStars > i)
         - const text = activeStars > i ? "star" : "star_border"
 
-        .rate-button__icon
+        .rate-button__icon.js-rate-button__icon
           +material-icon({ name: text, size: "m", color: "purple", })
-        input.rate-button__input(type="radio" name="star" value=i+1)
+        input.rate-button__input.js-rate-button__input(type="radio" name="star" value=i+1)
   

@@ -1,10 +1,10 @@
 .rate-button {
+  $root: &;
   display: flex;
   user-select: none;
 
   &__item {
     position: relative;
-    cursor: pointer;
   }
 
   &__input {
@@ -12,5 +12,11 @@
     position: absolute;
     left: 0;
     z-index: -1;
+  }
+
+  &_clickable {
+    #{$root}__item {
+      cursor: pointer;
+    }
   }
 }

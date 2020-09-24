@@ -8,9 +8,9 @@ export default class RateButton {
   }
 
   findDOMElements() {
-    this.starsContainer = this.rateButton.querySelectorAll('.rate-button__icon');
+    this.starsContainer = this.rateButton.querySelectorAll('.js-rate-button__icon');
     this.stars = Array.from(this.starsContainer).map((el) => new MaterialIcon(el));
-    this.inputs = this.rateButton.querySelectorAll('.rate-button__input');
+    this.inputs = this.rateButton.querySelectorAll('.js-rate-button__input');
   }
 
   bindEventListener() {
