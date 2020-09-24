@@ -16,6 +16,8 @@
   @media (max-width: 400px) {
     padding-left: 0;
     padding-right: 0;
+    align-items: flex-start;
+    padding-top: $space-x;
   }
 }
 
