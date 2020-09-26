@@ -1,25 +1,25 @@
-mixin material-icon({ name="Enter symbol name", color, size, } = {})
-  - let colorModifier = ""
-  - let sizeModifier = ""
+mixin material-icon({ name = 'Enter symbol name', color, size, } = {})
+  - let colorModifier = '';
+  - let sizeModifier = '';
 
   case color
-    when "white"
-      - colorModifier = "material-icon_color_white"
-    when "purple"
-      - colorModifier = "material-icon_color_purple"
-    when "purple-gradient"
-      - colorModifier = "material-icon_color_purple-gradient"
-    when "dark-gray"
-      - colorModifier = "material-icon_color_dark-gray"
-    when "light-gray"
-      - colorModifier = "material-icon_color_light-gray"
-  
-  case size
-    when "s"
-      - sizeModifier = "material-icon_size_small"
-    when "m"
-      - sizeModifier = "material-icon_size_medium"
-    when "l"
-      - sizeModifier = "material-icon_size_large"
+    when 'white'
+      - colorModifier = 'material-icon_color_white';
+    when 'purple'
+      - colorModifier = 'material-icon_color_purple';
+    when 'purple-gradient'
+      - colorModifier = 'material-icon_color_purple-gradient';
+    when 'dark-gray'
+      - colorModifier = 'material-icon_color_dark-gray';
+    when 'light-gray'
+      - colorModifier = 'material-icon_color_light-gray';
 
-  i.material-icon(class=`js-material-icon ${colorModifier} ${sizeModifier}`)=name
+  case size
+    when 's'
+      - sizeModifier = 'material-icon_size_small';
+    when 'm'
+      - sizeModifier = 'material-icon_size_medium';
+    when 'l'
+      - sizeModifier = 'material-icon_size_large';
+
+  i.material-icon(class=`js-material-icon ${colorModifier} ${sizeModifier}`)= name

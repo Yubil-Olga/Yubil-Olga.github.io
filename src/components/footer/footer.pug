@@ -2,35 +2,35 @@ include ../logo/logo
 include ../subscription-input/subscription-input
 include ../social-icons/social-icons
 include ../heading/heading
- 
-mixin footer({ isCreative = true, withBorder = false, slogan, formTitle, formDescription, copyright, items = [{ title, list: [{ name: "click me" }], }], } = {})
+
+mixin footer({ isCreative = true, withBorder = false, slogan, formTitle, formDescription, copyright, items = [{ title, list: [{ name: 'click me' }], }], } = {})
   footer.footer(
-    class=isCreative ? "footer_creative" : ""
-    class=withBorder ? "footer_with_border" : ""
+    class=isCreative ? 'footer_creative' : '',
+    class=withBorder ? 'footer_with_border' : ''
   )
     section.footer__main
       section.footer__section
         .footer__logo
-          +logo()
-        p.footer__description=slogan
+          +logo
+        p.footer__description= slogan
       unless isCreative
         each item in items
           section.footer__section
             .footer__subtitle
-              +heading({ text: item.title, tag: "h3", })
+              +heading({ text: item.title, tag: 'h3', })
             ul.footer__navigation
               each link in item.list
                 li.footer__navigation-item
-                  a.footer__link(href="/mock-address/change-me")=link.name
+                  a.footer__link(href='/mock-address/change-me')= link.name
         form.footer__section
           .footer__subtitle
-            +heading({ text: formTitle, tag: "h3", })
-          p.footer__description=formDescription
+            +heading({ text: formTitle, tag: 'h3', })
+          p.footer__description= formDescription
           .footer__control
-            +subscription-input()
+            +subscription-input
     .footer__wrapper
       .footer__copyright-bar
         unless isCreative
-          p.footer__copyright=copyright
+          p.footer__copyright= copyright
         .footer__social
-          +social-icons()
+          +social-icons

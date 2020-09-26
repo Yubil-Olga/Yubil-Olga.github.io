@@ -6,8 +6,8 @@ include ../material-icon/material-icon
 mixin dropdown({ title, hasControlButtons = false, items = [{ name, group, number, }], } = {})
   .dropdown.js-dropdown
     .dropdown__selection.js-dropdown__selection
-      p.dropdown__title.js-dropdown__title=title
-      +material-icon({ name: "expand_more", size: "m", })
+      p.dropdown__title.js-dropdown__title= title
+      +material-icon({ name: 'expand_more', size: 'm', })
     .dropdown__menu.js-dropdown__menu
       each item in items
         .dropdown__option.js-dropdown__option
@@ -15,7 +15,6 @@ mixin dropdown({ title, hasControlButtons = false, items = [{ name, group, numbe
       if hasControlButtons
         .dropdown__control
           .dropdown__clean-button.js-dropdown__clean-button 
-            +button({ text: "очистить", style: "ghost-link", })
+            +button({ text: 'очистить', style: 'ghost-link', })
           .dropdown__accept-button.js-dropdown__accept-button 
-            +button({ text: "применить", style: "link", })
-            
+            +button({ text: 'применить', style: 'link', })

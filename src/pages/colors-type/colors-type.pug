@@ -3,35 +3,34 @@ include ../../components/color-block/color-block
 include ../../components/heading/heading
 
 block variables
-  - const pageTitle = 'Form elements'
-   
+  - const pageTitle = 'Form elements';
+
 block main
   section.colors-type
     .colors-type__section
-      +color-block({ name: "Dark Shade 100%", description: "#1F2041", backgroundColor: "darkest shade", })
-      +color-block({ name: "Dark Shade 75%", description: "#1F2041", backgroundColor: "dark shade", })
-      +color-block({ name: "Dark Shade 50%", description: "#1F2041", backgroundColor: "shade", })
-      +color-block({ name: "Dark Shade 25%", description: "#1F2041", backgroundColor: "light shade", })
-      +color-block({ name: "Dark Shade 5%", description: "#1F2041", backgroundColor: "lightest shade", })
-      +color-block({ name: "Purple", description: "#BC9CFF", backgroundColor: "purple", })
-      +color-block({ name: "Green", description: "#6FCF97", backgroundColor: "green", })
+      +color-block({ name: 'Dark Shade 100%', description: '#1F2041', backgroundColor: 'darkest shade', })
+      +color-block({ name: 'Dark Shade 75%', description: '#1F2041', backgroundColor: 'dark shade', })
+      +color-block({ name: 'Dark Shade 50%', description: '#1F2041', backgroundColor: 'shade', })
+      +color-block({ name: 'Dark Shade 25%', description: '#1F2041', backgroundColor: 'light shade', })
+      +color-block({ name: 'Dark Shade 5%', description: '#1F2041', backgroundColor: 'lightest shade', })
+      +color-block({ name: 'Purple', description: '#BC9CFF', backgroundColor: 'purple', })
+      +color-block({ name: 'Green', description: '#6FCF97', backgroundColor: 'green', })
     .colors-type__section
-        .colors-type__font
-          .colors-type__tag
-            +heading({ text: "H1", tag: "h1", color: "light shade" })
-          .colors-type__sample
-            +heading({ text: "This one is the sub-section or widget title", tag: "h1", })
-        .colors-type__font
-          .colors-type__tag
-            +heading({ text: "H2", tag: "h2", color: "light shade" })
-          .colors-type__sample
-            +heading({ text: "Next one is the item title inside widgets", tag: "h2", })
-        .colors-type__font
-          .colors-type__tag
-            +heading({ text: "H3", tag: "h3", color: "light shade" })
-          .colors-type__sample
-            +heading({ text: "This is a label or CTA text", tag: "h3", })
-        .colors-type__font
-          p.colors-type__tag-body Body
-          p.colors-type__sample-body This is the body text which is used for most of the design, like paragraphs, lists, etc.
-  
+      .colors-type__font
+        .colors-type__tag
+          +heading({ text: 'H1', tag: 'h1', color: 'light shade', })
+        .colors-type__sample
+          +heading({ text: 'This one is the sub-section or widget title', tag: 'h1', })
+      .colors-type__font
+        .colors-type__tag
+          +heading({ text: 'H2', tag: 'h2', color: 'light shade', })
+        .colors-type__sample
+          +heading({ text: 'Next one is the item title inside widgets', tag: 'h2', })
+      .colors-type__font
+        .colors-type__tag
+          +heading({ text: 'H3', tag: 'h3', color: 'light shade', })
+        .colors-type__sample
+          +heading({ text: 'This is a label or CTA text', tag: 'h3', })
+      .colors-type__font
+        p.colors-type__tag-body Body
+        p.colors-type__sample-body This is the body text which is used for most of the design, like paragraphs, lists, etc.

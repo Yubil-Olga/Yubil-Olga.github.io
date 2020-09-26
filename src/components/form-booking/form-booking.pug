@@ -3,33 +3,32 @@ include ../dropdown/dropdown
 include ../button/button
 include ../heading/heading
 
-mixin form-booking({ number, roomStatus = "", price, currency = "₽", discount, serviceCharge, additionalServiceCharge, days, } = {}) 
-  - 
-    const daysTextDisplay = (days === 1) ? "сутки" : "суток"
+mixin form-booking({ number, roomStatus = '', price, currency = '₽', discount, serviceCharge, additionalServiceCharge, days, } = {})
+  -
+    const daysTextDisplay = (days === 1) ? 'сутки' : 'суток'
     function format(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
     }
-  
+
   form.form-booking
     header.form-booking__header
-      h2.form-booking__room-number=number
-        span.form-booking__luxury=roomStatus
+      h2.form-booking__room-number= number
+        span.form-booking__luxury= roomStatus
       .form-booking__price #{format(price)}#{currency}
     .form-booking__date-picker-wrapper
-      +date-dropdown({ firstTitle: "прибытие", secondTitle: "выезд", })
+      +date-dropdown({ firstTitle: 'прибытие', secondTitle: 'выезд', })
     .form-booking__dropdown-wrapper
       .form-booking__sub-title
-        +heading({ text: "гости", tag: "h3", })
-      +dropdown({
-        heading: "гости",
-        isShown: false, 
-        title: "Сколько гостей", 
-        hasControlButtons: true,
-        items: [
-          { name: "взрослые", group: "гости", },
-          { name: "дети", group: "гости", },
-          { name: "младенцы", group: "младенцы", },
-        ]
+        +heading({ text: 'гости', tag: 'h3', })
+      +dropdown({ 
+        heading: 'гости', 
+        isShown: false, title: 'Сколько гостей', 
+        hasControlButtons: true, 
+        items: [ 
+          { name: 'взрослые', group: 'гости', }, 
+          { name: 'дети', group: 'гости', }, 
+          { name: 'младенцы', group: 'младенцы', }, 
+        ] 
       })
     .form-booking__order-details
       .form-booking__order-item
@@ -46,4 +45,4 @@ mixin form-booking({ number, roomStatus = "", price, currency = "₽", discount,
         .form-booking__total-dots
         .form-booking__total-price #{format((price * days) + serviceCharge + additionalServiceCharge - discount)}#{currency}
     .form-booking__book-button
-      +button({ text: "забронировать", style: "arrow", size: "m", buttonType: "submit", })
+      +button({ text: 'забронировать', style: 'arrow', size: 'm', buttonType: 'submit', })

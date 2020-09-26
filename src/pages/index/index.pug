@@ -2,12 +2,11 @@ extends ../page-template
 include ../../components/form-selection/form-selection
 
 block variables
-  - const pageTitle = 'Index page'
+  - const pageTitle = 'Index page';
 
 block main
   main.index-page
     .index-page__item
-      +form-selection()
+      +form-selection
     .index-page__item
       p.index-page__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
-    

@@ -1,26 +1,23 @@
-mixin heading({ text="Heading", tag, color } = {})
-  - let typeModifier
-  - let tagModifier
-  - let colorModifier
+mixin heading({ text = 'Heading', tag, color } = {})
+  - let typeModifier;
+  - let tagModifier;
+  - let colorModifier;
 
   case tag
-    when "h1"
-      - typeModifier = "heading_type_h1"
-      - tagModifier = "h1"
-    when "h2"
-      - typeModifier = "heading_type_h2"
-      - tagModifier = "h2"
+    when 'h1'
+      - typeModifier = 'heading_type_h1';
+      - tagModifier = 'h1';
+    when 'h2'
+      - typeModifier = 'heading_type_h2';
+      - tagModifier = 'h2';
     default
-      - typeModifier = "heading_type_h3"
-      - tagModifier = "h3"
+      - typeModifier = 'heading_type_h3';
+      - tagModifier = 'h3';
 
   case color
-    when "light shade"
-      - colorModifier = "heading_color_light-shade"
+    when 'light shade'
+      - colorModifier = 'heading_color_light-shade';
     default
-     - colorModifier = ""
+      - colorModifier = '';
 
-  #{tagModifier}.heading(
-    class=typeModifier
-    class=colorModifier
-  )=text
+  #{tagModifier}.heading(class=typeModifier, class=colorModifier)= text

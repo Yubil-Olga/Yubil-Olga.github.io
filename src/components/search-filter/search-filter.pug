@@ -6,72 +6,72 @@ include ../expandable-checkbox/expandable-checkbox
 include ../heading/heading
 include ../date-dropdown/date-dropdown
 
-mixin search-filter()
+mixin search-filter
   aside.search-filter
     .search-filter__item
-      +date-dropdown({ type: "single", firstTitle: "даты пребывания в отеле", })
+      +date-dropdown({ type: 'single', firstTitle: 'даты пребывания в отеле', })
     .search-filter__item
       .search-filter__subtitle
-        +heading({ text: "гости", tag: "h3", })
-      +dropdown({
+        +heading({ text: 'гости', tag: 'h3', })
+      +dropdown({ 
         isShown: false, 
-        title: "Сколько гостей", 
-        hasControlButtons: true,
-        items: [
-          {name: "взрослые", group: "гости"}, 
-          {name: "дети", group: "гости"}, 
-          {name: "младенцы"},
-        ],
+        title: 'Сколько гостей',
+        hasControlButtons: true, 
+        items: [ 
+          {name: 'взрослые', group: 'гости'}, 
+          {name: 'дети', group: 'гости'}, 
+          {name: 'младенцы'}, 
+        ], 
       })
     .search-filter__item.search-filter__item_high
-      +heading({ text: "диапазон цены", tag: "h3", })
-      +range-slider()
+      +heading({ text: 'диапазон цены', tag: 'h3', })
+      +range-slider
       p.search-filter__comment Стоимость за сутки пребывания в номере
     .search-filter__item_high
       .search-filter__subtitle
-        +heading({ text: "Checkbox Buttons", tag: "h3", })
-      +checkbox({
+        +heading({ text: 'Checkbox Buttons', tag: 'h3', })
+      +checkbox({ 
         isRich: false, 
-        items: [
-          { title: "Можно курить", }, 
-          { title: "Можно с питомцами", isChecked: true, }, 
-          { title: "Можно пригласить гостей (до 10 человек)", isChecked: true, },
-        ],
+        items: [ 
+          { title: 'Можно курить', }, 
+          { title: 'Можно с питомцами', isChecked: true, }, 
+          { title: 'Можно пригласить гостей (до 10 человек)', isChecked: true, }, 
+        ], 
       })
     .search-filter__item
       .search-filter__subtitle
-        +heading({ text: "доступность", tag: "h3", })
-      +checkbox({
+        +heading({ text: 'доступность', tag: 'h3', })
+      +checkbox({ 
         isRich: true, 
-        items: [
-          { title: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.", },
-          { title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.", },
-        ],
+        items: [ 
+          { title: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.', }, 
+          { title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист и проводит до номера.', }, 
+        ], 
       })
     .search-filter__item
       .search-filter__subtitle
-        +heading({ text: "удобства номера", tag: "h3", })
-      +dropdown({
+        +heading({ text: 'удобства номера', tag: 'h3', })
+      +dropdown({ 
         isShown: false, 
-        title: "Сколько комнат",
-        hasControlButtons: false,
-        items: [
-          { name: "спальни", }, 
-          { name: "кровати", }, 
-          { name: "ванные комнаты", },
-        ],
+        title: 'Сколько комнат', 
+        hasControlButtons: false, 
+        items: [ 
+          { name: 'спальни', }, 
+          { name: 'кровати', }, 
+          { name: 'ванные комнаты', }, 
+        ], 
       })
     .search-filter__item
-      +expandable-checkbox({
-        title: "дополнительные удобства",  
-        items: [
-          { title: "Завтрак", }, 
-          { title: "Письменный стол", isChecked: true, }, 
-          { title: "Стул для кормления", isChecked: true, }, 
-          { title: "Кроватка", isChecked: true, }, 
-          { title: "Телевизор", }, 
-          { title: "Шампунь", },
-          { title: "Телевизор", }, 
-          { title: "Шампунь", },
-        ],
-      })    
+      +expandable-checkbox({ 
+        title: 'дополнительные удобства', 
+        items: [ 
+          { title: 'Завтрак', }, 
+          { title: 'Письменный стол', isChecked: true, }, 
+          { title: 'Стул для кормления', isChecked: true, }, 
+          { title: 'Кроватка', isChecked: true, }, 
+          { title: 'Телевизор', }, 
+          { title: 'Шампунь', }, 
+          { title: 'Телевизор', }, 
+          { title: 'Шампунь', }, 
+        ], 
+      }) 

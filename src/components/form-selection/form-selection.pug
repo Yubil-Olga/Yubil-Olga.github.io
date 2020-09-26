@@ -1,25 +1,25 @@
 include ../date-dropdown/date-dropdown
-include ../dropdown/dropdown 
-include ../button/button 
+include ../dropdown/dropdown
+include ../button/button
 include ../heading/heading
 
-mixin form-selection()
+mixin form-selection
   form.form-selection
-    +heading({ text: "Найдём номера под ваши пожелания", tag: "h1", })
+    +heading({ text: 'Найдём номера под ваши пожелания', tag: 'h1', })
     .form-selection__date-picker-wrapper
-      +date-dropdown({ firstTitle: "прибытие", secondTitle: "выезд", })
+      +date-dropdown({ firstTitle: 'прибытие', secondTitle: 'выезд', })
     .form-selection__dropdown-wrapper
       .form-selection__subtitle
-        +heading({ text: "гости", tag: "h3", })
-      +dropdown({
+        +heading({ text: 'гости', tag: 'h3', })
+      +dropdown({ 
         isShown: false, 
-        title: "Сколько гостей", 
-        hasControlButtons: true,
-        items: [
-          {name: "взрослые", group: "гости", }, 
-          {name: "дети", group: "гости", }, 
-          {name: "младенцы", },
-        ],
+        title: 'Сколько гостей', 
+        hasControlButtons: true, 
+        items: [ 
+          {name: 'взрослые', group: 'гости', }, 
+          {name: 'дети', group: 'гости', }, 
+          {name: 'младенцы', }, 
+        ], 
       })
     .form-selection__footer
-      +button({ href:"search-room.html", buttonType: "link", text: "подобрать номер", style: "arrow", size: "m", })
+      +button({ href: 'search-room.html', buttonType: 'link', text: 'подобрать номер', style: 'arrow', size: 'm', })

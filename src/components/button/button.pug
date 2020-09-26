@@ -1,41 +1,45 @@
-mixin button({ href = "/mock-address/change-me", buttonType, text = "click me", style, size, } = {})
-  - let sizeModifier
-  - let styleModifier
-  - let tagModifier
-  - let typeModifier
-  
+mixin button({ href = '/mock-address/change-me', buttonType, text = 'click me', style, size, } = {})
+  - let sizeModifier;
+  - let styleModifier;
+  - let tagModifier;
+  - let typeModifier;
+
   case style
     when "arrow"
-      - styleModifier = "button_with_arrow"
+      - styleModifier = 'button_with_arrow';
     when "border"
-      - styleModifier = "button_with_border"
+      - styleModifier = 'button_with_border';
     when "gradient"
-      - styleModifier = "button_with_gradient"
+      - styleModifier = 'button_with_gradient';
     when "ghost-link"
-      - styleModifier = "button_with_ghost-link"
+      - styleModifier = 'button_with_ghost-link';
     when "link"
-      - styleModifier = "button_with_link"
+      - styleModifier = 'button_with_link';
     default
-      - styleModifier = ""
-    
+      - styleModifier = '';
 
   case size
     when "s"
-      - sizeModifier = "button_size_s"
+      - sizeModifier = 'button_size_s';
     when "m"
-      - sizeModifier = "button_size_m"
+      - sizeModifier = 'button_size_m';
     default
-      - sizeModifier = ""
-  
+      - sizeModifier = '';
+
   case buttonType
     when "submit"
-      - tagModifier = "button"
-      - typeModifier = "submit"
-      - href = null
+      - tagModifier = 'button';
+      - typeModifier = 'submit';
+      - href = null;
     when "link"
-      - tagModifier = "a"
+      - tagModifier = 'a';
     default
-      - tagModifier = "button"
-      - href = null
+      - tagModifier = 'button';
+      - href = null;
 
-  #{tagModifier}(class=`button ${styleModifier} ${sizeModifier}` href=href type=typeModifier aria-label=text)=text
+  #{tagModifier}(
+    class=`button ${styleModifier} ${sizeModifier}`,
+    href=href,
+    type=typeModifier,
+    aria-label=text
+  )= text

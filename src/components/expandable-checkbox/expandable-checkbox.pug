@@ -5,10 +5,9 @@ include ../heading/heading
 mixin expandable-checkbox({ title, items, } = {})
   .expandable-checkbox.js-expandable-checkbox
     .expandable-checkbox__selection.js-expandable-checkbox__selection
-      +heading({ text: title, tag: "h3", })
+      +heading({ text: title, tag: 'h3', })
       .expandable-checkbox__button
-        +material-icon({ name: "expand_more", size: "m", color: "light-gray", })
+        +material-icon({ name: 'expand_more', size: 'm', color: 'light-gray', })
     .expandable-checkbox__list
       +checkbox({ isRich: false, items, })
-  
-                    
+      

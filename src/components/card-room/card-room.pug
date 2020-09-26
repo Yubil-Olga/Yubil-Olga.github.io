@@ -1,20 +1,17 @@
 include ../rate-button/rate-button
 
-mixin card-room({ link, images = [], number = 888, price = 9990, currency = "₽", roomStatus = "", stars = 5, reviews = 145, } = {}) 
+mixin card-room({ link, images = [], number = 888, price = 9990, currency = '₽', roomStatus = '', stars = 5, reviews = 145, } = {})
   section.card-room.js-card-room
     .card-room__slider
       .card-room__gallery.js-card-room__gallery
         each image in images
-          img(src=image alt=`room ${number}`).card-room__image
+          img.card-room__image(src=image, alt=`room ${number}`)
       .card-room__decoration
-    a(href=link).card-room__description
+    a.card-room__description(href=link)
       .card-room__room-details
-        h2.card-room__room-number=number
-          span.card-room__luxury=roomStatus
+        h2.card-room__room-number= number
+          span.card-room__luxury= roomStatus
         .card-room__price #{price}#{currency}
       .card-room__room-rating
         +rate-button({ total: 5, rating: stars, })
-        .card-room__comments=reviews
-
-
-
+        .card-room__comments= reviews

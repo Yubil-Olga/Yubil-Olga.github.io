@@ -2,57 +2,57 @@ include ../logo/logo
 include ../button/button
 include ../material-icon/material-icon
 
-mixin header({ isAuthed = false, language = "en", indentBetweenElements, items = [{ name: "click me", isExpanded: false, href: "/mock-address/change-me", isActive: false, }], } = {})
-  - let loginButtonText
-  - let registerButtonText
-  - let indentModifier
-  
+mixin header({ isAuthed = false, language = 'en', indentBetweenElements, items = [{ name: 'click me', isExpanded: false, href: '/mock-address/change-me', isActive: false, }], } = {})
+  - let loginButtonText;
+  - let registerButtonText;
+  - let indentModifier;
+
   case language
-    when "ru"
-      - loginButtonText = "войти"
-      - registerButtonText = "зарегистрироваться"
+    when 'ru'
+      - loginButtonText = 'войти';
+      - registerButtonText = 'зарегистрироваться';
     default
-      - loginButtonText = "Login"
-      - registerButtonText = "Register"
+      - loginButtonText = 'Login';
+      - registerButtonText = 'Register';
 
   case indentBetweenElements
-    when "large"
-      - indentModifier = "header__menu_indent_large"
+    when 'large'
+      - indentModifier = 'header__menu_indent_large';
     default
-      - indentModifier = ""
+      - indentModifier = '';
 
   header.header.js-header
     .header__wrapper
-      +logo()
+      +logo
       nav.header__navigation
         ul.header__menu.js-header__menu(class=indentModifier)
           each item in items
-            li.header__item(class= item.isActive ? "header__item_active" : "")
+            li.header__item(class=item.isActive ? 'header__item_active' : '')
               if item.isExpanded
                 .header__link
                   details.header__details
-                    summary.header__summary=item.name
-              else 
-                a(href=item.href).header__link=item.name
+                    summary.header__summary= item.name
+              else
+                a.header__link(href=item.href)= item.name
         .header__burger.js-header__burger
-          +material-icon({ name: "menu", size: "m", color: "dark-gray", })
+          +material-icon({ name: 'menu', size: 'm', color: 'dark-gray', })
         .header__toolbar
           if isAuthed
-            .header__user=user
-          else 
+            .header__user= user
+          else
             .header__sign-in-button
-              +button({
-                href: "login.html", 
-                buttonType: "link",
-                style: "border", 
-                text: loginButtonText,
-                size: "s",
+              +button({ 
+                href: 'login.html', 
+                buttonType: 'link', 
+                style: 'border', 
+                text: loginButtonText, 
+                size: 's', 
               })
             .header__sign-up-button
-              +button({
-                href: "registration.html", 
-                buttonType: "link",
-                style: "gradient", 
+              +button({ 
+                href: 'registration.html', 
+                buttonType: 'link', 
+                style: 'gradient', 
                 text: registerButtonText, 
-                size: "s",
+                size: 's', 
               })

@@ -1,21 +1,19 @@
 include ../material-icon/material-icon
 
-mixin pagination({ startNumber = 1, totalPages = 15, elementsOnPage = 12, allElements = "100+", descriptionText = "вариантов аренды", links = [] } = {})
+mixin pagination({ startNumber = 1, totalPages = 15, elementsOnPage = 12, allElements = '100+', descriptionText = 'вариантов аренды', links = [] } = {})
   .pagination
     ul.pagination__pages
       each link, index in links
-        - const { number, href, isCurrent = false, } = link
+        - const { number, href, isCurrent = false } = link;
         if index === links.length - 1
           li.pagination__item
             .pagination__link ...
         li.pagination__item
           a.pagination__link(
-            href=link.href 
-            class= link.isCurrent ? "pagination__link_current": null
-          )=link.number
+            href=link.href,
+            class=link.isCurrent ? 'pagination__link_current' : null
+          )= link.number
       li.pagination__item
-        a.pagination__link.pagination__link_next(href="/mock-address/change-me")
-          +material-icon({ name: "arrow_forward", color: "white", size: "m", })
+        a.pagination__link.pagination__link_next(href='/mock-address/change-me')
+          +material-icon({ name: 'arrow_forward', color: 'white', size: 'm', })
     p.pagination__description #{startNumber} – #{elementsOnPage} из #{allElements} #{descriptionText}
-    
-    

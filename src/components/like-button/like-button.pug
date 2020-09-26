@@ -1,17 +1,17 @@
 include ../material-icon/material-icon
 
 mixin like-button({ count = 0, isChecked = false, } = {})
-  - const icon = isChecked ? "favorite" : "favorite_border"
-  
+  - const icon = isChecked ? 'favorite' : 'favorite_border';
+
   label.like-button.js-like-button(
-    data-count= count < 0 ? 0 : count
-    class= isChecked ? "like-button_active" : ""
+    data-count=count < 0 ? 0 : count,
+    class=isChecked ? 'like-button_active' : ''
   )
     .like-button__icon.js-like-button__icon
-      +material-icon({ name: icon, size: "s", })
-    input.like-button__input.js-like-button__input(type="checkbox" value="like" checked=isChecked)
-        
-
-
-
-        
+      +material-icon({ name: icon, size: 's', })
+    input.like-button__input.js-like-button__input(
+      type='checkbox',
+      value='like',
+      checked=isChecked
+    )
+    
