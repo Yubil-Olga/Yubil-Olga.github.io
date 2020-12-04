@@ -13,9 +13,9 @@
     &_purple {
       color: $purple
     }
-    
+
     &_purple-gradient {
-      background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+      background: $purple-gradient;
       background-clip: text;
       color: transparent;
     }

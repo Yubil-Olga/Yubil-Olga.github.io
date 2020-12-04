@@ -5,7 +5,6 @@
   min-width: 40px;
   height: max-content;
   min-height: 20px;
-  border: 1px solid $dark-shade-25;
   border-radius: 10px;
   color: $dark-shade-25;
   box-sizing: border-box;
@@ -15,6 +14,9 @@
   align-items: center;
   cursor: pointer;
   user-select: none;
+  border: solid 1px transparent;
+  background: $dark-shade-25;
+  box-shadow: 1px 100px 1px #fff inset;
 
   &::after {
     content: attr(data-count);
@@ -26,7 +28,7 @@
       weight: normal;
       size: 10px;
     }
-  
+
     line-height: 12px;
   }
 
@@ -37,9 +39,9 @@
     left: 0;
     cursor: pointer;
   }
-  
+
   &_active {
-    border-color: $purple;
     color: $purple;
+    background-image: $purple-gradient;
   }
 }

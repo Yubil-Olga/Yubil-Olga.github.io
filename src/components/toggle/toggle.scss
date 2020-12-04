@@ -20,7 +20,7 @@
 
       &::before {
         content: '';
-        background-color: $purple;
+        background-image: $purple-gradient;
         right: 3px;
         left: auto;
       }
