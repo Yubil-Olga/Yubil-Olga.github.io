@@ -11,10 +11,10 @@ mixin dropdown({ title, hasControlButtons = false, items = [{ name, group, numbe
     .dropdown__menu.js-dropdown__menu
       each item in items
         .dropdown__option.js-dropdown__option
-          +dropdown-option({ name: item.name, group: item.group, number: item.number, })
+          +dropdown-option(item)
       if hasControlButtons
         .dropdown__control
-          .dropdown__clean-button.js-dropdown__clean-button 
+          .dropdown__clean-button.js-dropdown__clean-button
             +button({ text: 'очистить', style: 'ghost-link', })
-          .dropdown__accept-button.js-dropdown__accept-button 
+          .dropdown__accept-button.js-dropdown__accept-button
             +button({ text: 'применить', style: 'link', })

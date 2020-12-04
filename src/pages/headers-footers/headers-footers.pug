@@ -5,48 +5,25 @@ include ../../components/footer/footer
 block variables
   -
     const pageTitle = 'Headers & Footers'
-    const bglogo = true
-    const user = 'Cosmin Negoita'
-    const navigation = [
-      { name: 'Home', href: '/mock-address/change-me', isExpanded: false, isActive: true, },
-      { name: 'About Us', href: '/mock-address/change-me', isExpanded: false, },
-      { name: 'Services', href: '/mock-address/change-me', isExpanded: true, },
-      { name: 'Careers', href: '/mock-address/change-me', isExpanded: false, },
-      { name: 'News', href: '/mock-address/change-me', isExpanded: false, },
-      { name: 'Documentation', href: '/mock-address/change-me', isExpanded: false, },
-    ]
-    const footerNavigation = [
-      {
-        title: 'Navigation', 
-        list: [{ name: 'About Us', }, { name: 'News', }, { name: 'Support', }, { name: 'Products', }],
-      },
-      {
-        title: 'About Us', 
-        list: [{ name: 'Who we are', }, { name: 'Our team', }, { name: 'Careers', }, { name: 'Investors', }],
-      },
-      {
-        title: 'Support', 
-        list: [{ name: 'Documentation', }, { name: 'Community', }, { name: 'Get in Touch', }],
-      },
-    ]
+    const { user, navigation, footerNavigation } = require('./data.json');
 
 block main
   section.headers-footers
     +header({ isAuthed: false, language: 'en', indentBetweenElements: 'large', items: navigation, })
     +header({ isAuthed: true, language: 'en', indentBetweenElements: 'large', items: navigation, })
-    +footer({ 
-      isCreative: false, 
-      slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', 
-      formTitle: 'Subscribe to our newsletter', 
-      formDescription: 'Receive our latest news and promotions in your inbox!', 
-      copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.', 
-      items: footerNavigation, 
+    +footer({
+      isCreative: false,
+      slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+      formTitle: 'Subscribe to our newsletter',
+      formDescription: 'Receive our latest news and promotions in your inbox!',
+      copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+      items: footerNavigation,
     })
-    +footer({ 
-      isCreative: true, 
-      slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', 
-      formTitle: 'Subscribe to our newsletter', 
-      formDescription: 'Receive our latest news and promotions in your inbox!', 
-      copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.', 
-      items: footerNavigation, 
+    +footer({
+      isCreative: true,
+      slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+      formTitle: 'Subscribe to our newsletter',
+      formDescription: 'Receive our latest news and promotions in your inbox!',
+      copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+      items: footerNavigation,
     })

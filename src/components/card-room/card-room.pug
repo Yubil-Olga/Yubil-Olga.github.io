@@ -1,6 +1,6 @@
 include ../rate-button/rate-button
 
-mixin card-room({ link, images = [], number = 888, price = 9990, currency = '₽', roomStatus = '', stars = 5, reviews = 145, } = {})
+mixin card-room({ link, images = [], number, price = 0, currency = '₽', roomStatus = '', stars = 5, reviews = 0, } = {})
   section.card-room.js-card-room
     .card-room__slider
       .card-room__gallery.js-card-room__gallery

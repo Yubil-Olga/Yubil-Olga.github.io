@@ -9,24 +9,7 @@ include ../../components/calendar/calendar
 block variables
   -
     const pageTitle = 'Cards'
-    const bglogo = true
-    const rooms = [
-      {
-        number: '888', 
-        price: '9990', 
-        images: [ 'images/room1.png', 'images/room1.png', 'images/room1.png', 'images/room1.png', ], 
-        roomStatus: 'люкс', 
-        stars: '5', 
-        reviews: '145',
-      },
-      {
-        number: '840', 
-        price: '9900', 
-        images: [ 'images/room2.png', 'images/room2.png', 'images/room2.png', 'images/room2.png', ], 
-        stars: '4', 
-        reviews: '65',
-      },
-    ]
+    const { rooms, booking } = require('./data.json')
 
 block main
   .cards
@@ -35,7 +18,7 @@ block main
     .cards__item
       +form-registration
     .cards__item
-      +form-booking({ number: 888, roomStatus: 'люкс', price: 9990, discount: 2179, serviceCharge: 0, additionalServiceCharge: 300, days: 4, })
+      +form-booking(booking)
     .cards__item
       +form-login
     .cards__item

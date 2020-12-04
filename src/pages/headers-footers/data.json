@@ -1,0 +1,50 @@
+{
+  "user": "Cosmin Negoita",
+  "navigation": [
+    {
+      "name": "Home",
+      "href": "/mock-address/change-me",
+      "isExpanded": false,
+      "isActive": true
+    },
+    {
+      "name": "About Us",
+      "href": "/mock-address/change-me",
+      "isExpanded": false
+    },
+    {
+      "name": "Services",
+      "href": "/mock-address/change-me",
+      "isExpanded": true
+    },
+    {
+      "name": "Careers",
+      "href": "/mock-address/change-me",
+      "isExpanded": false
+    },
+    {
+      "name": "News",
+      "href": "/mock-address/change-me",
+      "isExpanded": false
+    },
+    {
+      "name": "Documentation",
+      "href": "/mock-address/change-me",
+      "isExpanded": false
+    }
+  ],
+  "footerNavigation": [
+    {
+      "title": "Navigation",
+      "list": [{ "name": "About Us" }, { "name": "News" }, { "name": "Support" }, { "name": "Products" }]
+    },
+    {
+      "title": "About Us",
+      "list": [{ "name": "Who we are" }, { "name": "Our team" }, { "name": "Careers" }, { "name": "Investors" }]
+    },
+    {
+      "title": "Support",
+      "list": [{ "name": "Documentation" }, { "name": "Community" }, { "name": "Get in Touch" }]
+    }
+  ]
+}

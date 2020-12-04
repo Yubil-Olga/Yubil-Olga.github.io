@@ -8,105 +8,7 @@ block variables
   -
     const pageTitle = 'Search room page'
     const footerWithBorder = true
-    const rooms = [
-      {
-        number: '888', price: '9990', 
-        images: [ 'images/room1.png', 'images/room1.png', 'images/room1.png', 'images/room1.png', ],
-        roomStatus: 'люкс', 
-        stars: '5', 
-        reviews: '145', 
-        link: 'room-details.html',
-      },
-      {
-        number: '840', 
-        price: '9900', 
-        images: [ 'images/room2.png', 'images/room2.png', 'images/room2.png', 'images/room2.png', ], 
-        stars: '4', 
-        reviews: '65', 
-        link: 'room-details.html',
-      },
-      {
-        number: '980', 
-        price: '8500', 
-        images: [ 'images/image3.png', 'images/image3.png', 'images/image3.png', 'images/image3.png', ], 
-        roomStatus: 'люкс', 
-        stars: '3', 
-        reviews: '35', 
-        link: 'room-details.html',
-      },
-      {
-        number: '856', 
-        price: '7300', 
-        images: [ 'images/image5.png', 'images/image5.png', 'images/image5.png', 'images/image5.png', ], 
-        stars: '5', 
-        reviews: '19', 
-        link: 'room-details.html',
-      },
-      {
-        number: '740', 
-        price: '6000', 
-        images: [ 'images/image4.png', 'images/image4.png', 'images/image4.png', 'images/image4.png', ], 
-        stars: '4', 
-        reviews: '44', 
-        link: 'room-details.html',
-      },
-      {
-        number: '982', 
-        price: '5800', 
-        images: [ 'images/image6.png', 'images/image6.png', 'images/image6.png', 'images/image6.png', ], 
-        stars: '3', 
-        reviews: '56', 
-        link: 'room-details.html',
-      },
-      {
-        number: '678', 
-        price: '5500', 
-        images: [ 'images/image11.png', 'images/image11.png', 'images/image11.png', 'images/image11.png', ], 
-        stars: '5', 
-        reviews: '45', 
-        link: 'room-details.html',
-      },
-      {
-        number: '450', 
-        price: '5300', 
-        images: [ 'images/image7.png', 'images/image7.png', 'images/image7.png', 'images/image7.png', ],
-        stars: '4', 
-        reviews: '39', 
-        link: 'room-details.html',
-      },
-      {
-        number: '350', 
-        price: '5000', 
-        images: [ 'images/image12.png', 'images/image12.png', 'images/image12.png', 'images/image12.png', ],
-        stars: '3', 
-        reviews: '77', 
-        link: 'room-details.html',
-      },
-      {
-        number: '666', 
-        price: '5000', 
-        images: [ 'images/image8.png', 'images/image8.png', 'images/image8.png', 'images/image8.png', ], 
-        stars: '5', 
-        reviews: '25', 
-        link: 'room-details.html',
-      },
-      {
-        number: '444', 
-        price: '5000', 
-        images: [ 'images/image9.png', 'images/image9.png', 'images/image9.png', 'images/image9.png', ], 
-        stars: '3', 
-        reviews: '15', 
-        link: 'room-details.html',
-      },
-      {
-        number: '352',
-        price: '5000', 
-        images: [ 'images/image10.png', 'images/image10.png', 'images/image10.png', 'images/image10.png', ],
-        stars: '3', 
-        reviews: '55', 
-        link: 'room-details.html',
-      },    
-    ]
+    const { rooms } = require('./data.json')
 
 block main
   main.search-room
@@ -118,11 +20,11 @@ block main
         each room in rooms
           +card-room(room)
       .search-room__pagination
-        +pagination({ 
-          links: [ 
-            { number: 1, href: '/mock-address/change-me', isCurrent: true}, 
-            { number: 2, href: '/mock-address/change-me', }, 
-            { number: 3, href: '/mock-address/change-me', }, 
-            { number: 15, href: '/mock-address/change-me', }, 
-          ] 
+        +pagination({
+          links: [
+            { number: 1, href: '/mock-address/change-me', isCurrent: true},
+            { number: 2, href: '/mock-address/change-me', },
+            { number: 3, href: '/mock-address/change-me', },
+            { number: 15, href: '/mock-address/change-me', },
+          ]
         })

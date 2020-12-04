@@ -11,7 +11,7 @@ mixin pagination({ startNumber = 1, totalPages = 15, elementsOnPage = 12, allEle
         li.pagination__item
           a.pagination__link(
             href=link.href,
-            class=link.isCurrent ? 'pagination__link_current' : null
+            class=link.isCurrent && 'pagination__link_current'
           )= link.number
       li.pagination__item
         a.pagination__link.pagination__link_next(href='/mock-address/change-me')

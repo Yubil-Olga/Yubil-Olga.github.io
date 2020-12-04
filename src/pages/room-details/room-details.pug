@@ -10,43 +10,16 @@ block variables
   -
     const pageTitle = 'Room details page'
     const footerWithBorder = true
-    const gallery = [
-      { src: 'images/room888-1.jpg', alt: 'room #888', },
-      { src: 'images/room888-2.jpg', alt: 'room #888', },
-      { src: 'images/room888-3.jpg', alt: 'room #888', },
-    ]
-    const advantages = [
-      { title: 'Комфорт', description: 'Шумопоглощающие стены', icon: 'insert_emoticon', },
-      { title: 'Удобство', description: 'Окно в каждой из спален', icon: 'location_city', },
-      { title: 'Уют', description: 'Номер оснащён камином', icon: 'whatshot', isUnderlined: false, },
-    ]
-    const reviews = [
-      {
-        name: 'Мурад Сарафанов', 
-        src: 'images/reviews/review2.png', 
-        voiceCounter: 12,
-        isLiked: true,
-        date: '5 дней назад',
-        comment: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-      },
-      {
-        name: 'Патрисия Стёклышкова',
-        src: 'images/reviews/review1.png',
-        voiceCounter: 2,
-        isLiked: false,
-        date: 'Неделю назад',
-        comment: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
-      }
-    ]
+    const { gallery, advantages, reviews, chart, rules, booking } = require('./data.json')
 
 block main
   main.room-details
     .room-details__gallery
       .room-details__gallery-item
-        img.room-details__image(src='images/room888-1.jpg', alt='room #888')
+        img.room-details__image(src=gallery[0].src, alt=gallery[0].alt)
       .room-details__gallery-item
-        img.room-details__image(src='images/room888-2.jpg', alt='room #888')
-        img.room-details__image(src='images/room888-3.jpg', alt='room #888')
+        img.room-details__image(src=gallery[1].src, alt=gallery[1].alt)
+        img.room-details__image(src=gallery[2].src, alt=gallery[2].alt)
     .room-details__description
       .room-details__info
         .room-details__item
@@ -58,14 +31,7 @@ block main
         .room-details__item
           .room-details__subtitle
             +heading({ text: 'Впечатления от номера', tag: 'h2', })
-          +chart({ 
-            data: [ 
-              { name: 'Великолепно', quantity: 130, color1: '#FFE39C', color2: '#FFBA9C', }, 
-              { name: 'Хорошо', quantity: 65, color1: '#BC9CFF', color2: '#8BA4F9', }, 
-              { name: 'Удовлетворительно', quantity: 65, color1: '#6FCF97', color2: '#66D2EA', }, 
-              { name: 'Разочарован', quantity: 0, color1: '#909090', color2: '#3D4975', }, 
-            ], 
-          })
+          +chart({ data: chart })
         .room-details__reviews
           .room-details__item
             .room-details__subtitle
@@ -77,7 +43,7 @@ block main
                   - reviewsNumberText = 'отзывов';
                 when reviews.length === 1
                   - reviewsNumberText = 'отзыв';
-                when reviews.length > 4 
+                when reviews.length > 4
                   - reviewsNumberText = 'отзывов';
                 default
                   - reviewsNumberText = 'отзыва';
@@ -90,13 +56,7 @@ block main
           .room-details__item
             .room-details__subtitle
               +heading({ text: 'Правила', tag: 'h2', })
-            +bullet-list({ 
-              rules: [ 
-                { text: 'Нельзя с питомцами', }, 
-                { text: 'Без вечеринок и мероприятий', }, 
-                { text: 'Время прибытия — после 13:00, а выезд до 12:00', }, 
-              ], 
-            })
+            +bullet-list({ rules })
         .room-details__item
           .room-details__subtitle
             +heading({ text: 'Отмена', tag: 'h2', })
@@ -105,4 +65,4 @@ block main
             | После этого при отмене не позднее чем за 5 дн. до прибытия
             | вы получите полный возврат за вычетом сбора за услуги.
       .room-details__booking
-        +form-booking({ number: 888, roomStatus: 'люкс', price: 9990, discount: 2179, serviceCharge: 0, additionalServiceCharge: 300, days: 4, })
+        +form-booking(booking)

@@ -1,11 +1,11 @@
 include ../material-icon/material-icon
 
-mixin rate-button({ total = 5, rating = 5, isClickable = false, } = {})
+mixin rate-button({ total = 5, rating = 0, isClickable = false, } = {})
   - const stars = total > 0 ? total : 1;
   - const activeStars = rating > stars ? stars : rating;
   - const tagModifier = isClickable ? 'label' : 'div';
 
-  .rate-button(class=isClickable ? 'js-rate-button rate-button_clickable' : '')
+  .rate-button(class=isClickable && 'js-rate-button rate-button_clickable')
     - for (let i=0; i<stars; i++)
       #{tagModifier}.rate-button__item
         if (activeStars > i)

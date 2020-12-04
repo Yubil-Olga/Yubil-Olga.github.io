@@ -5,8 +5,8 @@ include ../heading/heading
 
 mixin footer({ isCreative = true, withBorder = false, slogan, formTitle, formDescription, copyright, items = [{ title, list: [{ name: 'click me' }], }], } = {})
   footer.footer(
-    class=isCreative ? 'footer_creative' : '',
-    class=withBorder ? 'footer_with_border' : ''
+    class=isCreative && 'footer_creative',
+    class=withBorder && 'footer_with_border'
   )
     section.footer__main
       section.footer__section

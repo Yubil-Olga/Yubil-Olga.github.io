@@ -27,7 +27,7 @@ mixin header({ isAuthed = false, language = 'en', indentBetweenElements, items =
       nav.header__navigation
         ul.header__menu.js-header__menu(class=indentModifier)
           each item in items
-            li.header__item(class=item.isActive ? 'header__item_active' : '')
+            li.header__item(class=item.isActive && 'header__item_active')
               if item.isExpanded
                 .header__link
                   details.header__details
@@ -41,18 +41,18 @@ mixin header({ isAuthed = false, language = 'en', indentBetweenElements, items =
             .header__user= user
           else
             .header__sign-in-button
-              +button({ 
-                href: 'login.html', 
-                buttonType: 'link', 
-                style: 'border', 
-                text: loginButtonText, 
-                size: 's', 
+              +button({
+                href: 'login.html',
+                buttonType: 'link',
+                style: 'border',
+                text: loginButtonText,
+                size: 's',
               })
             .header__sign-up-button
-              +button({ 
-                href: 'registration.html', 
-                buttonType: 'link', 
-                style: 'gradient', 
-                text: registerButtonText, 
-                size: 's', 
+              +button({
+                href: 'registration.html',
+                buttonType: 'link',
+                style: 'gradient',
+                text: registerButtonText,
+                size: 's',
               })

@@ -1,6 +1,6 @@
 mixin field({ isMasked = false, type, theme, placeholder, text, readonly = false, } = {})
   - let themeModifier = '';
-  - const maskedModifier = isMasked ? 'field_masked' : '';
+  - const maskedModifier = isMasked && 'field_masked';
 
   case theme
     when 'dark'
@@ -14,4 +14,3 @@ mixin field({ isMasked = false, type, theme, placeholder, text, readonly = false
     value=text,
     readonly=readonly
   )
-  
