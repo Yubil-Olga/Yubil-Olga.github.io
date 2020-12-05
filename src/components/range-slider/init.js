@@ -1,5 +1,5 @@
-import RangeSlider from './range-slider';
+import RangeSlider from './RangeSlider';
 
 $(() => {
-  $('.js-range-slider').each((i, val) => new RangeSlider(val));
+  $('.js-range-slider').each((_, val) => new RangeSlider(val));
 });

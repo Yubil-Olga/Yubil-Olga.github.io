@@ -2,13 +2,13 @@
 
 .expandable-checkbox {
   box-sizing: border-box;
-  cursor: pointer;
 
   &__selection {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 12px;
+    cursor: pointer;
   }
 
   &__list {
@@ -19,7 +19,7 @@
     .expandable-checkbox__button {
       transform: rotate(180deg);
     }
-  
+
     .expandable-checkbox__list {
       display: block;
     }

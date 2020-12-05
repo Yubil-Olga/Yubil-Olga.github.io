@@ -1,5 +1,5 @@
-import CardRoom from './card-room';
+import CardRoom from './CardRoom';
 
 $(() => {
-  $('.js-card-room').each((i, val) => new CardRoom(val));
+  $('.js-card-room').each((_, val) => new CardRoom(val));
 });

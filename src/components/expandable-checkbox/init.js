@@ -1,5 +1,5 @@
-import ExpandableCheckbox from './expandable-checkbox';
+import ExpandableCheckbox from './ExpandableCheckbox';
 
 $(() => {
-  $('.js-expandable-checkbox').each((i, val) => new ExpandableCheckbox(val));
+  $('.js-expandable-checkbox').each((_, val) => new ExpandableCheckbox(val));
 });

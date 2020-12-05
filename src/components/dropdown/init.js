@@ -1,4 +1,4 @@
-import Dropdown from './dropdown';
+import Dropdown from './Dropdown';
 
 $(() => {
   const optionCases = {
@@ -8,5 +8,5 @@ $(() => {
     кровати: ['кровать', 'кровати', 'кроватей'],
     'ванные комнаты': ['ванная комната', 'ванные комнаты', 'ванных комнат'],
   };
-  $('.js-dropdown').each((i, val) => new Dropdown(val, optionCases));
+  $('.js-dropdown').each((_, val) => new Dropdown(val, optionCases));
 });

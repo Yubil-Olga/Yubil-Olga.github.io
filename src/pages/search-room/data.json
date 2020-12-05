@@ -37,7 +37,7 @@
     {
       "number": 740,
       "price": 6000,
-      "images": [ "images/image4.png", "images/image4.png", "images/image4.png", "'images/image4.png" ],
+      "images": [ "images/image4.png", "images/image4.png", "images/image4.png", "images/image4.png" ],
       "stars": 4,
       "reviews": 44,
       "link": "room-details.html"

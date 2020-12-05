@@ -1,5 +1,5 @@
-import DateDropdown from './date-dropdown';
+import DateDropdown from './DateDropdown';
 
 $(() => {
-  $('.js-date-dropdown').each((i, val) => new DateDropdown(val));
+  $('.js-date-dropdown').each((_, val) => new DateDropdown(val));
 });

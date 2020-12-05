@@ -3,24 +3,24 @@ import Inputmask from 'inputmask';
 export default class Field {
   constructor(htmlElement) {
     const isInput = $(htmlElement).hasClass('js-field');
-    this.$field = isInput ? $(htmlElement) : $(htmlElement).find('.js-field');
-    this.maskedStatus = 'field_masked';
-    this.init();
+    this._$field = isInput ? $(htmlElement) : $(htmlElement).find('.js-field');
+    this._maskedStatus = 'field_masked';
+    this._init();
   }
 
-  init() {
-    if (this.$field.hasClass(this.maskedStatus)) {
+  _init() {
+    if (this._$field.hasClass(this._maskedStatus)) {
       const im = new Inputmask('datetime', {
         inputFormat: 'dd.mm.yyyy',
         placeholder: 'ДД.ММ.ГГГГ',
         min: '01.01.1900',
         max: '01.01.2020',
       });
-      im.mask(this.$field);
+      im.mask(this._$field);
     }
   }
 
   getElement() {
-    return this.$field;
+    return this._$field;
   }
 }

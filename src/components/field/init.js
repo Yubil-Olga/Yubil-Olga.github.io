@@ -1,5 +1,5 @@
-import Field from './field';
+import Field from './Field';
 
 $(() => {
-  $('.js-field').each((i, val) => new Field(val));
+  $('.js-field').each((_, val) => new Field(val));
 });

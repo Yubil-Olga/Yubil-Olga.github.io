@@ -1,5 +1,5 @@
-import LikeButton from './like-button';
+import LikeButton from './LikeButton';
 
 $(() => {
-  $('.js-like-button').each((i, val) => new LikeButton(val));
+  $('.js-like-button').each((_, val) => new LikeButton(val));
 });

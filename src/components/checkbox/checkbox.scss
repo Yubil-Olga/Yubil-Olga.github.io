@@ -6,17 +6,18 @@
   color: $dark-shade-50;
 
   &__label {
-    display: inline-block;
+    display: block;
     position: relative;
     padding-left: 30px;
     padding-bottom: 10px;
-    cursor: pointer;
+    width: fit-content;
   }
 
   &__title {
     color: $dark-shade-50;
     margin: 0;
     line-height: 20px;
+    cursor: pointer;
   }
 
   &__input {
@@ -60,6 +61,7 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
     &::after {
       content: '';
@@ -69,7 +71,7 @@
 
   &__theme_rich {
     max-width: 266px;
-    
+
     .checkbox__label {
       padding-bottom: 8px;
     }

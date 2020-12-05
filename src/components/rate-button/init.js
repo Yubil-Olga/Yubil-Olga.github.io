@@ -1,5 +1,5 @@
-import RateButton from './rate-button';
+import RateButton from './RateButton';
 
 $(() => {
-  $('.js-rate-button').each((i, val) => new RateButton(val));
+  $('.js-rate-button').each((_, val) => new RateButton(val));
 });

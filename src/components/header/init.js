@@ -1,5 +1,5 @@
-import Header from './header';
+import Header from './Header';
 
 $(() => {
-  $('.js-header').each((i, val) => new Header(val));
+  $('.js-header').each((_, val) => new Header(val));
 });

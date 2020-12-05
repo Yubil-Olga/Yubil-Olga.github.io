@@ -3,10 +3,10 @@ import 'ion-rangeslider';
 export default class RangeSlider {
   constructor(htmlElement) {
     this.$rangeSlider = $(htmlElement);
-    this.init();
+    this._init();
   }
 
-  init() {
+  _init() {
     this.$rangeSlider.ionRangeSlider({
       type: 'double',
       min: 0,

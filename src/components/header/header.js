@@ -1,36 +1,36 @@
 export default class Header {
   constructor(htmlElement) {
-    this.header = htmlElement;
-    this.menuActiveClassName = 'header__menu_active';
-    this.findHTMLElements();
-    this.bindEventListeners();
+    this._header = htmlElement;
+    this._menuActiveClassName = 'header__menu_active';
+    this._findHTMLElements();
+    this._bindEventListeners();
   }
 
-  findHTMLElements() {
-    this.burger = this.header.querySelector('.js-header__burger');
-    this.menu = this.header.querySelector('.js-header__menu');
+  _findHTMLElements() {
+    this._burger = this._header.querySelector('.js-header__burger');
+    this._menu = this._header.querySelector('.js-header__menu');
   }
 
-  bindEventListeners() {
-    this.handleBurgerClick = this.handleBurgerClick.bind(this);
-    this.burger.addEventListener('click', this.handleBurgerClick);
+  _bindEventListeners() {
+    this._handleBurgerClick = this._handleBurgerClick.bind(this);
+    this._burger.addEventListener('click', this._handleBurgerClick);
   }
 
-  handleBurgerClick() {
-    this.menu.classList.toggle(this.menuActiveClassName);
-    this.handleWindowResize = this.handleWindowResize.bind(this);
-    window.addEventListener('resize', this.handleWindowResize);
+  _handleBurgerClick() {
+    this._menu.classList.toggle(this._menuActiveClassName);
+    this._handleWindowResize = this._handleWindowResize.bind(this);
+    window.addEventListener('resize', this._handleWindowResize);
   }
 
-  handleWindowResize(event) {
-    if (this.isMenuClosed(event)) {
-      this.menu.classList.remove(this.menuActiveClassName);
-      window.removeEventListener('resize', this.handleWindowResize);
+  _handleWindowResize(event) {
+    if (this._isMenuClosed(event)) {
+      this._menu.classList.remove(this._menuActiveClassName);
+      window.removeEventListener('resize', this._handleWindowResize);
     }
   }
 
-  isMenuClosed(event) {
+  _isMenuClosed(event) {
     return (event.target.innerWidth > 1000)
-      && (this.menu.classList.contains(this.menuActiveClassName));
+      && (this._menu.classList.contains(this._menuActiveClassName));
   }
 }
