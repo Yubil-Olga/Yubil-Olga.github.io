@@ -1,6 +1,8 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
+const cssnano = require('cssnano');
+const autoprefixer = require('autoprefixer');
 
 
 module.exports = merge(common, {
@@ -17,7 +19,24 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'postcss-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer,
+                cssnano({
+                  preset: [
+                    'default', {
+                      discardComments: {
+                        removeAll: true,
+                      },
+                    },
+                  ],
+                })
+              ],
+              sourceMap: true
+            }
+          },
           'resolve-url-loader',
           {
             loader: 'sass-loader',

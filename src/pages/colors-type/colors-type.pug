@@ -3,18 +3,15 @@ include ../../components/color-block/color-block
 include ../../components/heading/heading
 
 block variables
-  - const pageTitle = 'Form elements';
+  -
+    const pageTitle = 'Form elements';
+    const colors = require('./data.json');
 
 block main
   section.colors-type
     .colors-type__section
-      +color-block({ name: 'Dark Shade 100%', description: '#1F2041', backgroundColor: 'darkest shade', })
-      +color-block({ name: 'Dark Shade 75%', description: '#1F2041', backgroundColor: 'dark shade', })
-      +color-block({ name: 'Dark Shade 50%', description: '#1F2041', backgroundColor: 'shade', })
-      +color-block({ name: 'Dark Shade 25%', description: '#1F2041', backgroundColor: 'light shade', })
-      +color-block({ name: 'Dark Shade 5%', description: '#1F2041', backgroundColor: 'lightest shade', })
-      +color-block({ name: 'Purple', description: '#BC9CFF', backgroundColor: 'purple', })
-      +color-block({ name: 'Green', description: '#6FCF97', backgroundColor: 'green', })
+      each color in colors
+        +color-block(color)
     .colors-type__section
       .colors-type__font
         .colors-type__tag

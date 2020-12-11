@@ -1,0 +1,9 @@
+[
+  { "name": "Dark Shade 100%", "description": "#1F2041", "backgroundColor": "darkest-shade" },
+  { "name": "Dark Shade 75%", "description": "#1F2041", "backgroundColor": "dark-shade" },
+  { "name": "Dark Shade 50%", "description": "#1F2041", "backgroundColor": "shade" },
+  { "name": "Dark Shade 25%", "description": "#1F2041", "backgroundColor": "light-shade" },
+  { "name": "Dark Shade 5%", "description": "#1F2041", "backgroundColor": "lightest-shade" },
+  { "name": "Purple", "description": "#BC9CFF", "backgroundColor": "purple" },
+  { "name": "Green", "description": "#6FCF97", "backgroundColor": "green" }
+]

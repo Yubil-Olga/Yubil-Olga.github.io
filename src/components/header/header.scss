@@ -11,20 +11,12 @@
   margin: 0 auto;
 
   &__wrapper {
+    @include content;
     display: flex;
     justify-content: space-between;
-    max-width: $content-width;
     box-sizing: border-box;
     margin: 0 auto;
     position: relative;
-
-    @media (max-width: 1200px) {
-      padding: 0 $space-x;
-    }
-  
-    @media (max-width: 450px) {
-      padding: 0 $space-x/2;
-    }
   }
 
   &__navigation {
@@ -39,7 +31,7 @@
     &_indent {
       &_large {
         padding-right: 10px;
-      
+
         #{$root}__item {
           padding-left: 7px;
         }
@@ -123,7 +115,7 @@
       order: 3;
       margin-left: 20px;
     }
-  
+
     @media (max-width: 440px) {
       margin-left: 0;
     }
@@ -141,7 +133,7 @@
     border-left: 1px solid rgba($dark-shade, 0.1);
     padding-left: 30px;
   }
-  
+
   &__sign-up-button {
     @media (max-width: 530px) {
       display: none;

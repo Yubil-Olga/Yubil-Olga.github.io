@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 
 const dev = merge(common, {
   mode: 'development',
@@ -18,6 +19,13 @@ const dev = merge(common, {
         use: [
           'style-loader',
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer],
+              sourceMap: true
+            }
+          },
           'resolve-url-loader',
           {
             loader: 'sass-loader',

@@ -40,13 +40,13 @@
     grid-template-columns: 2fr min(380px);
     grid-gap: 60px;
     padding: 70px 0 50px;
-  
+
     @media (max-width: 1200px) {
       max-width: unset;
       grid-template-columns: 1fr;
       justify-items: center;
     }
-  
+
     @media (max-width: 450px) {
       padding: $space-y/2 10px;
     }

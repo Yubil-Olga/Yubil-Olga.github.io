@@ -1,37 +1,38 @@
 mixin button({ href = '/mock-address/change-me', buttonType, text = 'click me', style, size, } = {})
-  - let sizeModifier;
-  - let styleModifier;
-  - let tagModifier;
-  - let typeModifier;
+  -
+    let sizeModifier;
+    let styleModifier;
+    let tagModifier;
+    let typeModifier;
 
   case style
-    when "arrow"
+    when 'arrow'
       - styleModifier = 'button_with_arrow';
-    when "border"
+    when 'border'
       - styleModifier = 'button_with_border';
-    when "gradient"
+    when 'gradient'
       - styleModifier = 'button_with_gradient';
-    when "ghost-link"
+    when 'ghost-link'
       - styleModifier = 'button_with_ghost-link';
-    when "link"
+    when 'link'
       - styleModifier = 'button_with_link';
     default
       - styleModifier = '';
 
   case size
-    when "s"
+    when 's'
       - sizeModifier = 'button_size_s';
-    when "m"
+    when 'm'
       - sizeModifier = 'button_size_m';
     default
       - sizeModifier = '';
 
   case buttonType
-    when "submit"
+    when 'submit'
       - tagModifier = 'button';
       - typeModifier = 'submit';
       - href = null;
-    when "link"
+    when 'link'
       - tagModifier = 'a';
     default
       - tagModifier = 'button';

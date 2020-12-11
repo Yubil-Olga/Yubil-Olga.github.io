@@ -20,13 +20,13 @@ export default class RateButton {
 
   _handleRateButtonClick(event) {
     const rating = event.target.value;
-    this.clearStars();
+    this._clearStars();
     for (let i = 0; i < rating; i += 1) {
       this._stars[i].setTextContent('star');
     }
   }
 
-  clearStars() {
+  _clearStars() {
     this._stars.forEach((el) => {
       el.setTextContent('star_border');
     });

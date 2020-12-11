@@ -1,28 +1,28 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
-    },
-    "extends": ["eslint:recommended", "airbnb-base"],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaVersion": 11,
-        "sourceType": "module"
-    },
-    "plugins": ["fsd"],
-    "rules": {
-        "fsd/hof-name-prefix": "error",
-        "fsd/no-heavy-constructor": "error",
-        "fsd/jq-cache-dom-elements": "error",
-        "fsd/jq-use-js-prefix-in-selector": "error",
-        "fsd/no-function-declaration-in-event-listener": "error",
-        "fsd/split-conditionals": "error",
-        "no-undef": "off",
-        "linebreak-style": 0,
-        "no-param-reassign": ["error", { "props": false }],
-        "no-underscore-dangle": "off"
-    }
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["eslint:recommended", "airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["fsd"],
+  "rules": {
+    "fsd/hof-name-prefix": "error",
+    "fsd/no-heavy-constructor": "error",
+    "fsd/jq-cache-dom-elements": "error",
+    "fsd/jq-use-js-prefix-in-selector": "error",
+    "fsd/no-function-declaration-in-event-listener": "error",
+    "fsd/split-conditionals": "error",
+    "no-undef": "off",
+    "linebreak-style": 0,
+    "no-param-reassign": ["error", { "props": false }],
+    "no-underscore-dangle": "off"
+  }
 }

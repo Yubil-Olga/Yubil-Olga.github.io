@@ -21,6 +21,26 @@
   }
 }
 
+@mixin content {
+  width: 100%;
+  max-width: $content-width;
+
+  @media (min-width: 1441px) {
+    padding-left: $border-space;
+    padding-right: $border-space;
+    max-width: unset;
+  }
+
+  @media (max-width: 1200px) {
+    max-width: unset;
+    padding: 0 $space-x;
+  }
+
+  @media (max-width: 450px) {
+    padding: 0 $space-x/2;
+  }
+}
+
 @mixin form {
   width: 100%;
   max-width: 380px;
