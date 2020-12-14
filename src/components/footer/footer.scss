@@ -54,7 +54,7 @@
     grid-gap: 20px;
 
     &:first-child {
-      grid-gap: 14px;
+      grid-gap: 16px;
     }
 
     @media (max-width: 1300px) {
@@ -91,7 +91,7 @@
     @include content;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 4px 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -5,8 +5,11 @@
   margin: 0 auto;
   background-color: #fff;
 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
   &__gallery {
-    max-width: $max-width;
     margin: 0 auto;
     display: flex;
     width: 100%;
@@ -19,6 +22,14 @@
     flex-direction: column;
     justify-content: center;
 
+    @media (min-width: 1441px) {
+      flex: 1;
+
+      &:first-child {
+        flex: 2;
+      }
+    }
+
     @media (max-width: 600px) {
       &:not(:first-child) {
         display: none;
@@ -30,6 +41,10 @@
     width: 100%;
     height: auto;
     pointer-events: none;
+
+    @media (min-width: 1441px) {
+      height: 100%;;
+    }
   }
 
   &__description {
