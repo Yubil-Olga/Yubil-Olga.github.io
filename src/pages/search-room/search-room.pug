@@ -12,19 +12,20 @@ block variables
 
 block main
   main.search-room
-    +search-filter
-    .search-room__result
-      .search-room__title
-        +heading({ text: 'Номера, которые мы для вас подобрали', tag: 'h1', })
-      .search-room__rooms
-        each room in rooms
-          +card-room(room)
-      .search-room__pagination
-        +pagination({
-          links: [
-            { number: 1, href: '/mock-address/change-me', isCurrent: true},
-            { number: 2, href: '/mock-address/change-me', },
-            { number: 3, href: '/mock-address/change-me', },
-            { number: 15, href: '/mock-address/change-me', },
-          ]
-        })
+    .search-room__inner
+      +search-filter
+      .search-room__result
+        .search-room__title
+          +heading({ text: 'Номера, которые мы для вас подобрали', tag: 'h1', })
+        .search-room__rooms
+          each room in rooms
+            +card-room(room)
+        .search-room__pagination
+          +pagination({
+            links: [
+              { number: 1, href: '/mock-address/change-me', isCurrent: true},
+              { number: 2, href: '/mock-address/change-me', },
+              { number: 3, href: '/mock-address/change-me', },
+              { number: 15, href: '/mock-address/change-me', },
+            ]
+          })
